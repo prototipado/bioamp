@@ -1,0 +1,42 @@
+\hypertarget{Drv__UART_8c}{}\section{Drv\+\_\+\+U\+A\+R\+T.\+c File Reference}
+\label{Drv__UART_8c}\index{Drv\+\_\+\+U\+A\+R\+T.\+c@{Drv\+\_\+\+U\+A\+R\+T.\+c}}
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{group__UART__Library_ga7a96fcb2dfc23bcf106ef05a6e348eb4}{Drv\+\_\+\+U\+A\+R\+T\+\_\+available} ()
+\begin{DoxyCompactList}\small\item\em Indicates if there is new data to be read. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_ga4d7777f8692bb7fdf17e975025bfbf8a}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+De\+Init} ()
+\begin{DoxyCompactList}\small\item\em U\+A\+RT de-\/initialization. \end{DoxyCompactList}\item 
+void \hyperlink{Drv__UART_8c_afd2230db25ff9fbde60c54e9a80f0582}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit} (uint8\+\_\+t rxbuff\mbox{[}$\,$\mbox{]}, uint8\+\_\+t txbuff\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Ring Buffers initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__UART__Library_ga0332d0b4b9dee94a3464a62ab776b594}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+Read\+Byte} ()
+\begin{DoxyCompactList}\small\item\em Read one byte. \end{DoxyCompactList}\item 
+int \hyperlink{group__UART__Library_gac8130d4c4c932205906c516ff6afe684}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+Receive\+RB} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, int num\+Bytes)
+\begin{DoxyCompactList}\small\item\em Receive data by U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_ga3cd9c151bd9649652b8f6c7a8a371f4b}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+Send} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, int num\+Bytes)
+\begin{DoxyCompactList}\small\item\em Send data by U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_ga8026f78d22425b39818431d299d638a3}{Drv\+\_\+\+U\+A\+R\+T\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em U\+A\+RT initial setup and initialization. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_gab1ae01fa9bacc6e16c6aff7f1e055b1d}{H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+A\+ME} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT 0 interrupt handler using ring buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Drv\+\_\+\+U\+A\+R\+T.\+c@{Drv\+\_\+\+U\+A\+R\+T.\+c}!Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit@{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit}}
+\index{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit@{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit}!Drv\+\_\+\+U\+A\+R\+T.\+c@{Drv\+\_\+\+U\+A\+R\+T.\+c}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit(uint8\+\_\+t rxbuff[], uint8\+\_\+t txbuff[])}{Drv_UART_RBinit(uint8_t rxbuff[], uint8_t txbuff[])}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{rxbuff\mbox{[}$\,$\mbox{]}, }
+\item[{uint8\+\_\+t}]{txbuff\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{Drv__UART_8c_afd2230db25ff9fbde60c54e9a80f0582}{}\label{Drv__UART_8c_afd2230db25ff9fbde60c54e9a80f0582}
+
+
+Ring Buffers initialization. 
+
+
+
+Definition at line 27 of file Drv\+\_\+\+U\+A\+R\+T.\+c.
+

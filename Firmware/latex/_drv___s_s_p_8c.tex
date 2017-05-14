@@ -1,0 +1,43 @@
+\hypertarget{_drv___s_s_p_8c}{}\section{biopot\+L\+I\+R\+I\+N\+S/src/\+Drv\+\_\+\+S\+S\+P.c File Reference}
+\label{_drv___s_s_p_8c}\index{biopot\+L\+I\+R\+I\+N\+S/src/\+Drv\+\_\+\+S\+S\+P.\+c@{biopot\+L\+I\+R\+I\+N\+S/src/\+Drv\+\_\+\+S\+S\+P.\+c}}
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+S\+S\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___s_s_p___library_ga0c5eb23f106efe0d4b8687874954c549}{Drv\+\_\+\+S\+S\+P\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Init the S\+S\+P module. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_s_p___library_ga564dfbd00e01e9e2f7e5cb1537b46db6}{Drv\+\_\+\+S\+S\+P\+\_\+de\+Init} ()
+\begin{DoxyCompactList}\small\item\em De-\/\+Init the S\+S\+P module. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_s_p___library_ga0f01059c0a84ecf456f3ad9d38b9794b}{Drv\+\_\+\+S\+S\+P\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em Configuration of format and data of the S\+S\+P module. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___s_s_p___library_ga785ce7239c2c42f4a871322b9cff56b7}{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte} (uint8\+\_\+t to\+\_\+send)
+\begin{DoxyCompactList}\small\item\em Send and Receive a byte via S\+S\+P. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___s_s_p___library_ga3808c285915bc0c410f4188eafce502d}{spi\+\_\+rw} (uint8\+\_\+t out)
+\begin{DoxyCompactList}\small\item\em Faster way to transfer a single a byte via S\+S\+P. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___s_s_p_8c_a5468dd6dfaec4a6a2b18f7b39ed0eb48}{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes} (uint8\+\_\+t $\ast$to\+\_\+send, uint8\+\_\+t $\ast$to\+\_\+recive, uint8\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Send and Receive a byte via S\+S\+P. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_drv___s_s_p_8c_a5468dd6dfaec4a6a2b18f7b39ed0eb48}{}\index{Drv\+\_\+\+S\+S\+P.\+c@{Drv\+\_\+\+S\+S\+P.\+c}!Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes@{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes}}
+\index{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes@{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes}!Drv\+\_\+\+S\+S\+P.\+c@{Drv\+\_\+\+S\+S\+P.\+c}}
+\subsubsection[{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes(uint8\+\_\+t $\ast$to\+\_\+send, uint8\+\_\+t $\ast$to\+\_\+recive, uint8\+\_\+t length)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Multipl\+Bytes (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{to\+\_\+send, }
+\item[{uint8\+\_\+t $\ast$}]{to\+\_\+recive, }
+\item[{uint8\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\label{_drv___s_s_p_8c_a5468dd6dfaec4a6a2b18f7b39ed0eb48}
+
+
+Send and Receive a byte via S\+S\+P. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+send} & Byte to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Received byte 
+\end{DoxyReturn}

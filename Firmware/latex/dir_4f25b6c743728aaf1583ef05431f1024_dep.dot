@@ -1,0 +1,14 @@
+digraph "biopotLIRINS" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_4f25b6c743728aaf1583ef05431f1024 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4f25b6c743728aaf1583ef05431f1024.html"];
+    dir_4f25b6c743728aaf1583ef05431f1024 [shape=plaintext label="biopotLIRINS"];
+    dir_9e8a937057c080d24cdc4052568cef69 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_9e8a937057c080d24cdc4052568cef69.html"];
+    dir_d597c7465ec8fb3d9b67e1d9249d3304 [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_d597c7465ec8fb3d9b67e1d9249d3304.html"];
+  }
+  dir_1973f8af722dc424d77ffc4be4e1bb39 [shape=box label="lpc_board_biopotenciales_LIRINS" fillcolor="white" style="filled" color="red" URL="dir_1973f8af722dc424d77ffc4be4e1bb39.html"];
+  dir_d597c7465ec8fb3d9b67e1d9249d3304->dir_1973f8af722dc424d77ffc4be4e1bb39 [headlabel="2", labeldistance=1.5 headhref="dir_000001_000002.html"];
+  dir_d597c7465ec8fb3d9b67e1d9249d3304->dir_9e8a937057c080d24cdc4052568cef69 [headlabel="16", labeldistance=1.5 headhref="dir_000001_000005.html"];
+}

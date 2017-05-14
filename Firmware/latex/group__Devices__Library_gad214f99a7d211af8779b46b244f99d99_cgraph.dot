@@ -1,0 +1,36 @@
+digraph "Drv_Devices_printRegisters"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Drv_Devices_printRegisters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Drv_ADS1299_getSlavePresent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADS1299__Library.html#gae15b4a58c8244229e31efdc1c66a8672",tooltip="To know if the Slave Board is present. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Drv_ADS1299_RREGS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADS1299__Library.html#gae5ee6c66ba40e661985018da02f4683d",tooltip="Read multiple ADS registers. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Drv_ADS1299_csLow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADS1299__Library.html#gae7bfe7b22c142ad6af3606fc094dd149",tooltip="SPI chip select method. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Drv_GPIO_setPinState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#gaa0fc19aa74a1bf75817ba137e78f7a0a",tooltip="Set a GPIO pin state. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Drv_ADS1299_xfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADS1299__Library.html#gaacd804d5af6ab72174a9cb050dcf9041",tooltip="SPI communication method. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="spi_rw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__Library.html#ga3808c285915bc0c410f4188eafce502d",tooltip="Faster way to transfer a single a byte via SSP. "];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="delayUs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Devices__Library.html#ga120f8cfcae7121ef62deee0473cf19ee",tooltip="Delay in microseconds. "];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Drv_ADS1299_csHigh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADS1299__Library.html#gad90e09cf6259d704d03a6b3f569d0976",tooltip="SPI chip de-select. "];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="delayMs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Devices__Library.html#gadde208bf0ea8bb35d8606d3859219a40",tooltip="Delay in milliseconds. "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Drv_ADS1299_getRegistersData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADS1299__Library.html#ga790bde97963d9c00dc481bd2bbe91628",tooltip="Return a array with ADS1299 registers data. "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Drv_UART_Send",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__Library.html#ga3cd9c151bd9649652b8f6c7a8a371f4b",tooltip="Send data by UART. "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Drv_Devices_printRegisterName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Devices__Library.html#gad85a26f63a893c55cdbbe5c4c0d0e69e",tooltip="To get and send by UART the name of a specific ADS1299 register. "];
+  Node13 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Drv_Devices_sendEOT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Devices__Library.html#ga26ea493ed59bae1e6a0c0af4ece44f40",tooltip="Send characters to shake hands with the controlling program. "];
+  Node14 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+}

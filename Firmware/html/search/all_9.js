@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['lastboardchanneldata',['lastBoardChannelData',['../group___a_d_s1299___library.html#ga30b28017ba0fb5095382131d900dbd8e',1,'lastBoardChannelData():&#160;Drv_ADS1299.c'],['../group___a_d_s1299___library.html#ga30b28017ba0fb5095382131d900dbd8e',1,'lastBoardChannelData():&#160;Drv_ADS1299.c']]],
+  ['lastboarddataraw',['lastBoardDataRaw',['../group___a_d_s1299___library.html#ga7a5c129fa297decd31d1b5b2860b3b6f',1,'lastBoardDataRaw():&#160;Drv_ADS1299.c'],['../group___a_d_s1299___library.html#ga7a5c129fa297decd31d1b5b2860b3b6f',1,'lastBoardDataRaw():&#160;Drv_ADS1299.c']]],
+  ['lastslavechanneldata',['lastSlaveChannelData',['../group___a_d_s1299___library.html#gaf412b1daf072ddca4def438f97d2c65c',1,'lastSlaveChannelData():&#160;Drv_ADS1299.c'],['../group___a_d_s1299___library.html#gaf412b1daf072ddca4def438f97d2c65c',1,'lastSlaveChannelData():&#160;Drv_ADS1299.c']]],
+  ['lastslavedataraw',['lastSlaveDataRaw',['../group___a_d_s1299___library.html#ga72ed7b344555cffff8c860e89e44afd6',1,'lastSlaveDataRaw():&#160;Drv_ADS1299.c'],['../group___a_d_s1299___library.html#ga72ed7b344555cffff8c860e89e44afd6',1,'lastSlaveDataRaw():&#160;Drv_ADS1299.c']]],
+  ['leadoffsettings',['leadOffSettings',['../group___a_d_s1299___library.html#ga51cd0f121d75eaf14e9e4847f125dd8a',1,'leadOffSettings():&#160;Drv_ADS1299.c'],['../group___a_d_s1299___library.html#ga51cd0f121d75eaf14e9e4847f125dd8a',1,'leadOffSettings():&#160;Drv_ADS1299.c']]],
+  ['leadoffsettingscounter',['leadOffSettingsCounter',['../group___devices___library.html#gacaa36aec7dee3c3535b27afc88dcfc9c',1,'leadOffSettingsCounter():&#160;Drv_Devices.c'],['../group___devices___library.html#gacaa36aec7dee3c3535b27afc88dcfc9c',1,'leadOffSettingsCounter():&#160;Drv_Devices.c']]],
+  ['led_5fr_5fpin',['LED_R_PIN',['../group___devices___library.html#ga22f3cf4ef9dadad8d78d5c59999100b6',1,'Drv_Devices.h']]],
+  ['led_5fr_5fport',['LED_R_PORT',['../group___devices___library.html#ga5a11a7cbc215e25401541277460113a4',1,'Drv_Devices.h']]],
+  ['led_5fv_5fpin',['LED_V_PIN',['../group___devices___library.html#gaefaaa0f7c44f79a6150287630f9531d6',1,'Drv_Devices.h']]],
+  ['led_5fv_5fport',['LED_V_PORT',['../group___devices___library.html#gab09c8e054071dd324e1527eadec02adf',1,'Drv_Devices.h']]],
+  ['loff',['LOFF',['../group___definitions___a_d_s1299.html#gabb4faa9cfd0d710c0b6311baf45f506f',1,'Definitions_ADS1299.h']]],
+  ['loff_5fflip',['LOFF_FLIP',['../group___definitions___a_d_s1299.html#ga167c29fc8bc9fe36ff80fbab3aef76d0',1,'Definitions_ADS1299.h']]],
+  ['loff_5ffreq_5f31p2hz',['LOFF_FREQ_31p2HZ',['../group___definitions___a_d_s1299.html#ga39701cbaad5955197512c40d8bcc9da2',1,'Definitions_ADS1299.h']]],
+  ['loff_5ffreq_5f7p8hz',['LOFF_FREQ_7p8HZ',['../group___definitions___a_d_s1299.html#gaecc7fd6b62148228d2657531feb87a2a',1,'Definitions_ADS1299.h']]],
+  ['loff_5ffreq_5fdc',['LOFF_FREQ_DC',['../group___definitions___a_d_s1299.html#gad7df75a5d4ad6b65e5b56bb0fd7cd81e',1,'Definitions_ADS1299.h']]],
+  ['loff_5ffreq_5ffs_5f4',['LOFF_FREQ_FS_4',['../group___definitions___a_d_s1299.html#gacd0137898658760009f19c444fd2f59e',1,'Definitions_ADS1299.h']]],
+  ['loff_5fmag_5f24na',['LOFF_MAG_24NA',['../group___definitions___a_d_s1299.html#gafd483c0197a6d292803e9ffa51bf11ef',1,'Definitions_ADS1299.h']]],
+  ['loff_5fmag_5f24ua',['LOFF_MAG_24UA',['../group___definitions___a_d_s1299.html#gadc2a3347e2d38ae91587a60682fd1284',1,'Definitions_ADS1299.h']]],
+  ['loff_5fmag_5f6na',['LOFF_MAG_6NA',['../group___definitions___a_d_s1299.html#ga10347bce19f154a1f9efdcbb45aa0af8',1,'Definitions_ADS1299.h']]],
+  ['loff_5fmag_5f6ua',['LOFF_MAG_6UA',['../group___definitions___a_d_s1299.html#ga5da349629444fdc460223637219ce572',1,'Definitions_ADS1299.h']]],
+  ['loff_5fsensn',['LOFF_SENSN',['../group___definitions___a_d_s1299.html#ga62fffa8684b8eae61de347e70fedef39',1,'Definitions_ADS1299.h']]],
+  ['loff_5fsensp',['LOFF_SENSP',['../group___definitions___a_d_s1299.html#gab3086af5aee3864fbaee44f58fbd90fa',1,'Definitions_ADS1299.h']]],
+  ['loff_5fstatn',['LOFF_STATN',['../group___definitions___a_d_s1299.html#ga294d95c8864fdd237709e896fc0b7f2c',1,'Definitions_ADS1299.h']]],
+  ['loff_5fstatp',['LOFF_STATP',['../group___definitions___a_d_s1299.html#ga80a21df4016d8e925264718cf7e4b74b',1,'Definitions_ADS1299.h']]],
+  ['lpc_5fssp',['LPC_SSP',['../group___s_s_p___library.html#ga3e1177fbcbb4d87f0a2391e59042a5fc',1,'Drv_SSP.h']]]
+];

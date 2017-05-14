@@ -1,0 +1,48 @@
+\hypertarget{board__sysinit_8c}{}\section{board\+\_\+sysinit.\+c File Reference}
+\label{board__sysinit_8c}\index{board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}}
+{\ttfamily \#include \char`\"{}board\+\_\+api.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__BOARD__COMMON__API_gae8d2d761b984f48c3dbb27dd32a8c119}{Board\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Set up and initialize all required blocks and functions related to the board hardware. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_gae417dc93d00f1a89f74220e569fac777}{Board\+\_\+\+Setup\+Clocking} (void)
+\begin{DoxyCompactList}\small\item\em Setup system clocking. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_ga8ac1dc465c66e1cc00f5ffd346904d97}{Board\+\_\+\+Setup\+Muxing} (void)
+\begin{DoxyCompactList}\small\item\em Setup pin multiplexer per board schematics. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_gaeb60ea85499a4208167ae2540086516a}{Board\+\_\+\+System\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Setup and initialize hardware prior to call to \hyperlink{group__Application__Layer_ga840291bc02cba5474a4cb46a9b9566fe}{main()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint32\+\_\+t \hyperlink{board__sysinit_8c_a2e84f0502f9a7fdd271b97c588696e6f}{Osc\+Rate\+In} = 12000000
+\item 
+S\+T\+A\+T\+IC const P\+I\+N\+M\+U\+X\+\_\+\+G\+R\+P\+\_\+T \hyperlink{board__sysinit_8c_a83f9db198e72e02aa18e2a202b741a2d}{pinmuxing} \mbox{[}$\,$\mbox{]}
+\item 
+const uint32\+\_\+t \hyperlink{board__sysinit_8c_af871586e83eea2ead0fc417e9e874afa}{R\+T\+C\+Osc\+Rate\+In} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}!Osc\+Rate\+In@{Osc\+Rate\+In}}
+\index{Osc\+Rate\+In@{Osc\+Rate\+In}!board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}}
+\subsubsection[{\texorpdfstring{Osc\+Rate\+In}{OscRateIn}}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\+\_\+t Osc\+Rate\+In = 12000000}\hypertarget{board__sysinit_8c_a2e84f0502f9a7fdd271b97c588696e6f}{}\label{board__sysinit_8c_a2e84f0502f9a7fdd271b97c588696e6f}
+
+
+Definition at line 86 of file board\+\_\+sysinit.\+c.
+
+\index{board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}!pinmuxing@{pinmuxing}}
+\index{pinmuxing@{pinmuxing}!board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}}
+\subsubsection[{\texorpdfstring{pinmuxing}{pinmuxing}}]{\setlength{\rightskip}{0pt plus 5cm}S\+T\+A\+T\+IC const P\+I\+N\+M\+U\+X\+\_\+\+G\+R\+P\+\_\+T pinmuxing\mbox{[}$\,$\mbox{]}}\hypertarget{board__sysinit_8c_a83f9db198e72e02aa18e2a202b741a2d}{}\label{board__sysinit_8c_a83f9db198e72e02aa18e2a202b741a2d}
+
+
+Definition at line 45 of file board\+\_\+sysinit.\+c.
+
+\index{board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}!R\+T\+C\+Osc\+Rate\+In@{R\+T\+C\+Osc\+Rate\+In}}
+\index{R\+T\+C\+Osc\+Rate\+In@{R\+T\+C\+Osc\+Rate\+In}!board\+\_\+sysinit.\+c@{board\+\_\+sysinit.\+c}}
+\subsubsection[{\texorpdfstring{R\+T\+C\+Osc\+Rate\+In}{RTCOscRateIn}}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\+\_\+t R\+T\+C\+Osc\+Rate\+In = 0}\hypertarget{board__sysinit_8c_af871586e83eea2ead0fc417e9e874afa}{}\label{board__sysinit_8c_af871586e83eea2ead0fc417e9e874afa}
+
+
+Definition at line 89 of file board\+\_\+sysinit.\+c.
+

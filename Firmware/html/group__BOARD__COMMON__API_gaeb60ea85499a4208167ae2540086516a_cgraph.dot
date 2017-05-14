@@ -1,0 +1,11 @@
+digraph "Board_SystemInit"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Board_SystemInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Board_SetupMuxing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__BOARD__COMMON__API.html#ga8ac1dc465c66e1cc00f5ffd346904d97",tooltip="Setup pin multiplexer per board schematics. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Board_SetupClocking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__BOARD__COMMON__API.html#gae417dc93d00f1a89f74220e569fac777",tooltip="Setup system clocking. "];
+}

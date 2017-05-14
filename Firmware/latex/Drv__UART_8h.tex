@@ -1,0 +1,37 @@
+\hypertarget{Drv__UART_8h}{}\section{Drv\+\_\+\+U\+A\+R\+T.\+h File Reference}
+\label{Drv__UART_8h}\index{Drv\+\_\+\+U\+A\+R\+T.\+h@{Drv\+\_\+\+U\+A\+R\+T.\+h}}
+{\ttfamily \#include \char`\"{}lpc\+\_\+types.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__UART__Library_gad4455691936f92fdd6c37566fc58ba1f}{B\+A\+U\+D\+\_\+\+R\+A\+TE}~921600
+\item 
+\#define \hyperlink{group__UART__Library_gafa87a27ed6f715eb90d4db80687e93bf}{H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+A\+ME}~U\+A\+R\+T0\+\_\+\+I\+R\+Q\+Handler
+\item 
+\#define \hyperlink{group__UART__Library_ga7c3d3b9d5cf2685f7fdb298eaf359875}{I\+R\+Q\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}~U\+A\+R\+T0\+\_\+\+I\+R\+Qn
+\item 
+\#define \hyperlink{group__UART__Library_gaf9c71990720971fa35b971b5e305c05b}{U\+A\+R\+T\+\_\+\+R\+R\+B\+\_\+\+S\+I\+ZE}~32	/$\ast$ Receive $\ast$/
+\item 
+\#define \hyperlink{group__UART__Library_ga43200fe4a9ea07a8a7f41b484fce9a18}{U\+A\+R\+T\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}~L\+P\+C\+\_\+\+U\+A\+R\+T0
+\item 
+\#define \hyperlink{group__UART__Library_ga5fe77d3c1b35665239feac7a45b514a6}{U\+A\+R\+T\+\_\+\+S\+R\+B\+\_\+\+S\+I\+ZE}~128	/$\ast$ Send $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{group__UART__Library_ga7a96fcb2dfc23bcf106ef05a6e348eb4}{Drv\+\_\+\+U\+A\+R\+T\+\_\+available} ()
+\begin{DoxyCompactList}\small\item\em Indicates if there is new data to be read. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_ga4d7777f8692bb7fdf17e975025bfbf8a}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+De\+Init} ()
+\begin{DoxyCompactList}\small\item\em U\+A\+RT de-\/initialization. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_gae34ea7abfefbe2834e8b17aec557a30d}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+R\+Binit} ()
+\begin{DoxyCompactList}\small\item\em Ring Buffers initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__UART__Library_ga0332d0b4b9dee94a3464a62ab776b594}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+Read\+Byte} ()
+\begin{DoxyCompactList}\small\item\em Read one byte. \end{DoxyCompactList}\item 
+int \hyperlink{group__UART__Library_gac8130d4c4c932205906c516ff6afe684}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+Receive\+RB} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, int bytes)
+\begin{DoxyCompactList}\small\item\em Receive data by U\+A\+RT with Ring Buffer. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_ga3cd9c151bd9649652b8f6c7a8a371f4b}{Drv\+\_\+\+U\+A\+R\+T\+\_\+\+Send} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, int num\+Bytes)
+\begin{DoxyCompactList}\small\item\em Send data by U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_ga8026f78d22425b39818431d299d638a3}{Drv\+\_\+\+U\+A\+R\+T\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em U\+A\+RT initial setup and initialization. \end{DoxyCompactList}\item 
+void \hyperlink{group__UART__Library_gab1ae01fa9bacc6e16c6aff7f1e055b1d}{H\+A\+N\+D\+L\+E\+R\+\_\+\+N\+A\+ME} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT 0 interrupt handler using ring buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}

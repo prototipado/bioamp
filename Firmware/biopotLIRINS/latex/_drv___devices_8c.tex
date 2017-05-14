@@ -1,0 +1,511 @@
+\hypertarget{_drv___devices_8c}{}\section{src/\+Drv\+\_\+\+Devices.c File Reference}
+\label{_drv___devices_8c}\index{src/\+Drv\+\_\+\+Devices.\+c@{src/\+Drv\+\_\+\+Devices.\+c}}
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+Devices.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+A\+D\+S1299.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Definitions\+\_\+\+A\+D\+S1299.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+G\+P\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}board\+\_\+api.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_drv___devices_8c_a8092c357f91843e6fa9db02735addc7d}{Drv\+\_\+\+Devices\+\_\+event\+Serial} ()
+\begin{DoxyCompactList}\small\item\em Function for receiving new commands. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_afb56f6b90c50e36cd6e34665d85fb903}{Drv\+\_\+\+Devices\+\_\+get\+Commands} (uint8\+\_\+t token)
+\begin{DoxyCompactList}\small\item\em Function for interpreting commands. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a8584f49a773b7e9add0e51bb0057fb54}{Drv\+\_\+\+Devices\+\_\+stop\+Running} ()
+\begin{DoxyCompactList}\small\item\em Stop data acquisition. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a7f4ddcd86724d8aad896ff12e43146ca}{Drv\+\_\+\+Devices\+\_\+start\+Running} (int O\+U\+T\+\_\+\+T\+Y\+P\+E)
+\begin{DoxyCompactList}\small\item\em Start data acquisition. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a43e0b770fd7ccd57b3f0d5ddf0eda4be}{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch} ()
+\begin{DoxyCompactList}\small\item\em Start the system from scratch, send initial message and get the board ready to get commands. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a26ea493ed59bae1e6a0c0af4ece44f40}{Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T} ()
+\begin{DoxyCompactList}\small\item\em Send characters to shake hands with the controlling program. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a752ca1b164444c691ffe54ed89d848c8}{Drv\+\_\+\+Devices\+\_\+start\+Devices} ()
+\begin{DoxyCompactList}\small\item\em Call init and start functions of the different peripherals of the u\+C. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a1b75ac5dd3eb55ef54cff5de501875a9}{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings} (uint8\+\_\+t parameter)
+\begin{DoxyCompactList}\small\item\em Retrieve parameters and execute channel settings. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_a648ce331709a942df57efd5b8645db13}{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number} (uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Convert channel number from character to number. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_afd94e72e2e363f075a57a091e26424b2}{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Stop acquisition, set the channels and re-\/start acquisition. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_aa48520ff061081dab8c49d26bf9404dd}{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Set all channels to the default settings. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_acf4dbff760e8426996f21c8a68d77cef}{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State} (uint8\+\_\+t channel, uint8\+\_\+t start)
+\begin{DoxyCompactList}\small\item\em Activate or De-\/activate channel maintaining running state. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a42ce5be2b197d04b4b0a9918a11ea457}{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition} (uint8\+\_\+t test\+Input\+Code, uint8\+\_\+t amplitude\+Code, uint8\+\_\+t freq\+Code)
+\begin{DoxyCompactList}\small\item\em Set test inputs to all channels. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_ad214f99a7d211af8779b46b244f99d99}{Drv\+\_\+\+Devices\+\_\+print\+Registers} ()
+\begin{DoxyCompactList}\small\item\em Print the current state of all A\+D\+S1299 registers. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_ad85a26f63a893c55cdbbe5c4c0d0e69e}{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name} (uint8\+\_\+t reg\+Number)
+\begin{DoxyCompactList}\small\item\em To get and send by U\+A\+R\+T the name of a specific A\+D\+S1299 register. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a1a1a6145a5269b2a7ebd45abdb53b660}{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Print the current Default Channel Settings. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a87716766599b761bde56572ccaac7946}{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Change lead off detect settings and re-\/start device. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a91621cb0b85d8918aa835f198c827379}{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings} (uint8\+\_\+t parameter)
+\begin{DoxyCompactList}\small\item\em Retrieve parameters and execute channel settings. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a92e403bbfcda965385b78ce10bbea47a}{Drv\+\_\+\+Devices\+\_\+is\+Master} ()
+\begin{DoxyCompactList}\small\item\em Determines if the board is Master or Slave and set a flag. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_aeab801d2d0a8823545cfde29704edc96}{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master} ()
+\begin{DoxyCompactList}\small\item\em Return the state of the is\+Master flag. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a65091ea2e7c2a0500683edf1bbc844ad}{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running} ()
+\begin{DoxyCompactList}\small\item\em Return the state of the is\+\_\+running flag. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a828212dc5604557924cd8ea9e6252c6c}{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data} ()
+\begin{DoxyCompactList}\small\item\em Send via U\+A\+R\+T the data acquired by the A\+D\+S. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_a7a5e2ac941ca1d1f308f910539005d4b}{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave} ()
+\begin{DoxyCompactList}\small\item\em Start the system as Salve. Configure I/\+O pins. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___devices_8c_ab5e09814056d617c521549e542639b7e}{Sys\+Tick\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Handle interrupt from Sys\+Tick timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_drv___devices_8c_a95cbd6b99430748422cc048b4f29dc52}{is\+\_\+running} = F\+A\+L\+S\+E
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the A\+D\+S1299 is acquiring data or not. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a7ef266ee79910e6754e8783b550b4a0a}{get\+Channel\+Settings} = F\+A\+L\+S\+E
+\begin{DoxyCompactList}\small\item\em Flag to indicate if channel settings commands are being received. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_a2bc20b2f7f3efa988afcd5c19b3e2edf}{output\+Type} = O\+U\+T\+P\+U\+T\+\_\+8\+\_\+\+C\+H\+A\+N
+\begin{DoxyCompactList}\small\item\em Mode of use\+: 8 or 16 channels. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_ac011c12f1d5ab04cb87b6edaec1d24ad}{plus\+Counter} = 0
+\begin{DoxyCompactList}\small\item\em Counter to have control of the received commands. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_ae004df3f2b77e4d58eee171d2f76da40}{test\+Char} = 0
+\begin{DoxyCompactList}\small\item\em Auxiliary byte. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_a15bd8e07189205b21eb37b666895ee0e}{current\+Channel\+To\+Set} = 0
+\begin{DoxyCompactList}\small\item\em Keep track of what channel we are loading settings for. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_ac064adc9b9dc0e68d43cf71bd52a0fdb}{channel\+Settings\+Counter} = 0
+\begin{DoxyCompactList}\small\item\em Counter used to retrieve channel settings from serial port. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_ae41b989c13af450f21b18dd5ad2c414a}{use\+Filters} = F\+A\+L\+S\+E
+\begin{DoxyCompactList}\small\item\em Flag to indicate the use of filters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{_drv___devices_8c_acaa36aec7dee3c3535b27afc88dcfc9c}{lead\+Off\+Settings\+Counter} = 0
+\begin{DoxyCompactList}\small\item\em Counter used to retrieve lead off settings from serial port. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a774931d6c0caa199a9884bce2b300439}{get\+Lead\+Off\+Settings} = F\+A\+L\+S\+E
+\begin{DoxyCompactList}\small\item\em Flag to indicate if lead off settings commands are being received. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___devices_8c_a6ceb9b5a0a67762763468c0ac71705fe}{is\+Master} = F\+A\+L\+S\+E
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the board is Master (H\+I\+G\+H state) or Slave (L\+O\+W state) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_drv___devices_8c_a42ce5be2b197d04b4b0a9918a11ea457}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition@{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition}}
+\index{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition@{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition(uint8\+\_\+t test\+Input\+Code, uint8\+\_\+t amplitude\+Code, uint8\+\_\+t freq\+Code)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{test\+Input\+Code, }
+\item[{uint8\+\_\+t}]{amplitude\+Code, }
+\item[{uint8\+\_\+t}]{freq\+Code}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a42ce5be2b197d04b4b0a9918a11ea457}
+
+
+Set test inputs to all channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Code} & Input types \\
+\hline
+{\em amplitud\+Code} & Amplitude of the test signal\+: A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+N\+O\+C\+H\+A\+N\+G\+E, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+A\+M\+P\+\_\+1\+X, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+A\+M\+P\+\_\+2\+X \\
+\hline
+{\em freq\+Code} & Frequence of the test signal\+: A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+N\+O\+C\+H\+A\+N\+G\+E, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+L\+O\+W, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+P\+U\+L\+S\+E\+\_\+\+F\+A\+S\+T \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_a87716766599b761bde56572ccaac7946}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State}}
+\index{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State(uint8\+\_\+t channel)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a87716766599b761bde56572ccaac7946}
+
+
+Change lead off detect settings and re-\/start device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_acf4dbff760e8426996f21c8a68d77cef}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State}}
+\index{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State(uint8\+\_\+t channel, uint8\+\_\+t start)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel, }
+\item[{uint8\+\_\+t}]{start}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_acf4dbff760e8426996f21c8a68d77cef}
+
+
+Activate or De-\/activate channel maintaining running state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number \\
+\hline
+{\em start} & Channel desired state\+: T\+R\+U\+E (1) to activate channel, F\+A\+L\+S\+E (0) to de-\/activate channel \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_a8092c357f91843e6fa9db02735addc7d}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+event\+Serial@{Drv\+\_\+\+Devices\+\_\+event\+Serial}}
+\index{Drv\+\_\+\+Devices\+\_\+event\+Serial@{Drv\+\_\+\+Devices\+\_\+event\+Serial}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+event\+Serial()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+event\+Serial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a8092c357f91843e6fa9db02735addc7d}
+
+
+Function for receiving new commands. 
+
+\hypertarget{_drv___devices_8c_a648ce331709a942df57efd5b8645db13}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number@{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number@{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number(uint8\+\_\+t n)}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a648ce331709a942df57efd5b8645db13}
+
+
+Convert channel number from character to number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Character defining channel\+: \char`\"{}1-\/8\char`\"{}, \char`\"{}\+Q-\/\+I\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel number 
+\end{DoxyReturn}
+\hypertarget{_drv___devices_8c_afb56f6b90c50e36cd6e34665d85fb903}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+get\+Commands@{Drv\+\_\+\+Devices\+\_\+get\+Commands}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Commands@{Drv\+\_\+\+Devices\+\_\+get\+Commands}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+get\+Commands(uint8\+\_\+t token)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+get\+Commands (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{token}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_afb56f6b90c50e36cd6e34665d85fb903}
+
+
+Function for interpreting commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & Command to be decoded and interpreted \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_aeab801d2d0a8823545cfde29704edc96}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+get\+Is\+Master@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+get\+Is\+Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_aeab801d2d0a8823545cfde29704edc96}
+
+
+Return the state of the is\+Master flag. 
+
+\begin{DoxyReturn}{Returns}
+H\+I\+G\+H if the board is Master, L\+O\+W if the board is Slave 
+\end{DoxyReturn}
+\hypertarget{_drv___devices_8c_a65091ea2e7c2a0500683edf1bbc844ad}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+get\+Is\+Running@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+get\+Is\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a65091ea2e7c2a0500683edf1bbc844ad}
+
+
+Return the state of the is\+\_\+running flag. 
+
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if the board is running, F\+A\+L\+S\+E if the board is not acquiring data 
+\end{DoxyReturn}
+\hypertarget{_drv___devices_8c_a92e403bbfcda965385b78ce10bbea47a}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+is\+Master@{Drv\+\_\+\+Devices\+\_\+is\+Master}}
+\index{Drv\+\_\+\+Devices\+\_\+is\+Master@{Drv\+\_\+\+Devices\+\_\+is\+Master}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+is\+Master()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+is\+Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a92e403bbfcda965385b78ce10bbea47a}
+
+
+Determines if the board is Master or Slave and set a flag. 
+
+\begin{DoxyReturn}{Returns}
+H\+I\+G\+H if the board is Master, L\+O\+W if the board is Slave 
+\end{DoxyReturn}
+\hypertarget{_drv___devices_8c_a1b75ac5dd3eb55ef54cff5de501875a9}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings(uint8\+\_\+t parameter)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{parameter}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a1b75ac5dd3eb55ef54cff5de501875a9}
+
+
+Retrieve parameters and execute channel settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Setting parameter received as command\+: C\+H\+A\+N\+\_\+\+N\+U\+M, P\+O\+W\+E\+R\+\_\+\+D\+O\+W\+N, G\+A\+I\+N\+\_\+\+S\+E\+T, I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+E\+T, B\+I\+A\+S\+\_\+\+S\+E\+T, S\+R\+B2\+\_\+\+S\+E\+T, S\+R\+B1\+\_\+\+S\+E\+T \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_a91621cb0b85d8918aa835f198c827379}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings(uint8\+\_\+t parameter)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{parameter}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a91621cb0b85d8918aa835f198c827379}
+
+
+Retrieve parameters and execute channel settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Setting parameter received as command\+: P\+C\+H\+A\+N, N\+C\+H\+A\+N \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_a1a1a6145a5269b2a7ebd45abdb53b660}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a1a1a6145a5269b2a7ebd45abdb53b660}
+
+
+Print the current Default Channel Settings. 
+
+\hypertarget{_drv___devices_8c_ad85a26f63a893c55cdbbe5c4c0d0e69e}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+print\+Register\+Name@{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name@{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name(uint8\+\_\+t reg\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Register\+Name (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg\+Number}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_ad85a26f63a893c55cdbbe5c4c0d0e69e}
+
+
+To get and send by U\+A\+R\+T the name of a specific A\+D\+S1299 register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Number} & Number of register in decimal (0-\/23) \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_ad214f99a7d211af8779b46b244f99d99}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+print\+Registers@{Drv\+\_\+\+Devices\+\_\+print\+Registers}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Registers@{Drv\+\_\+\+Devices\+\_\+print\+Registers}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+print\+Registers()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Registers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_ad214f99a7d211af8779b46b244f99d99}
+
+
+Print the current state of all A\+D\+S1299 registers. 
+
+\hypertarget{_drv___devices_8c_a828212dc5604557924cd8ea9e6252c6c}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data@{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data}}
+\index{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data@{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a828212dc5604557924cd8ea9e6252c6c}
+
+
+Send via U\+A\+R\+T the data acquired by the A\+D\+S. 
+
+\hypertarget{_drv___devices_8c_a26ea493ed59bae1e6a0c0af4ece44f40}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T@{Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T}}
+\index{Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T@{Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a26ea493ed59bae1e6a0c0af4ece44f40}
+
+
+Send characters to shake hands with the controlling program. 
+
+\hypertarget{_drv___devices_8c_aa48520ff061081dab8c49d26bf9404dd}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings@{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings@{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_aa48520ff061081dab8c49d26bf9404dd}
+
+
+Set all channels to the default settings. 
+
+\hypertarget{_drv___devices_8c_a7a5e2ac941ca1d1f308f910539005d4b}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+start\+As\+Slave@{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave@{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+start\+As\+Slave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a7a5e2ac941ca1d1f308f910539005d4b}
+
+
+Start the system as Salve. Configure I/\+O pins. 
+
+\hypertarget{_drv___devices_8c_a752ca1b164444c691ffe54ed89d848c8}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+start\+Devices@{Drv\+\_\+\+Devices\+\_\+start\+Devices}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+Devices@{Drv\+\_\+\+Devices\+\_\+start\+Devices}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+start\+Devices()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+start\+Devices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a752ca1b164444c691ffe54ed89d848c8}
+
+
+Call init and start functions of the different peripherals of the u\+C. 
+
+\hypertarget{_drv___devices_8c_a43e0b770fd7ccd57b3f0d5ddf0eda4be}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch@{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch@{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a43e0b770fd7ccd57b3f0d5ddf0eda4be}
+
+
+Start the system from scratch, send initial message and get the board ready to get commands. 
+
+\hypertarget{_drv___devices_8c_a7f4ddcd86724d8aad896ff12e43146ca}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+start\+Running@{Drv\+\_\+\+Devices\+\_\+start\+Running}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+Running@{Drv\+\_\+\+Devices\+\_\+start\+Running}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+start\+Running(int O\+U\+T\+\_\+\+T\+Y\+P\+E)}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+start\+Running (
+\begin{DoxyParamCaption}
+\item[{int}]{O\+U\+T\+\_\+\+T\+Y\+P\+E}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a7f4ddcd86724d8aad896ff12e43146ca}
+
+
+Start data acquisition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em O\+U\+T\+\_\+\+T\+Y\+P\+E} & Define if quiet or how many channels are active\+: O\+U\+T\+P\+U\+T\+\_\+\+N\+O\+T\+H\+I\+N\+G, O\+U\+T\+P\+U\+T\+\_\+8\+\_\+\+C\+H\+A\+N, O\+U\+T\+P\+U\+T\+\_\+16\+\_\+\+C\+H\+A\+N \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+I\+G\+H if the device is running, L\+O\+W if not 
+\end{DoxyReturn}
+\hypertarget{_drv___devices_8c_a8584f49a773b7e9add0e51bb0057fb54}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+stop\+Running@{Drv\+\_\+\+Devices\+\_\+stop\+Running}}
+\index{Drv\+\_\+\+Devices\+\_\+stop\+Running@{Drv\+\_\+\+Devices\+\_\+stop\+Running}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+stop\+Running()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+stop\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_a8584f49a773b7e9add0e51bb0057fb54}
+
+
+Stop data acquisition. 
+
+\begin{DoxyReturn}{Returns}
+H\+I\+G\+H if the device is running, L\+O\+W if not 
+\end{DoxyReturn}
+\hypertarget{_drv___devices_8c_afd94e72e2e363f075a57a091e26424b2}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State}}
+\index{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State(uint8\+\_\+t channel)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_afd94e72e2e363f075a57a091e26424b2}
+
+
+Stop acquisition, set the channels and re-\/start acquisition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___devices_8c_ab5e09814056d617c521549e542639b7e}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!Sys\+Tick\+\_\+\+Handler@{Sys\+Tick\+\_\+\+Handler}}
+\index{Sys\+Tick\+\_\+\+Handler@{Sys\+Tick\+\_\+\+Handler}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{Sys\+Tick\+\_\+\+Handler(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Sys\+Tick\+\_\+\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_drv___devices_8c_ab5e09814056d617c521549e542639b7e}
+
+
+Handle interrupt from Sys\+Tick timer. 
+
+\begin{DoxyNote}{Note}
+Define what to do when the Sys\+Tick interrupt is called 
+\end{DoxyNote}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_drv___devices_8c_ac064adc9b9dc0e68d43cf71bd52a0fdb}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!channel\+Settings\+Counter@{channel\+Settings\+Counter}}
+\index{channel\+Settings\+Counter@{channel\+Settings\+Counter}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{channel\+Settings\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t channel\+Settings\+Counter = 0}\label{_drv___devices_8c_ac064adc9b9dc0e68d43cf71bd52a0fdb}
+
+
+Counter used to retrieve channel settings from serial port. 
+
+\hypertarget{_drv___devices_8c_a15bd8e07189205b21eb37b666895ee0e}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!current\+Channel\+To\+Set@{current\+Channel\+To\+Set}}
+\index{current\+Channel\+To\+Set@{current\+Channel\+To\+Set}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{current\+Channel\+To\+Set}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t current\+Channel\+To\+Set = 0}\label{_drv___devices_8c_a15bd8e07189205b21eb37b666895ee0e}
+
+
+Keep track of what channel we are loading settings for. 
+
+\hypertarget{_drv___devices_8c_a7ef266ee79910e6754e8783b550b4a0a}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!get\+Channel\+Settings@{get\+Channel\+Settings}}
+\index{get\+Channel\+Settings@{get\+Channel\+Settings}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{get\+Channel\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Channel\+Settings = F\+A\+L\+S\+E}\label{_drv___devices_8c_a7ef266ee79910e6754e8783b550b4a0a}
+
+
+Flag to indicate if channel settings commands are being received. 
+
+\hypertarget{_drv___devices_8c_a774931d6c0caa199a9884bce2b300439}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!get\+Lead\+Off\+Settings@{get\+Lead\+Off\+Settings}}
+\index{get\+Lead\+Off\+Settings@{get\+Lead\+Off\+Settings}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{get\+Lead\+Off\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Lead\+Off\+Settings = F\+A\+L\+S\+E}\label{_drv___devices_8c_a774931d6c0caa199a9884bce2b300439}
+
+
+Flag to indicate if lead off settings commands are being received. 
+
+\hypertarget{_drv___devices_8c_a95cbd6b99430748422cc048b4f29dc52}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!is\+\_\+running@{is\+\_\+running}}
+\index{is\+\_\+running@{is\+\_\+running}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{is\+\_\+running}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+\_\+running = F\+A\+L\+S\+E}\label{_drv___devices_8c_a95cbd6b99430748422cc048b4f29dc52}
+
+
+Flag to indicate if the A\+D\+S1299 is acquiring data or not. 
+
+\hypertarget{_drv___devices_8c_a6ceb9b5a0a67762763468c0ac71705fe}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!is\+Master@{is\+Master}}
+\index{is\+Master@{is\+Master}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{is\+Master}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Master = F\+A\+L\+S\+E}\label{_drv___devices_8c_a6ceb9b5a0a67762763468c0ac71705fe}
+
+
+Flag to indicate if the board is Master (H\+I\+G\+H state) or Slave (L\+O\+W state) 
+
+\hypertarget{_drv___devices_8c_acaa36aec7dee3c3535b27afc88dcfc9c}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!lead\+Off\+Settings\+Counter@{lead\+Off\+Settings\+Counter}}
+\index{lead\+Off\+Settings\+Counter@{lead\+Off\+Settings\+Counter}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{lead\+Off\+Settings\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t lead\+Off\+Settings\+Counter = 0}\label{_drv___devices_8c_acaa36aec7dee3c3535b27afc88dcfc9c}
+
+
+Counter used to retrieve lead off settings from serial port. 
+
+\hypertarget{_drv___devices_8c_a2bc20b2f7f3efa988afcd5c19b3e2edf}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!output\+Type@{output\+Type}}
+\index{output\+Type@{output\+Type}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{output\+Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t output\+Type = O\+U\+T\+P\+U\+T\+\_\+8\+\_\+\+C\+H\+A\+N}\label{_drv___devices_8c_a2bc20b2f7f3efa988afcd5c19b3e2edf}
+
+
+Mode of use\+: 8 or 16 channels. 
+
+\hypertarget{_drv___devices_8c_ac011c12f1d5ab04cb87b6edaec1d24ad}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!plus\+Counter@{plus\+Counter}}
+\index{plus\+Counter@{plus\+Counter}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{plus\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t plus\+Counter = 0}\label{_drv___devices_8c_ac011c12f1d5ab04cb87b6edaec1d24ad}
+
+
+Counter to have control of the received commands. 
+
+\hypertarget{_drv___devices_8c_ae004df3f2b77e4d58eee171d2f76da40}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!test\+Char@{test\+Char}}
+\index{test\+Char@{test\+Char}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{test\+Char}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t test\+Char = 0}\label{_drv___devices_8c_ae004df3f2b77e4d58eee171d2f76da40}
+
+
+Auxiliary byte. 
+
+\hypertarget{_drv___devices_8c_ae41b989c13af450f21b18dd5ad2c414a}{}\index{Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}!use\+Filters@{use\+Filters}}
+\index{use\+Filters@{use\+Filters}!Drv\+\_\+\+Devices.\+c@{Drv\+\_\+\+Devices.\+c}}
+\subsubsection[{use\+Filters}]{\setlength{\rightskip}{0pt plus 5cm}bool use\+Filters = F\+A\+L\+S\+E}\label{_drv___devices_8c_ae41b989c13af450f21b18dd5ad2c414a}
+
+
+Flag to indicate the use of filters. 
+

@@ -1,0 +1,11 @@
+\hypertarget{dir_4f25b6c743728aaf1583ef05431f1024}{}\section{biopot\+L\+I\+R\+I\+NS Directory Reference}
+\label{dir_4f25b6c743728aaf1583ef05431f1024}\index{biopot\+L\+I\+R\+I\+N\+S Directory Reference@{biopot\+L\+I\+R\+I\+N\+S Directory Reference}}
+Directory dependency graph for biopot\+L\+I\+R\+I\+NS\+:
+% FIG 0
+\subsection*{Directories}
+\begin{DoxyCompactItemize}
+\item 
+directory \hyperlink{dir_9e8a937057c080d24cdc4052568cef69}{inc}
+\item 
+directory \hyperlink{dir_d597c7465ec8fb3d9b67e1d9249d3304}{src}
+\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{group__SSP__Library}{}\section{S\+S\+P\+\_\+\+Library}
+\label{group__SSP__Library}\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__SSP__Library_ga3e1177fbcbb4d87f0a2391e59042a5fc}{L\+P\+C\+\_\+\+S\+SP}~L\+P\+C\+\_\+\+S\+S\+P0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__SSP__Library_ga564dfbd00e01e9e2f7e5cb1537b46db6}{Drv\+\_\+\+S\+S\+P\+\_\+de\+Init} ()
+\begin{DoxyCompactList}\small\item\em De-\/\+Init the S\+SP module. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__Library_ga0c5eb23f106efe0d4b8687874954c549}{Drv\+\_\+\+S\+S\+P\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Init the S\+SP module. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__Library_ga0f01059c0a84ecf456f3ad9d38b9794b}{Drv\+\_\+\+S\+S\+P\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em Configuration of format and data of the S\+SP module. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__SSP__Library_ga785ce7239c2c42f4a871322b9cff56b7}{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte} (uint8\+\_\+t to\+\_\+send)
+\begin{DoxyCompactList}\small\item\em Send and Receive a byte via S\+SP. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__SSP__Library_ga3808c285915bc0c410f4188eafce502d}{spi\+\_\+rw} (uint8\+\_\+t out)
+\begin{DoxyCompactList}\small\item\em Faster way to transfer a single a byte via S\+SP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}\char`\"{} Driver for controlling the Synchronous Serial Port. 
+
+\subsection{Macro Definition Documentation}
+\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}!L\+P\+C\+\_\+\+S\+SP@{L\+P\+C\+\_\+\+S\+SP}}
+\index{L\+P\+C\+\_\+\+S\+SP@{L\+P\+C\+\_\+\+S\+SP}!S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{L\+P\+C\+\_\+\+S\+SP}{LPC_SSP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+P\+C\+\_\+\+S\+SP~L\+P\+C\+\_\+\+S\+S\+P0}\hypertarget{group__SSP__Library_ga3e1177fbcbb4d87f0a2391e59042a5fc}{}\label{group__SSP__Library_ga3e1177fbcbb4d87f0a2391e59042a5fc}
+
+
+Definition at line 20 of file Drv\+\_\+\+S\+S\+P.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}!Drv\+\_\+\+S\+S\+P\+\_\+de\+Init@{Drv\+\_\+\+S\+S\+P\+\_\+de\+Init}}
+\index{Drv\+\_\+\+S\+S\+P\+\_\+de\+Init@{Drv\+\_\+\+S\+S\+P\+\_\+de\+Init}!S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+S\+S\+P\+\_\+de\+Init()}{Drv_SSP_deInit()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+S\+S\+P\+\_\+de\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__SSP__Library_ga564dfbd00e01e9e2f7e5cb1537b46db6}{}\label{group__SSP__Library_ga564dfbd00e01e9e2f7e5cb1537b46db6}
+
+
+De-\/\+Init the S\+SP module. 
+
+
+
+Definition at line 23 of file Drv\+\_\+\+S\+S\+P.\+c.
+
+\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}!Drv\+\_\+\+S\+S\+P\+\_\+init@{Drv\+\_\+\+S\+S\+P\+\_\+init}}
+\index{Drv\+\_\+\+S\+S\+P\+\_\+init@{Drv\+\_\+\+S\+S\+P\+\_\+init}!S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+S\+S\+P\+\_\+init()}{Drv_SSP_init()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+S\+S\+P\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__SSP__Library_ga0c5eb23f106efe0d4b8687874954c549}{}\label{group__SSP__Library_ga0c5eb23f106efe0d4b8687874954c549}
+
+
+Init the S\+SP module. 
+
+
+
+Definition at line 13 of file Drv\+\_\+\+S\+S\+P.\+c.
+
+\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}!Drv\+\_\+\+S\+S\+P\+\_\+setup@{Drv\+\_\+\+S\+S\+P\+\_\+setup}}
+\index{Drv\+\_\+\+S\+S\+P\+\_\+setup@{Drv\+\_\+\+S\+S\+P\+\_\+setup}!S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+S\+S\+P\+\_\+setup()}{Drv_SSP_setup()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+S\+S\+P\+\_\+setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__SSP__Library_ga0f01059c0a84ecf456f3ad9d38b9794b}{}\label{group__SSP__Library_ga0f01059c0a84ecf456f3ad9d38b9794b}
+
+
+Configuration of format and data of the S\+SP module. 
+
+
+
+Definition at line 31 of file Drv\+\_\+\+S\+S\+P.\+c.
+
+\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}!Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte@{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte}}
+\index{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte@{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte}!S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte(uint8\+\_\+t to\+\_\+send)}{Drv_SSP_transferByte(uint8_t to_send)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Drv\+\_\+\+S\+S\+P\+\_\+transfer\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{to\+\_\+send}
+\end{DoxyParamCaption}
+)}\hypertarget{group__SSP__Library_ga785ce7239c2c42f4a871322b9cff56b7}{}\label{group__SSP__Library_ga785ce7239c2c42f4a871322b9cff56b7}
+
+
+Send and Receive a byte via S\+SP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+send} & Byte to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Received byte 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Drv\+\_\+\+S\+S\+P.\+c.
+
+\index{S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}!spi\+\_\+rw@{spi\+\_\+rw}}
+\index{spi\+\_\+rw@{spi\+\_\+rw}!S\+S\+P\+\_\+\+Library@{S\+S\+P\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{spi\+\_\+rw(uint8\+\_\+t out)}{spi_rw(uint8_t out)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t spi\+\_\+rw (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__SSP__Library_ga3808c285915bc0c410f4188eafce502d}{}\label{group__SSP__Library_ga3808c285915bc0c410f4188eafce502d}
+
+
+Faster way to transfer a single a byte via S\+SP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Byte to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+in Received byte 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Drv\+\_\+\+S\+S\+P.\+c.
+

@@ -1,0 +1,12 @@
+digraph "lpc_board_biopotenciales_LIRINS" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_1973f8af722dc424d77ffc4be4e1bb39 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1973f8af722dc424d77ffc4be4e1bb39.html"];
+    dir_1973f8af722dc424d77ffc4be4e1bb39 [shape=plaintext label="lpc_board_biopotenciales_LIRINS"];
+    dir_eae1e0c71fae9bce609cee788af47060 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_eae1e0c71fae9bce609cee788af47060.html"];
+    dir_02e440919314f0e8d679efd9e64d218a [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_02e440919314f0e8d679efd9e64d218a.html"];
+  }
+  dir_02e440919314f0e8d679efd9e64d218a->dir_eae1e0c71fae9bce609cee788af47060 [headlabel="3", labeldistance=1.5 headhref="dir_000003_000004.html"];
+}
