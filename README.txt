@@ -23,6 +23,11 @@ THIS DESING IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND AN
 ===============================================================================
 */
 
+
+
+
+
+
 Laboratorio de Prototipado Electronico y 3D - FIUNER (http://ingenieria.uner.edu.ar/grupos/prototipado)
 
 BioAmp is an opensource project of a multichannel biopotential adquisition system for EEG, EMG, EOG and EOG signals.
