@@ -1,0 +1,11 @@
+digraph "readAdcVal"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="readAdcVal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_ADC_ReadValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADC__17XX__40XX.html#gab6374a3aa75b052970c472ee2e9f600e",tooltip="Read the ADC value from a channel. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_ADC_ReadByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADC__17XX__40XX.html#ga5dc774072fa55b145e57a25c1a146535",tooltip="Read the ADC value and convert it to 8bits value. "];
+}

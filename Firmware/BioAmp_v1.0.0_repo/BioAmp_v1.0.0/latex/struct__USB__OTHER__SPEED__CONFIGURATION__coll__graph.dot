@@ -1,0 +1,6 @@
+digraph "_USB_OTHER_SPEED_CONFIGURATION"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{_USB_OTHER_SPEED_CONFIGURATION\n|+ bConfigurationValue\l+ bDescriptorType\l+ bLength\l+ bmAttributes\l+ bMaxPower\l+ bNumInterfaces\l+ IConfiguration\l+ wTotalLength\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

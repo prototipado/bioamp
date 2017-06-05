@@ -1,0 +1,108 @@
+\hypertarget{group__USBD__HW}{}\section{U\+SB Device Controller Driver}
+\label{group__USBD__HW}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structUSBD__HW__API}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em Hardware A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structUSBD__HW__API}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+PI} \hyperlink{group__USBD__HW_ga4df5b7beaddc4e9267c320d92b4434fc}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Hardware A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} \{ \\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8d26afb2e56f4b1b788321a0d1633b33}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP} =1, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ad720a106a796d05d1dd52fb0b021be67}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aa284007e2d06d2f9241618b55c1bcd3a}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8966a8816143f41ac6aafd7215151f88}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13af973a80c8f31a5c9aa320b15cd230434}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3e17b2dcf495ff4befaeba2718affae4}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a1ba247a8c3cdc166098e817ec2808777}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3a3b0dc5766c4d17bd6d2daea5812fbc}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aaddab8476ea17ac9fb4e10796bc7c633}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a744297c96c9296f311a28da97df03001}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a6c66edac1510b9e9741a8f5019142214}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac469035908127847ebb32fd51a0a33bc}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a2e9c73676bebd4b0c4ebb412c2a53af4}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac9da611df8ba920792bb1388c70fbc53}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a327107e15682a2403deec540ca209670}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ae30ace519ceb787d84de55ebf5e4901e}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a7e46c0177f969c8be4e4a40784c7c2f4}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{group__USBD__HW_Sec_HWModDescription}{}\subsection{Module Description}\label{group__USBD__HW_Sec_HWModDescription}
+The Device Controller Driver Layer implements the routines to deal directly with the hardware. 
+
+\subsection{Typedef Documentation}
+\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T}{USBD_HW_API_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+PI}  {\bf U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T}}\hypertarget{group__USBD__HW_ga4df5b7beaddc4e9267c320d92b4434fc}{}\label{group__USBD__HW_ga4df5b7beaddc4e9267c320d92b4434fc}
+
+
+Hardware A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T@{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T@{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T}{USBD_EVENT_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T}}\hypertarget{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{}\label{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}
+U\+SB Endpoint/class handler Callback Events. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8d26afb2e56f4b1b788321a0d1633b33}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8d26afb2e56f4b1b788321a0d1633b33}
+}]1 Setup Packet received \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ad720a106a796d05d1dd52fb0b021be67}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ad720a106a796d05d1dd52fb0b021be67}
+}]2 O\+UT Packet received \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aa284007e2d06d2f9241618b55c1bcd3a}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aa284007e2d06d2f9241618b55c1bcd3a}
+}]3 IN Packet sent \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8966a8816143f41ac6aafd7215151f88}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8966a8816143f41ac6aafd7215151f88}
+}]4 O\+UT Packet -\/ Not Acknowledged \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13af973a80c8f31a5c9aa320b15cd230434}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13af973a80c8f31a5c9aa320b15cd230434}
+}]5 IN Packet -\/ Not Acknowledged \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3e17b2dcf495ff4befaeba2718affae4}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3e17b2dcf495ff4befaeba2718affae4}
+}]6 O\+UT Packet -\/ Stalled \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a1ba247a8c3cdc166098e817ec2808777}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a1ba247a8c3cdc166098e817ec2808777}
+}]7 IN Packet -\/ Stalled \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3a3b0dc5766c4d17bd6d2daea5812fbc}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3a3b0dc5766c4d17bd6d2daea5812fbc}
+}]8 D\+MA O\+UT EP -\/ End of Transfer \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aaddab8476ea17ac9fb4e10796bc7c633}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aaddab8476ea17ac9fb4e10796bc7c633}
+}]9 D\+MA IN EP -\/ End of Transfer \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a744297c96c9296f311a28da97df03001}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a744297c96c9296f311a28da97df03001}
+}]10 D\+MA O\+UT EP -\/ New Descriptor Request \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a6c66edac1510b9e9741a8f5019142214}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a6c66edac1510b9e9741a8f5019142214}
+}]11 D\+MA IN EP -\/ New Descriptor Request \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac469035908127847ebb32fd51a0a33bc}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac469035908127847ebb32fd51a0a33bc}
+}]12 D\+MA O\+UT EP -\/ Error \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a2e9c73676bebd4b0c4ebb412c2a53af4}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a2e9c73676bebd4b0c4ebb412c2a53af4}
+}]13 D\+MA IN EP -\/ Error \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac9da611df8ba920792bb1388c70fbc53}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac9da611df8ba920792bb1388c70fbc53}
+}]14 Reset event recieved \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a327107e15682a2403deec540ca209670}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a327107e15682a2403deec540ca209670}
+}]15 Start of Frame event \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ae30ace519ceb787d84de55ebf5e4901e}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ae30ace519ceb787d84de55ebf5e4901e}
+}]16 Device status events \index{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR}!U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}}\index{U\+S\+B Device Controller Driver@{U\+S\+B Device Controller Driver}!U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR@{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR\hypertarget{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a7e46c0177f969c8be4e4a40784c7c2f4}{}\label{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a7e46c0177f969c8be4e4a40784c7c2f4}
+}]17 Device error events \end{description}
+\end{Desc}
+
+
+Definition at line 48 of file usbd\+\_\+hw.\+h.
+

@@ -1,10 +1,6 @@
 var files =
 [
-    [ "biopotLIRINS.c", "biopotLIRINS_8c.html", "biopotLIRINS_8c" ],
-    [ "board.c", "board_8c.html", "board_8c" ],
-    [ "board.h", "board_8h.html", null ],
-    [ "board_api.h", "board__api_8h.html", "board__api_8h" ],
-    [ "board_sysinit.c", "board__sysinit_8c.html", "board__sysinit_8c" ],
+    [ "BioAmp.c", "BioAmp_8c.html", "BioAmp_8c" ],
     [ "cr_startup_lpc175x_6x.c", "cr__startup__lpc175x__6x_8c.html", "cr__startup__lpc175x__6x_8c" ],
     [ "crp.c", "crp_8c.html", null ],
     [ "Definitions_ADS1299.h", "Definitions__ADS1299_8h.html", "Definitions__ADS1299_8h" ],
@@ -18,6 +14,5 @@ var files =
     [ "Drv_SSP.h", "Drv__SSP_8h.html", "Drv__SSP_8h" ],
     [ "Drv_UART.c", "Drv__UART_8c.html", "Drv__UART_8c" ],
     [ "Drv_UART.h", "Drv__UART_8h.html", "Drv__UART_8h" ],
-    [ "retarget.h", "retarget_8h.html", null ],
     [ "sysinit.c", "sysinit_8c.html", "sysinit_8c" ]
 ];

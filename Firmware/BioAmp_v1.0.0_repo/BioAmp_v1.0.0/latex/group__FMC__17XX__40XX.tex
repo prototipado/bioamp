@@ -1,0 +1,179 @@
+\hypertarget{group__FMC__17XX__40XX}{}\section{C\+H\+IP\+: L\+P\+C17xx/40xx F\+L\+A\+SH Memory Controller driver}
+\label{group__FMC__17XX__40XX}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structLPC__FMC__T}{L\+P\+C\+\_\+\+F\+M\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em F\+L\+A\+SH Memory Controller Unit register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__FMC__17XX__40XX_ga1c732efb3127d9e699c46b4a89706639}{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY}~(1\+U\+L $<$$<$ 17)
+\item 
+\#define \hyperlink{group__FMC__17XX__40XX_ga3d2c7a30422c68c08d48b4e4f03a2787}{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT}~(1 $<$$<$ 2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__FMC__17XX__40XX_gab7ec5bd928d355795e7cd4f56371a9ec}{Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy} (void)
+\begin{DoxyCompactList}\small\item\em Clear signature generation completion flag. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__FMC__17XX__40XX_ga12cde229d831a9e32208b038651ca228}{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature} (uint32\+\_\+t start, uint32\+\_\+t stop)
+\begin{DoxyCompactList}\small\item\em Start computation of a signature for a F\+L\+A\+SH memory range. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__FMC__17XX__40XX_ga1341098e386d4291bf7ad3fb43b6d3bc}{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks} (uint32\+\_\+t start, uint32\+\_\+t blocks)
+\begin{DoxyCompactList}\small\item\em Start computation of a signature for a F\+L\+A\+SH memory address and block count. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__FMC__17XX__40XX_ga800317f87d55b213bdbd9aebe7c2a6b6}{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature} (int index)
+\begin{DoxyCompactList}\small\item\em Returns the generated F\+L\+A\+SH signature value. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{group__FMC__17XX__40XX_gaf2d1ec53b9f1e3e79cd6e9389597220d}{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy} (void)
+\begin{DoxyCompactList}\small\item\em Check for signature generation completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY@{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY}}
+\index{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY@{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY}{FMC_FLASHSIG_BUSY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY~(1\+U\+L $<$$<$ 17)}\hypertarget{group__FMC__17XX__40XX_ga1c732efb3127d9e699c46b4a89706639}{}\label{group__FMC__17XX__40XX_ga1c732efb3127d9e699c46b4a89706639}
+
+
+Definition at line 60 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT@{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT}}
+\index{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT@{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT}{FMC_FLASHSIG_STAT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT~(1 $<$$<$ 2)}\hypertarget{group__FMC__17XX__40XX_ga3d2c7a30422c68c08d48b4e4f03a2787}{}\label{group__FMC__17XX__40XX_ga3d2c7a30422c68c08d48b4e4f03a2787}
+
+
+Definition at line 63 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy@{Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy}}
+\index{Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy@{Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy(void)}{Chip_FMC_ClearSignatureBusy(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__FMC__17XX__40XX_gab7ec5bd928d355795e7cd4f56371a9ec}{}\label{group__FMC__17XX__40XX_gab7ec5bd928d355795e7cd4f56371a9ec}
+
+
+Clear signature generation completion flag. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature@{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature}}
+\index{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature@{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature(uint32\+\_\+t start, uint32\+\_\+t stop)}{Chip_FMC_ComputeSignature(uint32_t start, uint32_t stop)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{start, }
+\item[{uint32\+\_\+t}]{stop}
+\end{DoxyParamCaption}
+)}\hypertarget{group__FMC__17XX__40XX_ga12cde229d831a9e32208b038651ca228}{}\label{group__FMC__17XX__40XX_ga12cde229d831a9e32208b038651ca228}
+
+
+Start computation of a signature for a F\+L\+A\+SH memory range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & \+: Starting F\+L\+A\+SH address for computation, must be aligned on 16 byte boundary \\
+\hline
+{\em stop} & \+: Ending F\+L\+A\+SH address for computation, must be aligned on 16 byte boundary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Only bits 20..4 are used for the F\+L\+A\+SH signature computation. Use the \hyperlink{group__FMC__17XX__40XX_gaf2d1ec53b9f1e3e79cd6e9389597220d}{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy()} function to determine when the signature computation operation is complete and use the \hyperlink{group__FMC__17XX__40XX_ga800317f87d55b213bdbd9aebe7c2a6b6}{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature()} function to get the computed signature. 
+\end{DoxyNote}
+
+
+Definition at line 75 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks@{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks}}
+\index{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks@{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks(uint32\+\_\+t start, uint32\+\_\+t blocks)}{Chip_FMC_ComputeSignatureBlocks(uint32_t start, uint32_t blocks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{start, }
+\item[{uint32\+\_\+t}]{blocks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__FMC__17XX__40XX_ga1341098e386d4291bf7ad3fb43b6d3bc}{}\label{group__FMC__17XX__40XX_ga1341098e386d4291bf7ad3fb43b6d3bc}
+
+
+Start computation of a signature for a F\+L\+A\+SH memory address and block count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & \+: Starting F\+L\+A\+SH address for computation, must be aligned on 16 byte boundary \\
+\hline
+{\em blocks} & \+: Number of 16 byte blocks used for computation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Only bits 20..4 are used for the F\+L\+A\+SH signature computation. Use the \hyperlink{group__FMC__17XX__40XX_gaf2d1ec53b9f1e3e79cd6e9389597220d}{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy()} function to determine when the signature computation operation is complete and the \hyperlink{group__FMC__17XX__40XX_ga800317f87d55b213bdbd9aebe7c2a6b6}{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature()} function to get the computed signature. 
+\end{DoxyNote}
+
+
+Definition at line 92 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature@{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature}}
+\index{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature@{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature(int index)}{Chip_FMC_GetSignature(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group__FMC__17XX__40XX_ga800317f87d55b213bdbd9aebe7c2a6b6}{}\label{group__FMC__17XX__40XX_ga800317f87d55b213bdbd9aebe7c2a6b6}
+
+
+Returns the generated F\+L\+A\+SH signature value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \+: Signature index to get -\/ use 0 to F\+M\+S\+W0, 1 to F\+M\+S\+W1, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the generated F\+L\+A\+SH signature value 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}!Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy@{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy}}
+\index{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy@{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy}!C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx F\+L\+A\+S\+H Memory Controller driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy(void)}{Chip_FMC_IsSignatureBusy(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} bool Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__FMC__17XX__40XX_gaf2d1ec53b9f1e3e79cd6e9389597220d}{}\label{group__FMC__17XX__40XX_gaf2d1ec53b9f1e3e79cd6e9389597220d}
+
+
+Check for signature generation completion. 
+
+\begin{DoxyReturn}{Returns}
+true if the signature computation is running, false if finished 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file fmc\+\_\+17xx\+\_\+40xx.\+h.
+

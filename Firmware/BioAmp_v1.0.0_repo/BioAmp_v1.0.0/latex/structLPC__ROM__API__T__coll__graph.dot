@@ -1,0 +1,6 @@
+digraph "LPC_ROM_API_T"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{LPC_ROM_API_T\n|+ reserved0\l+ reserved1\l+ reserved10\l+ reserved2\l+ reserved3\l+ reserved4\l+ reserved5\l+ reserved6\l+ reserved7\l+ reserved8\l+ reserved9\l+ usbdApiBase\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

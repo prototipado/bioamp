@@ -1,0 +1,36 @@
+digraph "Drv_SSP_transferMultiplBytes"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Drv_SSP_transferMultiplBytes",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_SSP_RWFrames_Blocking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga302a381ad4d291164144ad2720399078",tooltip="SSP Polling Read/Write in blocking mode. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_SSP_GetStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga82dd278bcdbd80eaacc43abc211a970f",tooltip="Get the current status of SSP controller. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_SSP_ReceiveFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga7da053acf90aff24ca59bdf673207aac",tooltip="Get received SSP data. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_SSP_ClearIntPending",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga5fe8047a36b3055251cff755d339ca4a",tooltip="Clear the corresponding interrupt condition(s) in the SSP controller. "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Chip_SSP_GetDataSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga421d39f6094d0f335e5acbc3dd5f0b09",tooltip="Get the number of bits transferred in each frame. "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="SSP_Write2BFifo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssp__17xx__40xx_8c.html#a9c98fc8b1dcf42da02317388972abc5b"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Chip_SSP_SendFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#gab01849b80cad7f46924a04346560006c",tooltip="Send SSP 16-bit data. "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Chip_SSP_SetClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga49832a18e0618a82afd66caa6f868445",tooltip="Set up output clocks per bit for SSP bus. "];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Chip_SSP_GetRawIntStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SSP__17XX__40XX.html#ga0cc48f6c5bea491f2965b5b6fd0dcf69",tooltip="Get the raw interrupt status. "];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="SSP_Read2BFifo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssp__17xx__40xx_8c.html#aa291d1079d31fe085aa86b70aa21157d"];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="SSP_Write1BFifo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssp__17xx__40xx_8c.html#a71e1884ac83b1945523e96f19674efcd"];
+  Node12 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="SSP_Read1BFifo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssp__17xx__40xx_8c.html#aca75d71df356e4e04cbcbeadf96c52c6"];
+  Node13 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

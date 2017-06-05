@@ -1,0 +1,6 @@
+digraph "_USB_DFU_FUNC_DESCRIPTOR"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{_USB_DFU_FUNC_DESCRIPTOR\n|+ bcdDFUVersion\l+ bDescriptorType\l+ bLength\l+ bmAttributes\l+ wDetachTimeOut\l+ wTransferSize\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

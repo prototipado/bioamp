@@ -1,0 +1,11 @@
+digraph "Chip_I2C_Init"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_I2C_Init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="enableClk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#a17af46cefb0e538e13e29a6610cdc404"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_Clock_EnablePeriphClock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gac63024a1f928ba359c4f4cac7e48fe39",tooltip="Enables power and clocking for a peripheral. "];
+}

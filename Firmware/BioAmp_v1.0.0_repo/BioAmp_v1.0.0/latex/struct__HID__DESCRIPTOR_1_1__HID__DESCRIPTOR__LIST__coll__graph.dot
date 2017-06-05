@@ -1,0 +1,6 @@
+digraph "_HID_DESCRIPTOR::_HID_DESCRIPTOR_LIST"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{_HID_DESCRIPTOR::_HID\l_DESCRIPTOR_LIST\n|+ bDescriptorType\l+ wDescriptorLength\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

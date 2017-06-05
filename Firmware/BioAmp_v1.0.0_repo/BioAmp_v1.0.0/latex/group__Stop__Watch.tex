@@ -1,0 +1,349 @@
+\hypertarget{group__Stop__Watch}{}\section{C\+H\+IP\+: Stopwatch primitives.}
+\label{group__Stop__Watch}\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__Stop__Watch_gaa3bfba465962b310e4a5bd18292e8f87}{Stop\+Watch\+\_\+\+Delay\+Ms} (uint32\+\_\+t mS)
+\begin{DoxyCompactList}\small\item\em Delays the given number of mS using stopwatch primitives. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__Stop__Watch_ga744f358982209fe277eb21843e88a2d9}{Stop\+Watch\+\_\+\+Delay\+Ticks} (uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Delays the given number of ticks using stopwatch primitives. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__Stop__Watch_ga3bc7706d1a9cb32888f82b2874c3655c}{Stop\+Watch\+\_\+\+Delay\+Us} (uint32\+\_\+t uS)
+\begin{DoxyCompactList}\small\item\em Delays the given number of uS using stopwatch primitives. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__Stop__Watch_ga0a0b6b9a4391ae5f4fcccb22a2a35f73}{Stop\+Watch\+\_\+\+Elapsed} (uint32\+\_\+t start\+Time)
+\begin{DoxyCompactList}\small\item\em Returns number of ticks elapsed since stopwatch was started. \end{DoxyCompactList}\item 
+void \hyperlink{group__Stop__Watch_gaa0f8ea277b700d20b4322a15d9ddf32c}{Stop\+Watch\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize stopwatch. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga00f0c8411acd07344c7dd3cac8ec6d3e}{Stop\+Watch\+\_\+\+Ms\+To\+Ticks} (uint32\+\_\+t mS)
+\begin{DoxyCompactList}\small\item\em Converts from mS to stopwatch ticks. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga0dbab611d6cbdd4faad5018131aca140}{Stop\+Watch\+\_\+\+Start} (void)
+\begin{DoxyCompactList}\small\item\em Start a stopwatch. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_gae780d65d75ed3ca6dbd33389479eed9f}{Stop\+Watch\+\_\+\+Ticks\+Per\+Second} (void)
+\begin{DoxyCompactList}\small\item\em Returns number of ticks per second of the stopwatch timer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_gab62ee68f7b01b5c14b0d19c3c391ca02}{Stop\+Watch\+\_\+\+Ticks\+To\+Ms} (uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Converts from stopwatch ticks to mS. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga76fc3c7b473615677932efe3e5d0e142}{Stop\+Watch\+\_\+\+Ticks\+To\+Us} (uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Converts from stopwatch ticks to uS. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga65ab3801fdb76aab8879a0698fc4df45}{Stop\+Watch\+\_\+\+Us\+To\+Ticks} (uint32\+\_\+t uS)
+\begin{DoxyCompactList}\small\item\em Converts from uS to stopwatch ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Delay\+Ms@{Stop\+Watch\+\_\+\+Delay\+Ms}}
+\index{Stop\+Watch\+\_\+\+Delay\+Ms@{Stop\+Watch\+\_\+\+Delay\+Ms}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Delay\+Ms(uint32\+\_\+t m\+S)}{StopWatch_DelayMs(uint32_t mS)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Stop\+Watch\+\_\+\+Delay\+Ms (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{mS}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_gaa3bfba465962b310e4a5bd18292e8f87}{}\label{group__Stop__Watch_gaa3bfba465962b310e4a5bd18292e8f87}
+
+
+Delays the given number of mS using stopwatch primitives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mS} & \+: Number of mS to delay \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file stopwatch.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Delay\+Ticks@{Stop\+Watch\+\_\+\+Delay\+Ticks}}
+\index{Stop\+Watch\+\_\+\+Delay\+Ticks@{Stop\+Watch\+\_\+\+Delay\+Ticks}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Delay\+Ticks(uint32\+\_\+t ticks)}{StopWatch_DelayTicks(uint32_t ticks)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Stop\+Watch\+\_\+\+Delay\+Ticks (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ticks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga744f358982209fe277eb21843e88a2d9}{}\label{group__Stop__Watch_ga744f358982209fe277eb21843e88a2d9}
+
+
+Delays the given number of ticks using stopwatch primitives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & \+: Number of ticks to delay \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file stopwatch.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Delay\+Us@{Stop\+Watch\+\_\+\+Delay\+Us}}
+\index{Stop\+Watch\+\_\+\+Delay\+Us@{Stop\+Watch\+\_\+\+Delay\+Us}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Delay\+Us(uint32\+\_\+t u\+S)}{StopWatch_DelayUs(uint32_t uS)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Stop\+Watch\+\_\+\+Delay\+Us (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{uS}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga3bc7706d1a9cb32888f82b2874c3655c}{}\label{group__Stop__Watch_ga3bc7706d1a9cb32888f82b2874c3655c}
+
+
+Delays the given number of uS using stopwatch primitives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uS} & \+: Number of uS to delay \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file stopwatch.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Elapsed@{Stop\+Watch\+\_\+\+Elapsed}}
+\index{Stop\+Watch\+\_\+\+Elapsed@{Stop\+Watch\+\_\+\+Elapsed}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Elapsed(uint32\+\_\+t start\+Time)}{StopWatch_Elapsed(uint32_t startTime)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint32\+\_\+t Stop\+Watch\+\_\+\+Elapsed (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{start\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga0a0b6b9a4391ae5f4fcccb22a2a35f73}{}\label{group__Stop__Watch_ga0a0b6b9a4391ae5f4fcccb22a2a35f73}
+
+
+Returns number of ticks elapsed since stopwatch was started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & \+: Time returned by \hyperlink{group__Stop__Watch_ga0dbab611d6cbdd4faad5018131aca140}{Stop\+Watch\+\_\+\+Start()}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of ticks elapsed since stopwatch was started 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file stopwatch.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Init@{Stop\+Watch\+\_\+\+Init}}
+\index{Stop\+Watch\+\_\+\+Init@{Stop\+Watch\+\_\+\+Init}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Init(void)}{StopWatch_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Stop\+Watch\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_gaa0f8ea277b700d20b4322a15d9ddf32c}{}\label{group__Stop__Watch_gaa0f8ea277b700d20b4322a15d9ddf32c}
+
+
+Initialize stopwatch. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Ms\+To\+Ticks@{Stop\+Watch\+\_\+\+Ms\+To\+Ticks}}
+\index{Stop\+Watch\+\_\+\+Ms\+To\+Ticks@{Stop\+Watch\+\_\+\+Ms\+To\+Ticks}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Ms\+To\+Ticks(uint32\+\_\+t m\+S)}{StopWatch_MsToTicks(uint32_t mS)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Stop\+Watch\+\_\+\+Ms\+To\+Ticks (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{mS}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga00f0c8411acd07344c7dd3cac8ec6d3e}{}\label{group__Stop__Watch_ga00f0c8411acd07344c7dd3cac8ec6d3e}
+
+
+Converts from mS to stopwatch ticks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mS} & \+: Duration in mS to convert to ticks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of ticks in given number of mS 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Start@{Stop\+Watch\+\_\+\+Start}}
+\index{Stop\+Watch\+\_\+\+Start@{Stop\+Watch\+\_\+\+Start}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Start(void)}{StopWatch_Start(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Stop\+Watch\+\_\+\+Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga0dbab611d6cbdd4faad5018131aca140}{}\label{group__Stop__Watch_ga0dbab611d6cbdd4faad5018131aca140}
+
+
+Start a stopwatch. 
+
+\begin{DoxyReturn}{Returns}
+Current cycle count 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Ticks\+Per\+Second@{Stop\+Watch\+\_\+\+Ticks\+Per\+Second}}
+\index{Stop\+Watch\+\_\+\+Ticks\+Per\+Second@{Stop\+Watch\+\_\+\+Ticks\+Per\+Second}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Ticks\+Per\+Second(void)}{StopWatch_TicksPerSecond(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Stop\+Watch\+\_\+\+Ticks\+Per\+Second (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_gae780d65d75ed3ca6dbd33389479eed9f}{}\label{group__Stop__Watch_gae780d65d75ed3ca6dbd33389479eed9f}
+
+
+Returns number of ticks per second of the stopwatch timer. 
+
+\begin{DoxyReturn}{Returns}
+Number of ticks per second of the stopwatch timer 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Ticks\+To\+Ms@{Stop\+Watch\+\_\+\+Ticks\+To\+Ms}}
+\index{Stop\+Watch\+\_\+\+Ticks\+To\+Ms@{Stop\+Watch\+\_\+\+Ticks\+To\+Ms}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Ticks\+To\+Ms(uint32\+\_\+t ticks)}{StopWatch_TicksToMs(uint32_t ticks)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Stop\+Watch\+\_\+\+Ticks\+To\+Ms (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ticks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_gab62ee68f7b01b5c14b0d19c3c391ca02}{}\label{group__Stop__Watch_gab62ee68f7b01b5c14b0d19c3c391ca02}
+
+
+Converts from stopwatch ticks to mS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & \+: Duration in ticks to convert to mS. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of mS in given number of ticks 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Ticks\+To\+Us@{Stop\+Watch\+\_\+\+Ticks\+To\+Us}}
+\index{Stop\+Watch\+\_\+\+Ticks\+To\+Us@{Stop\+Watch\+\_\+\+Ticks\+To\+Us}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Ticks\+To\+Us(uint32\+\_\+t ticks)}{StopWatch_TicksToUs(uint32_t ticks)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Stop\+Watch\+\_\+\+Ticks\+To\+Us (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{ticks}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga76fc3c7b473615677932efe3e5d0e142}{}\label{group__Stop__Watch_ga76fc3c7b473615677932efe3e5d0e142}
+
+
+Converts from stopwatch ticks to uS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & \+: Duration in ticks to convert to uS. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of uS in given number of ticks 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\index{C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}!Stop\+Watch\+\_\+\+Us\+To\+Ticks@{Stop\+Watch\+\_\+\+Us\+To\+Ticks}}
+\index{Stop\+Watch\+\_\+\+Us\+To\+Ticks@{Stop\+Watch\+\_\+\+Us\+To\+Ticks}!C\+H\+I\+P\+: Stopwatch primitives.@{C\+H\+I\+P\+: Stopwatch primitives.}}
+\subsubsection[{\texorpdfstring{Stop\+Watch\+\_\+\+Us\+To\+Ticks(uint32\+\_\+t u\+S)}{StopWatch_UsToTicks(uint32_t uS)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Stop\+Watch\+\_\+\+Us\+To\+Ticks (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{uS}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Stop__Watch_ga65ab3801fdb76aab8879a0698fc4df45}{}\label{group__Stop__Watch_ga65ab3801fdb76aab8879a0698fc4df45}
+
+
+Converts from uS to stopwatch ticks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uS} & \+: Duration in uS to convert to ticks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of ticks in given number of uS 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+

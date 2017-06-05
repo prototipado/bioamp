@@ -1,0 +1,1602 @@
+\hypertarget{group__I2C__17XX__40XX}{}\section{C\+H\+IP\+: L\+P\+C17xx/40xx I2C driver}
+\label{group__I2C__17XX__40XX}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Master transfer data structure definitions. \end{DoxyCompactList}\item 
+struct \hyperlink{structLPC__I2C__T}{L\+P\+C\+\_\+\+I2\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em I2C register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga90031db9f3a3abcdb6c278046019048d}{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}~0x02
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7b419c9f5e25bec1367f655cb2552e2e}{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT}~0x01
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac0db244c4c7701bf94e2f5646b69dc2a}{I2\+C\+\_\+\+Check\+Error}(Error\+Code)  ~(Error\+Code \& 0x10000000)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gafd39e9ced8b71fd55deb05d7a23752b9}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA}~(1\+U\+L $<$$<$ 2)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5a696207d04d3694700e427a068409b1}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN}~(1\+U\+L $<$$<$ 6)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad53ba19314d57093aaa5076897604a50}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI}~(1\+U\+L $<$$<$ 3)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga75e0835be79d812d1e6df8b0a5150365}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA}~(1\+U\+L $<$$<$ 5)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga9704c03008de747eb42bde530a67350b}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO}~(1\+U\+L $<$$<$ 4)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga2e11959cc0c956258dc4833ccdee1504}{I2\+C\+\_\+\+E\+RR}~(0x10000000)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga8d5195514172b58efd29f09642566d37}{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga2509515124601141b72080b5daf45009}{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaa13b19babb8442aa9047f8ecb92a908d}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC}~((1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga92718ac11d46f6e32d526749f09d01b2}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC}~((1 $<$$<$ 6))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga36753112210a8c33d566b572b63b753b}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC}~((1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab6148bf41d7fc32bd259d2f6a7d7667d}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC}~((1 $<$$<$ 5))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga449d7af35550484c4dfefcddd01095b8}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC}~((1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga784c4b2fe7f3299e338655d2ddbf283c}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA}~((0x04))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab836acc31e0572bb0d0db614f0641f15}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN}~((0x40))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaa447cd2686805ef8009fc599144ee3dc}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI}~((0x08))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gabaad3370eb35644c135d40f06adbbba0}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA}~((0x20))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaae292803a059b84eac20ab8777d113af}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO}~((0x10))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac66b7c81c93cc59f69d204b4eb7d639b}{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5b04af302e0e4007df123dff0328ac5e}{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR}~(0x\+F\+F)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga44068704cf00223c47f6880322dcf67c}{I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK}(n)                ~((n \& 0x\+F\+E))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadca0b6beb066a8f6689960c687334ac2}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x07))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gabf11567c27c48d795ba0f92cf636dab6}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}~((1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac7dd5efba503dd79c6b42f3575f70307}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}~((1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga8dc8fa566a5113c3e1b35c0580d90d9f}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad6a9a202cf4d30607475338f7b59968a}{I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadf54076e458f10fc00be5ed9504bc930}{I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7c1e7f0f166cdc547263229c5ce07cb0}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR}~((0x00))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaed32dea40cf84a1efb09e0c389579163}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}~((0x38))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga2f07d3cfad351ba3c976d629db20cea2}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x50))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga9cc5203175775bfa5ae6df5d6d98b014}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x58))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gacb1c9145acd64a77464017f1dd9279c5}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT}~((0x10))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gacd29e4a94f8a533477dbbf026c0d525a}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}~((0x40))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gafe156febe3313a9f3423776f97d0f24f}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK}~((0x48))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab1f79137c62e306269633b005ad936da}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT}~((0x08))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga79230136402441c7e233c63fd2f71bdf}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}~((0x38))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad8c325e3c58aa8e7810797b9a6761596}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x28))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga234f86990a6fd63f1d2064cbca4709a3}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x30))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad41d0d1392b7d905b22b9c5015f2e48f}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT}~((0x10))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab91c158252efeb1a3a139faec3622ae0}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}~((0x18))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga15729d9436fbf4c23a22e7cdbc913552}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK}~((0x20))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5c44c05176052f6040cd40d680bc2a91}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT}~((0x08))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga3e2ecdeb466041bb3cf435ccf36564d9}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF}~((0x\+F8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga1605c253472e071e7f77e51bda156ba7}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL}~((0x78))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaf13df6ed7d10be0e063bcbc04d329749}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}~((0x68))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadcab34e87ad115c011e23a5bd4fb8aa3}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK}~((0x70))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga75dd46ddb054c4d47a531b8e90f7f446}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x90))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga20c65f8a82c18211127e5c335026bd76}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x98))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga4342227592c3e2e345517bd3e6cd8089}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x80))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gace56a90d55426cc6ab2a4ca540c63d02}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x88))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7055c4b55feda352df8016cbca0c270b}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}~((0x60))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7afe9f0e54aeb9ce8428c0adeb3c3274}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX}~((0x\+A0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac71ac23a80e1bdb700a2c37170031107}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}~((0x\+B0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaeb92fe85cc3f6c813cb91685234ac08c}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x\+B8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad9cdcd8c06924252a2ad9baced97d838}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x\+C0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga3e4522387958da1da6017a6e48a0daad}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x\+C8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gae6dcbdd1f01f7ebf3595722770e3b7b6}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}~((0x\+A8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadbb787dfeda35fe21147da81f68c0b57}{I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}~0x04
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadd2b30f5b29839a83c893d88b8d09dd7}{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL}~\hyperlink{group__I2C__17XX__40XX_gac7dd5efba503dd79c6b42f3575f70307}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5f79529ae357b8aa86e6ead24d95167e}{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT}~\hyperlink{group__I2C__17XX__40XX_gabf11567c27c48d795ba0f92cf636dab6}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga01f7ced141c84fc0299e0a509bfcc8ce}{I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV}~(0x10000000 $\vert$ 0x01)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga57d0c95ccd7c129288743e9674a9e96d}{I2\+C\+\_\+\+OK}~0x00
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac6c3ac5b11a68d4ff63b01e7aa4bc121}{I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND}~0x10
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga758db89a42044992cfb80d0f6f55261d}{I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND}~0x08
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gae90c077796281121b65b80b661a23062}{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF}~(1 $<$$<$ 8)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaefbb25ca99e199765e7dcdd6ef343590}{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}~(1 $<$$<$ 10)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga90a37b470118d82b9682cfc2e0b4de84}{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF}~(1 $<$$<$ 9)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga33116b352c72ef28879812c66387f17a}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT}~0x10000000\+UL
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}~0x20
+\begin{DoxyCompactList}\small\item\em I2C state handle return values. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}~0x20
+\begin{DoxyCompactList}\small\item\em I2C state handle return values. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gafeb8b5f682a81a2cc32f6c4b720a5e1f}{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gacfbf48ab1ed4f43314f63898ac827925}{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga95d605cbb817fa36d9c83545dd23fb5f}{I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gae5dd077e6273af4e15c3b656b56f9afd}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY}~0
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac3305a3a03ff55a1ee6ba304a09e0187}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE}~2
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga16246f0e987c65b12170dd4f127e99f9}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}~5
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga49da135773ab760dbf75fcbcdb383623}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}~6
+\begin{DoxyCompactList}\small\item\em Return values for S\+L\+A\+VE handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}) (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T}, \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T})
+\begin{DoxyCompactList}\small\item\em Event handler function type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__I2C__17XX__40XX_gaec46000c6a1fe2c12c9a0c7ee3677626}{I2\+C\+\_\+\+ID} \hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T}
+\begin{DoxyCompactList}\small\item\em I2C interface I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T} \{ \\*
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT} = 1, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE}, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK}, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK}, 
+\\*
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}
+ \}\begin{DoxyCompactList}\small\item\em I2C master events. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_gaec46000c6a1fe2c12c9a0c7ee3677626}{I2\+C\+\_\+\+ID} \{ \hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653}{I2\+C0}, 
+\hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2}{I2\+C1}, 
+\hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b}{I2\+C2}, 
+\hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304}{I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}
+ \}\begin{DoxyCompactList}\small\item\em I2C interface I\+Ds. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_ga5fb1ba338fb3822bb6ca012adc4194bf}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID} \{ \\*
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa7d2284af5f49b5b9df2582a31fff6370}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfad17f6d6b2d217b84307c502108a6fed6}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa8a4d6db2156bad4cf8c21226be564fe2}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfab6d7a585cfa1106eb290fa9f302c5783}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2}, 
+\\*
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfaf5cff98e9db3da7cc50edd21d3873efd}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfabdb0d442b75f2dbdb63aed5a307de077}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}
+ \}\begin{DoxyCompactList}\small\item\em I2C Slave Identifiers. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_ga21aa839302786105dcf6a96be0e6e8bc}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} \{ \\*
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca9f5024a35710b260041d351d794afa9a}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}, 
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcac41be4d0689494327d4dae20504c854d}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK}, 
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca674732e92811621ed2ca34b9e40ca724}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST}, 
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca803d8563e2b11514ba4549763ad441f5}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR}, 
+\\*
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcab3dd2c4a10e92ca1a5cb580501bad817}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}
+ \}\begin{DoxyCompactList}\small\item\em I2C transfer status. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__I2C__17XX__40XX_ga334c2c12edda443a7e949a1ea4a6a646}{Chip\+\_\+\+I2\+C\+\_\+\+De\+Init} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the I2C peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga68f1d630224edab35ba796373c5867c0}{Chip\+\_\+\+I2\+C\+\_\+\+Disable} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Disable I2C peripheral\textquotesingle{}s operation. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga06b84fe3fad7ffd4ccb93f2683781936}{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T} event)
+\begin{DoxyCompactList}\small\item\em Default event handler for interrupt base operation. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_gaaa89a66d658a41325b3c5e56bc059401}{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T} event)
+\begin{DoxyCompactList}\small\item\em Default event handler for polling operation. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__I2C__17XX__40XX_ga6b13511432337d21b8cd325651cc5b63}{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Get current clock rate for L\+P\+C\+\_\+\+I2C peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} \hyperlink{group__I2C__17XX__40XX_gafad03b4f6c0ecb3f59f014ab63bfda5c}{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Get pointer to current function handling the events. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_gab79263d278814945df2cd44c5db7b514}{Chip\+\_\+\+I2\+C\+\_\+\+Init} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Initializes the L\+P\+C\+\_\+\+I2C peripheral with specified parameter. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga5fdf29aff7847c93373cf02da41285e1}{Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Checks if master xfer in progress. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga4240d03d5dda43ddc8afd527b3172318}{Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em I2C peripheral state change checking. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga4a875b456dfe68acbe8ce1fc74d88bd3}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint8\+\_\+t slave\+Addr, uint8\+\_\+t cmd, uint8\+\_\+t $\ast$buff, int len)
+\begin{DoxyCompactList}\small\item\em Transfer a command to slave and receive data from slave after a repeated start. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_gae816049843eb162c803b5058ebd9a25c}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint8\+\_\+t slave\+Addr, uint8\+\_\+t $\ast$buff, int len)
+\begin{DoxyCompactList}\small\item\em Set function that must handle I2C events. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga9ff549bdb526786d313c141b11cab43e}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint8\+\_\+t slave\+Addr, const uint8\+\_\+t $\ast$buff, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Transmit data to I2C slave using I2C Master mode. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga179362e42a3de931ff7f57ca698254fa}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em I2C Master transfer state change handler. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga5f89391d66048894f4365d3b2b7df267}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Transmit and Receive data in master mode. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga17fac5d72058db8eed11d247e78b74ed}{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint32\+\_\+t clockrate)
+\begin{DoxyCompactList}\small\item\em Set up clock rate for L\+P\+C\+\_\+\+I2C peripheral. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga1fc3fc0946344e9551d9eef0bbf610b9}{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} event)
+\begin{DoxyCompactList}\small\item\em Set function that must handle I2C events. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_ga5fb1ba338fb3822bb6ca012adc4194bf}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID} sid, \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} $\ast$xfer, \hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} event, uint8\+\_\+t addr\+Mask)
+\begin{DoxyCompactList}\small\item\em Setup a slave I2C device. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga650618a5f4717c46ae3ea304142ddc03}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em I2C Slave event handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}}
+\index{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}{I2C_BYTE_RECV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV~0x02}\hypertarget{group__I2C__17XX__40XX_ga90031db9f3a3abcdb6c278046019048d}{}\label{group__I2C__17XX__40XX_ga90031db9f3a3abcdb6c278046019048d}
+
+
+Definition at line 221 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT@{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT}}
+\index{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT@{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT}{I2C_BYTE_SENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT~0x01}\hypertarget{group__I2C__17XX__40XX_ga7b419c9f5e25bec1367f655cb2552e2e}{}\label{group__I2C__17XX__40XX_ga7b419c9f5e25bec1367f655cb2552e2e}
+
+
+Definition at line 220 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+Check\+Error@{I2\+C\+\_\+\+Check\+Error}}
+\index{I2\+C\+\_\+\+Check\+Error@{I2\+C\+\_\+\+Check\+Error}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+Check\+Error}{I2C_CheckError}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+Check\+Error(
+\begin{DoxyParamCaption}
+\item[{}]{Error\+Code}
+\end{DoxyParamCaption}
+)~(Error\+Code \& 0x10000000)}\hypertarget{group__I2C__17XX__40XX_gac0db244c4c7701bf94e2f5646b69dc2a}{}\label{group__I2C__17XX__40XX_gac0db244c4c7701bf94e2f5646b69dc2a}
+
+
+Definition at line 230 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA}}
+\index{I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA}{I2C_CON_AA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA~(1\+U\+L $<$$<$ 2)}\hypertarget{group__I2C__17XX__40XX_gafd39e9ced8b71fd55deb05d7a23752b9}{}\label{group__I2C__17XX__40XX_gafd39e9ced8b71fd55deb05d7a23752b9}
+Assert acknowledge bit 
+
+Definition at line 99 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN}}
+\index{I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN}{I2C_CON_I2EN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN~(1\+U\+L $<$$<$ 6)}\hypertarget{group__I2C__17XX__40XX_ga5a696207d04d3694700e427a068409b1}{}\label{group__I2C__17XX__40XX_ga5a696207d04d3694700e427a068409b1}
+I2C interface bit 
+
+Definition at line 103 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI}}
+\index{I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI}{I2C_CON_SI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI~(1\+U\+L $<$$<$ 3)}\hypertarget{group__I2C__17XX__40XX_gad53ba19314d57093aaa5076897604a50}{}\label{group__I2C__17XX__40XX_gad53ba19314d57093aaa5076897604a50}
+I2C interrupt bit 
+
+Definition at line 100 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA}}
+\index{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA}{I2C_CON_STA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA~(1\+U\+L $<$$<$ 5)}\hypertarget{group__I2C__17XX__40XX_ga75e0835be79d812d1e6df8b0a5150365}{}\label{group__I2C__17XX__40XX_ga75e0835be79d812d1e6df8b0a5150365}
+S\+T\+A\+RT flag bit 
+
+Definition at line 102 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO}}
+\index{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO@{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO}{I2C_CON_STO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO~(1\+U\+L $<$$<$ 4)}\hypertarget{group__I2C__17XX__40XX_ga9704c03008de747eb42bde530a67350b}{}\label{group__I2C__17XX__40XX_ga9704c03008de747eb42bde530a67350b}
+I2C S\+T\+OP bit 
+
+Definition at line 101 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+RR@{I2\+C\+\_\+\+E\+RR}}
+\index{I2\+C\+\_\+\+E\+RR@{I2\+C\+\_\+\+E\+RR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+E\+RR}{I2C_ERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+E\+RR~(0x10000000)}\hypertarget{group__I2C__17XX__40XX_ga2e11959cc0c956258dc4833ccdee1504}{}\label{group__I2C__17XX__40XX_ga2e11959cc0c956258dc4833ccdee1504}
+
+
+Definition at line 227 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK}{I2C_I2ADR_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F\+F))}\hypertarget{group__I2C__17XX__40XX_ga8d5195514172b58efd29f09642566d37}{}\label{group__I2C__17XX__40XX_ga8d5195514172b58efd29f09642566d37}
+I2C Slave Address registers bit mask 
+
+Definition at line 192 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC@{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC}}
+\index{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC@{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC}{I2C_I2ADR_GC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC~((1 $<$$<$ 0))}\hypertarget{group__I2C__17XX__40XX_ga2509515124601141b72080b5daf45009}{}\label{group__I2C__17XX__40XX_ga2509515124601141b72080b5daf45009}
+General Call enable bit 
+
+Definition at line 191 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC}{I2C_I2CONCLR_AAC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC~((1 $<$$<$ 2))}\hypertarget{group__I2C__17XX__40XX_gaa13b19babb8442aa9047f8ecb92a908d}{}\label{group__I2C__17XX__40XX_gaa13b19babb8442aa9047f8ecb92a908d}
+Assert acknowledge Clear bit 
+
+Definition at line 90 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC}{I2C_I2CONCLR_I2ENC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC~((1 $<$$<$ 6))}\hypertarget{group__I2C__17XX__40XX_ga92718ac11d46f6e32d526749f09d01b2}{}\label{group__I2C__17XX__40XX_ga92718ac11d46f6e32d526749f09d01b2}
+I2C interface Disable bit 
+
+Definition at line 94 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC}{I2C_I2CONCLR_SIC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC~((1 $<$$<$ 3))}\hypertarget{group__I2C__17XX__40XX_ga36753112210a8c33d566b572b63b753b}{}\label{group__I2C__17XX__40XX_ga36753112210a8c33d566b572b63b753b}
+I2C interrupt Clear bit 
+
+Definition at line 91 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC}{I2C_I2CONCLR_STAC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC~((1 $<$$<$ 5))}\hypertarget{group__I2C__17XX__40XX_gab6148bf41d7fc32bd259d2f6a7d7667d}{}\label{group__I2C__17XX__40XX_gab6148bf41d7fc32bd259d2f6a7d7667d}
+S\+T\+A\+RT flag Clear bit 
+
+Definition at line 93 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC@{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC}{I2C_I2CONCLR_STOC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC~((1 $<$$<$ 4))}\hypertarget{group__I2C__17XX__40XX_ga449d7af35550484c4dfefcddd01095b8}{}\label{group__I2C__17XX__40XX_ga449d7af35550484c4dfefcddd01095b8}
+I2C S\+T\+OP Clear bit 
+
+Definition at line 92 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA}{I2C_I2CONSET_AA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA~((0x04))}\hypertarget{group__I2C__17XX__40XX_ga784c4b2fe7f3299e338655d2ddbf283c}{}\label{group__I2C__17XX__40XX_ga784c4b2fe7f3299e338655d2ddbf283c}
+Assert acknowledge flag 
+
+Definition at line 81 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN}{I2C_I2CONSET_I2EN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN~((0x40))}\hypertarget{group__I2C__17XX__40XX_gab836acc31e0572bb0d0db614f0641f15}{}\label{group__I2C__17XX__40XX_gab836acc31e0572bb0d0db614f0641f15}
+I2C interface enable 
+
+Definition at line 85 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI}{I2C_I2CONSET_SI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI~((0x08))}\hypertarget{group__I2C__17XX__40XX_gaa447cd2686805ef8009fc599144ee3dc}{}\label{group__I2C__17XX__40XX_gaa447cd2686805ef8009fc599144ee3dc}
+I2C interrupt flag 
+
+Definition at line 82 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA}{I2C_I2CONSET_STA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA~((0x20))}\hypertarget{group__I2C__17XX__40XX_gabaad3370eb35644c135d40f06adbbba0}{}\label{group__I2C__17XX__40XX_gabaad3370eb35644c135d40f06adbbba0}
+S\+T\+A\+RT flag 
+
+Definition at line 84 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO}}
+\index{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO@{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO}{I2C_I2CONSET_STO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO~((0x10))}\hypertarget{group__I2C__17XX__40XX_gaae292803a059b84eac20ab8777d113af}{}\label{group__I2C__17XX__40XX_gaae292803a059b84eac20ab8777d113af}
+S\+T\+OP flag 
+
+Definition at line 83 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK}{I2C_I2DAT_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F\+F))}\hypertarget{group__I2C__17XX__40XX_gac66b7c81c93cc59f69d204b4eb7d639b}{}\label{group__I2C__17XX__40XX_gac66b7c81c93cc59f69d204b4eb7d639b}
+Mask for I2\+D\+AT register 
+
+Definition at line 170 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR@{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR}}
+\index{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR@{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR}{I2C_I2DAT_IDLE_CHAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR~(0x\+F\+F)}\hypertarget{group__I2C__17XX__40XX_ga5b04af302e0e4007df123dff0328ac5e}{}\label{group__I2C__17XX__40XX_ga5b04af302e0e4007df123dff0328ac5e}
+Idle data value will be send out in slave mode in case of the actual expecting data requested from the master is greater than its sending data length that can be supported 
+
+Definition at line 171 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK@{I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK@{I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK}{I2C_I2MASK_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((n \& 0x\+F\+E))}\hypertarget{group__I2C__17XX__40XX_ga44068704cf00223c47f6880322dcf67c}{}\label{group__I2C__17XX__40XX_ga44068704cf00223c47f6880322dcf67c}
+I2C Mask Register mask field 
+
+Definition at line 197 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}{I2C_I2MMCTRL_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK~((0x07))}\hypertarget{group__I2C__17XX__40XX_gadca0b6beb066a8f6689960c687334ac2}{}\label{group__I2C__17XX__40XX_gadca0b6beb066a8f6689960c687334ac2}
+Mask for I2\+M\+M\+C\+T\+RL register 
+
+Definition at line 181 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}}
+\index{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}{I2C_I2MMCTRL_ENA_SCL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL~((1 $<$$<$ 1))}\hypertarget{group__I2C__17XX__40XX_gabf11567c27c48d795ba0f92cf636dab6}{}\label{group__I2C__17XX__40XX_gabf11567c27c48d795ba0f92cf636dab6}
+S\+CL output enable 
+
+Definition at line 179 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}}
+\index{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}{I2C_I2MMCTRL_MATCH_ALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL~((1 $<$$<$ 2))}\hypertarget{group__I2C__17XX__40XX_gac7dd5efba503dd79c6b42f3575f70307}{}\label{group__I2C__17XX__40XX_gac7dd5efba503dd79c6b42f3575f70307}
+Select interrupt register match 
+
+Definition at line 180 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA}}
+\index{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA@{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA}{I2C_I2MMCTRL_MM_ENA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA~((1 $<$$<$ 0))}\hypertarget{group__I2C__17XX__40XX_ga8dc8fa566a5113c3e1b35c0580d90d9f}{}\label{group__I2C__17XX__40XX_ga8dc8fa566a5113c3e1b35c0580d90d9f}
+Monitor mode enable 
+
+Definition at line 178 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK}{I2C_I2SCLH_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F\+F\+F\+F))}\hypertarget{group__I2C__17XX__40XX_gad6a9a202cf4d30607475338f7b59968a}{}\label{group__I2C__17XX__40XX_gad6a9a202cf4d30607475338f7b59968a}
+I2C S\+CL H\+I\+GH duty cycle Register bit mask 
+
+Definition at line 202 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK}{I2C_I2SCLL_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F\+F\+F\+F))}\hypertarget{group__I2C__17XX__40XX_gadf54076e458f10fc00be5ed9504bc930}{}\label{group__I2C__17XX__40XX_gadf54076e458f10fc00be5ed9504bc930}
+I2C S\+CL L\+OW duty cycle Register bit mask 
+
+Definition at line 207 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR}{I2C_I2STAT_BUS_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR~((0x00))}\hypertarget{group__I2C__17XX__40XX_ga7c1e7f0f166cdc547263229c5ce07cb0}{}\label{group__I2C__17XX__40XX_ga7c1e7f0f166cdc547263229c5ce07cb0}
+Bus Error 
+
+Definition at line 115 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}{I2C_I2STAT_M_RX_ARB_LOST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST~((0x38))}\hypertarget{group__I2C__17XX__40XX_gaed32dea40cf84a1efb09e0c389579163}{}\label{group__I2C__17XX__40XX_gaed32dea40cf84a1efb09e0c389579163}
+Arbitration lost 
+
+Definition at line 133 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}{I2C_I2STAT_M_RX_DAT_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK~((0x50))}\hypertarget{group__I2C__17XX__40XX_ga2f07d3cfad351ba3c976d629db20cea2}{}\label{group__I2C__17XX__40XX_ga2f07d3cfad351ba3c976d629db20cea2}
+Data has been received, A\+CK has been returned 
+
+Definition at line 136 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}{I2C_I2STAT_M_RX_DAT_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK~((0x58))}\hypertarget{group__I2C__17XX__40XX_ga9cc5203175775bfa5ae6df5d6d98b014}{}\label{group__I2C__17XX__40XX_ga9cc5203175775bfa5ae6df5d6d98b014}
+Data has been received, N\+A\+CK has been returned 
+
+Definition at line 137 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT}{I2C_I2STAT_M_RX_RESTART}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT~((0x10))}\hypertarget{group__I2C__17XX__40XX_gacb1c9145acd64a77464017f1dd9279c5}{}\label{group__I2C__17XX__40XX_gacb1c9145acd64a77464017f1dd9279c5}
+A repeat start condition has been transmitted 
+
+Definition at line 132 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}{I2C_I2STAT_M_RX_SLAR_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK~((0x40))}\hypertarget{group__I2C__17XX__40XX_gacd29e4a94f8a533477dbbf026c0d525a}{}\label{group__I2C__17XX__40XX_gacd29e4a94f8a533477dbbf026c0d525a}
+S\+L\+A+R has been transmitted, A\+CK has been received 
+
+Definition at line 134 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK}{I2C_I2STAT_M_RX_SLAR_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK~((0x48))}\hypertarget{group__I2C__17XX__40XX_gafe156febe3313a9f3423776f97d0f24f}{}\label{group__I2C__17XX__40XX_gafe156febe3313a9f3423776f97d0f24f}
+S\+L\+A+R has been transmitted, N\+A\+CK has been received 
+
+Definition at line 135 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT}{I2C_I2STAT_M_RX_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT~((0x08))}\hypertarget{group__I2C__17XX__40XX_gab1f79137c62e306269633b005ad936da}{}\label{group__I2C__17XX__40XX_gab1f79137c62e306269633b005ad936da}
+A start condition has been transmitted 
+
+Definition at line 131 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}{I2C_I2STAT_M_TX_ARB_LOST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST~((0x38))}\hypertarget{group__I2C__17XX__40XX_ga79230136402441c7e233c63fd2f71bdf}{}\label{group__I2C__17XX__40XX_ga79230136402441c7e233c63fd2f71bdf}
+Arbitration lost in S\+L\+A+\+R/W or Data bytes 
+
+Definition at line 126 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}{I2C_I2STAT_M_TX_DAT_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK~((0x28))}\hypertarget{group__I2C__17XX__40XX_gad8c325e3c58aa8e7810797b9a6761596}{}\label{group__I2C__17XX__40XX_gad8c325e3c58aa8e7810797b9a6761596}
+Data has been transmitted, A\+CK has been received 
+
+Definition at line 124 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}{I2C_I2STAT_M_TX_DAT_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK~((0x30))}\hypertarget{group__I2C__17XX__40XX_ga234f86990a6fd63f1d2064cbca4709a3}{}\label{group__I2C__17XX__40XX_ga234f86990a6fd63f1d2064cbca4709a3}
+Data has been transmitted, N\+A\+CK has been received 
+
+Definition at line 125 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT}{I2C_I2STAT_M_TX_RESTART}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT~((0x10))}\hypertarget{group__I2C__17XX__40XX_gad41d0d1392b7d905b22b9c5015f2e48f}{}\label{group__I2C__17XX__40XX_gad41d0d1392b7d905b22b9c5015f2e48f}
+A repeat start condition has been transmitted 
+
+Definition at line 121 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}{I2C_I2STAT_M_TX_SLAW_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK~((0x18))}\hypertarget{group__I2C__17XX__40XX_gab91c158252efeb1a3a139faec3622ae0}{}\label{group__I2C__17XX__40XX_gab91c158252efeb1a3a139faec3622ae0}
+S\+L\+A+W has been transmitted, A\+CK has been received 
+
+Definition at line 122 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK}{I2C_I2STAT_M_TX_SLAW_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK~((0x20))}\hypertarget{group__I2C__17XX__40XX_ga15729d9436fbf4c23a22e7cdbc913552}{}\label{group__I2C__17XX__40XX_ga15729d9436fbf4c23a22e7cdbc913552}
+S\+L\+A+W has been transmitted, N\+A\+CK has been received 
+
+Definition at line 123 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT}{I2C_I2STAT_M_TX_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT~((0x08))}\hypertarget{group__I2C__17XX__40XX_ga5c44c05176052f6040cd40d680bc2a91}{}\label{group__I2C__17XX__40XX_ga5c44c05176052f6040cd40d680bc2a91}
+A start condition has been transmitted 
+
+Definition at line 120 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF}{I2C_I2STAT_NO_INF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF~((0x\+F8))}\hypertarget{group__I2C__17XX__40XX_ga3e2ecdeb466041bb3cf435ccf36564d9}{}\label{group__I2C__17XX__40XX_ga3e2ecdeb466041bb3cf435ccf36564d9}
+No relevant information 
+
+Definition at line 114 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL}{I2C_I2STAT_S_RX_ARB_LOST_M_GENCALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL~((0x78))}\hypertarget{group__I2C__17XX__40XX_ga1605c253472e071e7f77e51bda156ba7}{}\label{group__I2C__17XX__40XX_ga1605c253472e071e7f77e51bda156ba7}
+Arbitration lost in S\+L\+A+\+R/W (G\+E\+N\+E\+R\+AL C\+A\+LL) as master 
+
+Definition at line 146 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}{I2C_I2STAT_S_RX_ARB_LOST_M_SLA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA~((0x68))}\hypertarget{group__I2C__17XX__40XX_gaf13df6ed7d10be0e063bcbc04d329749}{}\label{group__I2C__17XX__40XX_gaf13df6ed7d10be0e063bcbc04d329749}
+Arbitration lost in S\+L\+A+\+R/W as master 
+
+Definition at line 143 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK}{I2C_I2STAT_S_RX_GENCALL_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK~((0x70))}\hypertarget{group__I2C__17XX__40XX_gadcab34e87ad115c011e23a5bd4fb8aa3}{}\label{group__I2C__17XX__40XX_gadcab34e87ad115c011e23a5bd4fb8aa3}
+General call address has been received, A\+CK has been returned 
+
+Definition at line 145 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK}{I2C_I2STAT_S_RX_PRE_GENCALL_DAT_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK~((0x90))}\hypertarget{group__I2C__17XX__40XX_ga75dd46ddb054c4d47a531b8e90f7f446}{}\label{group__I2C__17XX__40XX_ga75dd46ddb054c4d47a531b8e90f7f446}
+Previously addressed with General Call; Data has been received and A\+CK has been returned 
+
+Definition at line 150 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}{I2C_I2STAT_S_RX_PRE_GENCALL_DAT_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK~((0x98))}\hypertarget{group__I2C__17XX__40XX_ga20c65f8a82c18211127e5c335026bd76}{}\label{group__I2C__17XX__40XX_ga20c65f8a82c18211127e5c335026bd76}
+Previously addressed with General Call; Data has been received and N\+OT A\+CK has been returned 
+
+Definition at line 151 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK}{I2C_I2STAT_S_RX_PRE_SLA_DAT_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK~((0x80))}\hypertarget{group__I2C__17XX__40XX_ga4342227592c3e2e345517bd3e6cd8089}{}\label{group__I2C__17XX__40XX_ga4342227592c3e2e345517bd3e6cd8089}
+Previously addressed with own S\+LA; Data has been received, A\+CK has been returned 
+
+Definition at line 148 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}{I2C_I2STAT_S_RX_PRE_SLA_DAT_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK~((0x88))}\hypertarget{group__I2C__17XX__40XX_gace56a90d55426cc6ab2a4ca540c63d02}{}\label{group__I2C__17XX__40XX_gace56a90d55426cc6ab2a4ca540c63d02}
+Previously addressed with own S\+LA;Data has been received and N\+OT A\+CK has been returned 
+
+Definition at line 149 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}{I2C_I2STAT_S_RX_SLAW_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK~((0x60))}\hypertarget{group__I2C__17XX__40XX_ga7055c4b55feda352df8016cbca0c270b}{}\label{group__I2C__17XX__40XX_ga7055c4b55feda352df8016cbca0c270b}
+Own slave address has been received, A\+CK has been returned 
+
+Definition at line 142 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX}{I2C_I2STAT_S_RX_STA_STO_SLVREC_SLVTRX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX~((0x\+A0))}\hypertarget{group__I2C__17XX__40XX_ga7afe9f0e54aeb9ce8428c0adeb3c3274}{}\label{group__I2C__17XX__40XX_ga7afe9f0e54aeb9ce8428c0adeb3c3274}
+A S\+T\+OP condition or repeated S\+T\+A\+RT condition has been received while still addressed as S\+L\+V/\+R\+EC (Slave Receive) or S\+L\+V/\+T\+RX (Slave Transmit) 
+
+Definition at line 152 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}{I2C_I2STAT_S_TX_ARB_LOST_M_SLA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA~((0x\+B0))}\hypertarget{group__I2C__17XX__40XX_gac71ac23a80e1bdb700a2c37170031107}{}\label{group__I2C__17XX__40XX_gac71ac23a80e1bdb700a2c37170031107}
+Arbitration lost in S\+L\+A+\+R/W as master 
+
+Definition at line 160 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}{I2C_I2STAT_S_TX_DAT_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK~((0x\+B8))}\hypertarget{group__I2C__17XX__40XX_gaeb92fe85cc3f6c813cb91685234ac08c}{}\label{group__I2C__17XX__40XX_gaeb92fe85cc3f6c813cb91685234ac08c}
+Data has been transmitted, A\+CK has been received 
+
+Definition at line 162 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}{I2C_I2STAT_S_TX_DAT_NACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK~((0x\+C0))}\hypertarget{group__I2C__17XX__40XX_gad9cdcd8c06924252a2ad9baced97d838}{}\label{group__I2C__17XX__40XX_gad9cdcd8c06924252a2ad9baced97d838}
+Data has been transmitted, N\+A\+CK has been received 
+
+Definition at line 163 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK}{I2C_I2STAT_S_TX_LAST_DAT_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK~((0x\+C8))}\hypertarget{group__I2C__17XX__40XX_ga3e4522387958da1da6017a6e48a0daad}{}\label{group__I2C__17XX__40XX_ga3e4522387958da1da6017a6e48a0daad}
+Last data byte in I2\+D\+AT has been transmitted (AA = 0); A\+CK has been received 
+
+Definition at line 164 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}}
+\index{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK@{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}{I2C_I2STAT_S_TX_SLAR_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK~((0x\+A8))}\hypertarget{group__I2C__17XX__40XX_gae6dcbdd1f01f7ebf3595722770e3b7b6}{}\label{group__I2C__17XX__40XX_gae6dcbdd1f01f7ebf3595722770e3b7b6}
+Own S\+L\+A+R has been received, A\+CK has been returned 
+
+Definition at line 159 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}}
+\index{I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}{I2C_LAST_BYTE_RECV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV~0x04}\hypertarget{group__I2C__17XX__40XX_gadbb787dfeda35fe21147da81f68c0b57}{}\label{group__I2C__17XX__40XX_gadbb787dfeda35fe21147da81f68c0b57}
+
+
+Definition at line 222 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL@{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL}}
+\index{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL@{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL}{I2C_MONITOR_CFG_MATCHALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL~{\bf I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}}\hypertarget{group__I2C__17XX__40XX_gadd2b30f5b29839a83c893d88b8d09dd7}{}\label{group__I2C__17XX__40XX_gadd2b30f5b29839a83c893d88b8d09dd7}
+Select interrupt register match 
+
+Definition at line 236 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT@{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT}}
+\index{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT@{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT}{I2C_MONITOR_CFG_SCL_OUTPUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT~{\bf I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}}\hypertarget{group__I2C__17XX__40XX_ga5f79529ae357b8aa86e6ead24d95167e}{}\label{group__I2C__17XX__40XX_ga5f79529ae357b8aa86e6ead24d95167e}
+S\+CL output enable 
+
+Definition at line 235 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV}}
+\index{I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV}{I2C_NAK_RECV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV~(0x10000000 $\vert$ 0x01)}\hypertarget{group__I2C__17XX__40XX_ga01f7ced141c84fc0299e0a509bfcc8ce}{}\label{group__I2C__17XX__40XX_ga01f7ced141c84fc0299e0a509bfcc8ce}
+
+
+Definition at line 228 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+OK@{I2\+C\+\_\+\+OK}}
+\index{I2\+C\+\_\+\+OK@{I2\+C\+\_\+\+OK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+OK}{I2C_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+OK~0x00}\hypertarget{group__I2C__17XX__40XX_ga57d0c95ccd7c129288743e9674a9e96d}{}\label{group__I2C__17XX__40XX_ga57d0c95ccd7c129288743e9674a9e96d}
+
+
+Definition at line 219 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND@{I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND}}
+\index{I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND@{I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND}{I2C_RECV_END}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND~0x10}\hypertarget{group__I2C__17XX__40XX_gac6c3ac5b11a68d4ff63b01e7aa4bc121}{}\label{group__I2C__17XX__40XX_gac6c3ac5b11a68d4ff63b01e7aa4bc121}
+
+
+Definition at line 224 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND@{I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND}}
+\index{I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND@{I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND}{I2C_SEND_END}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND~0x08}\hypertarget{group__I2C__17XX__40XX_ga758db89a42044992cfb80d0f6f55261d}{}\label{group__I2C__17XX__40XX_ga758db89a42044992cfb80d0f6f55261d}
+
+
+Definition at line 223 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF@{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF}}
+\index{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF@{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF}{I2C_SETUP_STATUS_ARBF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF~(1 $<$$<$ 8)}\hypertarget{group__I2C__17XX__40XX_gae90c077796281121b65b80b661a23062}{}\label{group__I2C__17XX__40XX_gae90c077796281121b65b80b661a23062}
+Arbitration false 
+
+Definition at line 212 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE@{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}}
+\index{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE@{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}{I2C_SETUP_STATUS_DONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE~(1 $<$$<$ 10)}\hypertarget{group__I2C__17XX__40XX_gaefbb25ca99e199765e7dcdd6ef343590}{}\label{group__I2C__17XX__40XX_gaefbb25ca99e199765e7dcdd6ef343590}
+Status D\+O\+NE 
+
+Definition at line 214 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF@{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF}}
+\index{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF@{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF}{I2C_SETUP_STATUS_NOACKF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF~(1 $<$$<$ 9)}\hypertarget{group__I2C__17XX__40XX_ga90a37b470118d82b9682cfc2e0b4de84}{}\label{group__I2C__17XX__40XX_ga90a37b470118d82b9682cfc2e0b4de84}
+No A\+CK returned 
+
+Definition at line 213 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT}{I2C_SLAVE_TIME_OUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT~0x10000000\+UL}\hypertarget{group__I2C__17XX__40XX_ga33116b352c72ef28879812c66387f17a}{}\label{group__I2C__17XX__40XX_ga33116b352c72ef28879812c66387f17a}
+Time out in case of using I2C slave mode 
+
+Definition at line 165 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}}
+\index{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}{I2C_STA_STO_RECV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV~0x20}\hypertarget{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}{}\label{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}
+
+
+I2C state handle return values. 
+
+
+
+Definition at line 225 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}}
+\index{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV@{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}{I2C_STA_STO_RECV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV~0x20}\hypertarget{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}{}\label{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}
+
+
+I2C state handle return values. 
+
+
+
+Definition at line 225 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK}{I2C_STAT_CODE_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F8))}\hypertarget{group__I2C__17XX__40XX_gafeb8b5f682a81a2cc32f6c4b720a5e1f}{}\label{group__I2C__17XX__40XX_gafeb8b5f682a81a2cc32f6c4b720a5e1f}
+Return Code mask in I2C status register 
+
+Definition at line 108 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR@{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR}}
+\index{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR@{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR}{I2C_STAT_CODE_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR~((0x\+F\+F))}\hypertarget{group__I2C__17XX__40XX_gacfbf48ab1ed4f43314f63898ac827925}{}\label{group__I2C__17XX__40XX_gacfbf48ab1ed4f43314f63898ac827925}
+Return Code error mask in I2C status register 
+
+Definition at line 109 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK}{I2DATA_BUFFER_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F\+F))}\hypertarget{group__I2C__17XX__40XX_ga95d605cbb817fa36d9c83545dd23fb5f}{}\label{group__I2C__17XX__40XX_ga95d605cbb817fa36d9c83545dd23fb5f}
+I2C Data buffer register bit mask 
+
+Definition at line 186 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY}}
+\index{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY}{RET_SLAVE_BUSY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY~0}\hypertarget{group__I2C__17XX__40XX_gae5dd077e6273af4e15c3b656b56f9afd}{}\label{group__I2C__17XX__40XX_gae5dd077e6273af4e15c3b656b56f9afd}
+Return value, when slave is busy 
+
+Definition at line 71 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE}}
+\index{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE}{RET_SLAVE_IDLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE~2}\hypertarget{group__I2C__17XX__40XX_gac3305a3a03ff55a1ee6ba304a09e0187}{}\label{group__I2C__17XX__40XX_gac3305a3a03ff55a1ee6ba304a09e0187}
+Return value, when slave enter idle mode 
+
+Definition at line 70 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}}
+\index{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}{RET_SLAVE_RX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX~5}\hypertarget{group__I2C__17XX__40XX_ga16246f0e987c65b12170dd4f127e99f9}{}\label{group__I2C__17XX__40XX_ga16246f0e987c65b12170dd4f127e99f9}
+Return value, when 1 byte RX\textquotesingle{}d successfully 
+
+Definition at line 69 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}}
+\index{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX@{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}{RET_SLAVE_TX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX~6}\hypertarget{group__I2C__17XX__40XX_ga49da135773ab760dbf75fcbcdb383623}{}\label{group__I2C__17XX__40XX_ga49da135773ab760dbf75fcbcdb383623}
+
+
+Return values for S\+L\+A\+VE handler. 
+
+\begin{DoxyNote}{Note}
+Chip drivers will usally be designed to match their events with this value\+Return value, when 1 byte TX\textquotesingle{}d successfully 
+\end{DoxyNote}
+
+
+Definition at line 68 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}}
+\index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}{I2C_EVENTHANDLER_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T) ({\bf I2\+C\+\_\+\+I\+D\+\_\+T}, {\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T})}\hypertarget{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{}\label{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}
+
+
+Event handler function type. 
+
+
+
+Definition at line 305 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+I\+D\+\_\+T@{I2\+C\+\_\+\+I\+D\+\_\+T}}
+\index{I2\+C\+\_\+\+I\+D\+\_\+T@{I2\+C\+\_\+\+I\+D\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+I\+D\+\_\+T}{I2C_ID_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf I2\+C\+\_\+\+ID}  {\bf I2\+C\+\_\+\+I\+D\+\_\+T}}\hypertarget{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{}\label{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}
+
+
+I2C interface I\+Ds. 
+
+\begin{DoxyNote}{Note}
+All Chip functions will take this as the first parameter, I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE must never be used for calling any Chip functions, it is only used to find the number of interfaces available in the Chip. 
+\end{DoxyNote}
+
+
+\subsection{Enumeration Type Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T}}
+\index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T}{I2C_EVENT_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T}}\hypertarget{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{}\label{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}
+
+
+I2C master events. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT}}\item[{\em 
+I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT\hypertarget{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac}{}\label{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac}
+}]I2C Wait event \index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE}}\item[{\em 
+I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE\hypertarget{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}{}\label{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}
+}]Done event that wakes up Wait event \index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK}}\item[{\em 
+I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK\hypertarget{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339}{}\label{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339}
+}]Re-\/entrency lock event for I2C transfer \index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK}}\item[{\em 
+I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK\hypertarget{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393}{}\label{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393}
+}]Re-\/entrency unlock event for I2C transfer \index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}}\item[{\em 
+I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX\hypertarget{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848}{}\label{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848}
+}]Slave receive event \index{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX@{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}}\item[{\em 
+I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX\hypertarget{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}{}\label{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}
+}]Slave transmit event \end{description}
+\end{Desc}
+
+
+Definition at line 293 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+ID@{I2\+C\+\_\+\+ID}}
+\index{I2\+C\+\_\+\+ID@{I2\+C\+\_\+\+ID}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+ID}{I2C_ID}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2\+C\+\_\+\+ID}}\hypertarget{group__I2C__17XX__40XX_gaec46000c6a1fe2c12c9a0c7ee3677626}{}\label{group__I2C__17XX__40XX_gaec46000c6a1fe2c12c9a0c7ee3677626}
+
+
+I2C interface I\+Ds. 
+
+\begin{DoxyNote}{Note}
+All Chip functions will take this as the first parameter, I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE must never be used for calling any Chip functions, it is only used to find the number of interfaces available in the Chip. 
+\end{DoxyNote}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I2\+C0@{I2\+C0}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C0@{I2\+C0}}\item[{\em 
+I2\+C0\hypertarget{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653}{}\label{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653}
+}]ID I2\+C0 \index{I2\+C1@{I2\+C1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C1@{I2\+C1}}\item[{\em 
+I2\+C1\hypertarget{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2}{}\label{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2}
+}]ID I2\+C1 \index{I2\+C2@{I2\+C2}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C2@{I2\+C2}}\item[{\em 
+I2\+C2\hypertarget{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b}{}\label{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b}
+}]ID I2\+C2 \index{I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}\item[{\em 
+I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE\hypertarget{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304}{}\label{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304}
+}]Number of I2C interfaces in the chip \end{description}
+\end{Desc}
+
+
+Definition at line 283 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID}{I2C_SLAVE_ID}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID}}\hypertarget{group__I2C__17XX__40XX_ga5fb1ba338fb3822bb6ca012adc4194bf}{}\label{group__I2C__17XX__40XX_ga5fb1ba338fb3822bb6ca012adc4194bf}
+
+
+I2C Slave Identifiers. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL}}\item[{\em 
+I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL\hypertarget{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa7d2284af5f49b5b9df2582a31fff6370}{}\label{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa7d2284af5f49b5b9df2582a31fff6370}
+}]Slave ID for general calls \index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0}}\item[{\em 
+I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0\hypertarget{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfad17f6d6b2d217b84307c502108a6fed6}{}\label{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfad17f6d6b2d217b84307c502108a6fed6}
+}]Slave ID fo Slave Address 0 \index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1}}\item[{\em 
+I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1\hypertarget{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa8a4d6db2156bad4cf8c21226be564fe2}{}\label{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa8a4d6db2156bad4cf8c21226be564fe2}
+}]Slave ID fo Slave Address 1 \index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2}}\item[{\em 
+I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2\hypertarget{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfab6d7a585cfa1106eb290fa9f302c5783}{}\label{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfab6d7a585cfa1106eb290fa9f302c5783}
+}]Slave ID fo Slave Address 2 \index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3}}\item[{\em 
+I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3\hypertarget{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfaf5cff98e9db3da7cc50edd21d3873efd}{}\label{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfaf5cff98e9db3da7cc50edd21d3873efd}
+}]Slave ID fo Slave Address 3 \index{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}\item[{\em 
+I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE\hypertarget{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfabdb0d442b75f2dbdb63aed5a307de077}{}\label{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfabdb0d442b75f2dbdb63aed5a307de077}
+}]Number of slave interfaces \end{description}
+\end{Desc}
+
+
+Definition at line 241 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}
+\index{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}{I2C_STATUS_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}\hypertarget{group__I2C__17XX__40XX_ga21aa839302786105dcf6a96be0e6e8bc}{}\label{group__I2C__17XX__40XX_ga21aa839302786105dcf6a96be0e6e8bc}
+
+
+I2C transfer status. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}}\item[{\em 
+I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE\hypertarget{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca9f5024a35710b260041d351d794afa9a}{}\label{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca9f5024a35710b260041d351d794afa9a}
+}]Transfer done successfully \index{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK}}\item[{\em 
+I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK\hypertarget{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcac41be4d0689494327d4dae20504c854d}{}\label{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcac41be4d0689494327d4dae20504c854d}
+}]N\+AK received during transfer \index{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST}}\item[{\em 
+I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST\hypertarget{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca674732e92811621ed2ca34b9e40ca724}{}\label{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca674732e92811621ed2ca34b9e40ca724}
+}]Aribitration lost during transfer \index{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR}}\item[{\em 
+I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR\hypertarget{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca803d8563e2b11514ba4549763ad441f5}{}\label{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca803d8563e2b11514ba4549763ad441f5}
+}]Bus error in I2C transfer \index{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY@{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}}\item[{\em 
+I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY\hypertarget{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcab3dd2c4a10e92ca1a5cb580501bad817}{}\label{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcab3dd2c4a10e92ca1a5cb580501bad817}
+}]I2C is busy doing transfer \end{description}
+\end{Desc}
+
+
+Definition at line 253 of file i2c\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+De\+Init@{Chip\+\_\+\+I2\+C\+\_\+\+De\+Init}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+De\+Init@{Chip\+\_\+\+I2\+C\+\_\+\+De\+Init}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+De\+Init(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_DeInit(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga334c2c12edda443a7e949a1ea4a6a646}{}\label{group__I2C__17XX__40XX_ga334c2c12edda443a7e949a1ea4a6a646}
+
+
+De-\/initializes the I2C peripheral registers to their default reset values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 383 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Disable@{Chip\+\_\+\+I2\+C\+\_\+\+Disable}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Disable@{Chip\+\_\+\+I2\+C\+\_\+\+Disable}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Disable(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_Disable(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga68f1d630224edab35ba796373c5867c0}{}\label{group__I2C__17XX__40XX_ga68f1d630224edab35ba796373c5867c0}
+
+
+Disable I2C peripheral\textquotesingle{}s operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 552 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T event)}{Chip_I2C_EventHandler(I2C_ID_T id, I2C_EVENT_T event)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{{\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T}}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga06b84fe3fad7ffd4ccb93f2683781936}{}\label{group__I2C__17XX__40XX_ga06b84fe3fad7ffd4ccb93f2683781936}
+
+
+Default event handler for interrupt base operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em event} & \+: Event ID of the event that called the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 338 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling@{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling@{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T event)}{Chip_I2C_EventHandlerPolling(I2C_ID_T id, I2C_EVENT_T event)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{{\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T}}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_gaaa89a66d658a41325b3c5e56bc059401}{}\label{group__I2C__17XX__40XX_gaaa89a66d658a41325b3c5e56bc059401}
+
+
+Default event handler for polling operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em event} & \+: Event ID of the event that called the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 354 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate@{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate@{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_GetClockRate(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga6b13511432337d21b8cd325651cc5b63}{}\label{group__I2C__17XX__40XX_ga6b13511432337d21b8cd325651cc5b63}
+
+
+Get current clock rate for L\+P\+C\+\_\+\+I2C peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current I2C peripheral clock rate 
+\end{DoxyReturn}
+
+
+Definition at line 402 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_GetMasterEventHandler(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_gafad03b4f6c0ecb3f59f014ab63bfda5c}{}\label{group__I2C__17XX__40XX_gafad03b4f6c0ecb3f59f014ab63bfda5c}
+
+
+Get pointer to current function handling the events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to function handing events of I2C 
+\end{DoxyReturn}
+
+
+Definition at line 418 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Init@{Chip\+\_\+\+I2\+C\+\_\+\+Init}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Init@{Chip\+\_\+\+I2\+C\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Init(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_Init(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_gab79263d278814945df2cd44c5db7b514}{}\label{group__I2C__17XX__40XX_gab79263d278814945df2cd44c5db7b514}
+
+
+Initializes the L\+P\+C\+\_\+\+I2C peripheral with specified parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 374 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active@{Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active@{Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_IsMasterActive(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga5fdf29aff7847c93373cf02da41285e1}{}\label{group__I2C__17XX__40XX_ga5fdf29aff7847c93373cf02da41285e1}
+
+
+Checks if master xfer in progress. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if master xfer in progress 0 otherwise 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This A\+PI is generally used in interrupt handler of the application to decide whether to call master state handler or to call slave state handler 
+\end{DoxyNote}
+
+
+Definition at line 489 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed@{Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed@{Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_IsStateChanged(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga4240d03d5dda43ddc8afd527b3172318}{}\label{group__I2C__17XX__40XX_ga4240d03d5dda43ddc8afd527b3172318}
+
+
+I2C peripheral state change checking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if I2C peripheral {\itshape id} has changed its state, 0 if there is no state change 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function must be used by the application when the polling has to be done based on state change. 
+\end{DoxyNote}
+
+
+Definition at line 558 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, uint8\+\_\+t slave\+Addr, uint8\+\_\+t cmd, uint8\+\_\+t $\ast$buff, int len)}{Chip_I2C_MasterCmdRead(I2C_ID_T id, uint8_t slaveAddr, uint8_t cmd, uint8_t *buff, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{uint8\+\_\+t}]{slave\+Addr, }
+\item[{uint8\+\_\+t}]{cmd, }
+\item[{uint8\+\_\+t $\ast$}]{buff, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga4a875b456dfe68acbe8ce1fc74d88bd3}{}\label{group__I2C__17XX__40XX_ga4a875b456dfe68acbe8ce1fc74d88bd3}
+
+
+Transfer a command to slave and receive data from slave after a repeated start. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em slave\+Addr} & \+: Slave address of the I2C device \\
+\hline
+{\em cmd} & \+: Command (Address/\+Register) to be written \\
+\hline
+{\em buff} & \+: Pointer to memory that will hold the data received \\
+\hline
+{\em len} & \+: Number of bytes to receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes successfully received 
+\end{DoxyReturn}
+
+
+Definition at line 465 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, uint8\+\_\+t slave\+Addr, uint8\+\_\+t $\ast$buff, int len)}{Chip_I2C_MasterRead(I2C_ID_T id, uint8_t slaveAddr, uint8_t *buff, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{uint8\+\_\+t}]{slave\+Addr, }
+\item[{uint8\+\_\+t $\ast$}]{buff, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_gae816049843eb162c803b5058ebd9a25c}{}\label{group__I2C__17XX__40XX_gae816049843eb162c803b5058ebd9a25c}
+
+
+Set function that must handle I2C events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em slave\+Addr} & \+: Slave address from which data be read \\
+\hline
+{\em buff} & \+: Pointer to memory where data read be stored \\
+\hline
+{\em len} & \+: Number of bytes to read from slave \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes read successfully 
+\end{DoxyReturn}
+
+
+Definition at line 478 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, uint8\+\_\+t slave\+Addr, const uint8\+\_\+t $\ast$buff, uint8\+\_\+t len)}{Chip_I2C_MasterSend(I2C_ID_T id, uint8_t slaveAddr, const uint8_t *buff, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{uint8\+\_\+t}]{slave\+Addr, }
+\item[{const uint8\+\_\+t $\ast$}]{buff, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga9ff549bdb526786d313c141b11cab43e}{}\label{group__I2C__17XX__40XX_ga9ff549bdb526786d313c141b11cab43e}
+
+
+Transmit data to I2C slave using I2C Master mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 .. etc) \\
+\hline
+{\em slave\+Addr} & \+: Slave address to which the data be written \\
+\hline
+{\em buff} & \+: Pointer to buffer having the array of data \\
+\hline
+{\em len} & \+: Number of bytes to be transfered from {\itshape buff} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes successfully transfered 
+\end{DoxyReturn}
+
+
+Definition at line 452 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_MasterStateHandler(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga179362e42a3de931ff7f57ca698254fa}{}\label{group__I2C__17XX__40XX_ga179362e42a3de931ff7f57ca698254fa}
+
+
+I2C Master transfer state change handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Usually called from the appropriate Interrupt handler 
+\end{DoxyNote}
+
+
+Definition at line 495 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer@{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, I2\+C\+\_\+\+X\+F\+E\+R\+\_\+\+T $\ast$xfer)}{Chip_I2C_MasterTransfer(I2C_ID_T id, I2C_XFER_T *xfer)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{{\bf I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} $\ast$}]{xfer}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga5f89391d66048894f4365d3b2b7df267}{}\label{group__I2C__17XX__40XX_ga5f89391d66048894f4365d3b2b7df267}
+
+
+Transmit and Receive data in master mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral selected (I2\+C0, I2\+C1 etc) \\
+\hline
+{\em xfer} & \+: Pointer to a \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} structure see notes below \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Any of \hyperlink{group__I2C__17XX__40XX_ga21aa839302786105dcf6a96be0e6e8bc}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} values, xfer-\/$>$tx\+Sz will have number of bytes not sent due to error, xfer-\/$>$rx\+Sz will have the number of bytes yet to be received. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The parameter {\itshape xfer} should have its member {\itshape slave\+Addr} initialized to the 7-\/\+Bit slave address to which the master will do the xfer, Bit0 to bit6 should have the address and Bit8 is ignored. During the transfer no code (like event handler) must change the content of the memory pointed to by {\itshape xfer}. The member of {\itshape xfer}, {\itshape tx\+Buff} and {\itshape tx\+Sz} be initialized to the memory from which the I2C must pick the data to be transfered to slave and the number of bytes to send respectively, similarly {\itshape rx\+Buff} and {\itshape rx\+Sz} must have pointer to memroy where data received from slave be stored and the number of data to get from slave respectilvely. 
+\end{DoxyNote}
+
+
+Definition at line 424 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate@{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate@{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, uint32\+\_\+t clockrate)}{Chip_I2C_SetClockRate(I2C_ID_T id, uint32_t clockrate)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{uint32\+\_\+t}]{clockrate}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga17fac5d72058db8eed11d247e78b74ed}{}\label{group__I2C__17XX__40XX_ga17fac5d72058db8eed11d247e78b74ed}
+
+
+Set up clock rate for L\+P\+C\+\_\+\+I2C peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em clockrate} & \+: Target clock rate value to initialized I2C peripheral (Hz) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Parameter {\itshape clockrate} for I2\+C0 should be from 1000 up to 1000000 (1 K\+Hz to 1 M\+Hz), as I2\+C0 support Fast Mode Plus. If the {\itshape clockrate} is more than 400 K\+Hz (Fast Plus Mode) Board\+\_\+\+I2\+C\+\_\+\+Enable\+Fast\+Plus() must be called prior to calling this function. 
+\end{DoxyNote}
+
+
+Definition at line 392 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+\+T event)}{Chip_I2C_SetMasterEventHandler(I2C_ID_T id, I2C_EVENTHANDLER_T event)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{{\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga1fc3fc0946344e9551d9eef0bbf610b9}{}\label{group__I2C__17XX__40XX_ga1fc3fc0946344e9551d9eef0bbf610b9}
+
+
+Set function that must handle I2C events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em event} & \+: Pointer to function that will handle the event (Should not be N\+U\+LL) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 when successful, 0 when a transfer is on going with its own event handler 
+\end{DoxyReturn}
+
+
+Definition at line 408 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup@{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup@{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id, I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D sid, I2\+C\+\_\+\+X\+F\+E\+R\+\_\+\+T $\ast$xfer, I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+\+T event, uint8\+\_\+t addr\+Mask)}{Chip_I2C_SlaveSetup(I2C_ID_T id, I2C_SLAVE_ID sid, I2C_XFER_T *xfer, I2C_EVENTHANDLER_T event, uint8_t addrMask)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id, }
+\item[{{\bf I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID}}]{sid, }
+\item[{{\bf I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} $\ast$}]{xfer, }
+\item[{{\bf I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}}]{event, }
+\item[{uint8\+\_\+t}]{addr\+Mask}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}{}\label{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}
+
+
+Setup a slave I2C device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+{\em sid} & \+: I2C Slave peripheral ID (I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0, I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1 etc) \\
+\hline
+{\em xfer} & \+: Pointer to transfer structure (see note below for more info) \\
+\hline
+{\em event} & \+: Event handler for slave transfers \\
+\hline
+{\em addr\+Mask} & \+: Address mask to use along with slave address (see notes below for more info) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Parameter {\itshape xfer} should point to a valid \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} structure object and must have {\itshape slave\+Addr} initialized with 7bit Slave address (From Bit1 to Bit7), Bit0 when set enables general call handling, {\itshape slave\+Addr} along with {\itshape addr\+Mask} will be used to match the slave address. {\itshape rx\+Buff} and {\itshape tx\+Buff} must point to valid buffers where slave can receive or send the data from, size of which will be provided by {\itshape rx\+Sz} and {\itshape tx\+Sz} respectively. Function pointed to by {\itshape event} will be called for the following events \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX} (One byte of data received successfully from the master and stored inside memory pointed by xfer-\/$>$rx\+Buff, incremented the pointer and decremented the {\itshape xfer-\/$>$rx\+Sz}), \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX} (One byte of data from xfer-\/$>$tx\+Buff was sent to master successfully, incremented the pointer and decremented xfer-\/$>$tx\+Sz), \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE} (Master is done doing its transfers with the slave).~\newline
+ ~\newline
+Bit-\/0 of the parameter {\itshape addr\+Mask} is reserved and should always be 0. Any bit (B\+I\+T1 to B\+I\+T7) set in {\itshape addr\+Mask} will make the corresponding bit in {\itshape xfer-\/$>$slave\+Addr} as don\textquotesingle{}t care. Thit is, if {\itshape xfer-\/$>$slave\+Addr} is (0x10 $<$$<$ 1) and {\itshape addr\+Mask} is (0x03 $<$$<$ 1) then 0x10, 0x11, 0x12, 0x13 will all be considered as valid slave addresses for the registered slave. Upon receving any event {\itshape xfer-\/$>$slave\+Addr} (B\+I\+T1 to B\+I\+T7) will hold the actual address which was received from master.~\newline
+ ~\newline
+{\bfseries General Call Handling}~\newline
+ Slave can receive data from master using general call address (0x00). General call handling must be setup as given below
+\begin{DoxyItemize}
+\item Call \hyperlink{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup()} with argument {\itshape sid} as I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL
+\begin{DoxyItemize}
+\item xfer-\/$>$slave\+Addr ignored, argument {\itshape addr\+Mask} ignored
+\item function provided by {\itshape event} will registered to be called when slave received data using addr 0x00
+\item xfer-\/$>$rx\+Buff and xfer-\/$>$rx\+Sz should be valid in argument {\itshape xfer} 
+\end{DoxyItemize}
+\item To handle General Call only (No other slaves are configured)
+\begin{DoxyItemize}
+\item Call \hyperlink{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup()} with sid as I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+X (X=0,1,2,3)
+\item setup {\itshape xfer} with slave\+Addr member set to 0, {\itshape event} is ignored hence can be N\+U\+LL
+\item provide {\itshape addr\+Mask} (typically 0, if not you better be knowing what you are doing)
+\end{DoxyItemize}
+\item To handler General Call when other slave is active
+\begin{DoxyItemize}
+\item Call \hyperlink{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup()} with sid as I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+X (X=0,1,2,3)
+\item setup {\itshape xfer} with slave\+Addr member set to 7-\/\+Bit Slave address \mbox{[}from Bit1 to 7\mbox{]}
+\item Set Bit0 of {\itshape xfer-\/$>$slave\+Addr} as 1
+\item Provide appropriate {\itshape addr\+Mask} 
+\item Argument {\itshape event} must point to function, that handles events from actual slave\+Address and not the GC 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+If the slave has only one byte in its tx\+Buff, once that byte is transfered to master the event handler will be called for event \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE}. If the master attempts to read more bytes in the same transfer then the slave hardware will send 0x\+FF to master till the end of transfer, event handler will not be called to notify this. For more info see section below~\newline
+ ~\newline
+{\bfseries  Last data handling in slave }~\newline
+ If the user wants to implement a slave which will read a byte from a specific location over and over again whenever master reads the slave. If the user initializes the xfer-\/$>$tx\+Buff as the location to read the byte from and xfer-\/$>$tx\+Sz as 1, then say, if master reads one byte; slave will send the byte read from xfer-\/$>$tx\+Buff and will call the event handler with \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE}. If the master attempts to read another byte instead of sending the byte read from xfer-\/$>$tx\+Buff the slave hardware will send 0x\+FF and no event will occur. To handle this issue, slave should set xfer-\/$>$tx\+Sz to 2, in which case when master reads the byte event handler will be called with \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}, in which the slave implementation can reset the buffer and size back to original location (i.\+e, xfer-\/$>$tx\+Buff--, xfer-\/$>$tx\+Sz++), if the master reads another byte in the same transfer, byte read from xfer-\/$>$tx\+Buff will be sent and \hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX} will be called again, and the process repeats. 
+\end{DoxyWarning}
+
+
+Definition at line 503 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}!Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler}}
+\index{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler@{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+C driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler(\+I2\+C\+\_\+\+I\+D\+\_\+\+T id)}{Chip_I2C_SlaveStateHandler(I2C_ID_T id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+I\+D\+\_\+T}}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2C__17XX__40XX_ga650618a5f4717c46ae3ea304142ddc03}{}\label{group__I2C__17XX__40XX_ga650618a5f4717c46ae3ea304142ddc03}
+
+
+I2C Slave event handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: I2C peripheral ID (I2\+C0, I2\+C1 ... etc) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 526 of file i2c\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+

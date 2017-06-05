@@ -1,0 +1,8 @@
+digraph "_HID_DESCRIPTOR"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{_HID_DESCRIPTOR\n|+ bcdHID\l+ bCountryCode\l+ bDescriptorType\l+ bLength\l+ bNumDescriptors\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +DescriptorList" ,arrowhead="odiamond"];
+  Node2 [label="{_HID_DESCRIPTOR::_HID\l_DESCRIPTOR_LIST\n|+ bDescriptorType\l+ wDescriptorLength\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct__HID__DESCRIPTOR_1_1__HID__DESCRIPTOR__LIST.html"];
+}

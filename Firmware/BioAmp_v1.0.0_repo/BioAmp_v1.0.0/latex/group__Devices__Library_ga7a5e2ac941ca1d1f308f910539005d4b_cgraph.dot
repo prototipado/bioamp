@@ -1,0 +1,26 @@
+digraph "Drv_Devices_startAsSlave"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Drv_Devices_startAsSlave",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Drv_GPIO_setPinDir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#gab513ddd38bb6f89dfa844fd7ab6c48dd",tooltip="Set GPIO direction for a single GPIO pin. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_GPIO_SetPinDIR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__17XX__40XX.html#gac384ba462a45291528e95945c3273772",tooltip="Set GPIO direction for a single GPIO pin. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_GPIO_SetPinDIROutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__17XX__40XX.html#gadd0450341df62f7e13ee57cd249fe2a2",tooltip="Set GPIO direction for a single GPIO pin to an output. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_GPIO_SetPinDIRInput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__17XX__40XX.html#ga0c20af0c6b9cee61714643bef6614485",tooltip="Set GPIO direction for a single GPIO pin to an input. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Chip_IOCON_PinMux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__IOCON__17XX__40XX.html#gaa2f90b2873cda51e67b3a67d6cc92617",tooltip="Setup pin modes and function. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Chip_IOCON_PinMuxSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__IOCON__17XX__40XX.html#ga5db68254cabb0d4cd4558d81557b77e4",tooltip="Sets I/O Control pin mux. "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Chip_IOCON_SetPinMuxing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__IOCON__17XX__40XX.html#gad97c96e401016cf296e6d20454f1c522",tooltip="Set all I/O Control pin muxing. "];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Drv_GPIO_setPinState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#gaa0fc19aa74a1bf75817ba137e78f7a0a",tooltip="Set a GPIO pin state. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Chip_GPIO_SetPinState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__17XX__40XX.html#ga2d8db9f0a52f061d64e8cada713ae03e",tooltip="Set a GPIO pin state. "];
+}

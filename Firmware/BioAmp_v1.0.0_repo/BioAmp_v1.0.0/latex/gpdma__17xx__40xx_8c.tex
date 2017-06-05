@@ -1,0 +1,118 @@
+\hypertarget{gpdma__17xx__40xx_8c}{}\section{gpdma\+\_\+17xx\+\_\+40xx.\+c File Reference}
+\label{gpdma__17xx__40xx_8c}\index{gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}}
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+Include dependency graph for gpdma\+\_\+17xx\+\_\+40xx.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__GPDMA__17XX__40XX_gae93a1b9cb8ee1a04176ce51a9a4ad073}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t channel\+Num, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable the G\+P\+D\+MA Channel. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_ga94c9bdb806ce700f0c04deeec0da142e}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{group__GPDMA__17XX__40XX_gabbb281ef4b818f2e60167cf766f94fdb}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T} type, uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Clear the Interrupt Flag from different registers according to the type. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_ga673cc6cab2ad87185f5f5d0ff8424075}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA)
+\begin{DoxyCompactList}\small\item\em Shutdown the G\+P\+D\+MA. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__GPDMA__17XX__40XX_ga55ff3d61ec382dbec4775bed2db2cde2}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint32\+\_\+t Peripheral\+Connection\+\_\+\+ID)
+\begin{DoxyCompactList}\small\item\em Get a free G\+P\+D\+MA channel for one D\+MA connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_ga21c99277e4579af4be9d9311a03b5542}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA)
+\begin{DoxyCompactList}\small\item\em Initialize the G\+P\+D\+MA. \end{DoxyCompactList}\item 
+int \hyperlink{group__GPDMA__17XX__40XX_gac32ac477dbee2d3be93ca90b30db856c}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{structGPDMA__CH__CFG__T}{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$G\+P\+D\+M\+A\+Cfg, uint8\+\_\+t Channel\+Num, uint32\+\_\+t src, uint32\+\_\+t dst, uint32\+\_\+t Size, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type)
+\begin{DoxyCompactList}\small\item\em Initialize channel configuration strucutre. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga986bb4a0d10a05ff6284fff871fb86c6}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num)
+\begin{DoxyCompactList}\small\item\em The G\+P\+D\+MA stream interrupt status checking. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_gab7d263072f745b4f3913fb0afc434c4e}{Int\+Status} \hyperlink{group__GPDMA__17XX__40XX_ga06fdae68a49436b9a02d42ad85782ff4}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{group__GPDMA__17XX__40XX_ga2f4aa97bd0ffa5046c8e2b17028d99cc}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} type, uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Read the status from different registers according to the type. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga8605c52de33b7a8977eadaa480f5807c}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$D\+M\+A\+Descriptor, uint32\+\_\+t src, uint32\+\_\+t dst, uint32\+\_\+t Size, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type, const \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$Next\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Prepare a single D\+MA descriptor. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga6a2f7c7238f4288cb73baec79c3e38a7}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num, const \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$D\+M\+A\+Descriptor, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type)
+\begin{DoxyCompactList}\small\item\em Do a D\+MA transfer using linked list of descriptors. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_gafa887387f85205ecacc3220700b49d0d}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num)
+\begin{DoxyCompactList}\small\item\em Stop a stream D\+MA transfer. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga53a4dbf10ce59c17b0dd2284fa635580}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num, uint32\+\_\+t src, uint32\+\_\+t dst, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type, uint32\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Do a D\+MA transfer M2M, M2P,P2M or P2P. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} uint8\+\_\+t \hyperlink{gpdma__17xx__40xx_8c_aa7e76ac50258d361a03b980c1043df49}{config\+D\+M\+A\+Mux} (uint32\+\_\+t gpdma\+\_\+peripheral\+\_\+connection\+\_\+number)
+\item 
+uint32\+\_\+t \hyperlink{gpdma__17xx__40xx_8c_ad96f6ffab0df64a5166a3854ef7170c3}{make\+Ctrl\+Word} (const \hyperlink{structGPDMA__CH__CFG__T}{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$G\+P\+D\+M\+A\+Channel\+Config, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Burst\+Src\+Conn, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Burst\+Dst\+Conn, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Wid\+Src\+Conn, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Wid\+Dst\+Conn)
+\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{gpdma__17xx__40xx_8c_a5f10b7d78a26cbb352cf755906906755}{setup\+Channel} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{structGPDMA__CH__CFG__T}{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$G\+P\+D\+M\+A\+Channel\+Config, uint32\+\_\+t Ctrl\+Word, uint32\+\_\+t Link\+List\+Item, uint8\+\_\+t Src\+Peripheral, uint8\+\_\+t Dst\+Peripheral)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structDMA__ChannelHandle__t}{D\+M\+A\+\_\+\+Channel\+Handle\+\_\+t} \hyperlink{gpdma__17xx__40xx_8c_ae4fa2fc608a1b214675a6f7b8cec5a33}{Channel\+Handler\+Array} \mbox{[}\hyperlink{group__GPDMA__17XX__40XX_gaf7c43b3d13c91c30ddf67e479966d5cd}{G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}!config\+D\+M\+A\+Mux@{config\+D\+M\+A\+Mux}}
+\index{config\+D\+M\+A\+Mux@{config\+D\+M\+A\+Mux}!gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{config\+D\+M\+A\+Mux(uint32\+\_\+t gpdma\+\_\+peripheral\+\_\+connection\+\_\+number)}{configDMAMux(uint32_t gpdma_peripheral_connection_number)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} uint8\+\_\+t config\+D\+M\+A\+Mux (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{gpdma\+\_\+peripheral\+\_\+connection\+\_\+number}
+\end{DoxyParamCaption}
+)}\hypertarget{gpdma__17xx__40xx_8c_aa7e76ac50258d361a03b980c1043df49}{}\label{gpdma__17xx__40xx_8c_aa7e76ac50258d361a03b980c1043df49}
+
+
+Definition at line 249 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\index{gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}!make\+Ctrl\+Word@{make\+Ctrl\+Word}}
+\index{make\+Ctrl\+Word@{make\+Ctrl\+Word}!gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{make\+Ctrl\+Word(const G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T $\ast$\+G\+P\+D\+M\+A\+Channel\+Config, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Burst\+Src\+Conn, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Burst\+Dst\+Conn, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Wid\+Src\+Conn, uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Wid\+Dst\+Conn)}{makeCtrlWord(const GPDMA_CH_CFG_T *GPDMAChannelConfig, uint32_t GPDMA_LUTPerBurstSrcConn, uint32_t GPDMA_LUTPerBurstDstConn, uint32_t GPDMA_LUTPerWidSrcConn, uint32_t GPDMA_LUTPerWidDstConn)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t make\+Ctrl\+Word (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$}]{G\+P\+D\+M\+A\+Channel\+Config, }
+\item[{uint32\+\_\+t}]{G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Burst\+Src\+Conn, }
+\item[{uint32\+\_\+t}]{G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Burst\+Dst\+Conn, }
+\item[{uint32\+\_\+t}]{G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Wid\+Src\+Conn, }
+\item[{uint32\+\_\+t}]{G\+P\+D\+M\+A\+\_\+\+L\+U\+T\+Per\+Wid\+Dst\+Conn}
+\end{DoxyParamCaption}
+)}\hypertarget{gpdma__17xx__40xx_8c_ad96f6ffab0df64a5166a3854ef7170c3}{}\label{gpdma__17xx__40xx_8c_ad96f6ffab0df64a5166a3854ef7170c3}
+$<$ Burst size = 32
+
+$<$ Burst size = 32 
+
+Definition at line 274 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\index{gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}!setup\+Channel@{setup\+Channel}}
+\index{setup\+Channel@{setup\+Channel}!gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{setup\+Channel(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T $\ast$\+G\+P\+D\+M\+A\+Channel\+Config, uint32\+\_\+t Ctrl\+Word, uint32\+\_\+t Link\+List\+Item, uint8\+\_\+t Src\+Peripheral, uint8\+\_\+t Dst\+Peripheral)}{setupChannel(LPC_GPDMA_T *pGPDMA, GPDMA_CH_CFG_T *GPDMAChannelConfig, uint32_t CtrlWord, uint32_t LinkListItem, uint8_t SrcPeripheral, uint8_t DstPeripheral)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} setup\+Channel (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$}]{G\+P\+D\+M\+A\+Channel\+Config, }
+\item[{uint32\+\_\+t}]{Ctrl\+Word, }
+\item[{uint32\+\_\+t}]{Link\+List\+Item, }
+\item[{uint8\+\_\+t}]{Src\+Peripheral, }
+\item[{uint8\+\_\+t}]{Dst\+Peripheral}
+\end{DoxyParamCaption}
+)}\hypertarget{gpdma__17xx__40xx_8c_a5f10b7d78a26cbb352cf755906906755}{}\label{gpdma__17xx__40xx_8c_a5f10b7d78a26cbb352cf755906906755}
+
+
+Definition at line 341 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+
+
+\subsection{Variable Documentation}
+\index{gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}!Channel\+Handler\+Array@{Channel\+Handler\+Array}}
+\index{Channel\+Handler\+Array@{Channel\+Handler\+Array}!gpdma\+\_\+17xx\+\_\+40xx.\+c@{gpdma\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{Channel\+Handler\+Array}{ChannelHandlerArray}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+M\+A\+\_\+\+Channel\+Handle\+\_\+t} Channel\+Handler\+Array\mbox{[}{\bf G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{gpdma__17xx__40xx_8c_ae4fa2fc608a1b214675a6f7b8cec5a33}{}\label{gpdma__17xx__40xx_8c_ae4fa2fc608a1b214675a6f7b8cec5a33}
+
+
+Definition at line 39 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+

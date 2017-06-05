@@ -1,0 +1,11 @@
+digraph "Chip_I2S_TxConfig"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_I2S_TxConfig",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="getClkDiv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2s__17xx__40xx_8c.html#a820d48d5d5cedc548319581e2c009352"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_Clock_GetPeripheral\lClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga9c2bc86c857119426aa6a724c12a6f42",tooltip="Returns clock rate for a peripheral (from peripheral clock) "];
+}

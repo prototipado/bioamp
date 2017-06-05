@@ -1,0 +1,247 @@
+\hypertarget{ssp__17xx__40xx_8h}{}\section{ssp\+\_\+17xx\+\_\+40xx.\+h File Reference}
+\label{ssp__17xx__40xx_8h}\index{ssp\+\_\+17xx\+\_\+40xx.\+h@{ssp\+\_\+17xx\+\_\+40xx.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structChip__SSP__DATA__SETUP__T}{Chip\+\_\+\+S\+S\+P\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T\+U\+P\+\_\+T}
+\item 
+struct \hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T}
+\begin{DoxyCompactList}\small\item\em S\+SP register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structSPI__Address__t}{S\+P\+I\+\_\+\+Address\+\_\+t}
+\item 
+struct \hyperlink{structSSP__ConfigFormat}{S\+S\+P\+\_\+\+Config\+Format}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga6333b5eaf9d5301431fc0399c0d417d5}{S\+S\+P\+\_\+\+C\+P\+H\+A\+\_\+\+F\+I\+R\+ST}~\hyperlink{group__SSP__17XX__40XX_gaee3465bdb33add1970f6ce7f7bc638c4}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+H\+A\+\_\+\+F\+I\+R\+ST}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga04ad38295445819979f55503eed5c177}{S\+S\+P\+\_\+\+C\+P\+H\+A\+\_\+\+S\+E\+C\+O\+ND}~\hyperlink{group__SSP__17XX__40XX_gae4150d0b2513ff70568be15c2170c9ea}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+H\+A\+\_\+\+S\+E\+C\+O\+ND}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaf64aec37a92ca6c14c23af6fc0052ccb}{S\+S\+P\+\_\+\+C\+P\+O\+L\+\_\+\+HI}~\hyperlink{group__SSP__17XX__40XX_gab4353fed07ef845a3796e154397f7e76}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+O\+L\+\_\+\+LO}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga1e10eccdb2b293607764028aab1b98a9}{S\+S\+P\+\_\+\+C\+P\+O\+L\+\_\+\+LO}~\hyperlink{group__SSP__17XX__40XX_ga36d7ad75edb14d318d710f964384f466}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+O\+L\+\_\+\+HI}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gad90cbeb91495d457ae2dd8bda909a2a9}{S\+S\+P\+\_\+\+C\+P\+S\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) (0x\+F\+F))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga90be93bebdbdfee011d90ea6e054260a}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) (0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga90be93bebdbdfee011d90ea6e054260a}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) (0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaee3465bdb33add1970f6ce7f7bc638c4}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+H\+A\+\_\+\+F\+I\+R\+ST}~((uint32\+\_\+t) (0))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gae4150d0b2513ff70568be15c2170c9ea}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+H\+A\+\_\+\+S\+E\+C\+O\+ND}~((uint32\+\_\+t) (1 $<$$<$ 7))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga36d7ad75edb14d318d710f964384f466}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+O\+L\+\_\+\+HI}~((uint32\+\_\+t) (1 $<$$<$ 6))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gab4353fed07ef845a3796e154397f7e76}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+C\+P\+O\+L\+\_\+\+LO}~((uint32\+\_\+t) (0))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga2d75ec18f2de7c9e24f69a3242ceee72}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+D\+SS}(n)                ~((uint32\+\_\+t) ((n) \& 0x\+F))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga7ca858fcf0f529a38e1e1bf0a69d4486}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+F\+R\+F\+\_\+\+M\+I\+C\+R\+O\+W\+I\+RE}~((uint32\+\_\+t) (2 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga4f0f58a8f4b87af0f18e84b981c31a74}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+F\+R\+F\+\_\+\+S\+PI}~((uint32\+\_\+t) (0 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga54c718a1a75a1e5e06417b9f8267ee27}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+F\+R\+F\+\_\+\+TI}~((uint32\+\_\+t) (1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaed4d66acb278ca43b6bc784b6031ee7f}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+S\+CR}(n)        ~((uint32\+\_\+t) ((n \& 0x\+F\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaed4d66acb278ca43b6bc784b6031ee7f}{S\+S\+P\+\_\+\+C\+R0\+\_\+\+S\+CR}(n)        ~((uint32\+\_\+t) ((n \& 0x\+F\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gad90a9c1c97a5c4e19e048e9686a4d8fa}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) (0x0\+F))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gac0e5bef37b94df5ad96bf270aa802dcd}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+L\+B\+M\+\_\+\+EN}~((uint32\+\_\+t) (1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaa8e064b00be6db00e597ad2509a633c3}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+EN}~((uint32\+\_\+t) (0))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga483d570ffc25bc917c99b3e8ece75649}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+S\+L\+A\+V\+E\+\_\+\+EN}~((uint32\+\_\+t) (1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaf8cd75ca0bf07a236b992cca4769b4dc}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+S\+O\+\_\+\+D\+I\+S\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gaad500ed8cec6c1734a12a7f55ff6ec26}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+S\+S\+P\+\_\+\+EN}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga48ac9207e05fd0e569f64e290a07f53b}{S\+S\+P\+\_\+\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK}(n)  ~((n) \& 0x\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga5ce108586bfd5b77c849aa9969c8973c}{S\+S\+P\+\_\+\+I\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) (0x03))
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga3c9cbd4f4b8169253d26f4d40cdc414d}{S\+S\+P\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE}~\hyperlink{group__SSP__17XX__40XX_gaa8e064b00be6db00e597ad2509a633c3}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+EN}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_gac6bc4b92810caa934b2d7116390098c6}{S\+S\+P\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE}~\hyperlink{group__SSP__17XX__40XX_ga483d570ffc25bc917c99b3e8ece75649}{S\+S\+P\+\_\+\+C\+R1\+\_\+\+S\+L\+A\+V\+E\+\_\+\+EN}
+\item 
+\#define \hyperlink{group__SSP__17XX__40XX_ga0fe66130dd87296b6e16cd9fbcf7daf1}{S\+S\+P\+\_\+\+S\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) (0x1\+F))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_ga2f99e08511788c146ae9b35023e4a61c}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+B\+I\+TS} \hyperlink{group__SSP__17XX__40XX_ga4e348748c4fb42ef94c2cbd968a43648}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+T}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_gab423240914ad746147aeb31f483e9553}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT} \hyperlink{group__SSP__17XX__40XX_ga12dec81e345a9ffbefd6a1fae5759e09}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+T}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_gad3ae555ad43caa2b2a47bc4769d8fe50}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+F\+O\+R\+M\+AT} \hyperlink{group__SSP__17XX__40XX_ga207687847d9ab8385057ddeca53c2942}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_ga2a375ed10848e3661b9b015fea1cf39b}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+M\+O\+DE} \hyperlink{group__SSP__17XX__40XX_gaced971159acfb5b4f06caa5b02f5a680}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+M\+O\+D\+E\+\_\+T}
+\item 
+typedef struct \hyperlink{structSSP__ConfigFormat}{S\+S\+P\+\_\+\+Config\+Format} \hyperlink{group__SSP__17XX__40XX_ga0c59381b3e253fe86244ec98a53a7d79}{S\+S\+P\+\_\+\+Config\+Format}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_gaee679ef8477b8e31bf174e66e2984caf}{\+\_\+\+S\+S\+P\+\_\+\+D\+MA} \hyperlink{group__SSP__17XX__40XX_ga026212e0116f9a1109fd221e6b0ac503}{S\+S\+P\+\_\+\+D\+M\+A\+\_\+T}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_ga59cc14c5381f32c16286c45bd6a3ece0}{\+\_\+\+S\+S\+P\+\_\+\+I\+N\+T\+C\+L\+E\+AR} \hyperlink{group__SSP__17XX__40XX_gadc98b69a8cb7a5afef8dd81bebbfc66d}{S\+S\+P\+\_\+\+I\+N\+T\+C\+L\+E\+A\+R\+\_\+T}
+\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_gab6a0ac593093184dd21c95f53b30f4ef}{\+\_\+\+S\+S\+P\+\_\+\+I\+N\+T\+M\+A\+SK} \hyperlink{group__SSP__17XX__40XX_ga84198f10a9a371b8523c09a850399bf4}{S\+S\+P\+\_\+\+I\+N\+T\+M\+A\+S\+K\+\_\+T}
+\begin{DoxyCompactList}\small\item\em S\+SP Type of Interrupt Mask. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_gafaff4574b830e5b94dcaf7ca8da399e8}{\+\_\+\+S\+S\+P\+\_\+\+M\+A\+S\+K\+I\+N\+T\+S\+T\+A\+T\+US} \hyperlink{group__SSP__17XX__40XX_gac0b1a846ede1f57c5fa27d4163acdbe9}{S\+S\+P\+\_\+\+M\+A\+S\+K\+I\+N\+T\+S\+T\+A\+T\+U\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em S\+SP Type of Mask Interrupt Status. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_ga2042535e55396776c81a7235ed95db35}{\+\_\+\+S\+S\+P\+\_\+\+R\+A\+W\+I\+N\+T\+S\+T\+A\+T\+US} \hyperlink{group__SSP__17XX__40XX_gaf901cb9befcf9302650fed7f1ddba443}{S\+S\+P\+\_\+\+R\+A\+W\+I\+N\+T\+S\+T\+A\+T\+U\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em S\+SP Type of Raw Interrupt Status. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__SSP__17XX__40XX_ga4ec33a0121a2ccab848c7b37907d9e9d}{\+\_\+\+S\+S\+P\+\_\+\+S\+T\+A\+T\+US} \hyperlink{group__SSP__17XX__40XX_gad95eaf4325a2ec8e457b309d21d6987d}{S\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em S\+SP Type of Status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_gaee679ef8477b8e31bf174e66e2984caf}{\+\_\+\+S\+S\+P\+\_\+\+D\+MA} \{ \hyperlink{group__SSP__17XX__40XX_ggaee679ef8477b8e31bf174e66e2984cafae51f79e5713056c61aadb8d5ddfc335a}{S\+S\+P\+\_\+\+D\+M\+A\+\_\+\+RX} = (1u), 
+\hyperlink{group__SSP__17XX__40XX_ggaee679ef8477b8e31bf174e66e2984cafa5925a5061635b0742605b6bb4b434ce4}{S\+S\+P\+\_\+\+D\+M\+A\+\_\+\+TX} = (1u $<$$<$ 1), 
+\hyperlink{group__SSP__17XX__40XX_ggaee679ef8477b8e31bf174e66e2984cafa8e393687f85f713df0927a4c6f45679e}{S\+S\+P\+\_\+\+D\+M\+A\+\_\+\+B\+I\+T\+M\+A\+SK} = ((uint32\+\_\+t)(0x3))
+ \}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_ga59cc14c5381f32c16286c45bd6a3ece0}{\+\_\+\+S\+S\+P\+\_\+\+I\+N\+T\+C\+L\+E\+AR} \{ \hyperlink{group__SSP__17XX__40XX_gga59cc14c5381f32c16286c45bd6a3ece0a3f8b48b9a600a7c3d1615c88abf76981}{S\+S\+P\+\_\+\+R\+O\+R\+IC} = 0x0, 
+\hyperlink{group__SSP__17XX__40XX_gga59cc14c5381f32c16286c45bd6a3ece0a5c9358a05d7509ce431770ca872cdce0}{S\+S\+P\+\_\+\+R\+T\+IC} = 0x1, 
+\hyperlink{group__SSP__17XX__40XX_gga59cc14c5381f32c16286c45bd6a3ece0acf79b0a911e1c9d4cee5387be0dc45ba}{S\+S\+P\+\_\+\+I\+N\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+I\+T\+M\+A\+SK} = 0x3
+ \}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_gab6a0ac593093184dd21c95f53b30f4ef}{\+\_\+\+S\+S\+P\+\_\+\+I\+N\+T\+M\+A\+SK} \{ \\*
+\hyperlink{group__SSP__17XX__40XX_ggab6a0ac593093184dd21c95f53b30f4efa891bf6d7622b4f6f010396f08a51adbf}{S\+S\+P\+\_\+\+R\+O\+R\+IM} = ((uint32\+\_\+t)(1 $<$$<$ 0)), 
+\hyperlink{group__SSP__17XX__40XX_ggab6a0ac593093184dd21c95f53b30f4efaabb6398ce8ef5db95fc47fc2bd525f13}{S\+S\+P\+\_\+\+R\+T\+IM} = ((uint32\+\_\+t)(1 $<$$<$ 1)), 
+\hyperlink{group__SSP__17XX__40XX_ggab6a0ac593093184dd21c95f53b30f4efa2fff5a42799aae53c7a4bf3e3a900448}{S\+S\+P\+\_\+\+R\+X\+IM} = ((uint32\+\_\+t)(1 $<$$<$ 2)), 
+\hyperlink{group__SSP__17XX__40XX_ggab6a0ac593093184dd21c95f53b30f4efa34e61a5c1d77d3763e4f8e1bfacbdcc4}{S\+S\+P\+\_\+\+T\+X\+IM} = ((uint32\+\_\+t)(1 $<$$<$ 3)), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_ggab6a0ac593093184dd21c95f53b30f4efa46081a07592bbc197435bbb21cc1e201}{S\+S\+P\+\_\+\+I\+N\+T\+\_\+\+M\+A\+S\+K\+\_\+\+B\+I\+T\+M\+A\+SK} = ((uint32\+\_\+t)(0xF))
+ \}\begin{DoxyCompactList}\small\item\em S\+SP Type of Interrupt Mask. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_gafaff4574b830e5b94dcaf7ca8da399e8}{\+\_\+\+S\+S\+P\+\_\+\+M\+A\+S\+K\+I\+N\+T\+S\+T\+A\+T\+US} \{ \\*
+\hyperlink{group__SSP__17XX__40XX_ggafaff4574b830e5b94dcaf7ca8da399e8a05e1bf0ddb0306501fcb234c6e885082}{S\+S\+P\+\_\+\+R\+O\+R\+M\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 0)), 
+\hyperlink{group__SSP__17XX__40XX_ggafaff4574b830e5b94dcaf7ca8da399e8a86603f74ba22232e10e325e2f0242308}{S\+S\+P\+\_\+\+R\+T\+M\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 1)), 
+\hyperlink{group__SSP__17XX__40XX_ggafaff4574b830e5b94dcaf7ca8da399e8a07742f0e285a6bf09099e3298fac1184}{S\+S\+P\+\_\+\+R\+X\+M\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 2)), 
+\hyperlink{group__SSP__17XX__40XX_ggafaff4574b830e5b94dcaf7ca8da399e8a8ad9ea51c1cde0cd518cdea049710093}{S\+S\+P\+\_\+\+T\+X\+M\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 3)), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_ggafaff4574b830e5b94dcaf7ca8da399e8a50da00745fc05f4421b4d60f861bd31e}{S\+S\+P\+\_\+\+M\+A\+S\+K\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK} = ((uint32\+\_\+t)(0xF))
+ \}\begin{DoxyCompactList}\small\item\em S\+SP Type of Mask Interrupt Status. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_ga2042535e55396776c81a7235ed95db35}{\+\_\+\+S\+S\+P\+\_\+\+R\+A\+W\+I\+N\+T\+S\+T\+A\+T\+US} \{ \\*
+\hyperlink{group__SSP__17XX__40XX_gga2042535e55396776c81a7235ed95db35ad112fd53fe6238566db3b86badca3643}{S\+S\+P\+\_\+\+R\+O\+R\+R\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 0)), 
+\hyperlink{group__SSP__17XX__40XX_gga2042535e55396776c81a7235ed95db35acadb0b951bbe2b20da961f4a55b775c2}{S\+S\+P\+\_\+\+R\+T\+R\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 1)), 
+\hyperlink{group__SSP__17XX__40XX_gga2042535e55396776c81a7235ed95db35af284137785b0311fdf9ffd06dd91022f}{S\+S\+P\+\_\+\+R\+X\+R\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 2)), 
+\hyperlink{group__SSP__17XX__40XX_gga2042535e55396776c81a7235ed95db35a0f19a960fdb1f4e1e41c2d3f391ab2a1}{S\+S\+P\+\_\+\+T\+X\+R\+IS} = ((uint32\+\_\+t)(1 $<$$<$ 3)), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_gga2042535e55396776c81a7235ed95db35a81d12ba594dec3491731ef65c4af785e}{S\+S\+P\+\_\+\+R\+A\+W\+\_\+\+I\+N\+T\+\_\+\+S\+T\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK} = ((uint32\+\_\+t)(0xF))
+ \}\begin{DoxyCompactList}\small\item\em S\+SP Type of Raw Interrupt Status. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_ga4ec33a0121a2ccab848c7b37907d9e9d}{\+\_\+\+S\+S\+P\+\_\+\+S\+T\+A\+T\+US} \{ \\*
+\hyperlink{group__SSP__17XX__40XX_gga4ec33a0121a2ccab848c7b37907d9e9daf2476dad0360373ccb5896f6f4283569}{S\+S\+P\+\_\+\+S\+T\+A\+T\+\_\+\+T\+FE} = ((uint32\+\_\+t)(1 $<$$<$ 0)), 
+\hyperlink{group__SSP__17XX__40XX_gga4ec33a0121a2ccab848c7b37907d9e9da895067b502eeae3c476190e309abde1a}{S\+S\+P\+\_\+\+S\+T\+A\+T\+\_\+\+T\+NF} = ((uint32\+\_\+t)(1 $<$$<$ 1)), 
+\hyperlink{group__SSP__17XX__40XX_gga4ec33a0121a2ccab848c7b37907d9e9da82f15e0720cc2b0dc53e90b7546fb96b}{S\+S\+P\+\_\+\+S\+T\+A\+T\+\_\+\+R\+NE} = ((uint32\+\_\+t)(1 $<$$<$ 2)), 
+\hyperlink{group__SSP__17XX__40XX_gga4ec33a0121a2ccab848c7b37907d9e9dad10671a086364beb55efad01f2c3688f}{S\+S\+P\+\_\+\+S\+T\+A\+T\+\_\+\+R\+FF} = ((uint32\+\_\+t)(1 $<$$<$ 3)), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_gga4ec33a0121a2ccab848c7b37907d9e9da5129659a9c16fdda33b925f07cf8ef52}{S\+S\+P\+\_\+\+S\+T\+A\+T\+\_\+\+B\+SY} = ((uint32\+\_\+t)(1 $<$$<$ 4))
+ \}\begin{DoxyCompactList}\small\item\em S\+SP Type of Status. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_ga2f99e08511788c146ae9b35023e4a61c}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+B\+I\+TS} \{ \\*
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61caa03e3d7c54b1b7e0a1159819be0fe2f4}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+4} = (3u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61cad68718bef531b459a981f3fe333885af}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+5} = (4u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61ca983bf05fec7f08931bf8397460736fad}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+6} = (5u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61caf427f7d2bdddeddab9780dde3e7112cd}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+7} = (6u $<$$<$ 0), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61cafed74a949c86fb130814553eeeaa28fc}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+8} = (7u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61ca86c78df806e6a2c6105e4009c87a9a30}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+9} = (8u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61caa5af8a64fabb893ce6cca58a6603b887}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+10} = (9u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61ca6eb61ba3d5420049cc5c6b5dc0ce180f}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+11} = (10u $<$$<$ 0), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61cac07c29c55be04e5bdf6c450f8fb978f9}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+12} = (11u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61cad3b1fe6ae4d631d30f668a62a499ad04}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+13} = (12u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61cae1d25567553d78628b76e6d3576708fb}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+14} = (13u $<$$<$ 0), 
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61ca0cb36a4e3580bffe6583e05ecc7560aa}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+15} = (14u $<$$<$ 0), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_gga2f99e08511788c146ae9b35023e4a61ca3d5cc36200365dc046d283f48711d885}{S\+S\+P\+\_\+\+B\+I\+T\+S\+\_\+16} = (15u $<$$<$ 0)
+ \}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_gab423240914ad746147aeb31f483e9553}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT} \{ \\*
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553aa5340f759c78820f18de9290b9c061c9}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A0\+\_\+\+C\+P\+O\+L0} = (0 $<$$<$ 6), 
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553abf7efd605c96ca17f8d3e142583573c7}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A0\+\_\+\+C\+P\+O\+L1} = (1u $<$$<$ 6), 
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553ae85026628900cd0603aea8741196e37c}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A1\+\_\+\+C\+P\+O\+L0} = (2u $<$$<$ 6), 
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553ab45a1654a40d69da708a2fd3717b3b3f}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A1\+\_\+\+C\+P\+O\+L1} = (3u $<$$<$ 6), 
+\\*
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553a356a1e930e648bee4fdcf58bbf2be871}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+O\+D\+E0} = S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A0\+\_\+\+C\+P\+O\+L0, 
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553a9c0ef0c2b54bd1f7cd915c072bb90c4f}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+O\+D\+E1} = S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A1\+\_\+\+C\+P\+O\+L0, 
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553a0ead0c9201c4f3ed09b8d8395b15e38d}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+O\+D\+E2} = S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A0\+\_\+\+C\+P\+O\+L1, 
+\hyperlink{group__SSP__17XX__40XX_ggab423240914ad746147aeb31f483e9553a509d039d8fa85d04307fa845b5f96ef0}{S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+O\+D\+E3} = S\+S\+P\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+P\+H\+A1\+\_\+\+C\+P\+O\+L1
+ \}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_gad3ae555ad43caa2b2a47bc4769d8fe50}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+F\+O\+R\+M\+AT} \{ \hyperlink{group__SSP__17XX__40XX_ggad3ae555ad43caa2b2a47bc4769d8fe50a04830722a3c3c26165b6e86944f80799}{S\+S\+P\+\_\+\+F\+R\+A\+M\+E\+F\+O\+R\+M\+A\+T\+\_\+\+S\+PI} = (0 $<$$<$ 4), 
+\hyperlink{group__SSP__17XX__40XX_ggad3ae555ad43caa2b2a47bc4769d8fe50a958fc5c359dea48d02188bebb93f3fd2}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+TI} = (1u $<$$<$ 4), 
+\hyperlink{group__SSP__17XX__40XX_ggad3ae555ad43caa2b2a47bc4769d8fe50a44c2cf7ad92d503bb0e32fa644b847d4}{S\+S\+P\+\_\+\+F\+R\+A\+M\+E\+F\+O\+R\+M\+A\+T\+\_\+\+M\+I\+C\+R\+O\+W\+I\+RE} = (2u $<$$<$ 4)
+ \}
+\item 
+enum \hyperlink{group__SSP__17XX__40XX_ga2a375ed10848e3661b9b015fea1cf39b}{C\+H\+I\+P\+\_\+\+S\+S\+P\+\_\+\+M\+O\+DE} \{ \hyperlink{group__SSP__17XX__40XX_gga2a375ed10848e3661b9b015fea1cf39ba5395d2342a5a2564d683efe73700d604}{S\+S\+P\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER} = (0 $<$$<$ 2), 
+\hyperlink{group__SSP__17XX__40XX_gga2a375ed10848e3661b9b015fea1cf39ba8e80727639bca1e64508d92d65346f3e}{S\+S\+P\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE} = (1u $<$$<$ 2)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga5fe8047a36b3055251cff755d339ca4a}{Chip\+\_\+\+S\+S\+P\+\_\+\+Clear\+Int\+Pending} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, \hyperlink{group__SSP__17XX__40XX_gadc98b69a8cb7a5afef8dd81bebbfc66d}{S\+S\+P\+\_\+\+I\+N\+T\+C\+L\+E\+A\+R\+\_\+T} Int\+Clear)
+\begin{DoxyCompactList}\small\item\em Clear the corresponding interrupt condition(s) in the S\+SP controller. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__17XX__40XX_ga48f87506f2fddc1043606eae292b6f16}{Chip\+\_\+\+S\+S\+P\+\_\+\+De\+Init} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Deinitialise the S\+SP. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga3033c296868595a01dd74ecccaed6090}{Chip\+\_\+\+S\+S\+P\+\_\+\+Disable} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Disable S\+SP operation. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_gaa733ed4b0773cda022ad87ff41304c40}{Chip\+\_\+\+S\+S\+P\+\_\+\+Disable\+Loop\+Back} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Disable loopback mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_gaa8c7ce019dfcc4ab5731615f66c30e19}{Chip\+\_\+\+S\+S\+P\+\_\+\+D\+M\+A\+\_\+\+Disable} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Disable D\+MA for S\+SP. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_gae8bf34541c093c052e5f9baf41fcda8b}{Chip\+\_\+\+S\+S\+P\+\_\+\+D\+M\+A\+\_\+\+Enable} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Enable D\+MA for S\+SP. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_gaf49b9a4689c9ae39bbd8c1ac20d31073}{Chip\+\_\+\+S\+S\+P\+\_\+\+Enable} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Enable S\+SP operation. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga8683ccce6ba5578103efcb791f39cff8}{Chip\+\_\+\+S\+S\+P\+\_\+\+Enable\+Loop\+Back} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Enable loopback mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t \hyperlink{group__SSP__17XX__40XX_ga421d39f6094d0f335e5acbc3dd5f0b09}{Chip\+\_\+\+S\+S\+P\+\_\+\+Get\+Data\+Size} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Get the number of bits transferred in each frame. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__SSP__17XX__40XX_ga207244e33021333a66bb04f2bd2f1102}{Chip\+\_\+\+S\+S\+P\+\_\+\+Get\+Int\+Status} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Get the masked interrupt status. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} \hyperlink{group__LPC__Types__Public__Types_gab7d263072f745b4f3913fb0afc434c4e}{Int\+Status} \hyperlink{group__SSP__17XX__40XX_ga0cc48f6c5bea491f2965b5b6fd0dcf69}{Chip\+\_\+\+S\+S\+P\+\_\+\+Get\+Raw\+Int\+Status} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, \hyperlink{group__SSP__17XX__40XX_gaf901cb9befcf9302650fed7f1ddba443}{S\+S\+P\+\_\+\+R\+A\+W\+I\+N\+T\+S\+T\+A\+T\+U\+S\+\_\+T} Raw\+Int)
+\begin{DoxyCompactList}\small\item\em Get the raw interrupt status. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} \hyperlink{group__LPC__Types__Public__Types_ga89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{group__SSP__17XX__40XX_ga82dd278bcdbd80eaacc43abc211a970f}{Chip\+\_\+\+S\+S\+P\+\_\+\+Get\+Status} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, \hyperlink{group__SSP__17XX__40XX_gad95eaf4325a2ec8e457b309d21d6987d}{S\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} Stat)
+\begin{DoxyCompactList}\small\item\em Get the current status of S\+SP controller. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__17XX__40XX_ga66e20405561e8d3dacba65cbfe41d556}{Chip\+\_\+\+S\+S\+P\+\_\+\+Init} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Initialize the S\+SP. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga20c7c516c84ba924973318bd64c113a3}{Chip\+\_\+\+S\+S\+P\+\_\+\+Int\+\_\+\+Disable} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Disable interrupt for the S\+SP. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga98eb3a788e313aeb5a4feb2516b11e8f}{Chip\+\_\+\+S\+S\+P\+\_\+\+Int\+\_\+\+Enable} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Enable interrupt for the S\+SP. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__17XX__40XX_gabf29dfba7478866abe7511d32638e57e}{Chip\+\_\+\+S\+S\+P\+\_\+\+Int\+\_\+\+Flush\+Data} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Clean all data in RX F\+I\+FO of S\+SP. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__SSP__17XX__40XX_gaf97dd891912b8312a1e0989d7a542b7b}{Chip\+\_\+\+S\+S\+P\+\_\+\+Int\+\_\+\+R\+W\+Frames16\+Bits} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, \hyperlink{structChip__SSP__DATA__SETUP__T}{Chip\+\_\+\+S\+S\+P\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T\+U\+P\+\_\+T} $\ast$xf\+\_\+setup)
+\begin{DoxyCompactList}\small\item\em S\+SP Interrupt Read/\+Write with 16-\/bit frame width. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__SSP__17XX__40XX_ga23d901d1757b6d95efc20c4d76721fb3}{Chip\+\_\+\+S\+S\+P\+\_\+\+Int\+\_\+\+R\+W\+Frames8\+Bits} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, \hyperlink{structChip__SSP__DATA__SETUP__T}{Chip\+\_\+\+S\+S\+P\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T\+U\+P\+\_\+T} $\ast$xf\+\_\+setup)
+\begin{DoxyCompactList}\small\item\em S\+SP Interrupt Read/\+Write with 8-\/bit frame width. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__SSP__17XX__40XX_ga8332233bb63af754bd9cc369f2a1e2d6}{Chip\+\_\+\+S\+S\+P\+\_\+\+Read\+Frames\+\_\+\+Blocking} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t buffer\+\_\+len)
+\begin{DoxyCompactList}\small\item\em S\+SP Polling Read in blocking mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint16\+\_\+t \hyperlink{group__SSP__17XX__40XX_ga7da053acf90aff24ca59bdf673207aac}{Chip\+\_\+\+S\+S\+P\+\_\+\+Receive\+Frame} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP)
+\begin{DoxyCompactList}\small\item\em Get received S\+SP data. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__SSP__17XX__40XX_ga302a381ad4d291164144ad2720399078}{Chip\+\_\+\+S\+S\+P\+\_\+\+R\+W\+Frames\+\_\+\+Blocking} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, \hyperlink{structChip__SSP__DATA__SETUP__T}{Chip\+\_\+\+S\+S\+P\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T\+U\+P\+\_\+T} $\ast$xf\+\_\+setup)
+\begin{DoxyCompactList}\small\item\em S\+SP Polling Read/\+Write in blocking mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_gab01849b80cad7f46924a04346560006c}{Chip\+\_\+\+S\+S\+P\+\_\+\+Send\+Frame} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint16\+\_\+t tx\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Send S\+SP 16-\/bit data. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga9b5a23b5030facdb75c3ed06d5e86172}{Chip\+\_\+\+S\+S\+P\+\_\+\+Set\+\_\+\+Mode} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint32\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set the S\+SP working as master or slave mode. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__17XX__40XX_ga373660d8ad7b28fb71209539b1e72717}{Chip\+\_\+\+S\+S\+P\+\_\+\+Set\+Bit\+Rate} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint32\+\_\+t bit\+Rate)
+\begin{DoxyCompactList}\small\item\em Set the clock frequency for S\+SP interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__17XX__40XX_ga49832a18e0618a82afd66caa6f868445}{Chip\+\_\+\+S\+S\+P\+\_\+\+Set\+Clock\+Rate} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint32\+\_\+t clk\+\_\+rate, uint32\+\_\+t prescale)
+\begin{DoxyCompactList}\small\item\em Set up output clocks per bit for S\+SP bus. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__SSP__17XX__40XX_ga381ba3a6b470b2c84468b88deed8ac18}{Chip\+\_\+\+S\+S\+P\+\_\+\+Set\+Format} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint32\+\_\+t bits, uint32\+\_\+t frame\+Format, uint32\+\_\+t clock\+Mode)
+\begin{DoxyCompactList}\small\item\em Set up the S\+SP frame format. \end{DoxyCompactList}\item 
+void \hyperlink{group__SSP__17XX__40XX_ga60e601329b0aa6afe5f355dc6e8f84bd}{Chip\+\_\+\+S\+S\+P\+\_\+\+Set\+Master} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, bool master)
+\begin{DoxyCompactList}\small\item\em Set the S\+SP operating modes, master or slave. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__SSP__17XX__40XX_gae64bd476b75c03d0b952f08ea42a09be}{Chip\+\_\+\+S\+S\+P\+\_\+\+Write\+Frames\+\_\+\+Blocking} (\hyperlink{structLPC__SSP__T}{L\+P\+C\+\_\+\+S\+S\+P\+\_\+T} $\ast$p\+S\+SP, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t buffer\+\_\+len)
+\begin{DoxyCompactList}\small\item\em S\+SP Polling Write in blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}

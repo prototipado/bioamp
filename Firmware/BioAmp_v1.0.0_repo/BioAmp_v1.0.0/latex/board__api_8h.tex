@@ -1,0 +1,26 @@
+\hypertarget{board__api_8h}{}\section{board\+\_\+api.\+h File Reference}
+\label{board__api_8h}\index{board\+\_\+api.\+h@{board\+\_\+api.\+h}}
+{\ttfamily \#include \char`\"{}lpc\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for board\+\_\+api.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__BOARD__COMMON__API_gae997487a4f312eb187c5e0201a7f1d5f}{p\+\_\+ms\+Delay\+\_\+func\+\_\+t}) (uint32\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Initializes board U\+A\+RT for output, required for printf redirection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__BOARD__COMMON__API_gae8d2d761b984f48c3dbb27dd32a8c119}{Board\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Set up and initialize all required blocks and functions related to the board hardware. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_gae417dc93d00f1a89f74220e569fac777}{Board\+\_\+\+Setup\+Clocking} (void)
+\begin{DoxyCompactList}\small\item\em Setup system clocking. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_ga27d97e44ce026a509b12317e059b2204}{Board\+\_\+\+Setup\+Ext\+Memory} (void)
+\begin{DoxyCompactList}\small\item\em Setup external system memory. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_ga8ac1dc465c66e1cc00f5ffd346904d97}{Board\+\_\+\+Setup\+Muxing} (void)
+\begin{DoxyCompactList}\small\item\em Setup pin multiplexer per board schematics. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_gaeb60ea85499a4208167ae2540086516a}{Board\+\_\+\+System\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Setup and initialize hardware prior to call to \hyperlink{group__Application__Layer_ga840291bc02cba5474a4cb46a9b9566fe}{main()} \end{DoxyCompactList}\end{DoxyCompactItemize}

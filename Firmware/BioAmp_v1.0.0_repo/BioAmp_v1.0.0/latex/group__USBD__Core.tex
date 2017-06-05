@@ -1,0 +1,1140 @@
+\hypertarget{group__USBD__Core}{}\section{U\+SB Core Layer}
+\label{group__USBD__Core}\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union____WORD__BYTE}{\+\_\+\+\_\+\+W\+O\+R\+D\+\_\+\+B\+Y\+TE}
+\item 
+struct \hyperlink{struct__BM__T}{\+\_\+\+B\+M\+\_\+T}
+\item 
+union \hyperlink{union__REQUEST__TYPE}{\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE}
+\item 
+struct \hyperlink{struct__USB__COMMON__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__CORE__DESCS__T}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB descriptors data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__USB__DEVICE__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__DEVICE__QUALIFIER__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__IAD__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__INTERFACE__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__USB__OTHER__SPEED__CONFIGURATION}{\+\_\+\+U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}
+\item 
+struct \hyperlink{struct__USB__SETUP__PACKET}{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}
+\item 
+struct \hyperlink{struct__USB__STRING__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__WB__T}{\+\_\+\+W\+B\+\_\+T}
+\item 
+struct \hyperlink{structUSBD__API__INIT__PARAM}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}
+\begin{DoxyCompactList}\small\item\em U\+SB device stack initialization parameter data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structUSBD__CORE__API}{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em U\+S\+BD stack Core A\+PI functions structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga217165f37f8e1835ea51da6e19768402}{B3\+V\+AL}(x)~((x) \& 0x\+F\+F),(((x) $>$$>$ 8) \& 0x\+F\+F),(((x) $>$$>$ 16) \& 0x\+F\+F)
+\item 
+\#define \hyperlink{group__USBD__Core_ga92087162f5b3634a1e7843be05702c37}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA}(mA)                            ~((mA)/2)
+\item 
+\#define \hyperlink{group__USBD__Core_ga136546c0b0fefbc4d0684f1a70a86d3e}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_ga196f799666c475a9064909c6e72b9d72}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))
+\item 
+\#define \hyperlink{group__USBD__Core_gacd04660262562260957b6df8d5e482b3}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_ga7c2da119cc5c129d253d5fa766c70893}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))
+\item 
+\#define \hyperlink{group__USBD__Core_ga038630c136094c9f727b62cb81a9a186}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_ga4460a327f0c59c1d44e550efcff1eb00}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))
+\item 
+\#define \hyperlink{group__USBD__Core_gac8df859211824ddcf32db5c80b06290a}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP}~64
+\item 
+\#define \hyperlink{group__USBD__Core_ga2b0c6c2be1d518967da6c7b32458c894}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP}~8
+\item 
+\#define \hyperlink{group__USBD__Core_gad4839d37e7a31a4d9e8ddf242b16608f}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP}~512
+\item 
+\#define \hyperlink{group__USBD__Core_ga317f2697db907bff3f818a644d231c08}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_ga652b2871268bd903653cbff0f3448a6e}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))
+\item 
+\#define \hyperlink{group__USBD__Core_gae377b4fc3e66e90afb99e60fa5cc0a94}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_ga6b053e842151d5c5dcdace597e45a36b}{U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))
+\item 
+\#define \hyperlink{group__USBD__Core_gac7fd274cdd131f4c0addec7a139bc9b7}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_gac933513ce6cbf852d0dc998bd8fb333d}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))
+\item 
+\#define \hyperlink{group__USBD__Core_gab7288d5e0e645952c8c156182f3baa11}{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group__USBD__Core_ga808d47bcf11e648d95efc88e330fabc5}{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}))
+\item 
+\#define \hyperlink{group__USBD__Core_ga018fc058eba40cffd92be1756a5d2b40}{W\+B\+V\+AL}(x)~((x) \& 0x\+F\+F),(((x) $>$$>$ 8) \& 0x\+F\+F)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__BM__T}{\+\_\+\+B\+M\+\_\+T} \hyperlink{group__USBD__Core_ga0c191764322e096fa81c1228eb62e63f}{B\+M\+\_\+T}
+\item 
+typedef union \hyperlink{union__REQUEST__TYPE}{\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE} \hyperlink{group__USBD__Core_gac85164494feb72445fab7999a3723b6f}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE}
+\item 
+typedef \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{group__USBD__Core_ga0404ce046312aa5c798cc4a05c417e46}{U\+S\+B\+\_\+\+C\+B\+\_\+T}) (\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb)
+\begin{DoxyCompactList}\small\item\em U\+SB device stack\textquotesingle{}s event callback function type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__USB__COMMON__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_gae20aa0e1d1e5418dbef678b53b2c3ebe}{U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_ga196f799666c475a9064909c6e72b9d72}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__USB__CORE__DESCS__T}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB descriptors data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__USB__DEVICE__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_ga7c2da119cc5c129d253d5fa766c70893}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__USB__DEVICE__QUALIFIER__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_ga4460a327f0c59c1d44e550efcff1eb00}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_ga652b2871268bd903653cbff0f3448a6e}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{group__USBD__Core_gaa578d29a85226108ef62c6d5c325b742}{U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T}) (\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\begin{DoxyCompactList}\small\item\em U\+S\+BD setup request and endpoint event handler type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__USB__IAD__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_ga6b053e842151d5c5dcdace597e45a36b}{U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__USB__INTERFACE__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_gac933513ce6cbf852d0dc998bd8fb333d}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__USB__OTHER__SPEED__CONFIGURATION}{\+\_\+\+U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON} \hyperlink{group__USBD__Core_ga808d47bcf11e648d95efc88e330fabc5}{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}
+\item 
+typedef \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{group__USBD__Core_ga7df622c61ebb152b83dd5972ac789b28}{U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T}) (\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, uint32\+\_\+t param1)
+\begin{DoxyCompactList}\small\item\em U\+SB device stack\textquotesingle{}s event callback function type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__USB__SETUP__PACKET}{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} \hyperlink{group__USBD__Core_ga4a940f7627cc7e9f0bb693cc0fce8637}{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}
+\item 
+typedef struct \hyperlink{struct__USB__STRING__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{group__USBD__Core_gabccfa24c1955b99a76219a89b8e6f3b6}{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{structUSBD__API__INIT__PARAM}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM} \hyperlink{group__USBD__Core_gaa6e8171941c1ae63afed95974e0f18e3}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB device stack initialization parameter data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structUSBD__CORE__API}{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI} \hyperlink{group__USBD__Core_ga6a53e8395d1c68f98d18ca4a49b75baa}{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+S\+BD stack Core A\+PI functions structure. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T}
+\item 
+typedef struct \hyperlink{struct__WB__T}{\+\_\+\+W\+B\+\_\+T} \hyperlink{group__USBD__Core_ga4fbe30f5ac133f5bb15c653a19162ae9}{W\+B\+\_\+T}
+\item 
+typedef union \hyperlink{union____WORD__BYTE}{\+\_\+\+\_\+\+W\+O\+R\+D\+\_\+\+B\+Y\+TE} \hyperlink{group__USBD__Core_ga340ec8de2973608b96d5cc7379b9561a}{W\+O\+R\+D\+\_\+\+B\+Y\+TE}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga8d90abb0515c0c9cd7c80480f1ebe7d3}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}~0
+\item 
+\#define \hyperlink{group__USBD__Core_gaf8f8eae5ae324d7d3e1344e97e23b20f}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST}~1
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga1dd6ef57678e7af95d835049d5b355b9}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD}~0
+\item 
+\#define \hyperlink{group__USBD__Core_gafd24e03239e2df9e6d9c6cbcd53c1337}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS}~1
+\item 
+\#define \hyperlink{group__USBD__Core_ga40131e4daec200a7d931c2b26e43d27f}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR}~2
+\item 
+\#define \hyperlink{group__USBD__Core_ga63cb1192a7cd205455bddd302f67c915}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~3
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_gaf89871a0b4aa9411e09a9961de76e76f}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}~0
+\item 
+\#define \hyperlink{group__USBD__Core_ga0e5e473281fc9c1ee1ea446823c02623}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~1
+\item 
+\#define \hyperlink{group__USBD__Core_ga4c4571ca0bf6b462bd8954a95456561c}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}~2
+\item 
+\#define \hyperlink{group__USBD__Core_gad1f005d9ae04da7324d465a86e489af5}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER}~3
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga062f3147a1bae954b642b915827b3f3f}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US}~0
+\item 
+\#define \hyperlink{group__USBD__Core_gab9fe860caa1f21c9410984a24bf57c7c}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE}~1
+\item 
+\#define \hyperlink{group__USBD__Core_gaa2b4d305dcd185cc1242e94ee78eea25}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE}~3
+\item 
+\#define \hyperlink{group__USBD__Core_gac87659819bfd6491120c819fae2d46bc}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}~5
+\item 
+\#define \hyperlink{group__USBD__Core_ga3572226ee2137c7fbf7487a02b0f560f}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}~6
+\item 
+\#define \hyperlink{group__USBD__Core_ga3c80fdedd69586ccf2894f5bd4638252}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}~7
+\item 
+\#define \hyperlink{group__USBD__Core_ga341ed4aff1f0d5a1a4a4f17cb606d08d}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}~8
+\item 
+\#define \hyperlink{group__USBD__Core_gaadef005acc40340955d34d9767ef297c}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}~9
+\item 
+\#define \hyperlink{group__USBD__Core_ga25550f44898d9c9a3bf0a7814af7fe96}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~10
+\item 
+\#define \hyperlink{group__USBD__Core_gaf8d2ea632916bfc2a7628f63d3f643aa}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~11
+\item 
+\#define \hyperlink{group__USBD__Core_ga916e1a4b8f8a5cb369d896ef35c4db34}{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME}~12
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga1e801ee37e93522f0f38eff9bc7aac02}{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}~0x01
+\item 
+\#define \hyperlink{group__USBD__Core_gaad5790ebb5c8f5a25ce60140c60c2ec5}{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}~0x02
+\item 
+\#define \hyperlink{group__USBD__Core_ga4ebb10046221004827e4b2a72cdeefa5}{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}~0x01
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga3ff0518fb298c9c9b556f59c0468ec0d}{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}~0
+\item 
+\#define \hyperlink{group__USBD__Core_ga2185a0541f4155470596c9c739c1656b}{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}~1
+\item 
+\#define \hyperlink{group__USBD__Core_ga90a1a76a81c04849dc897dacf6c3a213}{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE}~2
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_ga722f2d6ee2892228b6708e8b9904c645}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~1
+\item 
+\#define \hyperlink{group__USBD__Core_ga45e81401e4b530280fdd539da1b06c26}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~2
+\item 
+\#define \hyperlink{group__USBD__Core_gab01c9c74f2eb266b20aecd48bab4b35c}{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~3
+\item 
+\#define \hyperlink{group__USBD__Core_gad1699884fa580bba35246a566264c978}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~4
+\item 
+\#define \hyperlink{group__USBD__Core_ga4e8d6d81a224f8b511edc92b6cb4e085}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~5
+\item 
+\#define \hyperlink{group__USBD__Core_ga7158946184590ea6cfcb406d7f3c4ce5}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~6
+\item 
+\#define \hyperlink{group__USBD__Core_ga0d886bcc28cf10d730106d7be9b661fd}{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~7
+\item 
+\#define \hyperlink{group__USBD__Core_ga3356db66a2c62f7018f23f9189ba34c9}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~8
+\item 
+\#define \hyperlink{group__USBD__Core_ga0e105187070c79d5843dde5503bb78f2}{U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~9
+\item 
+\#define \hyperlink{group__USBD__Core_ga9d5ac46d5f303464ac827d63f9da984e}{U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~10
+\item 
+\#define \hyperlink{group__USBD__Core_ga2ab1841a48da627b702526b01eb31268}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~11
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_gaca7ece737f3f37b7a6f458fc24864776}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~0x00
+\item 
+\#define \hyperlink{group__USBD__Core_gade360faee3b601af707b65122a46d446}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO}~0x01
+\item 
+\#define \hyperlink{group__USBD__Core_gab6fd7e18adf5c748a6b56391c1c2b819}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS}~0x02
+\item 
+\#define \hyperlink{group__USBD__Core_ga3d9e0560a81b4dfd30bbf829960dbfab}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~0x03
+\item 
+\#define \hyperlink{group__USBD__Core_ga23d001aa49fada2019ff3a4886a9f2a5}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR}~0x04
+\item 
+\#define \hyperlink{group__USBD__Core_ga6053794e5de119b37615ec98f7eceedb}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~0x05
+\item 
+\#define \hyperlink{group__USBD__Core_ga88a8b2d45b2950ffd5654e4c3b6741ff}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER}~0x06
+\item 
+\#define \hyperlink{group__USBD__Core_gae6181c6bdb18c0e6491dd189983b6bd2}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER}~0x07
+\item 
+\#define \hyperlink{group__USBD__Core_ga053d2a9c3c9856ee01589ebb64d2e09b}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE}~0x08
+\item 
+\#define \hyperlink{group__USBD__Core_gab8167347cb586d3f82a7ad95fa25bc22}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB}~0x09
+\item 
+\#define \hyperlink{group__USBD__Core_gabd79da65d7f8f58b37e402fa1442831a}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US}~0x\+EF
+\item 
+\#define \hyperlink{group__USBD__Core_ga9b5f0021003a2fc948daf8d0f4768736}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP}~0x\+FE
+\item 
+\#define \hyperlink{group__USBD__Core_ga89b94b8bc3c5fa2ef7151b5d282f22bb}{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC}~0x\+FF
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_gafdd4f846b5497985c182a1a090d99729}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK}~0x40
+\item 
+\#define \hyperlink{group__USBD__Core_ga63c0a08ce70650c3c677ab523a45a0bb}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED}~0x80
+\item 
+\#define \hyperlink{group__USBD__Core_ga8c322771b797c09e3066a388b46e9ef9}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}~0x\+C0
+\item 
+\#define \hyperlink{group__USBD__Core_ga7b28a766a8a916fae421d52fbedd2cba}{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}~0x20
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_gab7544c5b8cf975839422c1ce29d4c5cb}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK}~0x80
+\item 
+\#define \hyperlink{group__USBD__Core_ga91482cd8f4ffa0d76ae673c08139b045}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT}(addr)                              ~((addr) $\vert$ 0x00)
+\item 
+\#define \hyperlink{group__USBD__Core_gaea6d13f333ab253fbffe04dabb4cb76f}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN}(addr)                                ~((addr) $\vert$ 0x80)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__USBD__Core_gacd114fdf068aaa69407358ee5ccfd170}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}~0x03
+\item 
+\#define \hyperlink{group__USBD__Core_ga6a51ed22b06e5ca0f76a35b6bac8d73a}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL}~0x00
+\item 
+\#define \hyperlink{group__USBD__Core_gab05aae4a5d079b8dfb6a9cb1325ea6e5}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US}~0x01
+\item 
+\#define \hyperlink{group__USBD__Core_gaf4bac84d4576dc8f74f39dc75749e3dc}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK}~0x02
+\item 
+\#define \hyperlink{group__USBD__Core_ga2cb5aa69a03df20aab217b808ad692a6}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}~0x03
+\item 
+\#define \hyperlink{group__USBD__Core_ga91301868eb0b52506fc9bc02b131f783}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK}~0x0C
+\item 
+\#define \hyperlink{group__USBD__Core_ga7733e58f8c4fbcef1533eb02f375aeb0}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON}~0x00
+\item 
+\#define \hyperlink{group__USBD__Core_gad1bb5cc537ea61634cb61c8c364c9a6f}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}~0x04
+\item 
+\#define \hyperlink{group__USBD__Core_gaa7808914116fe45223462e68d6f8aa5d}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE}~0x08
+\item 
+\#define \hyperlink{group__USBD__Core_ga0309c68623fb48fdc621f15dabc579f2}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}~0x0C
+\item 
+\#define \hyperlink{group__USBD__Core_ga834006343743238a5eb1d273ef3226ae}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK}~0x30
+\item 
+\#define \hyperlink{group__USBD__Core_gac852b5e62e4e577b1b43239ae190908a}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA}~0x00
+\item 
+\#define \hyperlink{group__USBD__Core_gabe8c89e5b624ac6bb5b9cd2919fc06be}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK}~0x10
+\item 
+\#define \hyperlink{group__USBD__Core_gabfdb9f73f34907249b8fd1128c25ae1a}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK}~0x20
+\item 
+\#define \hyperlink{group__USBD__Core_ga0ee1319e7242bb61298af850ea64f08a}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~0x30
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{group__USBD__Core_Sec_CoreModDescription}{}\subsection{Module Description}\label{group__USBD__Core_Sec_CoreModDescription}
+The U\+SB Core Layer implements the device abstraction defined in the {\itshape  Universal Serial Bus Specification, } for applications to interact with the U\+SB device interface on the device. The software in this layer responds to standard requests and returns standard descriptors. In current stack the Init() routine part of \hyperlink{group__USBD__HW_ga4df5b7beaddc4e9267c320d92b4434fc}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T} structure initializes both hardware layer and core layer. 
+
+\subsection{Macro Definition Documentation}
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!B3\+V\+AL@{B3\+V\+AL}}
+\index{B3\+V\+AL@{B3\+V\+AL}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{B3\+V\+AL}{B3VAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B3\+V\+AL(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x) \& 0x\+F\+F),(((x) $>$$>$ 8) \& 0x\+F\+F),(((x) $>$$>$ 16) \& 0x\+F\+F)}\hypertarget{group__USBD__Core_ga217165f37f8e1835ea51da6e19768402}{}\label{group__USBD__Core_ga217165f37f8e1835ea51da6e19768402}
+
+
+Definition at line 692 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS}{REQUEST_CLASS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+A\+SS~1}\hypertarget{group__USBD__Core_gafd24e03239e2df9e6d9c6cbcd53c1337}{}\label{group__USBD__Core_gafd24e03239e2df9e6d9c6cbcd53c1337}
+Class Request 
+
+Definition at line 109 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST}{REQUEST_DEVICE_TO_HOST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+O\+\_\+\+H\+O\+ST~1}\hypertarget{group__USBD__Core_gaf8f8eae5ae324d7d3e1344e97e23b20f}{}\label{group__USBD__Core_gaf8f8eae5ae324d7d3e1344e97e23b20f}
+Request from device to host 
+
+Definition at line 100 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}{REQUEST_HOST_TO_DEVICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE~0}\hypertarget{group__USBD__Core_ga8d90abb0515c0c9cd7c80480f1ebe7d3}{}\label{group__USBD__Core_ga8d90abb0515c0c9cd7c80480f1ebe7d3}
+bm\+Request\+Type.\+Dir defines Request from host to device 
+
+Definition at line 98 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED}{REQUEST_RESERVED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED~3}\hypertarget{group__USBD__Core_ga63cb1192a7cd205455bddd302f67c915}{}\label{group__USBD__Core_ga63cb1192a7cd205455bddd302f67c915}
+Reserved Request 
+
+Definition at line 113 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD}{REQUEST_STANDARD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+N\+D\+A\+RD~0}\hypertarget{group__USBD__Core_ga1dd6ef57678e7af95d835049d5b355b9}{}\label{group__USBD__Core_ga1dd6ef57678e7af95d835049d5b355b9}
+bm\+Request\+Type.\+Type defines Standard Request 
+
+Definition at line 107 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE}{REQUEST_TO_DEVICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+D\+E\+V\+I\+CE~0}\hypertarget{group__USBD__Core_gaf89871a0b4aa9411e09a9961de76e76f}{}\label{group__USBD__Core_gaf89871a0b4aa9411e09a9961de76e76f}
+bm\+Request\+Type.\+Recipient defines Request to device 
+
+Definition at line 120 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}{REQUEST_TO_ENDPOINT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT~2}\hypertarget{group__USBD__Core_ga4c4571ca0bf6b462bd8954a95456561c}{}\label{group__USBD__Core_ga4c4571ca0bf6b462bd8954a95456561c}
+Request to endpoint 
+
+Definition at line 124 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{REQUEST_TO_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~1}\hypertarget{group__USBD__Core_ga0e5e473281fc9c1ee1ea446823c02623}{}\label{group__USBD__Core_ga0e5e473281fc9c1ee1ea446823c02623}
+Request to interface 
+
+Definition at line 122 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER}{REQUEST_TO_OTHER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+\_\+\+O\+T\+H\+ER~3}\hypertarget{group__USBD__Core_gad1f005d9ae04da7324d465a86e489af5}{}\label{group__USBD__Core_gad1f005d9ae04da7324d465a86e489af5}
+Request to other 
+
+Definition at line 126 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR}{REQUEST_VENDOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+E\+S\+T\+\_\+\+V\+E\+N\+D\+OR~2}\hypertarget{group__USBD__Core_ga40131e4daec200a7d931c2b26e43d27f}{}\label{group__USBD__Core_ga40131e4daec200a7d931c2b26e43d27f}
+Vendor Request 
+
+Definition at line 111 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED}{USB_CONFIG_BUS_POWERED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+U\+S\+\_\+\+P\+O\+W\+E\+R\+ED~0x80}\hypertarget{group__USBD__Core_ga63c0a08ce70650c3c677ab523a45a0bb}{}\label{group__USBD__Core_ga63c0a08ce70650c3c677ab523a45a0bb}
+Bus powered 
+
+Definition at line 287 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA}{USB_CONFIG_POWER_MA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+MA(
+\begin{DoxyParamCaption}
+\item[{}]{mA}
+\end{DoxyParamCaption}
+)~((mA)/2)}\hypertarget{group__USBD__Core_ga92087162f5b3634a1e7843be05702c37}{}\label{group__USBD__Core_ga92087162f5b3634a1e7843be05702c37}
+b\+Max\+Power in Configuration Descriptor 
+
+Definition at line 295 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK}{USB_CONFIG_POWERED_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+O\+W\+E\+R\+E\+D\+\_\+\+M\+A\+SK~0x40}\hypertarget{group__USBD__Core_gafdd4f846b5497985c182a1a090d99729}{}\label{group__USBD__Core_gafdd4f846b5497985c182a1a090d99729}
+bm\+Attributes in Configuration Descriptor Power field mask 
+
+Definition at line 285 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}{USB_CONFIG_REMOTE_WAKEUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP~0x20}\hypertarget{group__USBD__Core_ga7b28a766a8a916fae421d52fbedd2cba}{}\label{group__USBD__Core_ga7b28a766a8a916fae421d52fbedd2cba}
+remote wakeup 
+
+Definition at line 291 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}{USB_CONFIG_SELF_POWERED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED~0x\+C0}\hypertarget{group__USBD__Core_ga8c322771b797c09e3066a388b46e9ef9}{}\label{group__USBD__Core_ga8c322771b797c09e3066a388b46e9ef9}
+Self powered 
+
+Definition at line 289 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}{USB_CONFIGURATION_DESC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))}\hypertarget{group__USBD__Core_ga136546c0b0fefbc4d0684f1a70a86d3e}{}\label{group__USBD__Core_ga136546c0b0fefbc4d0684f1a70a86d3e}
+
+
+Definition at line 695 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_CONFIGURATION_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~2}\hypertarget{group__USBD__Core_ga45e81401e4b530280fdd539da1b06c26}{}\label{group__USBD__Core_ga45e81401e4b530280fdd539da1b06c26}
+Configuration descriptor type 
+
+Definition at line 229 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_DEBUG_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+B\+U\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~10}\hypertarget{group__USBD__Core_ga9d5ac46d5f303464ac827d63f9da984e}{}\label{group__USBD__Core_ga9d5ac46d5f303464ac827d63f9da984e}
+Debug descriptor type 
+
+Definition at line 245 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP}{USB_DEVICE_CLASS_APP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+PP~0x\+FE}\hypertarget{group__USBD__Core_ga9b5f0021003a2fc948daf8d0f4768736}{}\label{group__USBD__Core_ga9b5f0021003a2fc948daf8d0f4768736}
+Application device class 
+
+Definition at line 276 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO}{USB_DEVICE_CLASS_AUDIO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+IO~0x01}\hypertarget{group__USBD__Core_gade360faee3b601af707b65122a46d446}{}\label{group__USBD__Core_gade360faee3b601af707b65122a46d446}
+Audio device class 
+
+Definition at line 256 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS}{USB_DEVICE_CLASS_COMMUNICATIONS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+NS~0x02}\hypertarget{group__USBD__Core_gab6fd7e18adf5c748a6b56391c1c2b819}{}\label{group__USBD__Core_gab6fd7e18adf5c748a6b56391c1c2b819}
+Communications device class 
+
+Definition at line 258 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB}{USB_DEVICE_CLASS_HUB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+UB~0x09}\hypertarget{group__USBD__Core_gab8167347cb586d3f82a7ad95fa25bc22}{}\label{group__USBD__Core_gab8167347cb586d3f82a7ad95fa25bc22}
+Hub device class 
+
+Definition at line 272 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{USB_DEVICE_CLASS_HUMAN_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+H\+U\+M\+A\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~0x03}\hypertarget{group__USBD__Core_ga3d9e0560a81b4dfd30bbf829960dbfab}{}\label{group__USBD__Core_ga3d9e0560a81b4dfd30bbf829960dbfab}
+Human interface device class 
+
+Definition at line 260 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US}{USB_DEVICE_CLASS_MISCELLANEOUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+I\+S\+C\+E\+L\+L\+A\+N\+E\+O\+US~0x\+EF}\hypertarget{group__USBD__Core_gabd79da65d7f8f58b37e402fa1442831a}{}\label{group__USBD__Core_gabd79da65d7f8f58b37e402fa1442831a}
+miscellaneous device class 
+
+Definition at line 274 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR}{USB_DEVICE_CLASS_MONITOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+M\+O\+N\+I\+T\+OR~0x04}\hypertarget{group__USBD__Core_ga23d001aa49fada2019ff3a4886a9f2a5}{}\label{group__USBD__Core_ga23d001aa49fada2019ff3a4886a9f2a5}
+monitor device class 
+
+Definition at line 262 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{USB_DEVICE_CLASS_PHYSICAL_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~0x05}\hypertarget{group__USBD__Core_ga6053794e5de119b37615ec98f7eceedb}{}\label{group__USBD__Core_ga6053794e5de119b37615ec98f7eceedb}
+physical interface device class 
+
+Definition at line 264 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER}{USB_DEVICE_CLASS_POWER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+O\+W\+ER~0x06}\hypertarget{group__USBD__Core_ga88a8b2d45b2950ffd5654e4c3b6741ff}{}\label{group__USBD__Core_ga88a8b2d45b2950ffd5654e4c3b6741ff}
+power device class 
+
+Definition at line 266 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER}{USB_DEVICE_CLASS_PRINTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+ER~0x07}\hypertarget{group__USBD__Core_gae6181c6bdb18c0e6491dd189983b6bd2}{}\label{group__USBD__Core_gae6181c6bdb18c0e6491dd189983b6bd2}
+Printer device class 
+
+Definition at line 268 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED}{USB_DEVICE_CLASS_RESERVED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+R\+E\+S\+E\+R\+V\+ED~0x00}\hypertarget{group__USBD__Core_gaca7ece737f3f37b7a6f458fc24864776}{}\label{group__USBD__Core_gaca7ece737f3f37b7a6f458fc24864776}
+U\+SB Device Classes Reserved device class 
+
+Definition at line 254 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE}{USB_DEVICE_CLASS_STORAGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+T\+O\+R\+A\+GE~0x08}\hypertarget{group__USBD__Core_ga053d2a9c3c9856ee01589ebb64d2e09b}{}\label{group__USBD__Core_ga053d2a9c3c9856ee01589ebb64d2e09b}
+Storage device class 
+
+Definition at line 270 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC}{USB_DEVICE_CLASS_VENDOR_SPECIFIC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+IC~0x\+FF}\hypertarget{group__USBD__Core_ga89b94b8bc3c5fa2ef7151b5d282f22bb}{}\label{group__USBD__Core_ga89b94b8bc3c5fa2ef7151b5d282f22bb}
+Vendor specific device class 
+
+Definition at line 278 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}{USB_DEVICE_DESC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))}\hypertarget{group__USBD__Core_gacd04660262562260957b6df8d5e482b3}{}\label{group__USBD__Core_gacd04660262562260957b6df8d5e482b3}
+
+
+Definition at line 694 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_DEVICE_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~1}\hypertarget{group__USBD__Core_ga722f2d6ee2892228b6708e8b9904c645}{}\label{group__USBD__Core_ga722f2d6ee2892228b6708e8b9904c645}
+U\+SB Descriptor Types Device descriptor type 
+
+Definition at line 227 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE}{USB_DEVICE_QUALI_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))}\hypertarget{group__USBD__Core_ga038630c136094c9f727b62cb81a9a186}{}\label{group__USBD__Core_ga038630c136094c9f727b62cb81a9a186}
+
+
+Definition at line 699 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_DEVICE_QUALIFIER_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~6}\hypertarget{group__USBD__Core_ga7158946184590ea6cfcb406d7f3c4ce5}{}\label{group__USBD__Core_ga7158946184590ea6cfcb406d7f3c4ce5}
+Device qualifier descriptor type 
+
+Definition at line 237 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP}{USB_ENDPOINT_0_HS_MAXP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+H\+S\+\_\+\+M\+A\+XP~64}\hypertarget{group__USBD__Core_gac8df859211824ddcf32db5c80b06290a}{}\label{group__USBD__Core_gac8df859211824ddcf32db5c80b06290a}
+Control endopint E\+P0\textquotesingle{}s maximum packet size in high-\/speed mode. 
+
+Definition at line 344 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP}{USB_ENDPOINT_0_LS_MAXP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+0\+\_\+\+L\+S\+\_\+\+M\+A\+XP~8}\hypertarget{group__USBD__Core_ga2b0c6c2be1d518967da6c7b32458c894}{}\label{group__USBD__Core_ga2b0c6c2be1d518967da6c7b32458c894}
+Control endopint E\+P0\textquotesingle{}s maximum packet size in low-\/speed mode. 
+
+Definition at line 346 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP}{USB_ENDPOINT_BULK_HS_MAXP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+B\+U\+L\+K\+\_\+\+H\+S\+\_\+\+M\+A\+XP~512}\hypertarget{group__USBD__Core_gad4839d37e7a31a4d9e8ddf242b16608f}{}\label{group__USBD__Core_gad4839d37e7a31a4d9e8ddf242b16608f}
+Bulk endopint\textquotesingle{}s maximum packet size in high-\/speed mode. 
+
+Definition at line 348 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}{USB_ENDPOINT_DESC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))}\hypertarget{group__USBD__Core_ga317f2697db907bff3f818a644d231c08}{}\label{group__USBD__Core_ga317f2697db907bff3f818a644d231c08}
+
+
+Definition at line 698 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_ENDPOINT_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~5}\hypertarget{group__USBD__Core_ga4e8d6d81a224f8b511edc92b6cb4e085}{}\label{group__USBD__Core_ga4e8d6d81a224f8b511edc92b6cb4e085}
+Endpoint descriptor type 
+
+Definition at line 235 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK}{USB_ENDPOINT_DIRECTION_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK~0x80}\hypertarget{group__USBD__Core_gab7544c5b8cf975839422c1ce29d4c5cb}{}\label{group__USBD__Core_gab7544c5b8cf975839422c1ce29d4c5cb}
+b\+Endpoint\+Address in Endpoint Descriptor Endopint address mask 
+
+Definition at line 301 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN}{USB_ENDPOINT_IN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+IN(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~((addr) $\vert$ 0x80)}\hypertarget{group__USBD__Core_gaea6d13f333ab253fbffe04dabb4cb76f}{}\label{group__USBD__Core_gaea6d13f333ab253fbffe04dabb4cb76f}
+Macro to convert IN endopint number to endpoint address value. 
+
+Definition at line 305 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT}{USB_ENDPOINT_OUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+O\+UT(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~((addr) $\vert$ 0x00)}\hypertarget{group__USBD__Core_ga91482cd8f4ffa0d76ae673c08139b045}{}\label{group__USBD__Core_ga91482cd8f4ffa0d76ae673c08139b045}
+Macro to convert O\+UT endopint number to endpoint address value. 
+
+Definition at line 303 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE}{USB_ENDPOINT_SYNC_ADAPTIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+D\+A\+P\+T\+I\+VE~0x08}\hypertarget{group__USBD__Core_gaa7808914116fe45223462e68d6f8aa5d}{}\label{group__USBD__Core_gaa7808914116fe45223462e68d6f8aa5d}
+Adaptive sync Endopint 
+
+Definition at line 328 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}{USB_ENDPOINT_SYNC_ASYNCHRONOUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US~0x04}\hypertarget{group__USBD__Core_gad1bb5cc537ea61634cb61c8c364c9a6f}{}\label{group__USBD__Core_gad1bb5cc537ea61634cb61c8c364c9a6f}
+Asynchronous sync Endopint 
+
+Definition at line 326 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK}{USB_ENDPOINT_SYNC_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK~0x0C}\hypertarget{group__USBD__Core_ga91301868eb0b52506fc9bc02b131f783}{}\label{group__USBD__Core_ga91301868eb0b52506fc9bc02b131f783}
+Endopint sync type mask 
+
+Definition at line 322 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON}{USB_ENDPOINT_SYNC_NO_SYNCHRONIZATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+A\+T\+I\+ON~0x00}\hypertarget{group__USBD__Core_ga7733e58f8c4fbcef1533eb02f375aeb0}{}\label{group__USBD__Core_ga7733e58f8c4fbcef1533eb02f375aeb0}
+no synchronization Endopint 
+
+Definition at line 324 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}{USB_ENDPOINT_SYNC_SYNCHRONOUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US~0x0C}\hypertarget{group__USBD__Core_ga0309c68623fb48fdc621f15dabc579f2}{}\label{group__USBD__Core_ga0309c68623fb48fdc621f15dabc579f2}
+Synchronous sync Endopint 
+
+Definition at line 330 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK}{USB_ENDPOINT_TYPE_BULK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+U\+LK~0x02}\hypertarget{group__USBD__Core_gaf4bac84d4576dc8f74f39dc75749e3dc}{}\label{group__USBD__Core_gaf4bac84d4576dc8f74f39dc75749e3dc}
+bulk Endopint type 
+
+Definition at line 318 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL}{USB_ENDPOINT_TYPE_CONTROL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+T\+R\+OL~0x00}\hypertarget{group__USBD__Core_ga6a51ed22b06e5ca0f76a35b6bac8d73a}{}\label{group__USBD__Core_ga6a51ed22b06e5ca0f76a35b6bac8d73a}
+Control Endopint type 
+
+Definition at line 314 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT}{USB_ENDPOINT_TYPE_INTERRUPT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT~0x03}\hypertarget{group__USBD__Core_ga2cb5aa69a03df20aab217b808ad692a6}{}\label{group__USBD__Core_ga2cb5aa69a03df20aab217b808ad692a6}
+interrupt Endopint type 
+
+Definition at line 320 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US}{USB_ENDPOINT_TYPE_ISOCHRONOUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+O\+C\+H\+R\+O\+N\+O\+US~0x01}\hypertarget{group__USBD__Core_gab05aae4a5d079b8dfb6a9cb1325ea6e5}{}\label{group__USBD__Core_gab05aae4a5d079b8dfb6a9cb1325ea6e5}
+isochronous Endopint type 
+
+Definition at line 316 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}{USB_ENDPOINT_TYPE_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK~0x03}\hypertarget{group__USBD__Core_gacd114fdf068aaa69407358ee5ccfd170}{}\label{group__USBD__Core_gacd114fdf068aaa69407358ee5ccfd170}
+bm\+Attributes in Endpoint Descriptor Endopint type mask 
+
+Definition at line 312 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA}{USB_ENDPOINT_USAGE_DATA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+A\+TA~0x00}\hypertarget{group__USBD__Core_gac852b5e62e4e577b1b43239ae190908a}{}\label{group__USBD__Core_gac852b5e62e4e577b1b43239ae190908a}
+Endopint data usage type 
+
+Definition at line 334 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK}{USB_ENDPOINT_USAGE_FEEDBACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+E\+E\+D\+B\+A\+CK~0x10}\hypertarget{group__USBD__Core_gabe8c89e5b624ac6bb5b9cd2919fc06be}{}\label{group__USBD__Core_gabe8c89e5b624ac6bb5b9cd2919fc06be}
+Endopint feedback usage type 
+
+Definition at line 336 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK}{USB_ENDPOINT_USAGE_IMPLICIT_FEEDBACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+M\+P\+L\+I\+C\+I\+T\+\_\+\+F\+E\+E\+D\+B\+A\+CK~0x20}\hypertarget{group__USBD__Core_gabfdb9f73f34907249b8fd1128c25ae1a}{}\label{group__USBD__Core_gabfdb9f73f34907249b8fd1128c25ae1a}
+Endopint implicit feedback usage type 
+
+Definition at line 338 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK}{USB_ENDPOINT_USAGE_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+M\+A\+SK~0x30}\hypertarget{group__USBD__Core_ga834006343743238a5eb1d273ef3226ae}{}\label{group__USBD__Core_ga834006343743238a5eb1d273ef3226ae}
+Endopint usage type mask 
+
+Definition at line 332 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED}{USB_ENDPOINT_USAGE_RESERVED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED~0x30}\hypertarget{group__USBD__Core_ga0ee1319e7242bb61298af850ea64f08a}{}\label{group__USBD__Core_ga0ee1319e7242bb61298af850ea64f08a}
+Endopint reserved usage type 
+
+Definition at line 340 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}}
+\index{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}{USB_FEATURE_ENDPOINT_STALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL~0}\hypertarget{group__USBD__Core_ga3ff0518fb298c9c9b556f59c0468ec0d}{}\label{group__USBD__Core_ga3ff0518fb298c9c9b556f59c0468ec0d}
+U\+SB Standard Feature selectors E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL feature 
+
+Definition at line 190 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP@{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}}
+\index{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP@{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}{USB_FEATURE_REMOTE_WAKEUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP~1}\hypertarget{group__USBD__Core_ga2185a0541f4155470596c9c739c1656b}{}\label{group__USBD__Core_ga2185a0541f4155470596c9c739c1656b}
+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP feature 
+
+Definition at line 192 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE@{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE}}
+\index{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE@{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE}{USB_FEATURE_TEST_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+M\+O\+DE~2}\hypertarget{group__USBD__Core_ga90a1a76a81c04849dc897dacf6c3a213}{}\label{group__USBD__Core_ga90a1a76a81c04849dc897dacf6c3a213}
+T\+E\+S\+T\+\_\+\+M\+O\+DE feature 
+
+Definition at line 194 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}}
+\index{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL@{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL}{USB_GETSTATUS_ENDPOINT_STALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL~0x01}\hypertarget{group__USBD__Core_ga4ebb10046221004827e4b2a72cdeefa5}{}\label{group__USBD__Core_ga4ebb10046221004827e4b2a72cdeefa5}
+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+S\+T\+A\+LL status 
+
+Definition at line 183 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP@{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}}
+\index{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP@{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP}{USB_GETSTATUS_REMOTE_WAKEUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP~0x02}\hypertarget{group__USBD__Core_gaad5790ebb5c8f5a25ce60140c60c2ec5}{}\label{group__USBD__Core_gaad5790ebb5c8f5a25ce60140c60c2ec5}
+R\+E\+M\+O\+T\+E\+\_\+\+W\+A\+K\+E\+UP capable status 
+
+Definition at line 181 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED@{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}}
+\index{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED@{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED}{USB_GETSTATUS_SELF_POWERED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+G\+E\+T\+S\+T\+A\+T\+U\+S\+\_\+\+S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED~0x01}\hypertarget{group__USBD__Core_ga1e801ee37e93522f0f38eff9bc7aac02}{}\label{group__USBD__Core_ga1e801ee37e93522f0f38eff9bc7aac02}
+U\+SB G\+E\+T\+\_\+\+S\+T\+A\+T\+US Bit Values S\+E\+L\+F\+\_\+\+P\+O\+W\+E\+R\+ED status 
+
+Definition at line 179 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}{USB_INTERFACE_ASSOC_DESC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))}\hypertarget{group__USBD__Core_gae377b4fc3e66e90afb99e60fa5cc0a94}{}\label{group__USBD__Core_gae377b4fc3e66e90afb99e60fa5cc0a94}
+
+
+Definition at line 697 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_INTERFACE_ASSOCIATION_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~11}\hypertarget{group__USBD__Core_ga2ab1841a48da627b702526b01eb31268}{}\label{group__USBD__Core_ga2ab1841a48da627b702526b01eb31268}
+Interface association descriptor type 
+
+Definition at line 247 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}{USB_INTERFACE_DESC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}))}\hypertarget{group__USBD__Core_gac7fd274cdd131f4c0addec7a139bc9b7}{}\label{group__USBD__Core_gac7fd274cdd131f4c0addec7a139bc9b7}
+
+
+Definition at line 696 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_INTERFACE_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~4}\hypertarget{group__USBD__Core_gad1699884fa580bba35246a566264c978}{}\label{group__USBD__Core_gad1699884fa580bba35246a566264c978}
+Interface descriptor type 
+
+Definition at line 233 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_INTERFACE_POWER_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~8}\hypertarget{group__USBD__Core_ga3356db66a2c62f7018f23f9189ba34c9}{}\label{group__USBD__Core_ga3356db66a2c62f7018f23f9189ba34c9}
+Interface power descriptor type 
+
+Definition at line 241 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_OTG_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+O\+T\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~9}\hypertarget{group__USBD__Core_ga0e105187070c79d5843dde5503bb78f2}{}\label{group__USBD__Core_ga0e105187070c79d5843dde5503bb78f2}
+O\+TG descriptor type 
+
+Definition at line 243 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE}{USB_OTHER_SPEED_CONF_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+\_\+\+S\+I\+ZE~(sizeof({\bf U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}))}\hypertarget{group__USBD__Core_gab7288d5e0e645952c8c156182f3baa11}{}\label{group__USBD__Core_gab7288d5e0e645952c8c156182f3baa11}
+
+
+Definition at line 700 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_OTHER_SPEED_CONFIG_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~7}\hypertarget{group__USBD__Core_ga0d886bcc28cf10d730106d7be9b661fd}{}\label{group__USBD__Core_ga0d886bcc28cf10d730106d7be9b661fd}
+Other speed configuration descriptor type 
+
+Definition at line 239 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE}{USB_REQUEST_CLEAR_FEATURE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE~1}\hypertarget{group__USBD__Core_gab9fe860caa1f21c9410984a24bf57c7c}{}\label{group__USBD__Core_gab9fe860caa1f21c9410984a24bf57c7c}
+C\+L\+E\+A\+R\+\_\+\+F\+E\+A\+T\+U\+RE request 
+
+Definition at line 154 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}{USB_REQUEST_GET_CONFIGURATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON~8}\hypertarget{group__USBD__Core_ga341ed4aff1f0d5a1a4a4f17cb606d08d}{}\label{group__USBD__Core_ga341ed4aff1f0d5a1a4a4f17cb606d08d}
+G\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON request 
+
+Definition at line 164 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_REQUEST_GET_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR~6}\hypertarget{group__USBD__Core_ga3572226ee2137c7fbf7487a02b0f560f}{}\label{group__USBD__Core_ga3572226ee2137c7fbf7487a02b0f560f}
+G\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR request 
+
+Definition at line 160 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{USB_REQUEST_GET_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~10}\hypertarget{group__USBD__Core_ga25550f44898d9c9a3bf0a7814af7fe96}{}\label{group__USBD__Core_ga25550f44898d9c9a3bf0a7814af7fe96}
+G\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE request 
+
+Definition at line 168 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US}{USB_REQUEST_GET_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+US~0}\hypertarget{group__USBD__Core_ga062f3147a1bae954b642b915827b3f3f}{}\label{group__USBD__Core_ga062f3147a1bae954b642b915827b3f3f}
+U\+SB Standard Request Codes G\+E\+T\+\_\+\+S\+T\+A\+T\+US request 
+
+Definition at line 152 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}{USB_REQUEST_SET_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS~5}\hypertarget{group__USBD__Core_gac87659819bfd6491120c819fae2d46bc}{}\label{group__USBD__Core_gac87659819bfd6491120c819fae2d46bc}
+S\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS request 
+
+Definition at line 158 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}{USB_REQUEST_SET_CONFIGURATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON~9}\hypertarget{group__USBD__Core_gaadef005acc40340955d34d9767ef297c}{}\label{group__USBD__Core_gaadef005acc40340955d34d9767ef297c}
+S\+E\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON request 
+
+Definition at line 166 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_REQUEST_SET_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR~7}\hypertarget{group__USBD__Core_ga3c80fdedd69586ccf2894f5bd4638252}{}\label{group__USBD__Core_ga3c80fdedd69586ccf2894f5bd4638252}
+S\+E\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR request 
+
+Definition at line 162 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE}{USB_REQUEST_SET_FEATURE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE~3}\hypertarget{group__USBD__Core_gaa2b4d305dcd185cc1242e94ee78eea25}{}\label{group__USBD__Core_gaa2b4d305dcd185cc1242e94ee78eea25}
+S\+E\+T\+\_\+\+F\+E\+A\+T\+U\+RE request 
+
+Definition at line 156 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{USB_REQUEST_SET_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~11}\hypertarget{group__USBD__Core_gaf8d2ea632916bfc2a7628f63d3f643aa}{}\label{group__USBD__Core_gaf8d2ea632916bfc2a7628f63d3f643aa}
+S\+E\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE request 
+
+Definition at line 170 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME@{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME}{USB_REQUEST_SYNC_FRAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME~12}\hypertarget{group__USBD__Core_ga916e1a4b8f8a5cb369d896ef35c4db34}{}\label{group__USBD__Core_ga916e1a4b8f8a5cb369d896ef35c4db34}
+S\+Y\+N\+C\+\_\+\+F\+R\+A\+ME request 
+
+Definition at line 172 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_STRING_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~3}\hypertarget{group__USBD__Core_gab01c9c74f2eb266b20aecd48bab4b35c}{}\label{group__USBD__Core_gab01c9c74f2eb266b20aecd48bab4b35c}
+String descriptor type 
+
+Definition at line 231 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!W\+B\+V\+AL@{W\+B\+V\+AL}}
+\index{W\+B\+V\+AL@{W\+B\+V\+AL}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{W\+B\+V\+AL}{WBVAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+B\+V\+AL(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x) \& 0x\+F\+F),(((x) $>$$>$ 8) \& 0x\+F\+F)}\hypertarget{group__USBD__Core_ga018fc058eba40cffd92be1756a5d2b40}{}\label{group__USBD__Core_ga018fc058eba40cffd92be1756a5d2b40}
+
+
+Definition at line 691 of file usbd.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!B\+M\+\_\+T@{B\+M\+\_\+T}}
+\index{B\+M\+\_\+T@{B\+M\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{B\+M\+\_\+T}{BM_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+B\+M\+\_\+T} {\bf B\+M\+\_\+T}}\hypertarget{group__USBD__Core_ga0c191764322e096fa81c1228eb62e63f}{}\label{group__USBD__Core_ga0c191764322e096fa81c1228eb62e63f}
+Structure to define 8 bit U\+SB request. 
+
+Definition at line 137 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE}{REQUEST_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf \+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE} {\bf R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE}}\hypertarget{group__USBD__Core_gac85164494feb72445fab7999a3723b6f}{}\label{group__USBD__Core_gac85164494feb72445fab7999a3723b6f}
+Union of \hyperlink{struct__BM__T}{\+\_\+\+B\+M\+\_\+T} struct and 8 bit byte. 
+
+Definition at line 146 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+B\+\_\+T@{U\+S\+B\+\_\+\+C\+B\+\_\+T}}
+\index{U\+S\+B\+\_\+\+C\+B\+\_\+T@{U\+S\+B\+\_\+\+C\+B\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+B\+\_\+T}{USB_CB_T}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+B\+\_\+\+C\+B\+\_\+T}\hypertarget{group__USBD__Core_ga0404ce046312aa5c798cc4a05c417e46}{}\label{group__USBD__Core_ga0404ce046312aa5c798cc4a05c417e46}
+
+
+U\+SB device stack\textquotesingle{}s event callback function type. 
+
+The U\+SB device stack exposes several event triggers through callback to application layer. The application layer can register methods to be called when such U\+SB event happens.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & Other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 64 of file usbd\+\_\+core.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_COMMON_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_gae20aa0e1d1e5418dbef678b53b2c3ebe}{}\label{group__USBD__Core_gae20aa0e1d1e5418dbef678b53b2c3ebe}
+U\+SB Common Descriptor 
+
+Definition at line 669 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_CONFIGURATION_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_ga196f799666c475a9064909c6e72b9d72}{}\label{group__USBD__Core_ga196f799666c475a9064909c6e72b9d72}
+U\+SB Standard Configuration Descriptor 
+
+Definition at line 493 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T@{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}}
+\index{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T@{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}{USB_CORE_DESCS_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}  {\bf U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}}\hypertarget{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{}\label{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}
+
+
+U\+SB descriptors data structure. 
+
+This structure is used as part of U\+SB device stack initialization parameter structure \hyperlink{group__USBD__Core_gaa6e8171941c1ae63afed95974e0f18e3}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}. This structure contains pointers to various descriptor arrays needed by the stack. These descriptors are reported to U\+SB host as part of enumerations process.
+
+\begin{DoxyNote}{Note}
+All descriptor pointers assigned in this structure should be on 4 byte aligned address boundary. 
+\end{DoxyNote}
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_DEVICE_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_ga7c2da119cc5c129d253d5fa766c70893}{}\label{group__USBD__Core_ga7c2da119cc5c129d253d5fa766c70893}
+U\+SB Standard Device Descriptor 
+
+Definition at line 417 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_DEVICE_QUALIFIER_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_ga4460a327f0c59c1d44e550efcff1eb00}{}\label{group__USBD__Core_ga4460a327f0c59c1d44e550efcff1eb00}
+U\+SB 2.\+0 Device Qualifier Descriptor 
+
+Definition at line 433 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_ENDPOINT_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_ga652b2871268bd903653cbff0f3448a6e}{}\label{group__USBD__Core_ga652b2871268bd903653cbff0f3448a6e}
+U\+SB Standard Endpoint Descriptor 
+
+Definition at line 650 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T@{U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T}}
+\index{U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T@{U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T}{USB_EP_HANDLER_T}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T}\hypertarget{group__USBD__Core_gaa578d29a85226108ef62c6d5c325b742}{}\label{group__USBD__Core_gaa578d29a85226108ef62c6d5c325b742}
+
+
+U\+S\+BD setup request and endpoint event handler type. 
+
+The application layer should define the custom class\textquotesingle{}s E\+P0 handler with function signature. The stack calls all the registered class handlers on any E\+P0 event before going through default handling of the event. This gives the class handlers to implement class specific request handlers and also to override the default stack handling for a particular event targeted to the interface. If an event is not handled by the callback the function should return E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED. For all other return codes the stack assumes that callback has taken care of the event and hence will not process the event any further and issues a S\+T\+A\+LL condition on E\+P0 indicating error to the host. ~\newline
+For endpoint interrupt handler the return value is ignored by the stack. ~\newline
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 106 of file usbd\+\_\+core.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_IAD_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+I\+A\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_ga6b053e842151d5c5dcdace597e45a36b}{}\label{group__USBD__Core_ga6b053e842151d5c5dcdace597e45a36b}
+U\+SB Standard Interface Association Descriptor 
+
+Definition at line 518 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_INTERFACE_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_gac933513ce6cbf852d0dc998bd8fb333d}{}\label{group__USBD__Core_gac933513ce6cbf852d0dc998bd8fb333d}
+U\+SB Standard Interface Descriptor 
+
+Definition at line 567 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}
+\index{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON@{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}{USB_OTHER_SPEED_CONFIGURATION}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON} {\bf U\+S\+B\+\_\+\+O\+T\+H\+E\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}}\hypertarget{group__USBD__Core_ga808d47bcf11e648d95efc88e330fabc5}{}\label{group__USBD__Core_ga808d47bcf11e648d95efc88e330fabc5}
+U\+SB Other Speed Configuration 
+
+Definition at line 684 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T@{U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T}}
+\index{U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T@{U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T}{USB_PARAM_CB_T}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T}\hypertarget{group__USBD__Core_ga7df622c61ebb152b83dd5972ac789b28}{}\label{group__USBD__Core_ga7df622c61ebb152b83dd5972ac789b28}
+
+
+U\+SB device stack\textquotesingle{}s event callback function type. 
+
+The U\+SB device stack exposes several event triggers through callback to application layer. The application layer can register methods to be called when such U\+SB event happens.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em param1} & Extra information related to the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 81 of file usbd\+\_\+core.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+\index{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}{USB_SETUP_PACKET}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} {\bf U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}\hypertarget{group__USBD__Core_ga4a940f7627cc7e9f0bb693cc0fce8637}{}\label{group__USBD__Core_ga4a940f7627cc7e9f0bb693cc0fce8637}
+U\+SB Default Control Pipe Setup Packet 
+
+Definition at line 220 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_STRING_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{group__USBD__Core_gabccfa24c1955b99a76219a89b8e6f3b6}{}\label{group__USBD__Core_gabccfa24c1955b99a76219a89b8e6f3b6}
+U\+SB String Descriptor 
+
+Definition at line 660 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T@{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T@{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}{USBD_API_INIT_PARAM_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}  {\bf U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}}\hypertarget{group__USBD__Core_gaa6e8171941c1ae63afed95974e0f18e3}{}\label{group__USBD__Core_gaa6e8171941c1ae63afed95974e0f18e3}
+
+
+U\+SB device stack initialization parameter data structure. 
+
+This data structure is used to pass initialization parameters to the U\+SB device stack\textquotesingle{}s init function. \index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T}{USBD_CORE_API_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}  {\bf U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T}}\hypertarget{group__USBD__Core_ga6a53e8395d1c68f98d18ca4a49b75baa}{}\label{group__USBD__Core_ga6a53e8395d1c68f98d18ca4a49b75baa}
+
+
+U\+S\+BD stack Core A\+PI functions structure. 
+
+This module exposes functions which interact directly with U\+SB device stack\textquotesingle{}s core layer. The application layer uses this component when it has to implement custom class function driver or standard class function driver which is not part of the current U\+SB device stack. The functions exposed by this interface are to register class specific E\+P0 handlers and corresponding utility functions to manipulate E\+P0 state machine of the stack. This interface also exposes function to register custom endpoint interrupt handler. \index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T@{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T@{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T}{USBD_HANDLE_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T}}\hypertarget{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{}\label{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}
+U\+SB device stack/module handle. 
+
+Definition at line 689 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!W\+B\+\_\+T@{W\+B\+\_\+T}}
+\index{W\+B\+\_\+T@{W\+B\+\_\+T}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{W\+B\+\_\+T}{WB_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+W\+B\+\_\+T} {\bf W\+B\+\_\+T}}\hypertarget{group__USBD__Core_ga4fbe30f5ac133f5bb15c653a19162ae9}{}\label{group__USBD__Core_ga4fbe30f5ac133f5bb15c653a19162ae9}
+Structure to pack lower and upper byte to form 16 bit word. 
+
+Definition at line 83 of file usbd.\+h.
+
+\index{U\+S\+B Core Layer@{U\+S\+B Core Layer}!W\+O\+R\+D\+\_\+\+B\+Y\+TE@{W\+O\+R\+D\+\_\+\+B\+Y\+TE}}
+\index{W\+O\+R\+D\+\_\+\+B\+Y\+TE@{W\+O\+R\+D\+\_\+\+B\+Y\+TE}!U\+S\+B Core Layer@{U\+S\+B Core Layer}}
+\subsubsection[{\texorpdfstring{W\+O\+R\+D\+\_\+\+B\+Y\+TE}{WORD_BYTE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf \+\_\+\+\_\+\+W\+O\+R\+D\+\_\+\+B\+Y\+TE} {\bf W\+O\+R\+D\+\_\+\+B\+Y\+TE}}\hypertarget{group__USBD__Core_ga340ec8de2973608b96d5cc7379b9561a}{}\label{group__USBD__Core_ga340ec8de2973608b96d5cc7379b9561a}
+Union of \hyperlink{struct__WB__T}{\+\_\+\+W\+B\+\_\+T} struct and 16 bit word. 
+
+Definition at line 92 of file usbd.\+h.
+

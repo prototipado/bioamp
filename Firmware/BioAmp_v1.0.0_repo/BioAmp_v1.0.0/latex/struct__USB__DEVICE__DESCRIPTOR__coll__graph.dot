@@ -1,0 +1,6 @@
+digraph "_USB_DEVICE_DESCRIPTOR"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{_USB_DEVICE_DESCRIPTOR\n|+ bcdDevice\l+ bcdUSB\l+ bDescriptorType\l+ bDeviceClass\l+ bDeviceProtocol\l+ bDeviceSubClass\l+ bLength\l+ bMaxPacketSize0\l+ bNumConfigurations\l+ idProduct\l+ idVendor\l+ iManufacturer\l+ iProduct\l+ iSerialNumber\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

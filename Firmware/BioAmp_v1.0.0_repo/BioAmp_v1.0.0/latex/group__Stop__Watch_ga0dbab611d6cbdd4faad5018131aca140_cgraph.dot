@@ -1,0 +1,9 @@
+digraph "StopWatch_Start"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="StopWatch_Start",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_TIMER_ReadCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__TIMER__17XX__40XX.html#ga6050d4da70d679696b3af922b8c1a6ac",tooltip="Returns the current timer count. "];
+}

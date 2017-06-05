@@ -1,0 +1,45 @@
+digraph "Chip_Clock_GetCPUClockDiv"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_Clock_GetCPUClockDiv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_Clock_GetSystemClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaf3dd97239f9db511dbc71c531132cc08",tooltip="Return system clock rate. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="SystemCoreClockUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SUPPORT__17XX__40XX__FUNC.html#gae0c36a9591fe6e9c45ecb21a794f0f0f",tooltip="Update system core clock rate, should be called if the system has a clock rate change. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Drv_GPIO_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#ga9be5db131ab65deac64ba3f32adc3e0a",tooltip="Initialize GPIO port. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Drv_Devices_startDevices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Devices__Library.html#ga752ca1b164444c691ffe54ed89d848c8",tooltip="Call init and start functions of the different peripherals of the uC. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Application__Layer.html#ga840291bc02cba5474a4cb46a9b9566fe"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="__attribute__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cr__startup__lpc175x__6x_8c.html#adce420b900676fa0caed5a713cac82fb"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Chip_Clock_GetSPIFIClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga09e6d1ff0c53ebffd5f6fd407ea01ddb",tooltip="Returns the SPIFI clock rate. "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Chip_Clock_GetUSBPLLInClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaa97e3b970f577ea06e5d4f76097576c7",tooltip="Return USB PLL input clock rate. "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Chip_Clock_GetUSBPLLOutClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga89cab6cddba486f9c820b06e0a28bade",tooltip="Return USB PLL output clock rate. "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Chip_Clock_GetUSBClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gac8679aba3cc005f859604a09ceceb4a4",tooltip="Gets the USB clock (USB_CLK) rate. "];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Chip_Clock_GetEMCClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gae2649650e17f30a5fc753c11cfa3efb4",tooltip="Returns clock rate for EMC. "];
+  Node2 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Chip_Clock_GetRTCClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga7c09db016cc48f17aca47d96b0d68814",tooltip="Returns clock rate for RTC. "];
+  Node2 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Chip_Clock_GetENETClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga04af0fa6fa72517538fc3d3918fcc0d9",tooltip="Returns clock rate for Ethernet. "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Chip_ENET_FindMIIDiv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#gad107338dec5ee221957fafe5e711e42e",tooltip="Find the divider index for a desired MII clock rate. "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Chip_ENET_ClearIntStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#ga0a574e2cc8946c200d71152722ac30d7",tooltip="Clear the interrupt status. "];
+  Node2 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="Chip_Clock_GetGPDMAClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga3141accbf546f4de8cfb005e31ec53a8",tooltip="Returns clock rate for GPDMA. "];
+  Node2 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="StopWatch_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Stop__Watch.html#gaa0f8ea277b700d20b4322a15d9ddf32c",tooltip="Initialize stopwatch. "];
+}

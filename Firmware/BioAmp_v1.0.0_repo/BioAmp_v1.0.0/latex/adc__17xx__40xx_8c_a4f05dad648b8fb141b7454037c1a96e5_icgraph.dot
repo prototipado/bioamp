@@ -1,0 +1,13 @@
+digraph "getClkDiv"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="getClkDiv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_ADC_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADC__17XX__40XX.html#ga459b17621657a66281f2bc9baae3626c",tooltip="Initialize the ADC peripheral and the ADC setup structure to default value. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_ADC_SetSampleRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADC__17XX__40XX.html#gae1629ea72c61a224e69e55f7699b7810",tooltip="Set the ADC Sample rate. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_ADC_Int_SetGlobalCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ADC__17XX__40XX.html#gafa58ed3d91229dfcc78a5fc05dd4221b",tooltip="Enable/Disable global interrupt for ADC channel. "];
+}

@@ -1,0 +1,1549 @@
+\hypertarget{group__I2S__17XX__40XX}{}\section{C\+H\+IP\+: L\+P\+C17xx/40xx I2S driver}
+\label{group__I2S__17XX__40XX}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structI2S__AUDIO__FORMAT__T}{I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T}
+\begin{DoxyCompactList}\small\item\em I2S Audio Format Structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em I2S register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga352feb095d028efc44d17f72beacfae5}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO}~((uint32\+\_\+t) (1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gae57a0b564a399a726a9a6737f5733beb}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET}~((uint32\+\_\+t) (1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga664f6b8ac38d7b3a23aae4e7a2fa1c6f}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE}~((uint32\+\_\+t) (1 $<$$<$ 5))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga2ed2d2a9f59339ad3cf1f28a78bfcad6}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga26e60492415a246afde8d4ede5aa292e}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}~((uint32\+\_\+t) (1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga576561248aa7e6f27c5ef6c51def80ed}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}~((uint32\+\_\+t) (3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga8bd50ada05c4cd981f07be7a3b1002dc}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}~((uint32\+\_\+t) (0))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga1177f9594c24141162839aafe829fcb9}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}~((uint32\+\_\+t) (3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga450d3ddbf42df650d0771ce9ed388bbd}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}(n)    ~((uint32\+\_\+t) (((n) \& 0x1\+F\+F) $<$$<$ 6))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaa960b95856c5f78a0eaed42d383dd124}{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}~((uint32\+\_\+t) ((0x1\+F\+F) $<$$<$ 6))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gab32b25d6de6c9c964421ff08c1402e03}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO}~((uint32\+\_\+t) (1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga78bd42c0693e2a68dcba79a4cc05b8d5}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE}~((uint32\+\_\+t) (1 $<$$<$ 15))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga7ec4a63719a45df4d30f42e03af0d9e6}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET}~((uint32\+\_\+t) (1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga58ea023dda649de724684288e703ef86}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE}~((uint32\+\_\+t) (1 $<$$<$ 5))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaa8e56c2dab6e3206093dd6575332253d}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaf48ba0298cdb6828567de0df29abcb4d}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}~((uint32\+\_\+t) (1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaa6666d92294cc244c41fd510fb7de31d}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}~((uint32\+\_\+t) (3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga9e390ef13bf52d00c311ca64d46c5ac2}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}~((uint32\+\_\+t) (0))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga47082bef68e91e6cedb9f819b8e2fa02}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}~((uint32\+\_\+t) (3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga0872086e4b97e8224ade08034623120b}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}(n)    ~((uint32\+\_\+t) (((n) \& 0x1\+F\+F) $<$$<$ 6))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaf32d949b14558ee1aad72a765726731c}{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}~((uint32\+\_\+t) ((0x1\+F\+F) $<$$<$ 6))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gae69669784240dd1858903a4470dd059d}{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}(n)    ~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga7b643833c4b80116d3026c7933449001}{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gad41f4bf7fae5f9be646215316d0d14bc}{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}(n)    ~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 16))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga0fb809d583bb8b68d34f347d19933575}{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaa2f1885afa1dfea78af4ba08ae8edbd5}{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}(n)    ~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga2e4e8b4d132b01bb74d57dd34ca7eaef}{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga7a4fcc39608a28a1bc7de7f0628a392c}{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}(n)    ~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 16))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga2ceda1798034a70380c9a9de567bb6b0}{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga10c454ef6bf76db84b90803d5864b6f9}{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}(n)      ~((uint32\+\_\+t) ((n \& 0x0\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaeb26d013e12b97b3089bd3666b641cbb}{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}~((uint32\+\_\+t) ((0x0\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga362154dbf216f1384f535c940d930cd9}{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gab13b76b79c11e175e3e3cdb5f30fc78e}{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}(n)      ~((uint32\+\_\+t) ((n \& 0x0\+F) $<$$<$ 16))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gacbd0d516073943ba5aa03e03649e6cc0}{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}~((uint32\+\_\+t) ((0x0\+F) $<$$<$ 16))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga7811db5a292d68de3dce209883bab6c0}{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga67cd00ecbec35d0dd723909916fb1014}{I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE}~(0\+U\+L $<$$<$ 5)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga3c732d1467300d87c582a1497e8dbadf}{I2\+S\+\_\+\+M\+O\+NO}~(1\+U\+L $<$$<$ 2)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga7d6c53914dea99eecc1d59eefbdbf5aa}{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE}~(0\+U\+L $<$$<$ 15)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga3f418f8bc5e6f401481d3b9e241758bb}{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE}~(1\+U\+L $<$$<$ 15)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaf008515f40666122bb1936e591b7ed99}{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0\+U\+L $<$$<$ 4)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gae090c11fade3a6f9bf9791dba1920556}{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE}~(1\+U\+L $<$$<$ 4)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga5668c8629a5ecec4c868d3272188dc1b}{I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE}(n)    ~((uint32\+\_\+t) (n \& 0x3\+F))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga2734ec0ee02ee7865c36b6ec3ffff081}{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga2a8f822f7a13efd542adb6e58c743ed9}{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}(n)    ~((uint32\+\_\+t) (n \& 0x03))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga64eb87a1f090271b07c7110f974f8300}{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gac6b39adbbfb5ff023160af667debeef6}{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}(n)~((uint32\+\_\+t) ((n \& 0x\+F\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga7487e9a82c9bb4a58118038ca6520dbe}{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}(n)~((uint32\+\_\+t) (n \& 0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga37137132251bc15250edcea1585d3e58}{I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE}~(1\+U\+L $<$$<$ 5)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga0e9a701addd279db953ca34d56487dbd}{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga84dfa37fbee79986ec79f4d856b8df24}{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2}~((uint32\+\_\+t) (1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaa412bd295235fcd4d7f0ad284d9386de}{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ}~((uint32\+\_\+t) (1))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga2a303c12a8e7381abc67993f15408e50}{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL}(n)  ~((uint32\+\_\+t) ((n \& 1\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga50182373fb2dd8c04d4385f84ce6f2d9}{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL}(n)  ~((uint32\+\_\+t) ((n \& 1\+F) $<$$<$ 16))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga07e34ebc83183644aa54cc124b769a43}{I2\+S\+\_\+\+S\+T\+E\+R\+EO}~(0\+U\+L $<$$<$ 2)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gaf442a366f6467626a2f72fdabf9b6d89}{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE}~(1\+U\+L $<$$<$ 3)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gabe1e11f6f4ce8542408e466b3316ca3c}{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE}~(0\+U\+L $<$$<$ 3)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga3ec6288248db2c2a4aab1351bb7e7f28}{I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE}(n)    ~((uint32\+\_\+t) (n \& 0x3\+F))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga3e268d07b159ec36998eb32a9e36af69}{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga00571d79a1a71166b2637108a8a6d42e}{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}(n)    ~((uint32\+\_\+t) (n \& 0x03))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gabd67f37d51f2557f49fa600abb48225b}{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_gab4441c879ba15275e44ffe3f075fecab}{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}(n)~((uint32\+\_\+t) ((n \& 0x\+F\+F) $<$$<$ 8))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga310a84df35c22ce4bed1f3785145670c}{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}(n)~((uint32\+\_\+t) (n \& 0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga4d016baad0fba07da20a6410470c71d3}{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}~(1\+U\+L $<$$<$ 0)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga683d81436e91c1631bdd5947ee78489b}{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}~(3\+U\+L $<$$<$ 0)
+\item 
+\#define \hyperlink{group__I2S__17XX__40XX_ga17cb1a91d5be4e7afad486ead6d2980d}{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}~(0\+U\+L $<$$<$ 0)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} \{ \hyperlink{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421ba549b2d28b5da72f6185d736f5fed51c1}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1}, 
+\hyperlink{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421ba65eabb50f670f1dcae7b3c790f088e16}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}, 
+\hyperlink{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421bab9921186ab93fee889b2074d508b88ce}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM}
+ \}\begin{DoxyCompactList}\small\item\em I2S D\+MA request channel define. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__I2S__17XX__40XX_ga2fbdb14520735214e155253f05a88a0a}{Chip\+\_\+\+I2\+S\+\_\+\+De\+Init} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Shutdown I2S. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga0c6731695f685fa21678ea3635b458f3}{Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Un-\/\+Mute the I2S channel. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_ga9c7067a9ee62d240aa6cd9426deefb13}{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} dma\+Num, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable D\+MA with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_gac08890ba38fd8e5df3a3a603e7a4fa42}{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} dma\+Num, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable D\+MA with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga3977adf6afb42ea9da7c764ef36efa6e}{Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Mute the Transmit channel. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t \hyperlink{group__I2S__17XX__40XX_ga5880b341bea64ea33e734af422b43dc3}{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Get the current level of the Receive F\+I\+FO. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t \hyperlink{group__I2S__17XX__40XX_ga125559c7f810a2564f5b6059ead42256}{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Get the current level of the Transmit F\+I\+FO. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_ga006752f0240a956ae02fba521e63c053}{Chip\+\_\+\+I2\+S\+\_\+\+Init} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Initialize for I2S. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_ga36b0f5c62d5c703c1374bdcc0d84d07f}{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable Interrupt with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_gaf5ea5a92372f64937b2a967f8aa284f3}{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable Interrupt with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__I2S__17XX__40XX_ga74005245ee6b79220df6a563db92a04f}{Chip\+\_\+\+I2\+S\+\_\+\+Receive} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Get received data from R\+X\+F\+I\+FO. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__I2S__17XX__40XX_gab443fc12cad5f6cfb13dc5ab19a003ae}{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{structI2S__AUDIO__FORMAT__T}{I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$format)
+\begin{DoxyCompactList}\small\item\em Configure I2S for Audio Format input. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_gae4e5e39c6ea22b2be42c91bdaa0f27e8}{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint32\+\_\+t clksel, uint32\+\_\+t fpin, uint32\+\_\+t mcena)
+\begin{DoxyCompactList}\small\item\em Set the I2S receive mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga0f7d40cc029ebd29091c0f3699bd1fe9}{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Disables accesses on F\+I\+F\+Os, places the transmit channel in mute mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga42eb351f08a2dea90fde3ba14d1698e3}{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Start receive data. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_gaa78f387af78de456819cec21bbf21ada}{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Stop I2S asynchronously. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga7927122545d8ec1879743fb8caffb723}{Chip\+\_\+\+I2\+S\+\_\+\+Send} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint32\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Send a 32-\/bit data to T\+X\+F\+I\+FO for transmition. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_gaf18685ebc3f86581fd7075fafe4c72e7}{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint32\+\_\+t div)
+\begin{DoxyCompactList}\small\item\em Set the clock frequency for I2S interface. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_gafd2bc55fb29ea5f082d5ae3b5794f605}{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint8\+\_\+t x\+Div, uint8\+\_\+t y\+Div)
+\begin{DoxyCompactList}\small\item\em Set the M\+C\+LK rate by using a fractional rate generator, dividing down the frequency of P\+C\+LK. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga4ab6d7b26edf92c1b7bcb7f6f9326888}{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint32\+\_\+t div)
+\begin{DoxyCompactList}\small\item\em Set the clock frequency for I2S interface. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_gaab4e4a66774d56ba378cce2dbc34e9b0}{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint8\+\_\+t x\+Div, uint8\+\_\+t y\+Div)
+\begin{DoxyCompactList}\small\item\em Set the M\+C\+LK rate by using a fractional rate generator, dividing down the frequency of P\+C\+LK. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__I2S__17XX__40XX_ga09acfe336e9aee86f1d029146937326a}{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{structI2S__AUDIO__FORMAT__T}{I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$format)
+\begin{DoxyCompactList}\small\item\em Configure I2S for Audio Format input. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga0c7a808e84e2c0a3f7ffbba089c7d380}{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, uint32\+\_\+t clksel, uint32\+\_\+t fpin, uint32\+\_\+t mcena)
+\begin{DoxyCompactList}\small\item\em Set the I2S transmit mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga0487f27c97c88ea9d2bf9adc6ec4e469}{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Disables accesses on F\+I\+F\+Os, places the transmit channel in mute mode. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_ga84f5b666dcacef8140c1355ed308a782}{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Start transmit data. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__I2S__17XX__40XX_gac7d296f84ba3283e63861515d134edfe}{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Stop I2S asynchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO}{I2S_DAI_MONO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+M\+O\+NO~((uint32\+\_\+t) (1 $<$$<$ 2))}\hypertarget{group__I2S__17XX__40XX_ga352feb095d028efc44d17f72beacfae5}{}\label{group__I2S__17XX__40XX_ga352feb095d028efc44d17f72beacfae5}
+D\+AI mono mode mask 
+
+Definition at line 138 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET}{I2S_DAI_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+R\+E\+S\+ET~((uint32\+\_\+t) (1 $<$$<$ 4))}\hypertarget{group__I2S__17XX__40XX_gae57a0b564a399a726a9a6737f5733beb}{}\label{group__I2S__17XX__40XX_gae57a0b564a399a726a9a6737f5733beb}
+D\+AI reset bit mask 
+
+Definition at line 144 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE}{I2S_DAI_SLAVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+L\+A\+VE~((uint32\+\_\+t) (1 $<$$<$ 5))}\hypertarget{group__I2S__17XX__40XX_ga664f6b8ac38d7b3a23aae4e7a2fa1c6f}{}\label{group__I2S__17XX__40XX_ga664f6b8ac38d7b3a23aae4e7a2fa1c6f}
+D\+AI slave mode mask 
+
+Definition at line 147 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP}{I2S_DAI_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+S\+T\+OP~((uint32\+\_\+t) (1 $<$$<$ 3))}\hypertarget{group__I2S__17XX__40XX_ga2ed2d2a9f59339ad3cf1f28a78bfcad6}{}\label{group__I2S__17XX__40XX_ga2ed2d2a9f59339ad3cf1f28a78bfcad6}
+D\+AI stop bit mask 
+
+Definition at line 141 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}{I2S_DAI_WORDWIDTH_16}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16~((uint32\+\_\+t) (1))}\hypertarget{group__I2S__17XX__40XX_ga26e60492415a246afde8d4ede5aa292e}{}\label{group__I2S__17XX__40XX_ga26e60492415a246afde8d4ede5aa292e}
+D\+AI 16 bit 
+
+Definition at line 133 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}{I2S_DAI_WORDWIDTH_32}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32~((uint32\+\_\+t) (3))}\hypertarget{group__I2S__17XX__40XX_ga576561248aa7e6f27c5ef6c51def80ed}{}\label{group__I2S__17XX__40XX_ga576561248aa7e6f27c5ef6c51def80ed}
+D\+AI 32 bit 
+
+Definition at line 134 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}{I2S_DAI_WORDWIDTH_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8~((uint32\+\_\+t) (0))}\hypertarget{group__I2S__17XX__40XX_ga8bd50ada05c4cd981f07be7a3b1002dc}{}\label{group__I2S__17XX__40XX_ga8bd50ada05c4cd981f07be7a3b1002dc}
+D\+AI 8 bit 
+
+Definition at line 132 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}{I2S_DAI_WORDWIDTH_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK~((uint32\+\_\+t) (3))}\hypertarget{group__I2S__17XX__40XX_ga1177f9594c24141162839aafe829fcb9}{}\label{group__I2S__17XX__40XX_ga1177f9594c24141162839aafe829fcb9}
+D\+AI word wide mask 
+
+Definition at line 135 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}{I2S_DAI_WS_HALFPERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (((n) \& 0x1\+F\+F) $<$$<$ 6))}\hypertarget{group__I2S__17XX__40XX_ga450d3ddbf42df650d0771ce9ed388bbd}{}\label{group__I2S__17XX__40XX_ga450d3ddbf42df650d0771ce9ed388bbd}
+D\+AI Word select set macro 
+
+Definition at line 150 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}}
+\index{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}{I2S_DAI_WS_HALFPERIOD_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+I\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK~((uint32\+\_\+t) ((0x1\+F\+F) $<$$<$ 6))}\hypertarget{group__I2S__17XX__40XX_gaa960b95856c5f78a0eaed42d383dd124}{}\label{group__I2S__17XX__40XX_gaa960b95856c5f78a0eaed42d383dd124}
+D\+AI Word select mask 
+
+Definition at line 151 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO}{I2S_DAO_MONO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+O\+NO~((uint32\+\_\+t) (1 $<$$<$ 2))}\hypertarget{group__I2S__17XX__40XX_gab32b25d6de6c9c964421ff08c1402e03}{}\label{group__I2S__17XX__40XX_gab32b25d6de6c9c964421ff08c1402e03}
+D\+AO mono audio mask 
+
+Definition at line 110 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE}{I2S_DAO_MUTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+M\+U\+TE~((uint32\+\_\+t) (1 $<$$<$ 15))}\hypertarget{group__I2S__17XX__40XX_ga78bd42c0693e2a68dcba79a4cc05b8d5}{}\label{group__I2S__17XX__40XX_ga78bd42c0693e2a68dcba79a4cc05b8d5}
+D\+AO mute mask 
+
+Definition at line 126 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET}{I2S_DAO_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+R\+E\+S\+ET~((uint32\+\_\+t) (1 $<$$<$ 4))}\hypertarget{group__I2S__17XX__40XX_ga7ec4a63719a45df4d30f42e03af0d9e6}{}\label{group__I2S__17XX__40XX_ga7ec4a63719a45df4d30f42e03af0d9e6}
+D\+AO reset mask 
+
+Definition at line 116 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE}{I2S_DAO_SLAVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+L\+A\+VE~((uint32\+\_\+t) (1 $<$$<$ 5))}\hypertarget{group__I2S__17XX__40XX_ga58ea023dda649de724684288e703ef86}{}\label{group__I2S__17XX__40XX_ga58ea023dda649de724684288e703ef86}
+D\+AO slave mode mask 
+
+Definition at line 119 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP}{I2S_DAO_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+S\+T\+OP~((uint32\+\_\+t) (1 $<$$<$ 3))}\hypertarget{group__I2S__17XX__40XX_gaa8e56c2dab6e3206093dd6575332253d}{}\label{group__I2S__17XX__40XX_gaa8e56c2dab6e3206093dd6575332253d}
+D\+AO stop mask 
+
+Definition at line 113 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}{I2S_DAO_WORDWIDTH_16}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16~((uint32\+\_\+t) (1))}\hypertarget{group__I2S__17XX__40XX_gaf48ba0298cdb6828567de0df29abcb4d}{}\label{group__I2S__17XX__40XX_gaf48ba0298cdb6828567de0df29abcb4d}
+D\+AO 16 bit 
+
+Definition at line 105 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}{I2S_DAO_WORDWIDTH_32}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32~((uint32\+\_\+t) (3))}\hypertarget{group__I2S__17XX__40XX_gaa6666d92294cc244c41fd510fb7de31d}{}\label{group__I2S__17XX__40XX_gaa6666d92294cc244c41fd510fb7de31d}
+D\+AO 32 bit 
+
+Definition at line 106 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}{I2S_DAO_WORDWIDTH_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8~((uint32\+\_\+t) (0))}\hypertarget{group__I2S__17XX__40XX_ga9e390ef13bf52d00c311ca64d46c5ac2}{}\label{group__I2S__17XX__40XX_ga9e390ef13bf52d00c311ca64d46c5ac2}
+D\+AO 8 bit 
+
+Definition at line 104 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK}{I2S_DAO_WORDWIDTH_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+\+M\+A\+SK~((uint32\+\_\+t) (3))}\hypertarget{group__I2S__17XX__40XX_ga47082bef68e91e6cedb9f819b8e2fa02}{}\label{group__I2S__17XX__40XX_ga47082bef68e91e6cedb9f819b8e2fa02}
+
+
+Definition at line 107 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD}{I2S_DAO_WS_HALFPERIOD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+OD(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (((n) \& 0x1\+F\+F) $<$$<$ 6))}\hypertarget{group__I2S__17XX__40XX_ga0872086e4b97e8224ade08034623120b}{}\label{group__I2S__17XX__40XX_ga0872086e4b97e8224ade08034623120b}
+D\+AO Word select set macro 
+
+Definition at line 122 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}}
+\index{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK}{I2S_DAO_WS_HALFPERIOD_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+A\+O\+\_\+\+W\+S\+\_\+\+H\+A\+L\+F\+P\+E\+R\+I\+O\+D\+\_\+\+M\+A\+SK~((uint32\+\_\+t) ((0x1\+F\+F) $<$$<$ 6))}\hypertarget{group__I2S__17XX__40XX_gaf32d949b14558ee1aad72a765726731c}{}\label{group__I2S__17XX__40XX_gaf32d949b14558ee1aad72a765726731c}
+D\+AO Word select mask 
+
+Definition at line 123 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}}
+\index{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}{I2S_DMA1_RX_DEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_gae69669784240dd1858903a4470dd059d}{}\label{group__I2S__17XX__40XX_gae69669784240dd1858903a4470dd059d}
+I2S set F\+I\+FO level that trigger a receive D\+MA request on D\+M\+A1 
+
+Definition at line 167 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}{I2S_DMA1_RX_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A1\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1))}\hypertarget{group__I2S__17XX__40XX_ga7b643833c4b80116d3026c7933449001}{}\label{group__I2S__17XX__40XX_ga7b643833c4b80116d3026c7933449001}
+I2S control D\+M\+A1 for I2S receive 
+
+Definition at line 165 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}}
+\index{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}{I2S_DMA1_TX_DEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 16))}\hypertarget{group__I2S__17XX__40XX_gad41f4bf7fae5f9be646215316d0d14bc}{}\label{group__I2S__17XX__40XX_gad41f4bf7fae5f9be646215316d0d14bc}
+I2S set F\+I\+FO level that trigger a transmit D\+MA request on D\+M\+A1 
+
+Definition at line 168 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}{I2S_DMA1_TX_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A1\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 1))}\hypertarget{group__I2S__17XX__40XX_ga0fb809d583bb8b68d34f347d19933575}{}\label{group__I2S__17XX__40XX_ga0fb809d583bb8b68d34f347d19933575}
+I2S control D\+M\+A1 for I2S transmit 
+
+Definition at line 166 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}}
+\index{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}{I2S_DMA2_RX_DEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_gaa2f1885afa1dfea78af4ba08ae8edbd5}{}\label{group__I2S__17XX__40XX_gaa2f1885afa1dfea78af4ba08ae8edbd5}
+I2S set F\+I\+FO level that trigger a receive D\+MA request on D\+M\+A1 
+
+Definition at line 175 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}{I2S_DMA2_RX_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A2\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1))}\hypertarget{group__I2S__17XX__40XX_ga2e4e8b4d132b01bb74d57dd34ca7eaef}{}\label{group__I2S__17XX__40XX_ga2e4e8b4d132b01bb74d57dd34ca7eaef}
+I2S control D\+M\+A2 for I2S receive 
+
+Definition at line 173 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}}
+\index{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}{I2S_DMA2_TX_DEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x1\+F) $<$$<$ 16))}\hypertarget{group__I2S__17XX__40XX_ga7a4fcc39608a28a1bc7de7f0628a392c}{}\label{group__I2S__17XX__40XX_ga7a4fcc39608a28a1bc7de7f0628a392c}
+I2S set F\+I\+FO level that trigger a transmit D\+MA request on D\+M\+A1 
+
+Definition at line 176 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}{I2S_DMA2_TX_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+D\+M\+A2\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 1))}\hypertarget{group__I2S__17XX__40XX_ga2ceda1798034a70380c9a9de567bb6b0}{}\label{group__I2S__17XX__40XX_ga2ceda1798034a70380c9a9de567bb6b0}
+I2S control D\+M\+A1 for I2S transmit 
+
+Definition at line 174 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}}
+\index{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH}{I2S_IRQ_RX_DEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+TH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x0\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_ga10c454ef6bf76db84b90803d5864b6f9}{}\label{group__I2S__17XX__40XX_ga10c454ef6bf76db84b90803d5864b6f9}
+I2S set the F\+I\+FO level on which to create an irq request 
+
+Definition at line 184 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}}
+\index{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}{I2S_IRQ_RX_DEPTH_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK~((uint32\+\_\+t) ((0x0\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_gaeb26d013e12b97b3089bd3666b641cbb}{}\label{group__I2S__17XX__40XX_gaeb26d013e12b97b3089bd3666b641cbb}
+
+
+Definition at line 185 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE}{I2S_IRQ_RX_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+I\+R\+Q\+\_\+\+R\+X\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1))}\hypertarget{group__I2S__17XX__40XX_ga362154dbf216f1384f535c940d930cd9}{}\label{group__I2S__17XX__40XX_ga362154dbf216f1384f535c940d930cd9}
+I2S control I2S receive interrupt 
+
+Definition at line 182 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}}
+\index{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH}{I2S_IRQ_TX_DEPTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+TH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x0\+F) $<$$<$ 16))}\hypertarget{group__I2S__17XX__40XX_gab13b76b79c11e175e3e3cdb5f30fc78e}{}\label{group__I2S__17XX__40XX_gab13b76b79c11e175e3e3cdb5f30fc78e}
+I2S set the F\+I\+FO level on which to create an irq request 
+
+Definition at line 186 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}}
+\index{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK}{I2S_IRQ_TX_DEPTH_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK~((uint32\+\_\+t) ((0x0\+F) $<$$<$ 16))}\hypertarget{group__I2S__17XX__40XX_gacbd0d516073943ba5aa03e03649e6cc0}{}\label{group__I2S__17XX__40XX_gacbd0d516073943ba5aa03e03649e6cc0}
+
+
+Definition at line 187 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE}{I2S_IRQ_TX_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+I\+R\+Q\+\_\+\+T\+X\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 1))}\hypertarget{group__I2S__17XX__40XX_ga7811db5a292d68de3dce209883bab6c0}{}\label{group__I2S__17XX__40XX_ga7811db5a292d68de3dce209883bab6c0}
+I2S control I2S transmit interrupt 
+
+Definition at line 183 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE@{I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE}}
+\index{I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE@{I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE}{I2S_MASTER_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+M\+O\+DE~(0\+U\+L $<$$<$ 5)}\hypertarget{group__I2S__17XX__40XX_ga67cd00ecbec35d0dd723909916fb1014}{}\label{group__I2S__17XX__40XX_ga67cd00ecbec35d0dd723909916fb1014}
+I2S in master mode 
+
+Definition at line 85 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+M\+O\+NO@{I2\+S\+\_\+\+M\+O\+NO}}
+\index{I2\+S\+\_\+\+M\+O\+NO@{I2\+S\+\_\+\+M\+O\+NO}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+M\+O\+NO}{I2S_MONO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+M\+O\+NO~(1\+U\+L $<$$<$ 2)}\hypertarget{group__I2S__17XX__40XX_ga3c732d1467300d87c582a1497e8dbadf}{}\label{group__I2S__17XX__40XX_ga3c732d1467300d87c582a1497e8dbadf}
+Mono audio 
+
+Definition at line 82 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE@{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE@{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE}{I2S_MUTE_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+D\+I\+S\+A\+B\+LE~(0\+U\+L $<$$<$ 15)}\hypertarget{group__I2S__17XX__40XX_ga7d6c53914dea99eecc1d59eefbdbf5aa}{}\label{group__I2S__17XX__40XX_ga7d6c53914dea99eecc1d59eefbdbf5aa}
+I2S mute disbale mask 
+
+Definition at line 98 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE}{I2S_MUTE_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+M\+U\+T\+E\+\_\+\+E\+N\+A\+B\+LE~(1\+U\+L $<$$<$ 15)}\hypertarget{group__I2S__17XX__40XX_ga3f418f8bc5e6f401481d3b9e241758bb}{}\label{group__I2S__17XX__40XX_ga3f418f8bc5e6f401481d3b9e241758bb}
+I2S mute enable mask 
+
+Definition at line 97 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE@{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE@{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE}{I2S_RESET_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+D\+I\+S\+A\+B\+LE~(0\+U\+L $<$$<$ 4)}\hypertarget{group__I2S__17XX__40XX_gaf008515f40666122bb1936e591b7ed99}{}\label{group__I2S__17XX__40XX_gaf008515f40666122bb1936e591b7ed99}
+I2S reset disable mask 
+
+Definition at line 94 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE}{I2S_RESET_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+E\+N\+A\+B\+LE~(1\+U\+L $<$$<$ 4)}\hypertarget{group__I2S__17XX__40XX_gae090c11fade3a6f9bf9791dba1920556}{}\label{group__I2S__17XX__40XX_gae090c11fade3a6f9bf9791dba1920556}
+I2S reset enable mask 
+
+Definition at line 93 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE@{I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE}}
+\index{I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE@{I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE}{I2S_RXBITRATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+X\+B\+I\+T\+R\+A\+TE(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (n \& 0x3\+F))}\hypertarget{group__I2S__17XX__40XX_ga5668c8629a5ecec4c868d3272188dc1b}{}\label{group__I2S__17XX__40XX_ga5668c8629a5ecec4c868d3272188dc1b}
+
+
+Definition at line 201 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}{I2S_RXMODE_4PIN_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 2))}\hypertarget{group__I2S__17XX__40XX_ga2734ec0ee02ee7865c36b6ec3ffff081}{}\label{group__I2S__17XX__40XX_ga2734ec0ee02ee7865c36b6ec3ffff081}
+I2S Receive control 4-\/pin mode 
+
+Definition at line 210 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL@{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}}
+\index{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL@{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}{I2S_RXMODE_CLKSEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (n \& 0x03))}\hypertarget{group__I2S__17XX__40XX_ga2a8f822f7a13efd542adb6e58c743ed9}{}\label{group__I2S__17XX__40XX_ga2a8f822f7a13efd542adb6e58c743ed9}
+I2S Receive select clock source 
+
+Definition at line 209 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA@{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}}
+\index{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA@{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}{I2S_RXMODE_MCENA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA~((uint32\+\_\+t) (1 $<$$<$ 3))}\hypertarget{group__I2S__17XX__40XX_ga64eb87a1f090271b07c7110f974f8300}{}\label{group__I2S__17XX__40XX_ga64eb87a1f090271b07c7110f974f8300}
+I2S Receive control the T\+X\+\_\+\+M\+C\+LK output 
+
+Definition at line 211 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}}
+\index{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}{I2S_RXRATE_X_DIVIDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x\+F\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_gac6b39adbbfb5ff023160af667debeef6}{}\label{group__I2S__17XX__40XX_gac6b39adbbfb5ff023160af667debeef6}
+I2S Receive M\+C\+LK rate denominator 
+
+Definition at line 195 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}}
+\index{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}{I2S_RXRATE_Y_DIVIDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+R\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (n \& 0x\+F\+F))}\hypertarget{group__I2S__17XX__40XX_ga7487e9a82c9bb4a58118038ca6520dbe}{}\label{group__I2S__17XX__40XX_ga7487e9a82c9bb4a58118038ca6520dbe}
+I2S Receive M\+C\+LK rate denominator 
+
+Definition at line 194 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE@{I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE}}
+\index{I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE@{I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE}{I2S_SLAVE_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+O\+DE~(1\+U\+L $<$$<$ 5)}\hypertarget{group__I2S__17XX__40XX_ga37137132251bc15250edcea1585d3e58}{}\label{group__I2S__17XX__40XX_ga37137132251bc15250edcea1585d3e58}
+I2S in slave mode 
+
+Definition at line 86 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1}}
+\index{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1}{I2S_STATE_DMA1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A1~((uint32\+\_\+t) (1 $<$$<$ 1))}\hypertarget{group__I2S__17XX__40XX_ga0e9a701addd279db953ca34d56487dbd}{}\label{group__I2S__17XX__40XX_ga0e9a701addd279db953ca34d56487dbd}
+I2S Status Receive or Transmit D\+M\+A1 
+
+Definition at line 157 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2}}
+\index{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2}{I2S_STATE_DMA2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+M\+A2~((uint32\+\_\+t) (1 $<$$<$ 2))}\hypertarget{group__I2S__17XX__40XX_ga84dfa37fbee79986ec79f4d856b8df24}{}\label{group__I2S__17XX__40XX_ga84dfa37fbee79986ec79f4d856b8df24}
+I2S Status Receive or Transmit D\+M\+A2 
+
+Definition at line 158 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ}}
+\index{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ}{I2S_STATE_IRQ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+RQ~((uint32\+\_\+t) (1))}\hypertarget{group__I2S__17XX__40XX_gaa412bd295235fcd4d7f0ad284d9386de}{}\label{group__I2S__17XX__40XX_gaa412bd295235fcd4d7f0ad284d9386de}
+I2S Status Receive or Transmit Interrupt 
+
+Definition at line 156 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL}}
+\index{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL}{I2S_STATE_RX_LEVEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+L\+E\+V\+EL(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 1\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_ga2a303c12a8e7381abc67993f15408e50}{}\label{group__I2S__17XX__40XX_ga2a303c12a8e7381abc67993f15408e50}
+I2S Status Current level of the Receive F\+I\+FO (5 bits) 
+
+Definition at line 159 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL}}
+\index{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL@{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL}{I2S_STATE_TX_LEVEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+L\+E\+V\+EL(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 1\+F) $<$$<$ 16))}\hypertarget{group__I2S__17XX__40XX_ga50182373fb2dd8c04d4385f84ce6f2d9}{}\label{group__I2S__17XX__40XX_ga50182373fb2dd8c04d4385f84ce6f2d9}
+I2S Status Current level of the Transmit F\+I\+FO (5 bits) 
+
+Definition at line 160 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+E\+R\+EO@{I2\+S\+\_\+\+S\+T\+E\+R\+EO}}
+\index{I2\+S\+\_\+\+S\+T\+E\+R\+EO@{I2\+S\+\_\+\+S\+T\+E\+R\+EO}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+E\+R\+EO}{I2S_STEREO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+E\+R\+EO~(0\+U\+L $<$$<$ 2)}\hypertarget{group__I2S__17XX__40XX_ga07e34ebc83183644aa54cc124b769a43}{}\label{group__I2S__17XX__40XX_ga07e34ebc83183644aa54cc124b769a43}
+Stereo audio 
+
+Definition at line 81 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE@{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE@{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE}{I2S_STOP_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+D\+I\+S\+A\+B\+LE~(1\+U\+L $<$$<$ 3)}\hypertarget{group__I2S__17XX__40XX_gaf442a366f6467626a2f72fdabf9b6d89}{}\label{group__I2S__17XX__40XX_gaf442a366f6467626a2f72fdabf9b6d89}
+I2S stop disable mask 
+
+Definition at line 90 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE}{I2S_STOP_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+S\+T\+O\+P\+\_\+\+E\+N\+A\+B\+LE~(0\+U\+L $<$$<$ 3)}\hypertarget{group__I2S__17XX__40XX_gabe1e11f6f4ce8542408e466b3316ca3c}{}\label{group__I2S__17XX__40XX_gabe1e11f6f4ce8542408e466b3316ca3c}
+I2S stop enable mask 
+
+Definition at line 89 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE@{I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE}}
+\index{I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE@{I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE}{I2S_TXBITRATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+T\+X\+B\+I\+T\+R\+A\+TE(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (n \& 0x3\+F))}\hypertarget{group__I2S__17XX__40XX_ga3ec6288248db2c2a4aab1351bb7e7f28}{}\label{group__I2S__17XX__40XX_ga3ec6288248db2c2a4aab1351bb7e7f28}
+
+
+Definition at line 200 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}}
+\index{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE@{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE}{I2S_TXMODE_4PIN_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+4\+P\+I\+N\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 2))}\hypertarget{group__I2S__17XX__40XX_ga3e268d07b159ec36998eb32a9e36af69}{}\label{group__I2S__17XX__40XX_ga3e268d07b159ec36998eb32a9e36af69}
+I2S Transmit control 4-\/pin mode 
+
+Definition at line 207 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL@{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}}
+\index{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL@{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL}{I2S_TXMODE_CLKSEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+C\+L\+K\+S\+EL(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (n \& 0x03))}\hypertarget{group__I2S__17XX__40XX_ga00571d79a1a71166b2637108a8a6d42e}{}\label{group__I2S__17XX__40XX_ga00571d79a1a71166b2637108a8a6d42e}
+I2S Transmit select clock source (2 bits) 
+
+Definition at line 206 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA@{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}}
+\index{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA@{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA}{I2S_TXMODE_MCENA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+T\+X\+M\+O\+D\+E\+\_\+\+M\+C\+E\+NA~((uint32\+\_\+t) (1 $<$$<$ 3))}\hypertarget{group__I2S__17XX__40XX_gabd67f37d51f2557f49fa600abb48225b}{}\label{group__I2S__17XX__40XX_gabd67f37d51f2557f49fa600abb48225b}
+I2S Transmit control the T\+X\+\_\+\+M\+C\+LK output 
+
+Definition at line 208 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}}
+\index{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER}{I2S_TXRATE_X_DIVIDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+X\+\_\+\+D\+I\+V\+I\+D\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) ((n \& 0x\+F\+F) $<$$<$ 8))}\hypertarget{group__I2S__17XX__40XX_gab4441c879ba15275e44ffe3f075fecab}{}\label{group__I2S__17XX__40XX_gab4441c879ba15275e44ffe3f075fecab}
+I2S Transmit M\+C\+LK rate denominator 
+
+Definition at line 193 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}}
+\index{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER@{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER}{I2S_TXRATE_Y_DIVIDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+T\+X\+R\+A\+T\+E\+\_\+\+Y\+\_\+\+D\+I\+V\+I\+D\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((uint32\+\_\+t) (n \& 0x\+F\+F))}\hypertarget{group__I2S__17XX__40XX_ga310a84df35c22ce4bed1f3785145670c}{}\label{group__I2S__17XX__40XX_ga310a84df35c22ce4bed1f3785145670c}
+I2S Transmit M\+C\+LK rate denominator 
+
+Definition at line 192 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16@{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}}
+\index{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16@{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16}{I2S_WORDWIDTH_16}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+16~(1\+U\+L $<$$<$ 0)}\hypertarget{group__I2S__17XX__40XX_ga4d016baad0fba07da20a6410470c71d3}{}\label{group__I2S__17XX__40XX_ga4d016baad0fba07da20a6410470c71d3}
+16 bit word 
+
+Definition at line 77 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32@{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}}
+\index{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32@{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32}{I2S_WORDWIDTH_32}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+32~(3\+U\+L $<$$<$ 0)}\hypertarget{group__I2S__17XX__40XX_ga683d81436e91c1631bdd5947ee78489b}{}\label{group__I2S__17XX__40XX_ga683d81436e91c1631bdd5947ee78489b}
+32 bit word 
+
+Definition at line 78 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8@{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}}
+\index{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8@{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8}{I2S_WORDWIDTH_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+S\+\_\+\+W\+O\+R\+D\+W\+I\+D\+T\+H\+\_\+8~(0\+U\+L $<$$<$ 0)}\hypertarget{group__I2S__17XX__40XX_ga17cb1a91d5be4e7afad486ead6d2980d}{}\label{group__I2S__17XX__40XX_ga17cb1a91d5be4e7afad486ead6d2980d}
+8 bit Word 
+
+Definition at line 76 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}
+\index{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}{I2S_DMA_CHANNEL_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}\hypertarget{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}{}\label{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}
+
+
+I2S D\+MA request channel define. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1}}\item[{\em 
+I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1\hypertarget{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421ba549b2d28b5da72f6185d736f5fed51c1}{}\label{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421ba549b2d28b5da72f6185d736f5fed51c1}
+}]D\+MA request channel 1 \index{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}}\item[{\em 
+I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2\hypertarget{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421ba65eabb50f670f1dcae7b3c790f088e16}{}\label{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421ba65eabb50f670f1dcae7b3c790f088e16}
+}]D\+MA request channel 2 \index{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM@{I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM}}\item[{\em 
+I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM\hypertarget{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421bab9921186ab93fee889b2074d508b88ce}{}\label{group__I2S__17XX__40XX_ggac04c1583101ddd661886d9677683421bab9921186ab93fee889b2074d508b88ce}
+}]The number of D\+MA request channels \end{description}
+\end{Desc}
+
+
+Definition at line 47 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+De\+Init@{Chip\+\_\+\+I2\+S\+\_\+\+De\+Init}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+De\+Init@{Chip\+\_\+\+I2\+S\+\_\+\+De\+Init}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+De\+Init(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_DeInit(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+S\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga2fbdb14520735214e155253f05a88a0a}{}\label{group__I2S__17XX__40XX_ga2fbdb14520735214e155253f05a88a0a}
+
+
+Shutdown I2S. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reset all relative registers (D\+MA, transmit/receive control, interrupt) to default value 
+\end{DoxyNote}
+
+
+Definition at line 121 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute@{Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute@{Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_DisableMute(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Disable\+Mute (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga0c6731695f685fa21678ea3635b458f3}{}\label{group__I2S__17XX__40XX_ga0c6731695f685fa21678ea3635b458f3}
+
+
+Un-\/\+Mute the I2S channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 316 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T dma\+Num, Functional\+State new\+State, uint8\+\_\+t depth)}{Chip_I2S_DMA_RxCmd(LPC_I2S_T *pI2S, I2S_DMA_CHANNEL_T dmaNum, FunctionalState newState, uint8_t depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{dma\+Num, }
+\item[{{\bf Functional\+State}}]{new\+State, }
+\item[{uint8\+\_\+t}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga9c7067a9ee62d240aa6cd9426deefb13}{}\label{group__I2S__17XX__40XX_ga9c7067a9ee62d240aa6cd9426deefb13}
+
+
+Enable/\+Disable D\+MA with a specific F\+I\+FO depth. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base I2S peripheral on the chip \\
+\hline
+{\em dma\+Num} & \+: Should be
+\begin{DoxyItemize}
+\item I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1 \+: Using D\+M\+A1
+\item I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2 \+: Using D\+M\+A2 
+\end{DoxyItemize}\\
+\hline
+{\em new\+State} & \+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE interrupt \\
+\hline
+{\em depth} & \+: F\+I\+FO level creating an irq request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 245 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T dma\+Num, Functional\+State new\+State, uint8\+\_\+t depth)}{Chip_I2S_DMA_TxCmd(LPC_I2S_T *pI2S, I2S_DMA_CHANNEL_T dmaNum, FunctionalState newState, uint8_t depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{dma\+Num, }
+\item[{{\bf Functional\+State}}]{new\+State, }
+\item[{uint8\+\_\+t}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gac08890ba38fd8e5df3a3a603e7a4fa42}{}\label{group__I2S__17XX__40XX_gac08890ba38fd8e5df3a3a603e7a4fa42}
+
+
+Enable/\+Disable D\+MA with a specific F\+I\+FO depth. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base I2S peripheral on the chip \\
+\hline
+{\em dma\+Num} & \+: Should be
+\begin{DoxyItemize}
+\item I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1 \+: Using D\+M\+A1
+\item I2\+S\+\_\+\+D\+M\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2 \+: Using D\+M\+A2 
+\end{DoxyItemize}\\
+\hline
+{\em new\+State} & \+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE interrupt \\
+\hline
+{\em depth} & \+: F\+I\+FO level creating an irq request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 227 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute@{Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute@{Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_EnableMute(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Enable\+Mute (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga3977adf6afb42ea9da7c764ef36efa6e}{}\label{group__I2S__17XX__40XX_ga3977adf6afb42ea9da7c764ef36efa6e}
+
+
+Mute the Transmit channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The data output from I2S transmit channel is always zeroes 
+\end{DoxyNote}
+
+
+Definition at line 306 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level@{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level@{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_GetRxLevel(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint8\+\_\+t Chip\+\_\+\+I2\+S\+\_\+\+Get\+Rx\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga5880b341bea64ea33e734af422b43dc3}{}\label{group__I2S__17XX__40XX_ga5880b341bea64ea33e734af422b43dc3}
+
+
+Get the current level of the Receive F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current level of the Receive F\+I\+FO 
+\end{DoxyReturn}
+
+
+Definition at line 399 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level@{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level@{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_GetTxLevel(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint8\+\_\+t Chip\+\_\+\+I2\+S\+\_\+\+Get\+Tx\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga125559c7f810a2564f5b6059ead42256}{}\label{group__I2S__17XX__40XX_ga125559c7f810a2564f5b6059ead42256}
+
+
+Get the current level of the Transmit F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current level of the Transmit F\+I\+FO 
+\end{DoxyReturn}
+
+
+Definition at line 389 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Init@{Chip\+\_\+\+I2\+S\+\_\+\+Init}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Init@{Chip\+\_\+\+I2\+S\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Init(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_Init(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+S\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga006752f0240a956ae02fba521e63c053}{}\label{group__I2S__17XX__40XX_ga006752f0240a956ae02fba521e63c053}
+
+
+Initialize for I2S. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, Functional\+State new\+State, uint8\+\_\+t depth)}{Chip_I2S_Int_RxCmd(LPC_I2S_T *pI2S, FunctionalState newState, uint8_t depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf Functional\+State}}]{new\+State, }
+\item[{uint8\+\_\+t}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga36b0f5c62d5c703c1374bdcc0d84d07f}{}\label{group__I2S__17XX__40XX_ga36b0f5c62d5c703c1374bdcc0d84d07f}
+
+
+Enable/\+Disable Interrupt with a specific F\+I\+FO depth. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base I2S peripheral on the chip \\
+\hline
+{\em new\+State} & \+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE interrupt \\
+\hline
+{\em depth} & \+: F\+I\+FO level creating an irq request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 212 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd@{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, Functional\+State new\+State, uint8\+\_\+t depth)}{Chip_I2S_Int_TxCmd(LPC_I2S_T *pI2S, FunctionalState newState, uint8_t depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf Functional\+State}}]{new\+State, }
+\item[{uint8\+\_\+t}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gaf5ea5a92372f64937b2a967f8aa284f3}{}\label{group__I2S__17XX__40XX_gaf5ea5a92372f64937b2a967f8aa284f3}
+
+
+Enable/\+Disable Interrupt with a specific F\+I\+FO depth. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base I2S peripheral on the chip \\
+\hline
+{\em new\+State} & \+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE interrupt \\
+\hline
+{\em depth} & \+: F\+I\+FO level creating an irq request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Receive@{Chip\+\_\+\+I2\+S\+\_\+\+Receive}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Receive@{Chip\+\_\+\+I2\+S\+\_\+\+Receive}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Receive(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_Receive(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+I2\+S\+\_\+\+Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga74005245ee6b79220df6a563db92a04f}{}\label{group__I2S__17XX__40XX_ga74005245ee6b79220df6a563db92a04f}
+
+
+Get received data from R\+X\+F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data received in R\+X\+F\+I\+FO 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function reads from R\+X\+F\+I\+FO without checking any condition. 
+\end{DoxyNote}
+
+
+Definition at line 255 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T $\ast$format)}{Chip_I2S_RxConfig(LPC_I2S_T *pI2S, I2S_AUDIO_FORMAT_T *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gab443fc12cad5f6cfb13dc5ab19a003ae}{}\label{group__I2S__17XX__40XX_gab443fc12cad5f6cfb13dc5ab19a003ae}
+
+
+Configure I2S for Audio Format input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base I2S peripheral on the chip \\
+\hline
+{\em format} & \+: Audio Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+SS or E\+R\+R\+OR 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint32\+\_\+t clksel, uint32\+\_\+t fpin, uint32\+\_\+t mcena)}{Chip_I2S_RxModeConfig(LPC_I2S_T *pI2S, uint32_t clksel, uint32_t fpin, uint32_t mcena)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Mode\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint32\+\_\+t}]{clksel, }
+\item[{uint32\+\_\+t}]{fpin, }
+\item[{uint32\+\_\+t}]{mcena}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gae4e5e39c6ea22b2be42c91bdaa0f27e8}{}\label{group__I2S__17XX__40XX_gae4e5e39c6ea22b2be42c91bdaa0f27e8}
+
+
+Set the I2S receive mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em clksel} & \+: Clock source selection for the receive bit clock divider \\
+\hline
+{\em fpin} & \+: Receive 4-\/pin mode selection \\
+\hline
+{\em mcena} & \+: Enable for the R\+X\+\_\+\+M\+C\+LK output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In addition to master and slave modes, which are independently configurable for the transmitter and the receiver, several different clock sources are possible, including variations that share the clock and/or WS between the transmitter and receiver. It also allows using I2S with fewer pins, typically four. 
+\end{DoxyNote}
+
+
+Definition at line 376 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_RxPause(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Pause (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga0f7d40cc029ebd29091c0f3699bd1fe9}{}\label{group__I2S__17XX__40XX_ga0f7d40cc029ebd29091c0f3699bd1fe9}
+
+
+Disables accesses on F\+I\+F\+Os, places the transmit channel in mute mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 295 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_RxStart(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga42eb351f08a2dea90fde3ba14d1698e3}{}\label{group__I2S__17XX__40XX_ga42eb351f08a2dea90fde3ba14d1698e3}
+
+
+Start receive data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 275 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop@{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_RxStop(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gaa78f387af78de456819cec21bbf21ada}{}\label{group__I2S__17XX__40XX_gaa78f387af78de456819cec21bbf21ada}
+
+
+Stop I2S asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Pause, resets the transmit channel and F\+I\+FO asynchronously 
+\end{DoxyNote}
+
+
+Definition at line 339 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Send@{Chip\+\_\+\+I2\+S\+\_\+\+Send}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Send@{Chip\+\_\+\+I2\+S\+\_\+\+Send}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Send(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint32\+\_\+t data)}{Chip_I2S_Send(LPC_I2S_T *pI2S, uint32_t data)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Send (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint32\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga7927122545d8ec1879743fb8caffb723}{}\label{group__I2S__17XX__40XX_ga7927122545d8ec1879743fb8caffb723}
+
+
+Send a 32-\/bit data to T\+X\+F\+I\+FO for transmition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em data} & \+: Data to be transmited \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function writes to T\+X\+F\+I\+FO without checking any condition. 
+\end{DoxyNote}
+
+
+Definition at line 244 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint32\+\_\+t div)}{Chip_I2S_SetRxBitRate(LPC_I2S_T *pI2S, uint32_t div)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+Bit\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint32\+\_\+t}]{div}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gaf18685ebc3f86581fd7075fafe4c72e7}{}\label{group__I2S__17XX__40XX_gaf18685ebc3f86581fd7075fafe4c72e7}
+
+
+Set the clock frequency for I2S interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em div} & \+: Clock divider. This value plus one is used to divide M\+C\+LK to produce the clock frequency for I2S interface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The value depends on the audio sample rate desired and the data size and format(stereo/mono) used. For example, a 48 k\+Hz sample rate for 16-\/bit stereo data requires a bit rate of 48 000 x 16 x 2 = 1.\+536 M\+Hz. So the mclk\+\_\+divider should be M\+C\+L\+K/1.\+536 M\+Hz 
+\end{DoxyNote}
+
+
+Definition at line 425 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint8\+\_\+t x\+Div, uint8\+\_\+t y\+Div)}{Chip_I2S_SetRxXYDivider(LPC_I2S_T *pI2S, uint8_t xDiv, uint8_t yDiv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Set\+Rx\+X\+Y\+Divider (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint8\+\_\+t}]{x\+Div, }
+\item[{uint8\+\_\+t}]{y\+Div}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gafd2bc55fb29ea5f082d5ae3b5794f605}{}\label{group__I2S__17XX__40XX_gafd2bc55fb29ea5f082d5ae3b5794f605}
+
+
+Set the M\+C\+LK rate by using a fractional rate generator, dividing down the frequency of P\+C\+LK. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em x\+Div} & \+: I2S transmit M\+C\+LK rate numerator \\
+\hline
+{\em y\+Div} & \+: I2S transmit M\+C\+LK rate denominator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Values of the numerator (X) and the denominator (Y) must be chosen to produce a frequency twice that desired for the transmitter M\+C\+LK, which must be an integer multiple of the transmitter bit clock rate. The equation for the fractional rate generator is\+: M\+C\+LK = P\+C\+LK $\ast$ (X/Y) /2 Note\+: If the value of X or Y is 0, then no clock is generated. Also, the value of Y must be greater than or equal to X. 
+\end{DoxyNote}
+
+
+Definition at line 463 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint32\+\_\+t div)}{Chip_I2S_SetTxBitRate(LPC_I2S_T *pI2S, uint32_t div)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+Bit\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint32\+\_\+t}]{div}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga4ab6d7b26edf92c1b7bcb7f6f9326888}{}\label{group__I2S__17XX__40XX_ga4ab6d7b26edf92c1b7bcb7f6f9326888}
+
+
+Set the clock frequency for I2S interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em div} & \+: Clock divider. This value plus one is used to divide M\+C\+LK to produce the clock frequency for I2S interface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The value depends on the audio sample rate desired and the data size and format(stereo/mono) used. For example, a 48 k\+Hz sample rate for 16-\/bit stereo data requires a bit rate of 48 000 x 16 x 2 = 1.\+536 M\+Hz. So the mclk\+\_\+divider should be M\+C\+L\+K/1.\+536 M\+Hz 
+\end{DoxyNote}
+
+
+Definition at line 412 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider@{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint8\+\_\+t x\+Div, uint8\+\_\+t y\+Div)}{Chip_I2S_SetTxXYDivider(LPC_I2S_T *pI2S, uint8_t xDiv, uint8_t yDiv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Set\+Tx\+X\+Y\+Divider (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint8\+\_\+t}]{x\+Div, }
+\item[{uint8\+\_\+t}]{y\+Div}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gaab4e4a66774d56ba378cce2dbc34e9b0}{}\label{group__I2S__17XX__40XX_gaab4e4a66774d56ba378cce2dbc34e9b0}
+
+
+Set the M\+C\+LK rate by using a fractional rate generator, dividing down the frequency of P\+C\+LK. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em x\+Div} & \+: I2S transmit M\+C\+LK rate numerator \\
+\hline
+{\em y\+Div} & \+: I2S transmit M\+C\+LK rate denominator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Values of the numerator (X) and the denominator (Y) must be chosen to produce a frequency twice that desired for the transmitter M\+C\+LK, which must be an integer multiple of the transmitter bit clock rate. The equation for the fractional rate generator is\+: M\+C\+LK = P\+C\+LK $\ast$ (X/Y) /2 Note\+: If the value of X or Y is 0, then no clock is generated. Also, the value of Y must be greater than or equal to X. 
+\end{DoxyNote}
+
+
+Definition at line 444 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T $\ast$format)}{Chip_I2S_TxConfig(LPC_I2S_T *pI2S, I2S_AUDIO_FORMAT_T *format)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$}]{format}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga09acfe336e9aee86f1d029146937326a}{}\label{group__I2S__17XX__40XX_ga09acfe336e9aee86f1d029146937326a}
+
+
+Configure I2S for Audio Format input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base I2S peripheral on the chip \\
+\hline
+{\em format} & \+: Audio Format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+SS or E\+R\+R\+OR 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, uint32\+\_\+t clksel, uint32\+\_\+t fpin, uint32\+\_\+t mcena)}{Chip_I2S_TxModeConfig(LPC_I2S_T *pI2S, uint32_t clksel, uint32_t fpin, uint32_t mcena)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Mode\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{uint32\+\_\+t}]{clksel, }
+\item[{uint32\+\_\+t}]{fpin, }
+\item[{uint32\+\_\+t}]{mcena}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga0c7a808e84e2c0a3f7ffbba089c7d380}{}\label{group__I2S__17XX__40XX_ga0c7a808e84e2c0a3f7ffbba089c7d380}
+
+
+Set the I2S transmit mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+{\em clksel} & \+: Clock source selection for the receive bit clock divider \\
+\hline
+{\em fpin} & \+: Receive 4-\/pin mode selection \\
+\hline
+{\em mcena} & \+: Enable for the R\+X\+\_\+\+M\+C\+LK output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+In addition to master and slave modes, which are independently configurable for the transmitter and the receiver, several different clock sources are possible, including variations that share the clock and/or WS between the transmitter and receiver. It also allows using I2S with fewer pins, typically four. 
+\end{DoxyNote}
+
+
+Definition at line 356 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_TxPause(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Pause (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga0487f27c97c88ea9d2bf9adc6ec4e469}{}\label{group__I2S__17XX__40XX_ga0487f27c97c88ea9d2bf9adc6ec4e469}
+
+
+Disables accesses on F\+I\+F\+Os, places the transmit channel in mute mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 285 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_TxStart(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_ga84f5b666dcacef8140c1355ed308a782}{}\label{group__I2S__17XX__40XX_ga84f5b666dcacef8140c1355ed308a782}
+
+
+Start transmit data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 265 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}!Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop}}
+\index{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop@{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop}!C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx I2\+S driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S)}{Chip_I2S_TxStop(LPC_I2S_T *pI2S)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S}
+\end{DoxyParamCaption}
+)}\hypertarget{group__I2S__17XX__40XX_gac7d296f84ba3283e63861515d134edfe}{}\label{group__I2S__17XX__40XX_gac7d296f84ba3283e63861515d134edfe}
+
+
+Stop I2S asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+I2S} & \+: The base of I2S peripheral on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Pause, resets the transmit channel and F\+I\+FO asynchronously 
+\end{DoxyNote}
+
+
+Definition at line 327 of file i2s\+\_\+17xx\+\_\+40xx.\+h.
+

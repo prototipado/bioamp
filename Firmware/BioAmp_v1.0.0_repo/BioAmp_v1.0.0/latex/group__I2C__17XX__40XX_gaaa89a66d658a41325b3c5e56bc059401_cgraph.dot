@@ -1,0 +1,15 @@
+digraph "Chip_I2C_EventHandlerPolling"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_I2C_EventHandlerPolling",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_I2C_IsStateChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga4240d03d5dda43ddc8afd527b3172318",tooltip="I2C peripheral state change checking. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_I2C_MasterStateHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga179362e42a3de931ff7f57ca698254fa",tooltip="I2C Master transfer state change handler. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="handleMasterXferState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#a27f3909b10ee0d79e0e35c4b6aff56f3"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="getCurState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#acecb6f0eb209426fd06808350763e595"];
+}

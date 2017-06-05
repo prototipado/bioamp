@@ -1,0 +1,259 @@
+\hypertarget{structUSBD__MSC__INIT__PARAM}{}\section{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM Struct Reference}
+\label{structUSBD__MSC__INIT__PARAM}\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+
+
+Mass Storage class function driver initialization parameter data structure.  
+
+
+
+
+{\ttfamily \#include $<$usbd\+\_\+mscuser.\+h$>$}
+
+
+
+Collaboration diagram for U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__MSC__INIT__PARAM_a88951ad7bc026318e18eadf372804caa}{Block\+Count}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__MSC__INIT__PARAM_af0ed8a5b4aec5f19e1b15c1ab3c3dcbd}{Block\+Size}
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a84e110f5e1d448f9c35e9e8583429df8}{Inquiry\+Str}
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a308fc23cd32876dcdc914d2223f8f7c4}{intf\+\_\+desc}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__MSC__INIT__PARAM_a1ab6b66d44ad7db8c2ded5e2f4200aae}{mem\+\_\+base}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__MSC__INIT__PARAM_a33048544944f306ae198de18468309b4}{mem\+\_\+size}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__MSC__INIT__PARAM_af5cecd156943a33ccaa619ea8a9d596d}{Memory\+Size}
+\item 
+uint64\+\_\+t \hyperlink{structUSBD__MSC__INIT__PARAM_abca96b7a6d9b77020bdca1ffdd153e56}{Memory\+Size64}
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a9d79a4a1054e7ecb88c7a2b51aa3d4c8}{M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\item 
+void($\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a6463d6a686009289cc1a92209f276514}{M\+S\+C\+\_\+\+Get\+Write\+Buf} )(uint32\+\_\+t offset, uint8\+\_\+t $\ast$$\ast$buff\+\_\+adr, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)
+\item 
+void($\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a6695a1fe8a7201c91ff6dadace9b7ef7}{M\+S\+C\+\_\+\+Read} )(uint32\+\_\+t offset, uint8\+\_\+t $\ast$$\ast$dst, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a8d8010352b3183a3b29c509f1d76c03c}{M\+S\+C\+\_\+\+Verify} )(uint32\+\_\+t offset, uint8\+\_\+t buf\mbox{[}$\,$\mbox{]}, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)
+\item 
+void($\ast$ \hyperlink{structUSBD__MSC__INIT__PARAM_a4f0ca241688cb8ccae080eb9e958cba3}{M\+S\+C\+\_\+\+Write} )(uint32\+\_\+t offset, uint8\+\_\+t $\ast$$\ast$src, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mass Storage class function driver initialization parameter data structure. 
+
+This data structure is used to pass initialization parameters to the Mass Storage class function driver\textquotesingle{}s init function. 
+
+Definition at line 58 of file usbd\+\_\+mscuser.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Block\+Count@{Block\+Count}}
+\index{Block\+Count@{Block\+Count}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Block\+Count}{BlockCount}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Block\+Count}\hypertarget{structUSBD__MSC__INIT__PARAM_a88951ad7bc026318e18eadf372804caa}{}\label{structUSBD__MSC__INIT__PARAM_a88951ad7bc026318e18eadf372804caa}
+Number of blocks present in the mass storage device 
+
+Definition at line 74 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Block\+Size@{Block\+Size}}
+\index{Block\+Size@{Block\+Size}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Block\+Size}{BlockSize}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Block\+Size}\hypertarget{structUSBD__MSC__INIT__PARAM_af0ed8a5b4aec5f19e1b15c1ab3c3dcbd}{}\label{structUSBD__MSC__INIT__PARAM_af0ed8a5b4aec5f19e1b15c1ab3c3dcbd}
+Block size in number of bytes 
+
+Definition at line 75 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Inquiry\+Str@{Inquiry\+Str}}
+\index{Inquiry\+Str@{Inquiry\+Str}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Inquiry\+Str}{InquiryStr}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Inquiry\+Str}\hypertarget{structUSBD__MSC__INIT__PARAM_a84e110f5e1d448f9c35e9e8583429df8}{}\label{structUSBD__MSC__INIT__PARAM_a84e110f5e1d448f9c35e9e8583429df8}
+Pointer to the 28 character string. This string is sent in response to the S\+C\+SI Inquiry command. \begin{DoxyNote}{Note}
+The data pointed by the pointer should be of global scope. 
+\end{DoxyNote}
+
+
+Definition at line 70 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!intf\+\_\+desc@{intf\+\_\+desc}}
+\index{intf\+\_\+desc@{intf\+\_\+desc}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{intf\+\_\+desc}{intf_desc}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::intf\+\_\+desc}\hypertarget{structUSBD__MSC__INIT__PARAM_a308fc23cd32876dcdc914d2223f8f7c4}{}\label{structUSBD__MSC__INIT__PARAM_a308fc23cd32876dcdc914d2223f8f7c4}
+Pointer to the interface descriptor within the descriptor array ({\itshape high\+\_\+speed\+\_\+desc}) passed to Init() through \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} structure. The stack assumes both HS and FS use same B\+U\+LK endpoints. 
+
+Definition at line 82 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!mem\+\_\+base@{mem\+\_\+base}}
+\index{mem\+\_\+base@{mem\+\_\+base}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{mem\+\_\+base}{mem_base}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::mem\+\_\+base}\hypertarget{structUSBD__MSC__INIT__PARAM_a1ab6b66d44ad7db8c2ded5e2f4200aae}{}\label{structUSBD__MSC__INIT__PARAM_a1ab6b66d44ad7db8c2ded5e2f4200aae}
+Base memory location from where the stack can allocate data and buffers. \begin{DoxyNote}{Note}
+The memory address set in this field should be accessible by U\+SB D\+MA controller. Also this value should be aligned on 4 byte boundary. 
+\end{DoxyNote}
+
+
+Definition at line 61 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!mem\+\_\+size@{mem\+\_\+size}}
+\index{mem\+\_\+size@{mem\+\_\+size}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{mem\+\_\+size}{mem_size}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::mem\+\_\+size}\hypertarget{structUSBD__MSC__INIT__PARAM_a33048544944f306ae198de18468309b4}{}\label{structUSBD__MSC__INIT__PARAM_a33048544944f306ae198de18468309b4}
+The size of memory buffer which stack can use. \begin{DoxyNote}{Note}
+The {\itshape mem\+\_\+size} should be greater than the size returned by \hyperlink{structUSBD__MSC__API_a73a9d240b20fcd83e6d2c9675420d626}{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+P\+I\+::\+Get\+Mem\+Size()} routine. 
+\end{DoxyNote}
+
+
+Definition at line 66 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Memory\+Size@{Memory\+Size}}
+\index{Memory\+Size@{Memory\+Size}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Memory\+Size}{MemorySize}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Memory\+Size}\hypertarget{structUSBD__MSC__INIT__PARAM_af5cecd156943a33ccaa619ea8a9d596d}{}\label{structUSBD__MSC__INIT__PARAM_af5cecd156943a33ccaa619ea8a9d596d}
+Memory size in number of bytes 
+
+Definition at line 76 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Memory\+Size64@{Memory\+Size64}}
+\index{Memory\+Size64@{Memory\+Size64}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Memory\+Size64}{MemorySize64}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Memory\+Size64}\hypertarget{structUSBD__MSC__INIT__PARAM_abca96b7a6d9b77020bdca1ffdd153e56}{}\label{structUSBD__MSC__INIT__PARAM_abca96b7a6d9b77020bdca1ffdd153e56}
+
+
+Definition at line 177 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr@{M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr}}
+\index{M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr@{M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr}{MSC_Ep0_Hdlr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+M\+S\+C\+\_\+\+Ep0\+\_\+\+Hdlr) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)}\hypertarget{structUSBD__MSC__INIT__PARAM_a9d79a4a1054e7ecb88c7a2b51aa3d4c8}{}\label{structUSBD__MSC__INIT__PARAM_a9d79a4a1054e7ecb88c7a2b51aa3d4c8}
+Optional user override-\/able function to replace the default M\+SC class handler.
+
+The application software could override the default E\+P0 class handler with their own by providing the handler function address as this data member of the parameter structure. Application which like the default handler should set this data member to zero before calling the U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+P\+I\+::\+Init(). ~\newline
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 175 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!M\+S\+C\+\_\+\+Get\+Write\+Buf@{M\+S\+C\+\_\+\+Get\+Write\+Buf}}
+\index{M\+S\+C\+\_\+\+Get\+Write\+Buf@{M\+S\+C\+\_\+\+Get\+Write\+Buf}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{M\+S\+C\+\_\+\+Get\+Write\+Buf}{MSC_GetWriteBuf}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+M\+S\+C\+\_\+\+Get\+Write\+Buf) (uint32\+\_\+t offset, uint8\+\_\+t $\ast$$\ast$buff\+\_\+adr, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)}\hypertarget{structUSBD__MSC__INIT__PARAM_a6463d6a686009289cc1a92209f276514}{}\label{structUSBD__MSC__INIT__PARAM_a6463d6a686009289cc1a92209f276514}
+Optional callback function to optimize M\+S\+C\+\_\+\+Write buffer transfer.
+
+This function is provided by the application software. This function gets called when host sends S\+C\+S\+I\+\_\+\+W\+R\+I\+T\+E10/\+S\+C\+S\+I\+\_\+\+W\+R\+I\+T\+E12 command. The callback function should update the {\itshape buff\+\_\+adr} pointer so that the stack transfers the data directly to the target buffer. /note The updated buffer address should be accessible by U\+SB D\+MA master. If user doesn\textquotesingle{}t want to use zero-\/copy model, then the user should not update the buffer pointer. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em offset} & Destination start address. \\
+\hline
+\mbox{\tt in,out}  & {\em buf} & Buffer containing the data sent by the host. \\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!M\+S\+C\+\_\+\+Read@{M\+S\+C\+\_\+\+Read}}
+\index{M\+S\+C\+\_\+\+Read@{M\+S\+C\+\_\+\+Read}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{M\+S\+C\+\_\+\+Read}{MSC_Read}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+M\+S\+C\+\_\+\+Read) (uint32\+\_\+t offset, uint8\+\_\+t $\ast$$\ast$dst, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)}\hypertarget{structUSBD__MSC__INIT__PARAM_a6695a1fe8a7201c91ff6dadace9b7ef7}{}\label{structUSBD__MSC__INIT__PARAM_a6695a1fe8a7201c91ff6dadace9b7ef7}
+M\+SC Read callback function.
+
+This function is provided by the application software. This function gets called when host sends a read command.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em offset} & Source start address. \\
+\hline
+\mbox{\tt in,out}  & {\em dst} & Pointer to a pointer to the source of data. The M\+SC function drivers implemented in stack are written with zero-\/copy model. Meaning the stack doesn\textquotesingle{}t make an extra copy of buffer before writing/reading data from U\+SB hardware F\+I\+FO. Hence the parameter is pointer to a pointer containing address buffer ({\itshape uint8\+\_\+t$\ast$$\ast$ dst}). So that the user application can update the buffer pointer instead of copying data to address pointed by the parameter. /note The updated buffer address should be accessible by U\+SB D\+MA master. If user doesn\textquotesingle{}t want to use zero-\/copy model, then the user should copy data to the address pointed by the passed buffer pointer parameter and shouldn\textquotesingle{}t change the address value. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!M\+S\+C\+\_\+\+Verify@{M\+S\+C\+\_\+\+Verify}}
+\index{M\+S\+C\+\_\+\+Verify@{M\+S\+C\+\_\+\+Verify}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{M\+S\+C\+\_\+\+Verify}{MSC_Verify}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+M\+S\+C\+\_\+\+Verify) (uint32\+\_\+t offset, uint8\+\_\+t buf\mbox{[}$\,$\mbox{]}, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)}\hypertarget{structUSBD__MSC__INIT__PARAM_a8d8010352b3183a3b29c509f1d76c03c}{}\label{structUSBD__MSC__INIT__PARAM_a8d8010352b3183a3b29c509f1d76c03c}
+M\+SC Verify callback function.
+
+This function is provided by the application software. This function gets called when host sends a verify command. The callback function should compare the buffer with the destination memory at the requested offset and
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em offset} & Destination start address. \\
+\hline
+\mbox{\tt in}  & {\em buf} & Buffer containing the data sent by the host. \\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to verify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & If data in the buffer matches the data at destination \\
+\hline
+{\em E\+R\+R\+\_\+\+F\+A\+I\+L\+ED} & At least one byte is different. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 136 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!M\+S\+C\+\_\+\+Write@{M\+S\+C\+\_\+\+Write}}
+\index{M\+S\+C\+\_\+\+Write@{M\+S\+C\+\_\+\+Write}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{M\+S\+C\+\_\+\+Write}{MSC_Write}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+M\+S\+C\+\_\+\+Write) (uint32\+\_\+t offset, uint8\+\_\+t $\ast$$\ast$src, uint32\+\_\+t length, uint32\+\_\+t high\+\_\+offset)}\hypertarget{structUSBD__MSC__INIT__PARAM_a4f0ca241688cb8ccae080eb9e958cba3}{}\label{structUSBD__MSC__INIT__PARAM_a4f0ca241688cb8ccae080eb9e958cba3}
+M\+SC Write callback function.
+
+This function is provided by the application software. This function gets called when host sends a write command.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em offset} & Destination start address. \\
+\hline
+\mbox{\tt in,out}  & {\em src} & Pointer to a pointer to the source of data. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file usbd\+\_\+mscuser.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd__mscuser_8h}{usbd\+\_\+mscuser.\+h}\end{DoxyCompactItemize}

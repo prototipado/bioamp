@@ -1,0 +1,95 @@
+\hypertarget{enet__17xx__40xx_8c}{}\section{enet\+\_\+17xx\+\_\+40xx.\+c File Reference}
+\label{enet__17xx__40xx_8c}\index{enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}}
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+Include dependency graph for enet\+\_\+17xx\+\_\+40xx.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__ENET__17XX__40XX_ga94eb7a70f4023c83ca18e4e675ad0b32}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+De\+Init} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em De-\/initialize the ethernet interface. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__ENET__17XX__40XX_gad107338dec5ee221957fafe5e711e42e}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Find\+M\+I\+I\+Div} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t clock\+Rate)
+\begin{DoxyCompactList}\small\item\em Find the divider index for a desired M\+II clock rate. \end{DoxyCompactList}\item 
+\hyperlink{group__ENET__17XX__40XX_gab29d71439401a8d4f68643acfd10959b}{E\+N\+E\+T\+\_\+\+B\+U\+F\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} \hyperlink{group__ENET__17XX__40XX_gafed5419d7a6be4580641e557429a63ad}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+Buffer\+Status} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint16\+\_\+t produce\+Index, uint16\+\_\+t consume\+Index, uint16\+\_\+t buff\+Size)
+\begin{DoxyCompactList}\small\item\em Get the buffer status with the current Produce Index and Consume Index. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__ENET__17XX__40XX_gac5f44f20f55847c4c9b9906f051aeca3}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+Fill\+Desc\+Num} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint16\+\_\+t produce\+Index, uint16\+\_\+t consume\+Index, uint16\+\_\+t buff\+Size)
+\begin{DoxyCompactList}\small\item\em Get the number of descriptors filled. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga4246666fbc4e9be17c45e6837a0e5dca}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Inc\+R\+X\+Consume\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Increase the current Rx Consume Descriptor Index. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga9a1d6a9086bfbca3c856ad2b3b90546c}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Inc\+T\+X\+Produce\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Increase the current Tx Produce Descriptor Index. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga24a13ad31f70570906a4b885754f8953}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Init} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, bool use\+R\+M\+II)
+\begin{DoxyCompactList}\small\item\em Initialize ethernet interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga04559be4fcfb24203ce9e372750383c1}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Init\+Rx\+Descriptors} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, \hyperlink{structENET__RXDESC__T}{E\+N\+E\+T\+\_\+\+R\+X\+D\+E\+S\+C\+\_\+T} $\ast$p\+Descs, \hyperlink{structENET__RXSTAT__T}{E\+N\+E\+T\+\_\+\+R\+X\+S\+T\+A\+T\+\_\+T} $\ast$p\+Status, uint32\+\_\+t desc\+Num)
+\begin{DoxyCompactList}\small\item\em Configures the initial ethernet receive descriptors. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga1e57967b888b1a7bfd4313fd9e70c696}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Init\+Tx\+Descriptors} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, \hyperlink{structENET__TXDESC__T}{E\+N\+E\+T\+\_\+\+T\+X\+D\+E\+S\+C\+\_\+T} $\ast$p\+Descs, \hyperlink{structENET__TXSTAT__T}{E\+N\+E\+T\+\_\+\+T\+X\+S\+T\+A\+T\+\_\+T} $\ast$p\+Status, uint32\+\_\+t desc\+Num)
+\begin{DoxyCompactList}\small\item\em Configures the initial ethernet transmit descriptors. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_gab6d3dfc1cc671503532d00947f236e1d}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Read\+M\+I\+I\+Data} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Returns the value read from the P\+HY. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga0881ac9e0e98620c0e65f9a6d7a43240}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set\+Full\+Duplex} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Sets full duplex operation for the interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga6d7031584471e30e89ded1fff5f3340d}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set\+Half\+Duplex} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Sets half duplex operation for the interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga9694421dbd0f331895fcf514fd18c938}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Setup\+M\+II} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t div, uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Sets up the P\+HY link clock divider and P\+HY address. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_gaca2166605d385fd5150f173cd33a3ac2}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Start\+M\+I\+I\+Read} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em Starts a P\+HY read via the M\+II. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_gade9f31bbc04119bc06638fd8ce874f73}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Start\+M\+I\+I\+Write} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint8\+\_\+t reg, uint16\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Starts a P\+HY write via the M\+II. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{enet__17xx__40xx_8c_af85199564dc2281c923a03ab095f7d08}{reset\+E\+N\+ET} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} const uint8\+\_\+t \hyperlink{enet__17xx__40xx_8c_acf19e8f28b62d3a4162dfcc049d064e1}{Enet\+Clk\+Div} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} uint32\+\_\+t \hyperlink{enet__17xx__40xx_8c_aeea00bd7e8d855d9724aa75fb81257fc}{phy\+Addr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}!reset\+E\+N\+ET@{reset\+E\+N\+ET}}
+\index{reset\+E\+N\+ET@{reset\+E\+N\+ET}!enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{reset\+E\+N\+E\+T(\+L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+\+T $\ast$p\+E\+N\+E\+T)}{resetENET(LPC_ENET_T *pENET)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void reset\+E\+N\+ET (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$}]{p\+E\+N\+ET}
+\end{DoxyParamCaption}
+)}\hypertarget{enet__17xx__40xx_8c_af85199564dc2281c923a03ab095f7d08}{}\label{enet__17xx__40xx_8c_af85199564dc2281c923a03ab095f7d08}
+
+
+Definition at line 53 of file enet\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+
+
+\subsection{Variable Documentation}
+\index{enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}!Enet\+Clk\+Div@{Enet\+Clk\+Div}}
+\index{Enet\+Clk\+Div@{Enet\+Clk\+Div}!enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{Enet\+Clk\+Div}{EnetClkDiv}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} const uint8\+\_\+t Enet\+Clk\+Div\mbox{[}$\,$\mbox{]}}\hypertarget{enet__17xx__40xx_8c_acf19e8f28b62d3a4162dfcc049d064e1}{}\label{enet__17xx__40xx_8c_acf19e8f28b62d3a4162dfcc049d064e1}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{4, 6, 8, 10, 14, 20, 28, 36, 40, 44,
+                                     48, 52, 56, 60, 64\}
+\end{DoxyCode}
+
+
+Definition at line 42 of file enet\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}!phy\+Addr@{phy\+Addr}}
+\index{phy\+Addr@{phy\+Addr}!enet\+\_\+17xx\+\_\+40xx.\+c@{enet\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{phy\+Addr}{phyAddr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} uint32\+\_\+t phy\+Addr}\hypertarget{enet__17xx__40xx_8c_aeea00bd7e8d855d9724aa75fb81257fc}{}\label{enet__17xx__40xx_8c_aeea00bd7e8d855d9724aa75fb81257fc}
+
+
+Definition at line 39 of file enet\+\_\+17xx\+\_\+40xx.\+c.
+

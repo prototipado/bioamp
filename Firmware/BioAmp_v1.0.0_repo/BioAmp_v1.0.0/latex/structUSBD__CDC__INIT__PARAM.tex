@@ -1,0 +1,569 @@
+\hypertarget{structUSBD__CDC__INIT__PARAM}{}\section{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM Struct Reference}
+\label{structUSBD__CDC__INIT__PARAM}\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+
+
+Communication Device Class function driver initialization parameter data structure.  
+
+
+
+
+{\ttfamily \#include $<$usbd\+\_\+cdcuser.\+h$>$}
+
+
+
+Collaboration diagram for U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_ac6a85d108817d7ba7e56934df8c80b81}{C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a655ea6e4382a762a37073972e84206f3}{C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_aa537c123e85c8e402a24fd593ca1d4d7}{C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_ada9ad64d565d5ca5ebb6bc0636b9882e}{C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a7393ec7442baaa058bed1384a9fc6fa6}{C\+I\+C\+\_\+\+Get\+Request} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Hid, \hyperlink{group__USBD__Core_ga4a940f7627cc7e9f0bb693cc0fce8637}{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} $\ast$p\+Setup, uint8\+\_\+t $\ast$$\ast$p\+Buffer, uint16\+\_\+t $\ast$length)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a828e304674e2d4d7c449b9ac7025cb5d}{C\+I\+C\+\_\+\+Set\+Request} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Cdc, \hyperlink{group__USBD__Core_ga4a940f7627cc7e9f0bb693cc0fce8637}{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} $\ast$p\+Setup, uint8\+\_\+t $\ast$$\ast$p\+Buffer, uint16\+\_\+t length)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a84c3d40976a44e3dde322e98480776a3}{cif\+\_\+intf\+\_\+desc}
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a4564c92d967b03f85870e940ad7d67b3}{Clr\+Comm\+Feature} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t feature)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a473ac609a0fe0a78826b20a947de7df1}{dif\+\_\+intf\+\_\+desc}
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_ab8edfef92cb0d830a742a68d96e10952}{Get\+Comm\+Feature} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t feature, uint8\+\_\+t $\ast$$\ast$p\+Buffer, uint16\+\_\+t $\ast$len)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a50f19d3a3bfac1e1d6525d44ecb8063a}{Get\+Encps\+Resp} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint8\+\_\+t $\ast$$\ast$buffer, uint16\+\_\+t $\ast$len)
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__CDC__INIT__PARAM_a2d9d28e9450cf152c1826a3669015014}{mem\+\_\+base}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__CDC__INIT__PARAM_a3616334a22f3ae9a30029f572920b9f4}{mem\+\_\+size}
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a1ae8501d22f581ca8f756f068fb1c506}{Send\+Break} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t mstime)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a3722a6599dc056cd6b3343b9fbcf04b0}{Send\+Encps\+Cmd} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t len)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_a1e5fcd48c821d9af9b4a422e9847d636}{Set\+Comm\+Feature} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t feature, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t len)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_ab73f0f1c6bf0957cb72bb57a481fc847}{Set\+Ctrl\+Line\+State} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t state)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__CDC__INIT__PARAM_aa2572724619feddd267d35ab6014f379}{Set\+Line\+Code} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, \hyperlink{usbd__cdc_8h_a1d66ffafad206be2563c72cb972fbf52}{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG} $\ast$line\+\_\+coding)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Communication Device Class function driver initialization parameter data structure. 
+
+This data structure is used to pass initialization parameters to the Communication Device Class function driver\textquotesingle{}s init function. 
+
+Definition at line 66 of file usbd\+\_\+cdcuser.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr}}
+\index{C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr}{CDC_BulkIN_Hdlr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+C\+D\+C\+\_\+\+Bulk\+I\+N\+\_\+\+Hdlr) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)}\hypertarget{structUSBD__CDC__INIT__PARAM_ac6a85d108817d7ba7e56934df8c80b81}{}\label{structUSBD__CDC__INIT__PARAM_ac6a85d108817d7ba7e56934df8c80b81}
+Communication Device Class specific B\+U\+LK IN endpoint handler.
+
+The application software should provide the B\+U\+LK IN endpoint handler. Applications should transfer data depending on the communication protocol type set in descriptors. ~\newline
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 176 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr}}
+\index{C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr}{CDC_BulkOUT_Hdlr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+C\+D\+C\+\_\+\+Bulk\+O\+U\+T\+\_\+\+Hdlr) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)}\hypertarget{structUSBD__CDC__INIT__PARAM_a655ea6e4382a762a37073972e84206f3}{}\label{structUSBD__CDC__INIT__PARAM_a655ea6e4382a762a37073972e84206f3}
+Communication Device Class specific B\+U\+LK O\+UT endpoint handler.
+
+The application software should provide the B\+U\+LK O\+UT endpoint handler. Applications should transfer data depending on the communication protocol type set in descriptors. ~\newline
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 195 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr}}
+\index{C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr}{CDC_Ep0_Hdlr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+C\+D\+C\+\_\+\+Ep0\+\_\+\+Hdlr) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)}\hypertarget{structUSBD__CDC__INIT__PARAM_aa537c123e85c8e402a24fd593ca1d4d7}{}\label{structUSBD__CDC__INIT__PARAM_aa537c123e85c8e402a24fd593ca1d4d7}
+Optional user override-\/able function to replace the default C\+DC class handler.
+
+The application software could override the default E\+P0 class handler with their own by providing the handler function address as this data member of the parameter structure. Application which like the default handler should set this data member to zero before calling the U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+A\+P\+I\+::\+Init(). ~\newline
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 380 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr}}
+\index{C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr@{C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr}{CDC_InterruptEP_Hdlr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+C\+D\+C\+\_\+\+Interrupt\+E\+P\+\_\+\+Hdlr) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)}\hypertarget{structUSBD__CDC__INIT__PARAM_ada9ad64d565d5ca5ebb6bc0636b9882e}{}\label{structUSBD__CDC__INIT__PARAM_ada9ad64d565d5ca5ebb6bc0636b9882e}
+Optional Communication Device Class specific I\+N\+T\+E\+R\+R\+U\+PT IN endpoint handler.
+
+The application software should provide the I\+NT IN endpoint handler. Applications should transfer data depending on the communication protocol type set in descriptors. ~\newline
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 359 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!C\+I\+C\+\_\+\+Get\+Request@{C\+I\+C\+\_\+\+Get\+Request}}
+\index{C\+I\+C\+\_\+\+Get\+Request@{C\+I\+C\+\_\+\+Get\+Request}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{C\+I\+C\+\_\+\+Get\+Request}{CIC_GetRequest}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+C\+I\+C\+\_\+\+Get\+Request) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Hid, {\bf U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} $\ast$p\+Setup, uint8\+\_\+t $\ast$$\ast$p\+Buffer, uint16\+\_\+t $\ast$length)}\hypertarget{structUSBD__CDC__INIT__PARAM_a7393ec7442baaa058bed1384a9fc6fa6}{}\label{structUSBD__CDC__INIT__PARAM_a7393ec7442baaa058bed1384a9fc6fa6}
+Communication Interface Class specific get request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends C\+IC management element get requests. \begin{DoxyNote}{Note}
+Applications implementing Abstract Control Model subclass can set this param to N\+U\+LL. As the default driver parses A\+CM requests and calls the individual A\+CM call-\/back routines defined in this structure. For all other subclasses this routine should be provided by the application. ~\newline
+The setup packet data ({\itshape p\+Setup}) is passed to the call-\/back so that application can extract the C\+IC request type and other associated data. By default the stack will assign {\itshape p\+Buffer} pointer to {\itshape E\+P0\+Buff} allocated at init. The application code can directly write data into this buffer as long as data is less than 64 byte. If more data has to be sent then application code should update {\itshape p\+Buffer} pointer and length accordingly.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em p\+Setup} & Pointer to setup packet received from host. \\
+\hline
+\mbox{\tt in,out}  & {\em p\+Buffer} & Pointer to a pointer of data buffer containing request data. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt in,out}  & {\em length} & Amount of data to be sent back to host. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 121 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!C\+I\+C\+\_\+\+Set\+Request@{C\+I\+C\+\_\+\+Set\+Request}}
+\index{C\+I\+C\+\_\+\+Set\+Request@{C\+I\+C\+\_\+\+Set\+Request}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{C\+I\+C\+\_\+\+Set\+Request}{CIC_SetRequest}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+C\+I\+C\+\_\+\+Set\+Request) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Cdc, {\bf U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} $\ast$p\+Setup, uint8\+\_\+t $\ast$$\ast$p\+Buffer, uint16\+\_\+t length)}\hypertarget{structUSBD__CDC__INIT__PARAM_a828e304674e2d4d7c449b9ac7025cb5d}{}\label{structUSBD__CDC__INIT__PARAM_a828e304674e2d4d7c449b9ac7025cb5d}
+Communication Interface Class specific set request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a C\+IC management element requests. \begin{DoxyNote}{Note}
+Applications implementing Abstract Control Model subclass can set this param to N\+U\+LL. As the default driver parses A\+CM requests and calls the individual A\+CM call-\/back routines defined in this structure. For all other subclasses this routine should be provided by the application. ~\newline
+The setup packet data ({\itshape p\+Setup}) is passed to the call-\/back so that application can extract the C\+IC request type and other associated data. If a set request has data associated, then this call-\/back is called twice.
+\begin{DoxyEnumerate}
+\item First when setup request is received, at this time application code could update {\itshape p\+Buffer} pointer to point to the intended destination. The length param is set to 0 so that application code knows this is first time. By default the stack will assign {\itshape p\+Buffer} pointer to {\itshape E\+P0\+Buff} allocated at init. Note, if data length is greater than 64 bytes and application code doesn\textquotesingle{}t update {\itshape p\+Buffer} pointer the stack will send S\+T\+A\+LL condition to host.
+\item Second when the data is received from the host. This time the length param is set with number of data bytes received.
+\end{DoxyEnumerate}
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em p\+Setup} & Pointer to setup packet received from host. \\
+\hline
+\mbox{\tt in,out}  & {\em p\+Buffer} & Pointer to a pointer of data buffer containing request data. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt in}  & {\em length} & Amount of data copied to destination buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 157 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!cif\+\_\+intf\+\_\+desc@{cif\+\_\+intf\+\_\+desc}}
+\index{cif\+\_\+intf\+\_\+desc@{cif\+\_\+intf\+\_\+desc}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{cif\+\_\+intf\+\_\+desc}{cif_intf_desc}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::cif\+\_\+intf\+\_\+desc}\hypertarget{structUSBD__CDC__INIT__PARAM_a84c3d40976a44e3dde322e98480776a3}{}\label{structUSBD__CDC__INIT__PARAM_a84c3d40976a44e3dde322e98480776a3}
+Pointer to the control interface descriptor within the descriptor array ({\itshape high\+\_\+speed\+\_\+desc}) passed to Init() through \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} structure. The stack assumes both HS and FS use same B\+U\+LK endpoints. 
+
+Definition at line 81 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Clr\+Comm\+Feature@{Clr\+Comm\+Feature}}
+\index{Clr\+Comm\+Feature@{Clr\+Comm\+Feature}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Clr\+Comm\+Feature}{ClrCommFeature}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Clr\+Comm\+Feature) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t feature)}\hypertarget{structUSBD__CDC__INIT__PARAM_a4564c92d967b03f85870e940ad7d67b3}{}\label{structUSBD__CDC__INIT__PARAM_a4564c92d967b03f85870e940ad7d67b3}
+Abstract control model(\+A\+C\+M) subclass specific C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE request. In the call-\/back the application should Clears the settings for a particular communication feature.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em feature} & Communication feature type. See usbcdc11.\+pdf, section 6.\+2.\+4, Table 47. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 286 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!dif\+\_\+intf\+\_\+desc@{dif\+\_\+intf\+\_\+desc}}
+\index{dif\+\_\+intf\+\_\+desc@{dif\+\_\+intf\+\_\+desc}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{dif\+\_\+intf\+\_\+desc}{dif_intf_desc}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::dif\+\_\+intf\+\_\+desc}\hypertarget{structUSBD__CDC__INIT__PARAM_a473ac609a0fe0a78826b20a947de7df1}{}\label{structUSBD__CDC__INIT__PARAM_a473ac609a0fe0a78826b20a947de7df1}
+Pointer to the data interface descriptor within the descriptor array ({\itshape high\+\_\+speed\+\_\+desc}) passed to Init() through \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} structure. The stack assumes both HS and FS use same B\+U\+LK endpoints. 
+
+Definition at line 86 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Get\+Comm\+Feature@{Get\+Comm\+Feature}}
+\index{Get\+Comm\+Feature@{Get\+Comm\+Feature}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Get\+Comm\+Feature}{GetCommFeature}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Get\+Comm\+Feature) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t feature, uint8\+\_\+t $\ast$$\ast$p\+Buffer, uint16\+\_\+t $\ast$len)}\hypertarget{structUSBD__CDC__INIT__PARAM_ab8edfef92cb0d830a742a68d96e10952}{}\label{structUSBD__CDC__INIT__PARAM_ab8edfef92cb0d830a742a68d96e10952}
+Abstract control model(\+A\+C\+M) subclass specific G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em feature} & Communication feature type. See usbcdc11.\+pdf, section 6.\+2.\+4, Table 47. \\
+\hline
+\mbox{\tt in,out}  & {\em buffer} & Pointer to a pointer of data buffer containing current settings for the communication feature. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. \\
+\hline
+\mbox{\tt in,out}  & {\em len} & Amount of data to be sent back to host. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 269 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Get\+Encps\+Resp@{Get\+Encps\+Resp}}
+\index{Get\+Encps\+Resp@{Get\+Encps\+Resp}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Get\+Encps\+Resp}{GetEncpsResp}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Get\+Encps\+Resp) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint8\+\_\+t $\ast$$\ast$buffer, uint16\+\_\+t $\ast$len)}\hypertarget{structUSBD__CDC__INIT__PARAM_a50f19d3a3bfac1e1d6525d44ecb8063a}{}\label{structUSBD__CDC__INIT__PARAM_a50f19d3a3bfac1e1d6525d44ecb8063a}
+Abstract control model(\+A\+C\+M) subclass specific G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in,out}  & {\em buffer} & Pointer to a pointer of data buffer containing response data. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt in,out}  & {\em len} & Amount of data to be sent back to host. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 231 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!mem\+\_\+base@{mem\+\_\+base}}
+\index{mem\+\_\+base@{mem\+\_\+base}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{mem\+\_\+base}{mem_base}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::mem\+\_\+base}\hypertarget{structUSBD__CDC__INIT__PARAM_a2d9d28e9450cf152c1826a3669015014}{}\label{structUSBD__CDC__INIT__PARAM_a2d9d28e9450cf152c1826a3669015014}
+Base memory location from where the stack can allocate data and buffers. \begin{DoxyNote}{Note}
+The memory address set in this field should be accessible by U\+SB D\+MA controller. Also this value should be aligned on 4 byte boundary. 
+\end{DoxyNote}
+
+
+Definition at line 69 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!mem\+\_\+size@{mem\+\_\+size}}
+\index{mem\+\_\+size@{mem\+\_\+size}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{mem\+\_\+size}{mem_size}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::mem\+\_\+size}\hypertarget{structUSBD__CDC__INIT__PARAM_a3616334a22f3ae9a30029f572920b9f4}{}\label{structUSBD__CDC__INIT__PARAM_a3616334a22f3ae9a30029f572920b9f4}
+The size of memory buffer which stack can use. \begin{DoxyNote}{Note}
+The {\itshape mem\+\_\+size} should be greater than the size returned by \hyperlink{structUSBD__CDC__API_abde21c25f0b02b4d3ec9af0e41378437}{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+A\+P\+I\+::\+Get\+Mem\+Size()} routine. 
+\end{DoxyNote}
+
+
+Definition at line 74 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Send\+Break@{Send\+Break}}
+\index{Send\+Break@{Send\+Break}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Send\+Break}{SendBreak}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Send\+Break) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t mstime)}\hypertarget{structUSBD__CDC__INIT__PARAM_a1ae8501d22f581ca8f756f068fb1c506}{}\label{structUSBD__CDC__INIT__PARAM_a1ae8501d22f581ca8f756f068fb1c506}
+Abstract control model(\+A\+C\+M) subclass specific S\+E\+N\+D\+\_\+\+B\+R\+E\+AK request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a S\+E\+N\+D\+\_\+\+B\+R\+E\+AK request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em mstime} & Duration of Break signal in milliseconds. If mstime is F\+F\+F\+Fh, then the application should send break until another Send\+Break request is received with the w\+Value of 0000h. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 322 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Send\+Encps\+Cmd@{Send\+Encps\+Cmd}}
+\index{Send\+Encps\+Cmd@{Send\+Encps\+Cmd}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Send\+Encps\+Cmd}{SendEncpsCmd}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Send\+Encps\+Cmd) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t len)}\hypertarget{structUSBD__CDC__INIT__PARAM_a3722a6599dc056cd6b3343b9fbcf04b0}{}\label{structUSBD__CDC__INIT__PARAM_a3722a6599dc056cd6b3343b9fbcf04b0}
+Abstract control model(\+A\+C\+M) subclass specific S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND set request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em buffer} & Pointer to the command buffer. \\
+\hline
+\mbox{\tt in}  & {\em len} & Length of the command buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 212 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Set\+Comm\+Feature@{Set\+Comm\+Feature}}
+\index{Set\+Comm\+Feature@{Set\+Comm\+Feature}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Set\+Comm\+Feature}{SetCommFeature}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Set\+Comm\+Feature) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t feature, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t len)}\hypertarget{structUSBD__CDC__INIT__PARAM_a1e5fcd48c821d9af9b4a422e9847d636}{}\label{structUSBD__CDC__INIT__PARAM_a1e5fcd48c821d9af9b4a422e9847d636}
+Abstract control model(\+A\+C\+M) subclass specific S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE set request.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em feature} & Communication feature type. See usbcdc11.\+pdf, section 6.\+2.\+4, Table 47. \\
+\hline
+\mbox{\tt in}  & {\em buffer} & Pointer to the settings buffer for the specified communication feature. \\
+\hline
+\mbox{\tt in}  & {\em len} & Length of the request buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 249 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Set\+Ctrl\+Line\+State@{Set\+Ctrl\+Line\+State}}
+\index{Set\+Ctrl\+Line\+State@{Set\+Ctrl\+Line\+State}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Set\+Ctrl\+Line\+State}{SetCtrlLineState}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Set\+Ctrl\+Line\+State) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, uint16\+\_\+t state)}\hypertarget{structUSBD__CDC__INIT__PARAM_ab73f0f1c6bf0957cb72bb57a481fc847}{}\label{structUSBD__CDC__INIT__PARAM_ab73f0f1c6bf0957cb72bb57a481fc847}
+Abstract control model(\+A\+C\+M) subclass specific S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE request. R\+S-\/232 signal used to tell the D\+CE device the D\+TE device is now present
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em state} & The state value uses bitmap values defined in usbcdc11.\+pdf, section 6.\+2.\+14, Table 51. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 304 of file usbd\+\_\+cdcuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!Set\+Line\+Code@{Set\+Line\+Code}}
+\index{Set\+Line\+Code@{Set\+Line\+Code}!U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{Set\+Line\+Code}{SetLineCode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+C\+D\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+Set\+Line\+Code) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+C\+DC, {\bf C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG} $\ast$line\+\_\+coding)}\hypertarget{structUSBD__CDC__INIT__PARAM_aa2572724619feddd267d35ab6014f379}{}\label{structUSBD__CDC__INIT__PARAM_aa2572724619feddd267d35ab6014f379}
+Abstract control model(\+A\+C\+M) subclass specific S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG request call-\/back function.
+
+This function is provided by the application software. This function gets called when host sends a S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG request. The application should configure the device per D\+TE rate, stop-\/bits, parity, and number-\/of-\/character bits settings provided in command buffer. See usbcdc11.\+pdf, section 6.\+2.\+13, table 50 for detail of the command buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Cdc} & Handle to C\+DC function driver. \\
+\hline
+\mbox{\tt in}  & {\em line\+\_\+coding} & Pointer to the C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG command buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 340 of file usbd\+\_\+cdcuser.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd__cdcuser_8h}{usbd\+\_\+cdcuser.\+h}\end{DoxyCompactItemize}

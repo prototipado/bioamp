@@ -1,0 +1,11 @@
+digraph "handleMasterXferState"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="handleMasterXferState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_I2C_MasterStateHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga179362e42a3de931ff7f57ca698254fa",tooltip="I2C Master transfer state change handler. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_I2C_EventHandlerPolling",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#gaaa89a66d658a41325b3c5e56bc059401",tooltip="Default event handler for polling operation. "];
+}

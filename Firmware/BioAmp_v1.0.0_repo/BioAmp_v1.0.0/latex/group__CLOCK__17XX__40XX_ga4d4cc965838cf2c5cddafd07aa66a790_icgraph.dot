@@ -1,0 +1,19 @@
+digraph "Chip_Clock_FeedPLL"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_Clock_FeedPLL",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_Clock_EnablePLL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga2f3b19dee294433937973fb4fedfe3f6",tooltip="Enables or connects a PLL. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_USB_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__SUPPORT__17XX__40XX__FUNC.html#gaa098023402e8e6034f34663ce39d9ccd",tooltip="USB Pin and clock initialization Calling this function will initialize the USB pins and the clock..."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_Clock_SetCPUClockSource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaefeafe3f6ad6d2690c252e6cfcc826dd",tooltip="Sets the current CPU clock source. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_Clock_DisablePLL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga3b9589b6a14d39653503be3693990f8f",tooltip="Disables or disconnects a PLL. "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Chip_Clock_SetupPLL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaf4a2dd4c6aae5d6b830f7cf529ec8773",tooltip="Sets up a PLL. "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

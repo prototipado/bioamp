@@ -1,0 +1,18 @@
+digraph "Chip_Clock_GetPeripheralClockRate"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_Clock_GetPeripheral\lClockRate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_Clock_GetSPIFIClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga09e6d1ff0c53ebffd5f6fd407ea01ddb",tooltip="Returns the SPIFI clock rate. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_Clock_GetUSBPLLInClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaa97e3b970f577ea06e5d4f76097576c7",tooltip="Return USB PLL input clock rate. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_Clock_GetUSBPLLOutClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga89cab6cddba486f9c820b06e0a28bade",tooltip="Return USB PLL output clock rate. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_Clock_GetUSBClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gac8679aba3cc005f859604a09ceceb4a4",tooltip="Gets the USB clock (USB_CLK) rate. "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

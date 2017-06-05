@@ -1,0 +1,27 @@
+digraph "Chip_Clock_GetMainPLLInClockRate"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_Clock_GetMainPLLInClockRate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_Clock_GetSYSCLKRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaec133465745ce56e49b184185f8252e1",tooltip="Returns the current SYSCLK clock rate. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_Clock_GetMainPLLSource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaf678411ef6cde49c95c603030554fa9d",tooltip="Returns the input clock source for SYSCLK. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_Clock_SetPCLKDiv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga847b9fe292e8d5461c02750a21d34885",tooltip="Sets a clock divider for all peripherals. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_Clock_GetPCLKDiv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga2fb0ad885ca820d555cf9ff4268cc252",tooltip="Gets the clock divider for all peripherals. "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Chip_Clock_GetIntOscRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gaa8db0ad49f51bf5d6870181e77249c2b",tooltip="Returns the internal oscillator (IRC) clock rate. "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Chip_Clock_GetMainOscRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga32ea9f95eed11d2bfa470b473232456e",tooltip="Returns the main oscillator clock rate. "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Chip_Clock_GetRTCOscRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga64b01351fd2019749b1f1d18dfd263f0",tooltip="Returns the RTC oscillator clock rate. "];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Chip_Clock_GetMainPLLOut\lClockRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#gad1a38c10a143b8e21d2a8085ec0cb13e",tooltip="Return PLL0 (Main PLL) output clock rate. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Chip_Clock_IsMainPLLEnabled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga63e9e5918d1a8b0d1c5811c3f0189846",tooltip="Read PLL0 enable status. "];
+  Node9 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+}

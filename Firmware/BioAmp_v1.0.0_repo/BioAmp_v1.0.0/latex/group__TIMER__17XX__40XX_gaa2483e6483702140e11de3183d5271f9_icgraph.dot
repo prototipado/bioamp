@@ -1,0 +1,9 @@
+digraph "Chip_TIMER_PrescaleSet"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_TIMER_PrescaleSet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="StopWatch_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Stop__Watch.html#gaa0f8ea277b700d20b4322a15d9ddf32c",tooltip="Initialize stopwatch. "];
+}

@@ -1,0 +1,652 @@
+\hypertarget{group__COMMON__IAP}{}\section{C\+H\+IP\+: Common Chip I\+S\+P/\+I\+AP commands and return codes}
+\label{group__COMMON__IAP}\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__COMMON__IAP_gaaff51c256373e4a20f8dab1adc1300f3}{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~13
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga4cfd7e0c133c450664f0a60bfbbd9eaa}{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}~14
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga2117bbba83cf2110a3fde4cafe189784}{I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}~53
+\item 
+\#define \hyperlink{group__COMMON__IAP_gaa4e308bc310bb68aa8409a6f830aee04}{I\+A\+P\+\_\+\+B\+U\+SY}~11
+\item 
+\#define \hyperlink{group__COMMON__IAP_gafdceac1acd5c460094011136c08574a4}{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED}~15
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga6855b3bb97689d746eff1f27dde58fc5}{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS}~0
+\item 
+\#define \hyperlink{group__COMMON__IAP_gaa63a66d010441cd1b5837742455cf075}{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD}~56
+\item 
+\#define \hyperlink{group__COMMON__IAP_gabeb57ce3d4009fdee1847f5494376c8d}{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR}~10
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga719488ff2abf2f325b73a10b20403813}{I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR}~6
+\item 
+\#define \hyperlink{group__COMMON__IAP_gaaccc191ce402e19b0c0ae399f614efe8}{I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED}~19
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga72a13c4c7132aa3da476fc0907cb2a08}{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~3
+\item 
+\#define \hyperlink{group__COMMON__IAP_gacd5a7fb6c783f5d435e594170757d1d4}{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}~5
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga34d721b0a3ff4caf7b847c9d85fe73a0}{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD}~62
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga76ebaaa7cd2a015246d1a44e3a0cc369}{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE}~61
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga24604c568e67c76aee924f9439426111}{I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD}~59
+\item 
+\#define \hyperlink{group__COMMON__IAP_gad212cc38d91507366f07f9393e42eaec}{I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}~52
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga6913ca0660dc1a2cccd8c6b09bcdbc75}{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}~17
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga456a8363a47d21d7198056da4b1e9f61}{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE}~16
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga78fcc8d4b3835576a272431915e39eb7}{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND}~1
+\item 
+\#define \hyperlink{group__COMMON__IAP_gab3af925b968fb59823d08d77261aebf7}{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR}~7
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga6c61111082b04ba6780151c83f8c3644}{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT}~18
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga6bf1bec9cbb419f8006447171e9750b7}{I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR}~12
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga540234bb0f525a06770175699d01063b}{I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD}~50
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga8d0f5e06feea423e15ee0238534f80ea}{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD}~55
+\item 
+\#define \hyperlink{group__COMMON__IAP_gad2458645f1cf815f56f205bd7f7fd1af}{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD}~58
+\item 
+\#define \hyperlink{group__COMMON__IAP_gad1f3638abcb5134b6fb6aceb67a4bb2c}{I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD}~57
+\item 
+\#define \hyperlink{group__COMMON__IAP_gae385db2542e6b2c8b8417cf1b929fcb1}{I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD}~54
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga19b046ec9c03aa0276a9cbe409eb3f04}{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK}~8
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga8600f9e930f1dee5d67a2bc11efcde63}{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED}~9
+\item 
+\#define \hyperlink{group__COMMON__IAP_gaad19f900fbc28ee51d3e0138a88a446b}{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~2
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga8d15cbc501933748afbe786c587e74f9}{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}~4
+\item 
+\#define \hyperlink{group__COMMON__IAP_ga9eb15375e6dd4de560a7d43b4483a293}{I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}~51
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__COMMON__IAP_ga07176e9ce6963e57318fa8c127b4f611}{I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T}) (unsigned int\mbox{[}5\mbox{]}, unsigned int\mbox{[}4\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga98c7e657a618cf004a8967112dae1a30}{Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector} (uint32\+\_\+t str\+Sector, uint32\+\_\+t end\+Sector)
+\begin{DoxyCompactList}\small\item\em Blank check a sector or multiples sector of on-\/chip flash memory. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga0f3983319210f99d1931f1e9fa762d9e}{Chip\+\_\+\+I\+A\+P\+\_\+\+Compare} (uint32\+\_\+t dst\+Add, uint32\+\_\+t src\+Add, uint32\+\_\+t bytescmp)
+\begin{DoxyCompactList}\small\item\em Compare the memory contents at two locations. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga71cb8cde86dc344b05219cdf1ecee638}{Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash} (uint32\+\_\+t dst\+Add, uint32\+\_\+t $\ast$src\+Add, uint32\+\_\+t byteswrt)
+\begin{DoxyCompactList}\small\item\em Copy R\+AM to flash. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga95ca28fb39884184657054e134671f95}{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page} (uint32\+\_\+t str\+Page, uint32\+\_\+t end\+Page)
+\begin{DoxyCompactList}\small\item\em Erase a page or multiple papers of on-\/chip flash memory. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga02dbb90a49e24dc449d45a66f03a4a2d}{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector} (uint32\+\_\+t str\+Sector, uint32\+\_\+t end\+Sector)
+\begin{DoxyCompactList}\small\item\em Erase sector. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_gac45b60745e55670c7fa806e2865625c4}{Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write} (uint32\+\_\+t str\+Sector, uint32\+\_\+t end\+Sector)
+\begin{DoxyCompactList}\small\item\em Prepare sector for write operation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga478acfa6d97211d4f43edfa8717dc066}{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code} (void)
+\begin{DoxyCompactList}\small\item\em Read boot code version number. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__COMMON__IAP_gaa4b90551649db0627dc195acfc834cbe}{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+ID} (void)
+\begin{DoxyCompactList}\small\item\em Read part identification number. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__COMMON__IAP_ga2835e129423f1ce0628004a8adf00773}{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+ID} (void)
+\begin{DoxyCompactList}\small\item\em Read the unique ID. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__COMMON__IAP_ga91a6ef5cac3a052f637cf0b5d7d31d53}{Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+SP} (void)
+\begin{DoxyCompactList}\small\item\em I\+AP reinvoke I\+SP to invoke the bootloader in I\+SP mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}}
+\index{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}{IAP_ADDR_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR~13}\hypertarget{group__COMMON__IAP_gaaff51c256373e4a20f8dab1adc1300f3}{}\label{group__COMMON__IAP_gaaff51c256373e4a20f8dab1adc1300f3}
+Address is not on word boundary 
+
+Definition at line 72 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED@{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}}
+\index{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED@{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}{IAP_ADDR_NOT_MAPPED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED~14}\hypertarget{group__COMMON__IAP_ga4cfd7e0c133c450664f0a60bfbbd9eaa}{}\label{group__COMMON__IAP_ga4cfd7e0c133c450664f0a60bfbbd9eaa}
+Address is not mapped in the memory map 
+
+Definition at line 73 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}{IAP_BLANK_CHECK_SECTOR_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+B\+L\+A\+N\+K\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD~53}\hypertarget{group__COMMON__IAP_ga2117bbba83cf2110a3fde4cafe189784}{}\label{group__COMMON__IAP_ga2117bbba83cf2110a3fde4cafe189784}
+Blank check sector 
+
+Definition at line 48 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+B\+U\+SY@{I\+A\+P\+\_\+\+B\+U\+SY}}
+\index{I\+A\+P\+\_\+\+B\+U\+SY@{I\+A\+P\+\_\+\+B\+U\+SY}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+B\+U\+SY}{IAP_BUSY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+B\+U\+SY~11}\hypertarget{group__COMMON__IAP_gaa4e308bc310bb68aa8409a6f830aee04}{}\label{group__COMMON__IAP_gaa4e308bc310bb68aa8409a6f830aee04}
+Flash programming hardware interface is busy 
+
+Definition at line 70 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED@{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED}}
+\index{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED@{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED}{IAP_CMD_LOCKED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+K\+ED~15}\hypertarget{group__COMMON__IAP_gafdceac1acd5c460094011136c08574a4}{}\label{group__COMMON__IAP_gafdceac1acd5c460094011136c08574a4}
+Command is locked 
+
+Definition at line 74 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS@{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\index{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS@{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS}{IAP_CMD_SUCCESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+C\+E\+SS~0}\hypertarget{group__COMMON__IAP_ga6855b3bb97689d746eff1f27dde58fc5}{}\label{group__COMMON__IAP_ga6855b3bb97689d746eff1f27dde58fc5}
+Command is executed successfully 
+
+Definition at line 59 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD}{IAP_COMPARE_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+MD~56}\hypertarget{group__COMMON__IAP_gaa63a66d010441cd1b5837742455cf075}{}\label{group__COMMON__IAP_gaa63a66d010441cd1b5837742455cf075}
+Compare two R\+AM address locations 
+
+Definition at line 51 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR}}
+\index{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR}{IAP_COMPARE_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR~10}\hypertarget{group__COMMON__IAP_gabeb57ce3d4009fdee1847f5494376c8d}{}\label{group__COMMON__IAP_gabeb57ce3d4009fdee1847f5494376c8d}
+Source and destination data not equal 
+
+Definition at line 69 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR}}
+\index{I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR}{IAP_COUNT_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR~6}\hypertarget{group__COMMON__IAP_ga719488ff2abf2f325b73a10b20403813}{}\label{group__COMMON__IAP_ga719488ff2abf2f325b73a10b20403813}
+Byte count is not multiple of 4 or is not a permitted value 
+
+Definition at line 65 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED@{I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED@{I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED}{IAP_CRP_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+C\+R\+P\+\_\+\+E\+N\+A\+B\+L\+ED~19}\hypertarget{group__COMMON__IAP_gaaccc191ce402e19b0c0ae399f614efe8}{}\label{group__COMMON__IAP_gaaccc191ce402e19b0c0ae399f614efe8}
+Code read protection enabled 
+
+Definition at line 78 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}}
+\index{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}{IAP_DST_ADDR_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR~3}\hypertarget{group__COMMON__IAP_ga72a13c4c7132aa3da476fc0907cb2a08}{}\label{group__COMMON__IAP_ga72a13c4c7132aa3da476fc0907cb2a08}
+Destination address is not on a correct boundary 
+
+Definition at line 62 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED@{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}}
+\index{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED@{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}{IAP_DST_ADDR_NOT_MAPPED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED~5}\hypertarget{group__COMMON__IAP_gacd5a7fb6c783f5d435e594170757d1d4}{}\label{group__COMMON__IAP_gacd5a7fb6c783f5d435e594170757d1d4}
+Destination address is not mapped in the memory map 
+
+Definition at line 64 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD@{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD}}
+\index{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD@{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD}{IAP_EEPROM_READ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+AD~62}\hypertarget{group__COMMON__IAP_ga34d721b0a3ff4caf7b847c9d85fe73a0}{}\label{group__COMMON__IAP_ga34d721b0a3ff4caf7b847c9d85fe73a0}
+E\+E\+P\+R\+OM R\+E\+AD command 
+
+Definition at line 56 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE@{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE}}
+\index{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE@{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE}{IAP_EEPROM_WRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+W\+R\+I\+TE~61}\hypertarget{group__COMMON__IAP_ga76ebaaa7cd2a015246d1a44e3a0cc369}{}\label{group__COMMON__IAP_ga76ebaaa7cd2a015246d1a44e3a0cc369}
+E\+E\+P\+R\+OM Write command 
+
+Definition at line 55 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD}{IAP_ERASE_PAGE_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+A\+G\+E\+\_\+\+C\+MD~59}\hypertarget{group__COMMON__IAP_ga24604c568e67c76aee924f9439426111}{}\label{group__COMMON__IAP_ga24604c568e67c76aee924f9439426111}
+Erase page 
+
+Definition at line 54 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}{IAP_ERSSECTOR_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+E\+R\+S\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD~52}\hypertarget{group__COMMON__IAP_gad212cc38d91507366f07f9393e42eaec}{}\label{group__COMMON__IAP_gad212cc38d91507366f07f9393e42eaec}
+Erase Sector command 
+
+Definition at line 47 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}}
+\index{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}{IAP_INVALID_BAUD_RATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE~17}\hypertarget{group__COMMON__IAP_ga6913ca0660dc1a2cccd8c6b09bcdbc75}{}\label{group__COMMON__IAP_ga6913ca0660dc1a2cccd8c6b09bcdbc75}
+Invalid baud rate setting 
+
+Definition at line 76 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE}}
+\index{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE}{IAP_INVALID_CODE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+DE~16}\hypertarget{group__COMMON__IAP_ga456a8363a47d21d7198056da4b1e9f61}{}\label{group__COMMON__IAP_ga456a8363a47d21d7198056da4b1e9f61}
+Unlock code is invalid 
+
+Definition at line 75 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND}}
+\index{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND}{IAP_INVALID_COMMAND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND~1}\hypertarget{group__COMMON__IAP_ga78fcc8d4b3835576a272431915e39eb7}{}\label{group__COMMON__IAP_ga78fcc8d4b3835576a272431915e39eb7}
+Invalid command 
+
+Definition at line 60 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR}}
+\index{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR}{IAP_INVALID_SECTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR~7}\hypertarget{group__COMMON__IAP_gab3af925b968fb59823d08d77261aebf7}{}\label{group__COMMON__IAP_gab3af925b968fb59823d08d77261aebf7}
+Sector number is invalid or end sector number is greater than start sector number 
+
+Definition at line 66 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT}}
+\index{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT@{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT}{IAP_INVALID_STOP_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT~18}\hypertarget{group__COMMON__IAP_ga6c61111082b04ba6780151c83f8c3644}{}\label{group__COMMON__IAP_ga6c61111082b04ba6780151c83f8c3644}
+Invalid stop bit setting 
+
+Definition at line 77 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR}}
+\index{I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR}{IAP_PARAM_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+OR~12}\hypertarget{group__COMMON__IAP_ga6bf1bec9cbb419f8006447171e9750b7}{}\label{group__COMMON__IAP_ga6bf1bec9cbb419f8006447171e9750b7}
+nsufficient number of parameters or invalid parameter 
+
+Definition at line 71 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD}{IAP_PREWRRITE_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+P\+R\+E\+W\+R\+R\+I\+T\+E\+\_\+\+C\+MD~50}\hypertarget{group__COMMON__IAP_ga540234bb0f525a06770175699d01063b}{}\label{group__COMMON__IAP_ga540234bb0f525a06770175699d01063b}
+Prepare sector for write operation command 
+
+Definition at line 45 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD}{IAP_READ_BOOT_CODE_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+B\+O\+O\+T\+\_\+\+C\+O\+D\+E\+\_\+\+C\+MD~55}\hypertarget{group__COMMON__IAP_ga8d0f5e06feea423e15ee0238534f80ea}{}\label{group__COMMON__IAP_ga8d0f5e06feea423e15ee0238534f80ea}
+Read Boot code version 
+
+Definition at line 50 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD}{IAP_READ_UID_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+R\+E\+A\+D\+\_\+\+U\+I\+D\+\_\+\+C\+MD~58}\hypertarget{group__COMMON__IAP_gad2458645f1cf815f56f205bd7f7fd1af}{}\label{group__COMMON__IAP_gad2458645f1cf815f56f205bd7f7fd1af}
+Read U\+ID 
+
+Definition at line 53 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD}{IAP_REINVOKE_ISP_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+R\+E\+I\+N\+V\+O\+K\+E\+\_\+\+I\+S\+P\+\_\+\+C\+MD~57}\hypertarget{group__COMMON__IAP_gad1f3638abcb5134b6fb6aceb67a4bb2c}{}\label{group__COMMON__IAP_gad1f3638abcb5134b6fb6aceb67a4bb2c}
+Reinvoke I\+SP 
+
+Definition at line 52 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD}{IAP_REPID_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+R\+E\+P\+I\+D\+\_\+\+C\+MD~54}\hypertarget{group__COMMON__IAP_gae385db2542e6b2c8b8417cf1b929fcb1}{}\label{group__COMMON__IAP_gae385db2542e6b2c8b8417cf1b929fcb1}
+Read Part\+ID command 
+
+Definition at line 49 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK@{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK}}
+\index{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK@{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK}{IAP_SECTOR_NOT_BLANK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK~8}\hypertarget{group__COMMON__IAP_ga19b046ec9c03aa0276a9cbe409eb3f04}{}\label{group__COMMON__IAP_ga19b046ec9c03aa0276a9cbe409eb3f04}
+Sector is not blank 
+
+Definition at line 67 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED@{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED}}
+\index{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED@{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED}{IAP_SECTOR_NOT_PREPARED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+ED~9}\hypertarget{group__COMMON__IAP_ga8600f9e930f1dee5d67a2bc11efcde63}{}\label{group__COMMON__IAP_ga8600f9e930f1dee5d67a2bc11efcde63}
+Command to prepare sector for write operation was not executed 
+
+Definition at line 68 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}}
+\index{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR@{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}{IAP_SRC_ADDR_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR~2}\hypertarget{group__COMMON__IAP_gaad19f900fbc28ee51d3e0138a88a446b}{}\label{group__COMMON__IAP_gaad19f900fbc28ee51d3e0138a88a446b}
+Source address is not on word boundary 
+
+Definition at line 61 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED@{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}}
+\index{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED@{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}{IAP_SRC_ADDR_NOT_MAPPED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED~4}\hypertarget{group__COMMON__IAP_ga8d15cbc501933748afbe786c587e74f9}{}\label{group__COMMON__IAP_ga8d15cbc501933748afbe786c587e74f9}
+Source address is not mapped in the memory map 
+
+Definition at line 63 of file iap.\+h.
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}}
+\index{I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD@{I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD}{IAP_WRISECTOR_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+A\+P\+\_\+\+W\+R\+I\+S\+E\+C\+T\+O\+R\+\_\+\+C\+MD~51}\hypertarget{group__COMMON__IAP_ga9eb15375e6dd4de560a7d43b4483a293}{}\label{group__COMMON__IAP_ga9eb15375e6dd4de560a7d43b4483a293}
+Write Sector command 
+
+Definition at line 46 of file iap.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T@{I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T}}
+\index{I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T@{I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T}{IAP_ENTRY_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ I\+A\+P\+\_\+\+E\+N\+T\+R\+Y\+\_\+T) (unsigned int\mbox{[}5\mbox{]}, unsigned int\mbox{[}4\mbox{]})}\hypertarget{group__COMMON__IAP_ga07176e9ce6963e57318fa8c127b4f611}{}\label{group__COMMON__IAP_ga07176e9ce6963e57318fa8c127b4f611}
+
+
+Definition at line 81 of file iap.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector@{Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector@{Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector(uint32\+\_\+t str\+Sector, uint32\+\_\+t end\+Sector)}{Chip_IAP_BlankCheckSector(uint32_t strSector, uint32_t endSector)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Blank\+Check\+Sector (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{str\+Sector, }
+\item[{uint32\+\_\+t}]{end\+Sector}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga98c7e657a618cf004a8967112dae1a30}{}\label{group__COMMON__IAP_ga98c7e657a618cf004a8967112dae1a30}
+
+
+Blank check a sector or multiples sector of on-\/chip flash memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Sector} & \+: Start sector number \\
+\hline
+{\em end\+Sector} & \+: End sector number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Offset of the first non blank word location if the status code is S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The end sector must be greater than or equal to start sector number 
+\end{DoxyNote}
+
+
+Definition at line 93 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Compare@{Chip\+\_\+\+I\+A\+P\+\_\+\+Compare}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Compare@{Chip\+\_\+\+I\+A\+P\+\_\+\+Compare}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Compare(uint32\+\_\+t dst\+Add, uint32\+\_\+t src\+Add, uint32\+\_\+t bytescmp)}{Chip_IAP_Compare(uint32_t dstAdd, uint32_t srcAdd, uint32_t bytescmp)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Compare (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{dst\+Add, }
+\item[{uint32\+\_\+t}]{src\+Add, }
+\item[{uint32\+\_\+t}]{bytescmp}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga0f3983319210f99d1931f1e9fa762d9e}{}\label{group__COMMON__IAP_ga0f3983319210f99d1931f1e9fa762d9e}
+
+
+Compare the memory contents at two locations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst\+Add} & \+: Destination of the R\+AM address of data bytes to be compared \\
+\hline
+{\em src\+Add} & \+: Source of the R\+AM address of data bytes to be compared \\
+\hline
+{\em bytescmp} & \+: Number of bytes to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Offset of the first mismatch of the status code is C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The addresses should be a word boundary and number of bytes should be a multiply of 4 
+\end{DoxyNote}
+
+
+Definition at line 128 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash@{Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash@{Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash(uint32\+\_\+t dst\+Add, uint32\+\_\+t $\ast$src\+Add, uint32\+\_\+t byteswrt)}{Chip_IAP_CopyRamToFlash(uint32_t dstAdd, uint32_t *srcAdd, uint32_t byteswrt)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Copy\+Ram\+To\+Flash (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{dst\+Add, }
+\item[{uint32\+\_\+t $\ast$}]{src\+Add, }
+\item[{uint32\+\_\+t}]{byteswrt}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga71cb8cde86dc344b05219cdf1ecee638}{}\label{group__COMMON__IAP_ga71cb8cde86dc344b05219cdf1ecee638}
+
+
+Copy R\+AM to flash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst\+Add} & \+: Destination flash address where data bytes are to be written \\
+\hline
+{\em src\+Add} & \+: Source flash address where data bytes are to be read \\
+\hline
+{\em byteswrt} & \+: Number of bytes to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code to indicate the command is executed successfully or not 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The addresses should be a 256 byte boundary and the number of bytes should be 256 $\vert$ 512 $\vert$ 1024 $\vert$ 4096 
+\end{DoxyNote}
+
+
+Definition at line 64 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page@{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page@{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page(uint32\+\_\+t str\+Page, uint32\+\_\+t end\+Page)}{Chip_IAP_ErasePage(uint32_t strPage, uint32_t endPage)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Page (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{str\+Page, }
+\item[{uint32\+\_\+t}]{end\+Page}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga95ca28fb39884184657054e134671f95}{}\label{group__COMMON__IAP_ga95ca28fb39884184657054e134671f95}
+
+
+Erase a page or multiple papers of on-\/chip flash memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Page} & \+: Start page number \\
+\hline
+{\em end\+Page} & \+: End page number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code to indicate the command is executed successfully or not 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The page number must be greater than or equal to start page number 
+\end{DoxyNote}
+
+
+Definition at line 164 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector@{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector@{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector(uint32\+\_\+t str\+Sector, uint32\+\_\+t end\+Sector)}{Chip_IAP_EraseSector(uint32_t strSector, uint32_t endSector)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Erase\+Sector (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{str\+Sector, }
+\item[{uint32\+\_\+t}]{end\+Sector}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga02dbb90a49e24dc449d45a66f03a4a2d}{}\label{group__COMMON__IAP_ga02dbb90a49e24dc449d45a66f03a4a2d}
+
+
+Erase sector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Sector} & \+: Start sector number \\
+\hline
+{\em end\+Sector} & \+: End sector number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code to indicate the command is executed successfully or not 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The end sector must be greater than or equal to start sector number 
+\end{DoxyNote}
+
+
+Definition at line 79 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write@{Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write@{Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write(uint32\+\_\+t str\+Sector, uint32\+\_\+t end\+Sector)}{Chip_IAP_PreSectorForReadWrite(uint32_t strSector, uint32_t endSector)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Pre\+Sector\+For\+Read\+Write (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{str\+Sector, }
+\item[{uint32\+\_\+t}]{end\+Sector}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_gac45b60745e55670c7fa806e2865625c4}{}\label{group__COMMON__IAP_gac45b60745e55670c7fa806e2865625c4}
+
+
+Prepare sector for write operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Sector} & \+: Start sector number \\
+\hline
+{\em end\+Sector} & \+: End sector number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code to indicate the command is executed successfully or not 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This command must be executed before executing \char`\"{}\+Copy R\+A\+M to flash\char`\"{} or \char`\"{}\+Erase Sector\char`\"{} command. The end sector must be greater than or equal to start sector number 
+\end{DoxyNote}
+
+
+Definition at line 51 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code@{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code@{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code(void)}{Chip_IAP_ReadBootCode(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+Boot\+Code (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga478acfa6d97211d4f43edfa8717dc066}{}\label{group__COMMON__IAP_ga478acfa6d97211d4f43edfa8717dc066}
+
+
+Read boot code version number. 
+
+\begin{DoxyReturn}{Returns}
+Boot code version number 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+ID@{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+ID}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+ID@{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+ID}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+I\+D(void)}{Chip_IAP_ReadPID(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+P\+ID (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_gaa4b90551649db0627dc195acfc834cbe}{}\label{group__COMMON__IAP_gaa4b90551649db0627dc195acfc834cbe}
+
+
+Read part identification number. 
+
+\begin{DoxyReturn}{Returns}
+Part identification number 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+ID@{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+ID}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+ID@{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+ID}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+I\+D(void)}{Chip_IAP_ReadUID(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Read\+U\+ID (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga2835e129423f1ce0628004a8adf00773}{}\label{group__COMMON__IAP_ga2835e129423f1ce0628004a8adf00773}
+
+
+Read the unique ID. 
+
+\begin{DoxyReturn}{Returns}
+Status code to indicate the command is executed successfully or not 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\index{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}!Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+SP@{Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+SP}}
+\index{Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+SP@{Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+SP}!C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes@{C\+H\+I\+P\+: Common Chip I\+S\+P/\+I\+A\+P commands and return codes}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+S\+P(void)}{Chip_IAP_ReinvokeISP(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+I\+A\+P\+\_\+\+Reinvoke\+I\+SP (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__COMMON__IAP_ga91a6ef5cac3a052f637cf0b5d7d31d53}{}\label{group__COMMON__IAP_ga91a6ef5cac3a052f637cf0b5d7d31d53}
+
+
+I\+AP reinvoke I\+SP to invoke the bootloader in I\+SP mode. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file iap.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+

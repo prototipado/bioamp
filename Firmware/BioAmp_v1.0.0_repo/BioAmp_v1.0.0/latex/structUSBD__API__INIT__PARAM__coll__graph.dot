@@ -1,0 +1,6 @@
+digraph "USBD_API_INIT_PARAM"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{USBD_API_INIT_PARAM\n|+ cache_flush\l+ max_num_ep\l+ mem_base\l+ mem_size\l+ pad0\l+ reserved_sbz\l+ USB_Configure_Event\l+ USB_Error_Event\l+ USB_Feature_Event\l+ USB_Interface_Event\land 8 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

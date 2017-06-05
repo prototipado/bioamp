@@ -1,0 +1,29 @@
+\hypertarget{fmc__17xx__40xx_8h}{}\section{fmc\+\_\+17xx\+\_\+40xx.\+h File Reference}
+\label{fmc__17xx__40xx_8h}\index{fmc\+\_\+17xx\+\_\+40xx.\+h@{fmc\+\_\+17xx\+\_\+40xx.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structLPC__FMC__T}{L\+P\+C\+\_\+\+F\+M\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em F\+L\+A\+SH Memory Controller Unit register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__FMC__17XX__40XX_ga1c732efb3127d9e699c46b4a89706639}{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+B\+U\+SY}~(1\+U\+L $<$$<$ 17)
+\item 
+\#define \hyperlink{group__FMC__17XX__40XX_ga3d2c7a30422c68c08d48b4e4f03a2787}{F\+M\+C\+\_\+\+F\+L\+A\+S\+H\+S\+I\+G\+\_\+\+S\+T\+AT}~(1 $<$$<$ 2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__FMC__17XX__40XX_gab7ec5bd928d355795e7cd4f56371a9ec}{Chip\+\_\+\+F\+M\+C\+\_\+\+Clear\+Signature\+Busy} (void)
+\begin{DoxyCompactList}\small\item\em Clear signature generation completion flag. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__FMC__17XX__40XX_ga12cde229d831a9e32208b038651ca228}{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature} (uint32\+\_\+t start, uint32\+\_\+t stop)
+\begin{DoxyCompactList}\small\item\em Start computation of a signature for a F\+L\+A\+SH memory range. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__FMC__17XX__40XX_ga1341098e386d4291bf7ad3fb43b6d3bc}{Chip\+\_\+\+F\+M\+C\+\_\+\+Compute\+Signature\+Blocks} (uint32\+\_\+t start, uint32\+\_\+t blocks)
+\begin{DoxyCompactList}\small\item\em Start computation of a signature for a F\+L\+A\+SH memory address and block count. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__FMC__17XX__40XX_ga800317f87d55b213bdbd9aebe7c2a6b6}{Chip\+\_\+\+F\+M\+C\+\_\+\+Get\+Signature} (int index)
+\begin{DoxyCompactList}\small\item\em Returns the generated F\+L\+A\+SH signature value. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{group__FMC__17XX__40XX_gaf2d1ec53b9f1e3e79cd6e9389597220d}{Chip\+\_\+\+F\+M\+C\+\_\+\+Is\+Signature\+Busy} (void)
+\begin{DoxyCompactList}\small\item\em Check for signature generation completion. \end{DoxyCompactList}\end{DoxyCompactItemize}

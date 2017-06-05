@@ -1,0 +1,39 @@
+digraph "Chip_UART_SendRB"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_UART_SendRB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_UART_IntDisable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#gaf92136333a1b6efdfd40e96f97d4a24e",tooltip="Disable UART interrupts. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="RingBuffer_InsertMult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#gafeafb521d4e03052ab2c893fd0e388d5",tooltip="Insert an array of items into ring buffer. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="RingBuffer_IsFull",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#ga760da012435262add1d8d7aa79e873a0",tooltip="Return number of items in the ring buffer. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="RingBuffer_GetCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#ga7b69777c35694637acaf39e6bfcc1822",tooltip="Return number of items in the ring buffer. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="RingBuffer_GetFree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#ga75424687def8979742338366d39c8559",tooltip="Return number of free items in the ring buffer. "];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Chip_UART_TXIntHandlerRB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#ga74df5e39960a1535118fcfe2fbe90d30",tooltip="UART transmit-only interrupt handler for ring buffers. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Chip_UART_ReadLineStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#gaf15ab7a9529d102b91760ed5587b279a",tooltip="Return Line Status register/status (LSR) "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="RingBuffer_Pop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#gaf3ce7f43677c2b4c6eedb3cc4962b80d",tooltip="Pop an item from the ring buffer. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="RingBuffer_IsEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#ga6f03e04a69262864bde4f35fc6f3dfb5",tooltip="Return empty status of ring buffer. "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="RingBuffer_Insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#gaafdee54f2525b2c7a983d1a631b42226",tooltip="Insert a single item into ring buffer. "];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="RingBuffer_PopMult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Ring__Buffer.html#gae0ef7bb96d1fe84ae1441b7c214b1e56",tooltip="Pop an array of items from the ring buffer. "];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Chip_UART_SendByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#gaa600b8621d1425b1b493238a68f38088",tooltip="Transmit a single data byte through the UART peripheral. "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Chip_UART_IntEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#ga5a816f48dc294f330cc2cc7b32f9e88b",tooltip="Enable UART interrupts. "];
+}

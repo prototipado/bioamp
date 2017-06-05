@@ -1,0 +1,13 @@
+digraph "Chip_Timer_GetClockIndex"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_Timer_GetClockIndex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_TIMER_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__TIMER__17XX__40XX.html#gac2ca0aff00ae8a651e129afba400c833",tooltip="Initialize a timer. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="StopWatch_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__Stop__Watch.html#gaa0f8ea277b700d20b4322a15d9ddf32c",tooltip="Initialize stopwatch. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_TIMER_DeInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__TIMER__17XX__40XX.html#gaa52f3e33303d7d4f1e2325586a21a5c0",tooltip="Shutdown a timer. "];
+}

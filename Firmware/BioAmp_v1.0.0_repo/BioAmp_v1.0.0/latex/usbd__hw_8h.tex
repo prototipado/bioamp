@@ -1,0 +1,61 @@
+\hypertarget{usbd__hw_8h}{}\section{usbd\+\_\+hw.\+h File Reference}
+\label{usbd__hw_8h}\index{usbd\+\_\+hw.\+h@{usbd\+\_\+hw.\+h}}
+
+
+U\+SB Hardware Function prototypes.  
+
+
+{\ttfamily \#include \char`\"{}error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+core.\+h\char`\"{}}\\*
+Include dependency graph for usbd\+\_\+hw.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structUSBD__HW__API}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em Hardware A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structUSBD__HW__API}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+PI} \hyperlink{group__USBD__HW_ga4df5b7beaddc4e9267c320d92b4434fc}{U\+S\+B\+D\+\_\+\+H\+W\+\_\+\+A\+P\+I\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Hardware A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} \{ \\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8d26afb2e56f4b1b788321a0d1633b33}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+E\+T\+UP} =1, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ad720a106a796d05d1dd52fb0b021be67}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+UT}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aa284007e2d06d2f9241618b55c1bcd3a}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+IN}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a8966a8816143f41ac6aafd7215151f88}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+N\+AK}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13af973a80c8f31a5c9aa320b15cd230434}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+N\+AK}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3e17b2dcf495ff4befaeba2718affae4}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+S\+T\+A\+LL}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a1ba247a8c3cdc166098e817ec2808777}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+S\+T\+A\+LL}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a3a3b0dc5766c4d17bd6d2daea5812fbc}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+OT}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13aaddab8476ea17ac9fb4e10796bc7c633}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+OT}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a744297c96c9296f311a28da97df03001}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+N\+DR}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a6c66edac1510b9e9741a8f5019142214}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+N\+DR}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac469035908127847ebb32fd51a0a33bc}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+O\+U\+T\+\_\+\+D\+M\+A\+\_\+\+E\+RR}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a2e9c73676bebd4b0c4ebb412c2a53af4}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+I\+N\+\_\+\+D\+M\+A\+\_\+\+E\+RR}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ac9da611df8ba920792bb1388c70fbc53}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+R\+E\+S\+ET}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a327107e15682a2403deec540ca209670}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+S\+OF}, 
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13ae30ace519ceb787d84de55ebf5e4901e}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+S\+T\+A\+TE}, 
+\\*
+\hyperlink{group__USBD__HW_gga61dde6aa35d2912927ef1b185eedaa13a7e46c0177f969c8be4e4a40784c7c2f4}{U\+S\+B\+\_\+\+E\+V\+T\+\_\+\+D\+E\+V\+\_\+\+E\+R\+R\+OR}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+SB Hardware Function prototypes. 
+
+Definition of functions exported by R\+OM based Device Controller Driver (D\+CD). 

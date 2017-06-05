@@ -1,0 +1,11 @@
+digraph "Chip_GPDMA_ClearIntPending"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_GPDMA_ClearIntPending",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_GPDMA_Stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPDMA__17XX__40XX.html#gafa887387f85205ecacc3220700b49d0d",tooltip="Stop a stream DMA transfer. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_GPDMA_Interrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPDMA__17XX__40XX.html#ga986bb4a0d10a05ff6284fff871fb86c6",tooltip="The GPDMA stream interrupt status checking. "];
+}

@@ -1,0 +1,11 @@
+digraph "Chip_RTC_GetTime"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_RTC_GetTime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_RTC_SetFullTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__RTC__17XX__40XX.html#ga501471295a030ca2dc2872577367073e",tooltip="Set full time in the RTC peripheral. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_RTC_GetFullTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__RTC__17XX__40XX.html#gab03d971e0b77ba907f414cdc00acce3b",tooltip="Get full time from the RTC peripheral. "];
+}

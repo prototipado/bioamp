@@ -1,0 +1,244 @@
+\hypertarget{group__BOARD__COMMON__API}{}\section{B\+O\+A\+RD\+: Common board functions}
+\label{group__BOARD__COMMON__API}\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__BOARD__COMMON__API_gae997487a4f312eb187c5e0201a7f1d5f}{p\+\_\+ms\+Delay\+\_\+func\+\_\+t}) (uint32\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Initializes board U\+A\+RT for output, required for printf redirection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__BOARD__COMMON__API_gae8d2d761b984f48c3dbb27dd32a8c119}{Board\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Set up and initialize all required blocks and functions related to the board hardware. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_gae417dc93d00f1a89f74220e569fac777}{Board\+\_\+\+Setup\+Clocking} (void)
+\begin{DoxyCompactList}\small\item\em Setup system clocking. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_ga27d97e44ce026a509b12317e059b2204}{Board\+\_\+\+Setup\+Ext\+Memory} (void)
+\begin{DoxyCompactList}\small\item\em Setup external system memory. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_ga8ac1dc465c66e1cc00f5ffd346904d97}{Board\+\_\+\+Setup\+Muxing} (void)
+\begin{DoxyCompactList}\small\item\em Setup pin multiplexer per board schematics. \end{DoxyCompactList}\item 
+void \hyperlink{group__BOARD__COMMON__API_gaeb60ea85499a4208167ae2540086516a}{Board\+\_\+\+System\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Setup and initialize hardware prior to call to \hyperlink{group__Application__Layer_ga840291bc02cba5474a4cb46a9b9566fe}{main()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains common board definitions that are shared across boards and devices. All of these functions do not need to be implemented for a specific board, but if they are implemented, they should use this A\+PI standard. 
+
+\subsection{Typedef Documentation}
+\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}!p\+\_\+ms\+Delay\+\_\+func\+\_\+t@{p\+\_\+ms\+Delay\+\_\+func\+\_\+t}}
+\index{p\+\_\+ms\+Delay\+\_\+func\+\_\+t@{p\+\_\+ms\+Delay\+\_\+func\+\_\+t}!B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsubsection[{\texorpdfstring{p\+\_\+ms\+Delay\+\_\+func\+\_\+t}{p_msDelay_func_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ p\+\_\+ms\+Delay\+\_\+func\+\_\+t) (uint32\+\_\+t)}\hypertarget{group__BOARD__COMMON__API_gae997487a4f312eb187c5e0201a7f1d5f}{}\label{group__BOARD__COMMON__API_gae997487a4f312eb187c5e0201a7f1d5f}
+
+
+Initializes board U\+A\+RT for output, required for printf redirection. 
+
+\begin{DoxyReturn}{Returns}
+None Sends a single character on the U\+A\+RT, required for printf redirection 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & \+: character to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None Get a single character from the U\+A\+RT, required for scanf input 
+
+E\+OF if not character was received, or character value Prints a string to the U\+A\+RT 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \+: Terminated string to output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None Sets the state of a board L\+ED to on or off 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+Number} & \+: L\+ED number to set state for \\
+\hline
+{\em State} & \+: true for on, false for off \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None Returns the current state of a board L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+Number} & \+: L\+ED number to set state for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the L\+ED is on, otherwise false Toggles the current state of a board L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+Number} & \+: L\+ED number to change state for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None Turn on Board L\+CD Backlight 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Intensity} & \+: Backlight intensity (0 = off, $>$=1 = on) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+On boards where a G\+P\+IO is used to control backlight on/off state, a \textquotesingle{}0\textquotesingle{} or \textquotesingle{}1\textquotesingle{} value will turn off or on the backlight. On some boards, a non-\/0 value will control backlight intensity via a P\+WN. For P\+WM systems, the intensity value is a percentage value between 0 and 100\%. Function prototype for a MS delay function. Board layers or example code may define this function as needed. 
+\end{DoxyNote}
+
+
+Definition at line 153 of file board\+\_\+api.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}!Board\+\_\+\+Init@{Board\+\_\+\+Init}}
+\index{Board\+\_\+\+Init@{Board\+\_\+\+Init}!B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsubsection[{\texorpdfstring{Board\+\_\+\+Init(void)}{Board_Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__BOARD__COMMON__API_gae8d2d761b984f48c3dbb27dd32a8c119}{}\label{group__BOARD__COMMON__API_gae8d2d761b984f48c3dbb27dd32a8c119}
+
+
+Set up and initialize all required blocks and functions related to the board hardware. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file board\+\_\+sysinit.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}!Board\+\_\+\+Setup\+Clocking@{Board\+\_\+\+Setup\+Clocking}}
+\index{Board\+\_\+\+Setup\+Clocking@{Board\+\_\+\+Setup\+Clocking}!B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsubsection[{\texorpdfstring{Board\+\_\+\+Setup\+Clocking(void)}{Board_SetupClocking(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+\_\+\+Setup\+Clocking (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__BOARD__COMMON__API_gae417dc93d00f1a89f74220e569fac777}{}\label{group__BOARD__COMMON__API_gae417dc93d00f1a89f74220e569fac777}
+
+
+Setup system clocking. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This sets up board clocking. 
+\end{DoxyNote}
+
+
+Definition at line 106 of file board\+\_\+sysinit.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}!Board\+\_\+\+Setup\+Ext\+Memory@{Board\+\_\+\+Setup\+Ext\+Memory}}
+\index{Board\+\_\+\+Setup\+Ext\+Memory@{Board\+\_\+\+Setup\+Ext\+Memory}!B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsubsection[{\texorpdfstring{Board\+\_\+\+Setup\+Ext\+Memory(void)}{Board_SetupExtMemory(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+\_\+\+Setup\+Ext\+Memory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__BOARD__COMMON__API_ga27d97e44ce026a509b12317e059b2204}{}\label{group__BOARD__COMMON__API_ga27d97e44ce026a509b12317e059b2204}
+
+
+Setup external system memory. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is typically called after pin mux setup and clock setup and sets up any external memory needed by the system (D\+R\+AM, S\+R\+AM, etc.). Not all boards need this function. 
+\end{DoxyNote}
+\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}!Board\+\_\+\+Setup\+Muxing@{Board\+\_\+\+Setup\+Muxing}}
+\index{Board\+\_\+\+Setup\+Muxing@{Board\+\_\+\+Setup\+Muxing}!B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsubsection[{\texorpdfstring{Board\+\_\+\+Setup\+Muxing(void)}{Board_SetupMuxing(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+\_\+\+Setup\+Muxing (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__BOARD__COMMON__API_ga8ac1dc465c66e1cc00f5ffd346904d97}{}\label{group__BOARD__COMMON__API_ga8ac1dc465c66e1cc00f5ffd346904d97}
+
+
+Setup pin multiplexer per board schematics. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\hyperlink{group__BOARD__COMMON__API_ga8ac1dc465c66e1cc00f5ffd346904d97}{Board\+\_\+\+Setup\+Muxing()} should be called from \hyperlink{sysinit_8c_a93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()} prior to application \hyperlink{group__Application__Layer_ga840291bc02cba5474a4cb46a9b9566fe}{main()} is called. So that the P\+I\+Ns are set in proper state. 
+\end{DoxyNote}
+
+
+Definition at line 100 of file board\+\_\+sysinit.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}!Board\+\_\+\+System\+Init@{Board\+\_\+\+System\+Init}}
+\index{Board\+\_\+\+System\+Init@{Board\+\_\+\+System\+Init}!B\+O\+A\+R\+D\+: Common board functions@{B\+O\+A\+R\+D\+: Common board functions}}
+\subsubsection[{\texorpdfstring{Board\+\_\+\+System\+Init(void)}{Board_SystemInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+\_\+\+System\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__BOARD__COMMON__API_gaeb60ea85499a4208167ae2540086516a}{}\label{group__BOARD__COMMON__API_gaeb60ea85499a4208167ae2540086516a}
+
+
+Setup and initialize hardware prior to call to \hyperlink{group__Application__Layer_ga840291bc02cba5474a4cb46a9b9566fe}{main()} 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\hyperlink{group__BOARD__COMMON__API_gaeb60ea85499a4208167ae2540086516a}{Board\+\_\+\+System\+Init()} is called prior to the application and sets up system clocking, memory, and any resources needed prior to the application starting. 
+\end{DoxyNote}
+
+
+Definition at line 118 of file board\+\_\+sysinit.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+

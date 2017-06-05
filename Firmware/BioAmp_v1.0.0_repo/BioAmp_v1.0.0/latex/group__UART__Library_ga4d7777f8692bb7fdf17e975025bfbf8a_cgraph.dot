@@ -1,0 +1,15 @@
+digraph "Drv_UART_DeInit"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Drv_UART_DeInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_UART_DeInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#gaa18c4ebd4be27643e6f848472e778989",tooltip="De-initializes the pUART peripheral. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_UART_TXDisable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__UART__17XX__40XX.html#ga96589453d52bc5e208ffbeced9a49dab",tooltip="Disable transmission on UART TxD pin. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Chip_Clock_DisablePeriph\lClock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CLOCK__17XX__40XX.html#ga1bcb3f29f3cfbe896517e7bb6ebeaf03",tooltip="Disables power and clocking for a peripheral. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_UART_GetClockIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart__17xx__40xx_8c.html#a4b6a78420b27ce599f016a640a85f692"];
+}

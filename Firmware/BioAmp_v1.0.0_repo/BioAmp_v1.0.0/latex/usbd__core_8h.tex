@@ -1,0 +1,44 @@
+\hypertarget{usbd__core_8h}{}\section{usbd\+\_\+core.\+h File Reference}
+\label{usbd__core_8h}\index{usbd\+\_\+core.\+h@{usbd\+\_\+core.\+h}}
+
+
+R\+OM A\+PI for U\+SB device stack.  
+
+
+{\ttfamily \#include \char`\"{}error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}app\+\_\+usbd\+\_\+cfg.\+h\char`\"{}}\\*
+Include dependency graph for usbd\+\_\+core.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__USB__CORE__DESCS__T}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB descriptors data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structUSBD__API__INIT__PARAM}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}
+\begin{DoxyCompactList}\small\item\em U\+SB device stack initialization parameter data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structUSBD__CORE__API}{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em U\+S\+BD stack Core A\+PI functions structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{group__USBD__Core_ga0404ce046312aa5c798cc4a05c417e46}{U\+S\+B\+\_\+\+C\+B\+\_\+T}) (\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb)
+\begin{DoxyCompactList}\small\item\em U\+SB device stack\textquotesingle{}s event callback function type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct__USB__CORE__DESCS__T}{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB descriptors data structure. \end{DoxyCompactList}\item 
+typedef \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{group__USBD__Core_gaa578d29a85226108ef62c6d5c325b742}{U\+S\+B\+\_\+\+E\+P\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+T}) (\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\begin{DoxyCompactList}\small\item\em U\+S\+BD setup request and endpoint event handler type. \end{DoxyCompactList}\item 
+typedef \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{group__USBD__Core_ga7df622c61ebb152b83dd5972ac789b28}{U\+S\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+B\+\_\+T}) (\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, uint32\+\_\+t param1)
+\begin{DoxyCompactList}\small\item\em U\+SB device stack\textquotesingle{}s event callback function type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structUSBD__API__INIT__PARAM}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM} \hyperlink{group__USBD__Core_gaa6e8171941c1ae63afed95974e0f18e3}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB device stack initialization parameter data structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structUSBD__CORE__API}{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI} \hyperlink{group__USBD__Core_ga6a53e8395d1c68f98d18ca4a49b75baa}{U\+S\+B\+D\+\_\+\+C\+O\+R\+E\+\_\+\+A\+P\+I\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+S\+BD stack Core A\+PI functions structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+OM A\+PI for U\+SB device stack. 
+
+Definition of functions exported by core layer of R\+OM based U\+SB device stack. 

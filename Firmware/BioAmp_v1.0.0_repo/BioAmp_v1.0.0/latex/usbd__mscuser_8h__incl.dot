@@ -1,0 +1,26 @@
+digraph "usbd_mscuser.h"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="usbd_mscuser.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="error.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8h.html"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="usbd.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usbd_8h.html",tooltip="Common definitions and declarations for the USB stack. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="lpc_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lpc__types_8h.html"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="stdbool.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="usbd_msc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usbd__msc_8h.html",tooltip="Mass Storage class (MSC) descriptors. "];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="usbd_core.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usbd__core_8h.html",tooltip="ROM API for USB device stack. "];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="app_usbd_cfg.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+}

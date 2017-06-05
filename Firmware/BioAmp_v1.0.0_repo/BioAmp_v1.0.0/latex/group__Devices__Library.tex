@@ -1,0 +1,1104 @@
+\hypertarget{group__Devices__Library}{}\section{Devices\+\_\+\+Library}
+\label{group__Devices__Library}\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Devices__Library_ga22f3cf4ef9dadad8d78d5c59999100b6}{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}~0
+\item 
+\#define \hyperlink{group__Devices__Library_ga5a11a7cbc215e25401541277460113a4}{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__Devices__Library_gaefaaa0f7c44f79a6150287630f9531d6}{L\+E\+D\+\_\+\+V\+\_\+\+P\+IN}~1
+\item 
+\#define \hyperlink{group__Devices__Library_gab09c8e054071dd324e1527eadec02adf}{L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__Devices__Library_ga3ea9ecb7907af23b0d59637a7e778d47}{M\+S\+\_\+\+P\+IN}~27
+\item 
+\#define \hyperlink{group__Devices__Library_gaf98ad77692941c0b1abe1a1a399bceea}{M\+S\+\_\+\+P\+O\+RT}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__Devices__Library_gadde208bf0ea8bb35d8606d3859219a40}{delay\+Ms} (uint8\+\_\+t timer\+\_\+num, uint32\+\_\+t delay\+In\+Ms)
+\begin{DoxyCompactList}\small\item\em Delay in milliseconds. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga120f8cfcae7121ef62deee0473cf19ee}{delay\+Us} (uint8\+\_\+t timer\+\_\+num, uint32\+\_\+t delay\+In\+Us)
+\begin{DoxyCompactList}\small\item\em Delay in microseconds. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga42ce5be2b197d04b4b0a9918a11ea457}{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition} (uint8\+\_\+t test\+Input\+Code, uint8\+\_\+t amplitude\+Code, uint8\+\_\+t freq\+Code)
+\begin{DoxyCompactList}\small\item\em Set test inputs to all channels. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gab949068810476a2e08078aa7eab15a83}{Drv\+\_\+\+Devices\+\_\+board\+Reset} (void)
+\item 
+void \hyperlink{group__Devices__Library_ga87716766599b761bde56572ccaac7946}{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Change lead off detect settings and re-\/start device. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gacf4dbff760e8426996f21c8a68d77cef}{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State} (uint8\+\_\+t channel, uint8\+\_\+t start)
+\begin{DoxyCompactList}\small\item\em Activate or De-\/activate channel maintaining running state. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga8092c357f91843e6fa9db02735addc7d}{Drv\+\_\+\+Devices\+\_\+event\+Serial} ()
+\begin{DoxyCompactList}\small\item\em Function for receiving new commands. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_ga648ce331709a942df57efd5b8645db13}{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number} (uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Convert channel number from character to number. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gafb56f6b90c50e36cd6e34665d85fb903}{Drv\+\_\+\+Devices\+\_\+get\+Commands} (uint8\+\_\+t token)
+\begin{DoxyCompactList}\small\item\em Function for interpreting commands. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_gaeab801d2d0a8823545cfde29704edc96}{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master} ()
+\begin{DoxyCompactList}\small\item\em Return the state of the is\+Master flag. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga65091ea2e7c2a0500683edf1bbc844ad}{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running} ()
+\begin{DoxyCompactList}\small\item\em Return the state of the is\+\_\+running flag. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga92e403bbfcda965385b78ce10bbea47a}{Drv\+\_\+\+Devices\+\_\+is\+Master} ()
+\begin{DoxyCompactList}\small\item\em Determines if the board is Master or Slave and set a flag. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga1b75ac5dd3eb55ef54cff5de501875a9}{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings} (uint8\+\_\+t parameter)
+\begin{DoxyCompactList}\small\item\em Retrieve parameters and execute channel settings. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga91621cb0b85d8918aa835f198c827379}{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings} (uint8\+\_\+t parameter)
+\begin{DoxyCompactList}\small\item\em Retrieve parameters and execute channel settings. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga1a1a6145a5269b2a7ebd45abdb53b660}{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Print the current Default Channel Settings. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gac177c9b23475b7551fbcebe3db410bf0}{Drv\+\_\+\+Devices\+\_\+print\+Menu} (void)
+\begin{DoxyCompactList}\small\item\em Print menu. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gad85a26f63a893c55cdbbe5c4c0d0e69e}{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name} (uint8\+\_\+t reg\+Number)
+\begin{DoxyCompactList}\small\item\em To get and send by U\+A\+RT the name of a specific A\+D\+S1299 register. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gad214f99a7d211af8779b46b244f99d99}{Drv\+\_\+\+Devices\+\_\+print\+Registers} ()
+\begin{DoxyCompactList}\small\item\em Print the current state of all A\+D\+S1299 registers. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga828212dc5604557924cd8ea9e6252c6c}{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data} ()
+\begin{DoxyCompactList}\small\item\em Send via U\+A\+RT the data acquired by the A\+DS. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga26ea493ed59bae1e6a0c0af4ece44f40}{Drv\+\_\+\+Devices\+\_\+send\+E\+OT} ()
+\begin{DoxyCompactList}\small\item\em Send characters to shake hands with the controlling program. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gaa48520ff061081dab8c49d26bf9404dd}{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Set all channels to the default settings. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga7a5e2ac941ca1d1f308f910539005d4b}{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave} ()
+\begin{DoxyCompactList}\small\item\em Start the system as Salve. Configure I/O pins. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga752ca1b164444c691ffe54ed89d848c8}{Drv\+\_\+\+Devices\+\_\+start\+Devices} ()
+\begin{DoxyCompactList}\small\item\em Call init and start functions of the different peripherals of the uC. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga43e0b770fd7ccd57b3f0d5ddf0eda4be}{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch} ()
+\begin{DoxyCompactList}\small\item\em Start the system from scratch, send initial message and get the board ready to get commands. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga7f4ddcd86724d8aad896ff12e43146ca}{Drv\+\_\+\+Devices\+\_\+start\+Running} (int O\+U\+T\+\_\+\+T\+Y\+PE)
+\begin{DoxyCompactList}\small\item\em Start data acquisition. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga8584f49a773b7e9add0e51bb0057fb54}{Drv\+\_\+\+Devices\+\_\+stop\+Running} ()
+\begin{DoxyCompactList}\small\item\em Stop data acquisition. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_ga2d56cab48a0548365790822b78afa02d}{Drv\+\_\+\+Devices\+\_\+update\+Frequency} (uint8\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Update sampling frequency. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gafd94e72e2e363f075a57a091e26424b2}{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Stop acquisition, set the channels and re-\/start acquisition. \end{DoxyCompactList}\item 
+void \hyperlink{group__Devices__Library_gab5e09814056d617c521549e542639b7e}{Sys\+Tick\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Handle interrupt from Sys\+Tick timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_gac064adc9b9dc0e68d43cf71bd52a0fdb}{channel\+Settings\+Counter}
+\begin{DoxyCompactList}\small\item\em Counter used to retrieve channel settings from serial port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_ga15bd8e07189205b21eb37b666895ee0e}{current\+Channel\+To\+Set}
+\begin{DoxyCompactList}\small\item\em Keep track of what channel we are loading settings for. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga7ef266ee79910e6754e8783b550b4a0a}{get\+Channel\+Settings}
+\begin{DoxyCompactList}\small\item\em Flag to indicate if channel settings commands are being received. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga774931d6c0caa199a9884bce2b300439}{get\+Lead\+Off\+Settings}
+\begin{DoxyCompactList}\small\item\em Flag to indicate if lead off settings commands are being received. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga95cbd6b99430748422cc048b4f29dc52}{is\+\_\+running}
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the A\+D\+S1299 is acquiring data or not. \end{DoxyCompactList}\item 
+bool \hyperlink{group__Devices__Library_ga6ceb9b5a0a67762763468c0ac71705fe}{is\+Master}
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the board is Master (H\+I\+GH state) or Slave (L\+OW state) \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_gacaa36aec7dee3c3535b27afc88dcfc9c}{lead\+Off\+Settings\+Counter}
+\begin{DoxyCompactList}\small\item\em Counter used to retrieve lead off settings from serial port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_ga2bc20b2f7f3efa988afcd5c19b3e2edf}{output\+Type}
+\begin{DoxyCompactList}\small\item\em Mode of use\+: 8 or 16 channels. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_gac011c12f1d5ab04cb87b6edaec1d24ad}{plus\+Counter}
+\begin{DoxyCompactList}\small\item\em Counter to have control of the received commands. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__Devices__Library_gae004df3f2b77e4d58eee171d2f76da40}{test\+Char}
+\begin{DoxyCompactList}\small\item\em Auxiliary byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\char`\"{}\char`\"{} Driver for controlling the different devices used by the application. 
+
+\subsection{Macro Definition Documentation}
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!L\+E\+D\+\_\+\+R\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}{LED_R_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+\_\+\+P\+IN~0}\hypertarget{group__Devices__Library_ga22f3cf4ef9dadad8d78d5c59999100b6}{}\label{group__Devices__Library_ga22f3cf4ef9dadad8d78d5c59999100b6}
+
+
+Definition at line 28 of file Drv\+\_\+\+Devices.\+h.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}{LED_R_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT~1}\hypertarget{group__Devices__Library_ga5a11a7cbc215e25401541277460113a4}{}\label{group__Devices__Library_ga5a11a7cbc215e25401541277460113a4}
+
+
+Definition at line 29 of file Drv\+\_\+\+Devices.\+h.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!L\+E\+D\+\_\+\+V\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+V\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+V\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+V\+\_\+\+P\+IN}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+V\+\_\+\+P\+IN}{LED_V_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+V\+\_\+\+P\+IN~1}\hypertarget{group__Devices__Library_gaefaaa0f7c44f79a6150287630f9531d6}{}\label{group__Devices__Library_gaefaaa0f7c44f79a6150287630f9531d6}
+
+
+Definition at line 31 of file Drv\+\_\+\+Devices.\+h.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT}{LED_V_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+V\+\_\+\+P\+O\+RT~1}\hypertarget{group__Devices__Library_gab09c8e054071dd324e1527eadec02adf}{}\label{group__Devices__Library_gab09c8e054071dd324e1527eadec02adf}
+
+
+Definition at line 32 of file Drv\+\_\+\+Devices.\+h.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!M\+S\+\_\+\+P\+IN@{M\+S\+\_\+\+P\+IN}}
+\index{M\+S\+\_\+\+P\+IN@{M\+S\+\_\+\+P\+IN}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{M\+S\+\_\+\+P\+IN}{MS_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+S\+\_\+\+P\+IN~27}\hypertarget{group__Devices__Library_ga3ea9ecb7907af23b0d59637a7e778d47}{}\label{group__Devices__Library_ga3ea9ecb7907af23b0d59637a7e778d47}
+Definitions and Declarations 
+
+Definition at line 25 of file Drv\+\_\+\+Devices.\+h.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!M\+S\+\_\+\+P\+O\+RT@{M\+S\+\_\+\+P\+O\+RT}}
+\index{M\+S\+\_\+\+P\+O\+RT@{M\+S\+\_\+\+P\+O\+RT}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{M\+S\+\_\+\+P\+O\+RT}{MS_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+S\+\_\+\+P\+O\+RT~1}\hypertarget{group__Devices__Library_gaf98ad77692941c0b1abe1a1a399bceea}{}\label{group__Devices__Library_gaf98ad77692941c0b1abe1a1a399bceea}
+
+
+Definition at line 26 of file Drv\+\_\+\+Devices.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!delay\+Ms@{delay\+Ms}}
+\index{delay\+Ms@{delay\+Ms}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{delay\+Ms(uint8\+\_\+t timer\+\_\+num, uint32\+\_\+t delay\+In\+Ms)}{delayMs(uint8_t timer_num, uint32_t delayInMs)}}]{\setlength{\rightskip}{0pt plus 5cm}void delay\+Ms (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{timer\+\_\+num, }
+\item[{uint32\+\_\+t}]{delay\+In\+Ms}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gadde208bf0ea8bb35d8606d3859219a40}{}\label{group__Devices__Library_gadde208bf0ea8bb35d8606d3859219a40}
+
+
+Delay in milliseconds. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em timer\+\_\+num} & Timer to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+delay\+In\+Ms Time in milliseconds 
+\end{DoxyReturn}
+
+
+Definition at line 1292 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!delay\+Us@{delay\+Us}}
+\index{delay\+Us@{delay\+Us}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{delay\+Us(uint8\+\_\+t timer\+\_\+num, uint32\+\_\+t delay\+In\+Us)}{delayUs(uint8_t timer_num, uint32_t delayInUs)}}]{\setlength{\rightskip}{0pt plus 5cm}void delay\+Us (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{timer\+\_\+num, }
+\item[{uint32\+\_\+t}]{delay\+In\+Us}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga120f8cfcae7121ef62deee0473cf19ee}{}\label{group__Devices__Library_ga120f8cfcae7121ef62deee0473cf19ee}
+
+
+Delay in microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer\+\_\+num} & Timer to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+delay\+In\+Us Time in microseconds 
+\end{DoxyReturn}
+
+
+Definition at line 1327 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition@{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition}}
+\index{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition@{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition(uint8\+\_\+t test\+Input\+Code, uint8\+\_\+t amplitude\+Code, uint8\+\_\+t freq\+Code)}{Drv_Devices_activateAllChannelsToTestCondition(uint8_t testInputCode, uint8_t amplitudeCode, uint8_t freqCode)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+activate\+All\+Channels\+To\+Test\+Condition (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{test\+Input\+Code, }
+\item[{uint8\+\_\+t}]{amplitude\+Code, }
+\item[{uint8\+\_\+t}]{freq\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga42ce5be2b197d04b4b0a9918a11ea457}{}\label{group__Devices__Library_ga42ce5be2b197d04b4b0a9918a11ea457}
+
+
+Set test inputs to all channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Code} & Input types \\
+\hline
+{\em amplitud\+Code} & Amplitude of the test signal\+: A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+N\+O\+C\+H\+A\+N\+GE, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+A\+M\+P\+\_\+1X, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+A\+M\+P\+\_\+2X \\
+\hline
+{\em freq\+Code} & Frequence of the test signal\+: A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+N\+O\+C\+H\+A\+N\+GE, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+L\+OW, A\+D\+S\+T\+E\+S\+T\+S\+I\+G\+\_\+\+P\+U\+L\+S\+E\+\_\+\+F\+A\+ST \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 841 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+board\+Reset@{Drv\+\_\+\+Devices\+\_\+board\+Reset}}
+\index{Drv\+\_\+\+Devices\+\_\+board\+Reset@{Drv\+\_\+\+Devices\+\_\+board\+Reset}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+board\+Reset(void)}{Drv_Devices_boardReset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+board\+Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gab949068810476a2e08078aa7eab15a83}{}\label{group__Devices__Library_gab949068810476a2e08078aa7eab15a83}
+\+: This is a function that can be called multiple times, this is what we refer to as a {\ttfamily soft reset}. You will hear/see this many times.
+
+\+: This is a function that can be called multiple times, this is what we refer to as a {\ttfamily soft reset}. You will hear/see this many times. \begin{DoxyAuthor}{Author}
+\+: AJ Keller () 
+\end{DoxyAuthor}
+
+
+Definition at line 587 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State}}
+\index{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State(uint8\+\_\+t channel)}{Drv_Devices_changeChannelLeadOffDetect_maintainRunningState(uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+change\+Channel\+Lead\+Off\+Detect\+\_\+maintain\+Running\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga87716766599b761bde56572ccaac7946}{}\label{group__Devices__Library_ga87716766599b761bde56572ccaac7946}
+
+
+Change lead off detect settings and re-\/start device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1049 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State}}
+\index{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State(uint8\+\_\+t channel, uint8\+\_\+t start)}{Drv_Devices_changeChannelState_maintainRunningState(uint8_t channel, uint8_t start)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+change\+Channel\+State\+\_\+maintain\+Running\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel, }
+\item[{uint8\+\_\+t}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gacf4dbff760e8426996f21c8a68d77cef}{}\label{group__Devices__Library_gacf4dbff760e8426996f21c8a68d77cef}
+
+
+Activate or De-\/activate channel maintaining running state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number \\
+\hline
+{\em start} & Channel desired state\+: T\+R\+UE (1) to activate channel, F\+A\+L\+SE (0) to de-\/activate channel \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 813 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+event\+Serial@{Drv\+\_\+\+Devices\+\_\+event\+Serial}}
+\index{Drv\+\_\+\+Devices\+\_\+event\+Serial@{Drv\+\_\+\+Devices\+\_\+event\+Serial}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+event\+Serial()}{Drv_Devices_eventSerial()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+event\+Serial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga8092c357f91843e6fa9db02735addc7d}{}\label{group__Devices__Library_ga8092c357f91843e6fa9db02735addc7d}
+
+
+Function for receiving new commands. 
+
+
+
+Definition at line 75 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number@{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number@{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number(uint8\+\_\+t n)}{Drv_Devices_getChannelNumber(uint8_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Drv\+\_\+\+Devices\+\_\+get\+Channel\+Number (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga648ce331709a942df57efd5b8645db13}{}\label{group__Devices__Library_ga648ce331709a942df57efd5b8645db13}
+
+
+Convert channel number from character to number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Character defining channel\+: \char`\"{}1-\/8\char`\"{}, \char`\"{}\+Q-\/\+I\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel number 
+\end{DoxyReturn}
+
+
+Definition at line 694 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+get\+Commands@{Drv\+\_\+\+Devices\+\_\+get\+Commands}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Commands@{Drv\+\_\+\+Devices\+\_\+get\+Commands}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+get\+Commands(uint8\+\_\+t token)}{Drv_Devices_getCommands(uint8_t token)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+get\+Commands (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{token}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gafb56f6b90c50e36cd6e34665d85fb903}{}\label{group__Devices__Library_gafb56f6b90c50e36cd6e34665d85fb903}
+
+
+Function for interpreting commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & Command to be decoded and interpreted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+get\+Is\+Master@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+get\+Is\+Master()}{Drv_Devices_getIsMaster()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+get\+Is\+Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gaeab801d2d0a8823545cfde29704edc96}{}\label{group__Devices__Library_gaeab801d2d0a8823545cfde29704edc96}
+
+
+Return the state of the is\+Master flag. 
+
+\begin{DoxyReturn}{Returns}
+H\+I\+GH if the board is Master, L\+OW if the board is Slave 
+\end{DoxyReturn}
+
+
+Definition at line 1118 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+get\+Is\+Running@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running}}
+\index{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running@{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+get\+Is\+Running()}{Drv_Devices_getIsRunning()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+get\+Is\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga65091ea2e7c2a0500683edf1bbc844ad}{}\label{group__Devices__Library_ga65091ea2e7c2a0500683edf1bbc844ad}
+
+
+Return the state of the is\+\_\+running flag. 
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the board is running, F\+A\+L\+SE if the board is not acquiring data 
+\end{DoxyReturn}
+
+
+Definition at line 1127 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+is\+Master@{Drv\+\_\+\+Devices\+\_\+is\+Master}}
+\index{Drv\+\_\+\+Devices\+\_\+is\+Master@{Drv\+\_\+\+Devices\+\_\+is\+Master}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+is\+Master()}{Drv_Devices_isMaster()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+is\+Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga92e403bbfcda965385b78ce10bbea47a}{}\label{group__Devices__Library_ga92e403bbfcda965385b78ce10bbea47a}
+
+
+Determines if the board is Master or Slave and set a flag. 
+
+\begin{DoxyReturn}{Returns}
+H\+I\+GH if the board is Master, L\+OW if the board is Slave 
+\end{DoxyReturn}
+
+
+Definition at line 1105 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings(uint8\+\_\+t parameter)}{Drv_Devices_loadChannelSettings(uint8_t parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+load\+Channel\+Settings (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{parameter}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga1b75ac5dd3eb55ef54cff5de501875a9}{}\label{group__Devices__Library_ga1b75ac5dd3eb55ef54cff5de501875a9}
+
+
+Retrieve parameters and execute channel settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Setting parameter received as command\+: C\+H\+A\+N\+\_\+\+N\+UM, P\+O\+W\+E\+R\+\_\+\+D\+O\+WN, G\+A\+I\+N\+\_\+\+S\+ET, I\+N\+P\+U\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+ET, B\+I\+A\+S\+\_\+\+S\+ET, S\+R\+B2\+\_\+\+S\+ET, S\+R\+B1\+\_\+\+S\+ET \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 649 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings@{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings(uint8\+\_\+t parameter)}{Drv_Devices_loadLeadOffSettings(uint8_t parameter)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+load\+Lead\+Off\+Settings (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{parameter}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga91621cb0b85d8918aa835f198c827379}{}\label{group__Devices__Library_ga91621cb0b85d8918aa835f198c827379}
+
+
+Retrieve parameters and execute channel settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Setting parameter received as command\+: P\+C\+H\+AN, N\+C\+H\+AN \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1070 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 19
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings@{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings()}{Drv_Devices_printDefaultChannelSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Default\+Channel\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga1a1a6145a5269b2a7ebd45abdb53b660}{}\label{group__Devices__Library_ga1a1a6145a5269b2a7ebd45abdb53b660}
+
+
+Print the current Default Channel Settings. 
+
+
+
+Definition at line 1007 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 21
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 22
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+print\+Menu@{Drv\+\_\+\+Devices\+\_\+print\+Menu}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Menu@{Drv\+\_\+\+Devices\+\_\+print\+Menu}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+print\+Menu(void)}{Drv_Devices_printMenu(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Menu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gac177c9b23475b7551fbcebe3db410bf0}{}\label{group__Devices__Library_gac177c9b23475b7551fbcebe3db410bf0}
+
+
+Print menu. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+Definition at line 1257 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 23
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 24
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+print\+Register\+Name@{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name@{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+print\+Register\+Name(uint8\+\_\+t reg\+Number)}{Drv_Devices_printRegisterName(uint8_t regNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Register\+Name (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gad85a26f63a893c55cdbbe5c4c0d0e69e}{}\label{group__Devices__Library_gad85a26f63a893c55cdbbe5c4c0d0e69e}
+
+
+To get and send by U\+A\+RT the name of a specific A\+D\+S1299 register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+Number} & Number of register in decimal (0-\/23) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 923 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 25
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+print\+Registers@{Drv\+\_\+\+Devices\+\_\+print\+Registers}}
+\index{Drv\+\_\+\+Devices\+\_\+print\+Registers@{Drv\+\_\+\+Devices\+\_\+print\+Registers}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+print\+Registers()}{Drv_Devices_printRegisters()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+print\+Registers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gad214f99a7d211af8779b46b244f99d99}{}\label{group__Devices__Library_gad214f99a7d211af8779b46b244f99d99}
+
+
+Print the current state of all A\+D\+S1299 registers. 
+
+
+
+Definition at line 861 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 27
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data@{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data}}
+\index{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data@{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data()}{Drv_Devices_sendChannelData()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+send\+Channel\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga828212dc5604557924cd8ea9e6252c6c}{}\label{group__Devices__Library_ga828212dc5604557924cd8ea9e6252c6c}
+
+
+Send via U\+A\+RT the data acquired by the A\+DS. 
+
+
+
+Definition at line 1135 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 29
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+send\+E\+OT@{Drv\+\_\+\+Devices\+\_\+send\+E\+OT}}
+\index{Drv\+\_\+\+Devices\+\_\+send\+E\+OT@{Drv\+\_\+\+Devices\+\_\+send\+E\+OT}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+send\+E\+O\+T()}{Drv_Devices_sendEOT()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+send\+E\+OT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga26ea493ed59bae1e6a0c0af4ece44f40}{}\label{group__Devices__Library_ga26ea493ed59bae1e6a0c0af4ece44f40}
+
+
+Send characters to shake hands with the controlling program. 
+
+
+
+Definition at line 616 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 31
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 32
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings@{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings}}
+\index{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings@{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings()}{Drv_Devices_setChannelsToDefaultSettings()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+set\+Channels\+To\+Default\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gaa48520ff061081dab8c49d26bf9404dd}{}\label{group__Devices__Library_gaa48520ff061081dab8c49d26bf9404dd}
+
+
+Set all channels to the default settings. 
+
+
+
+Definition at line 793 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 33
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 34
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+start\+As\+Slave@{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave@{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+start\+As\+Slave()}{Drv_Devices_startAsSlave()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+start\+As\+Slave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga7a5e2ac941ca1d1f308f910539005d4b}{}\label{group__Devices__Library_ga7a5e2ac941ca1d1f308f910539005d4b}
+
+
+Start the system as Salve. Configure I/O pins. 
+
+
+
+Definition at line 1198 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 35
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 36
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+start\+Devices@{Drv\+\_\+\+Devices\+\_\+start\+Devices}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+Devices@{Drv\+\_\+\+Devices\+\_\+start\+Devices}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+start\+Devices()}{Drv_Devices_startDevices()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+start\+Devices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga752ca1b164444c691ffe54ed89d848c8}{}\label{group__Devices__Library_ga752ca1b164444c691ffe54ed89d848c8}
+
+
+Call init and start functions of the different peripherals of the uC. 
+
+
+
+Definition at line 624 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 37
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 38
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch@{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch@{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch()}{Drv_Devices_startFromScratch()}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+start\+From\+Scratch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga43e0b770fd7ccd57b3f0d5ddf0eda4be}{}\label{group__Devices__Library_ga43e0b770fd7ccd57b3f0d5ddf0eda4be}
+
+
+Start the system from scratch, send initial message and get the board ready to get commands. 
+
+
+
+Definition at line 566 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 39
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 40
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+start\+Running@{Drv\+\_\+\+Devices\+\_\+start\+Running}}
+\index{Drv\+\_\+\+Devices\+\_\+start\+Running@{Drv\+\_\+\+Devices\+\_\+start\+Running}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+start\+Running(int O\+U\+T\+\_\+\+T\+Y\+P\+E)}{Drv_Devices_startRunning(int OUT_TYPE)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+start\+Running (
+\begin{DoxyParamCaption}
+\item[{int}]{O\+U\+T\+\_\+\+T\+Y\+PE}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga7f4ddcd86724d8aad896ff12e43146ca}{}\label{group__Devices__Library_ga7f4ddcd86724d8aad896ff12e43146ca}
+
+
+Start data acquisition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em O\+U\+T\+\_\+\+T\+Y\+PE} & Define if quiet or how many channels are active\+: O\+U\+T\+P\+U\+T\+\_\+\+N\+O\+T\+H\+I\+NG, O\+U\+T\+P\+U\+T\+\_\+8\+\_\+\+C\+H\+AN, O\+U\+T\+P\+U\+T\+\_\+16\+\_\+\+C\+H\+AN \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+I\+GH if the device is running, L\+OW if not 
+\end{DoxyReturn}
+
+
+Definition at line 551 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 41
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 42
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+stop\+Running@{Drv\+\_\+\+Devices\+\_\+stop\+Running}}
+\index{Drv\+\_\+\+Devices\+\_\+stop\+Running@{Drv\+\_\+\+Devices\+\_\+stop\+Running}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+stop\+Running()}{Drv_Devices_stopRunning()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+Devices\+\_\+stop\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga8584f49a773b7e9add0e51bb0057fb54}{}\label{group__Devices__Library_ga8584f49a773b7e9add0e51bb0057fb54}
+
+
+Stop data acquisition. 
+
+\begin{DoxyReturn}{Returns}
+H\+I\+GH if the device is running, L\+OW if not 
+\end{DoxyReturn}
+
+
+Definition at line 535 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 43
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 44
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+update\+Frequency@{Drv\+\_\+\+Devices\+\_\+update\+Frequency}}
+\index{Drv\+\_\+\+Devices\+\_\+update\+Frequency@{Drv\+\_\+\+Devices\+\_\+update\+Frequency}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+update\+Frequency(uint8\+\_\+t freq)}{Drv_Devices_updateFrequency(uint8_t freq)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+update\+Frequency (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{freq}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_ga2d56cab48a0548365790822b78afa02d}{}\label{group__Devices__Library_ga2d56cab48a0548365790822b78afa02d}
+
+
+Update sampling frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & Sampling frequency \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 758 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 45
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 46
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State}}
+\index{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State@{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State(uint8\+\_\+t channel)}{Drv_Devices_writeChannelSettings_maintainRunningState(uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+Devices\+\_\+write\+Channel\+Settings\+\_\+maintain\+Running\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gafd94e72e2e363f075a57a091e26424b2}{}\label{group__Devices__Library_gafd94e72e2e363f075a57a091e26424b2}
+
+
+Stop acquisition, set the channels and re-\/start acquisition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 738 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 47
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 48
+
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!Sys\+Tick\+\_\+\+Handler@{Sys\+Tick\+\_\+\+Handler}}
+\index{Sys\+Tick\+\_\+\+Handler@{Sys\+Tick\+\_\+\+Handler}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{Sys\+Tick\+\_\+\+Handler(void)}{SysTick_Handler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sys\+Tick\+\_\+\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Devices__Library_gab5e09814056d617c521549e542639b7e}{}\label{group__Devices__Library_gab5e09814056d617c521549e542639b7e}
+
+
+Handle interrupt from Sys\+Tick timer. 
+
+\begin{DoxyNote}{Note}
+Define what to do when the Sys\+Tick interrupt is called 
+\end{DoxyNote}
+
+
+Definition at line 1236 of file Drv\+\_\+\+Devices.\+c.
+
+
+
+\subsection{Variable Documentation}
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!channel\+Settings\+Counter@{channel\+Settings\+Counter}}
+\index{channel\+Settings\+Counter@{channel\+Settings\+Counter}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{channel\+Settings\+Counter}{channelSettingsCounter}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t channel\+Settings\+Counter}\hypertarget{group__Devices__Library_gac064adc9b9dc0e68d43cf71bd52a0fdb}{}\label{group__Devices__Library_gac064adc9b9dc0e68d43cf71bd52a0fdb}
+
+
+Counter used to retrieve channel settings from serial port. 
+
+
+
+Definition at line 50 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!current\+Channel\+To\+Set@{current\+Channel\+To\+Set}}
+\index{current\+Channel\+To\+Set@{current\+Channel\+To\+Set}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{current\+Channel\+To\+Set}{currentChannelToSet}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t current\+Channel\+To\+Set}\hypertarget{group__Devices__Library_ga15bd8e07189205b21eb37b666895ee0e}{}\label{group__Devices__Library_ga15bd8e07189205b21eb37b666895ee0e}
+
+
+Keep track of what channel we are loading settings for. 
+
+
+
+Definition at line 45 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!get\+Channel\+Settings@{get\+Channel\+Settings}}
+\index{get\+Channel\+Settings@{get\+Channel\+Settings}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{get\+Channel\+Settings}{getChannelSettings}}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Channel\+Settings}\hypertarget{group__Devices__Library_ga7ef266ee79910e6754e8783b550b4a0a}{}\label{group__Devices__Library_ga7ef266ee79910e6754e8783b550b4a0a}
+
+
+Flag to indicate if channel settings commands are being received. 
+
+
+
+Definition at line 25 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!get\+Lead\+Off\+Settings@{get\+Lead\+Off\+Settings}}
+\index{get\+Lead\+Off\+Settings@{get\+Lead\+Off\+Settings}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{get\+Lead\+Off\+Settings}{getLeadOffSettings}}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Lead\+Off\+Settings}\hypertarget{group__Devices__Library_ga774931d6c0caa199a9884bce2b300439}{}\label{group__Devices__Library_ga774931d6c0caa199a9884bce2b300439}
+
+
+Flag to indicate if lead off settings commands are being received. 
+
+
+
+Definition at line 65 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!is\+\_\+running@{is\+\_\+running}}
+\index{is\+\_\+running@{is\+\_\+running}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{is\+\_\+running}{is_running}}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+\_\+running}\hypertarget{group__Devices__Library_ga95cbd6b99430748422cc048b4f29dc52}{}\label{group__Devices__Library_ga95cbd6b99430748422cc048b4f29dc52}
+
+
+Flag to indicate if the A\+D\+S1299 is acquiring data or not. 
+
+
+
+Definition at line 20 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!is\+Master@{is\+Master}}
+\index{is\+Master@{is\+Master}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{is\+Master}{isMaster}}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Master}\hypertarget{group__Devices__Library_ga6ceb9b5a0a67762763468c0ac71705fe}{}\label{group__Devices__Library_ga6ceb9b5a0a67762763468c0ac71705fe}
+
+
+Flag to indicate if the board is Master (H\+I\+GH state) or Slave (L\+OW state) 
+
+
+
+Definition at line 70 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!lead\+Off\+Settings\+Counter@{lead\+Off\+Settings\+Counter}}
+\index{lead\+Off\+Settings\+Counter@{lead\+Off\+Settings\+Counter}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{lead\+Off\+Settings\+Counter}{leadOffSettingsCounter}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t lead\+Off\+Settings\+Counter}\hypertarget{group__Devices__Library_gacaa36aec7dee3c3535b27afc88dcfc9c}{}\label{group__Devices__Library_gacaa36aec7dee3c3535b27afc88dcfc9c}
+
+
+Counter used to retrieve lead off settings from serial port. 
+
+
+
+Definition at line 60 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!output\+Type@{output\+Type}}
+\index{output\+Type@{output\+Type}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{output\+Type}{outputType}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t output\+Type}\hypertarget{group__Devices__Library_ga2bc20b2f7f3efa988afcd5c19b3e2edf}{}\label{group__Devices__Library_ga2bc20b2f7f3efa988afcd5c19b3e2edf}
+
+
+Mode of use\+: 8 or 16 channels. 
+
+
+
+Definition at line 30 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!plus\+Counter@{plus\+Counter}}
+\index{plus\+Counter@{plus\+Counter}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{plus\+Counter}{plusCounter}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t plus\+Counter}\hypertarget{group__Devices__Library_gac011c12f1d5ab04cb87b6edaec1d24ad}{}\label{group__Devices__Library_gac011c12f1d5ab04cb87b6edaec1d24ad}
+
+
+Counter to have control of the received commands. 
+
+
+
+Definition at line 35 of file Drv\+\_\+\+Devices.\+c.
+
+\index{Devices\+\_\+\+Library@{Devices\+\_\+\+Library}!test\+Char@{test\+Char}}
+\index{test\+Char@{test\+Char}!Devices\+\_\+\+Library@{Devices\+\_\+\+Library}}
+\subsubsection[{\texorpdfstring{test\+Char}{testChar}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t test\+Char}\hypertarget{group__Devices__Library_gae004df3f2b77e4d58eee171d2f76da40}{}\label{group__Devices__Library_gae004df3f2b77e4d58eee171d2f76da40}
+
+
+Auxiliary byte. 
+
+
+
+Definition at line 40 of file Drv\+\_\+\+Devices.\+c.
+

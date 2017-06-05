@@ -1,0 +1,15 @@
+digraph "Chip_GPDMA_SGTransfer"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_GPDMA_SGTransfer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_GPDMA_InitChannelCfg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPDMA__17XX__40XX.html#gac32ac477dbee2d3be93ca90b30db856c",tooltip="Initialize channel configuration strucutre. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="configDMAMux",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gpdma__17xx__40xx_8c.html#aa7e76ac50258d361a03b980c1043df49"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="setupChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gpdma__17xx__40xx_8c.html#a5f10b7d78a26cbb352cf755906906755"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_GPDMA_ChannelCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPDMA__17XX__40XX.html#gae93a1b9cb8ee1a04176ce51a9a4ad073",tooltip="Enable or Disable the GPDMA Channel. "];
+}

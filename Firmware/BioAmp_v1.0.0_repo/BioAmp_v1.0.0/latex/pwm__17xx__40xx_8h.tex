@@ -1,0 +1,1203 @@
+\hypertarget{pwm__17xx__40xx_8h}{}\section{pwm\+\_\+17xx\+\_\+40xx.\+h File Reference}
+\label{pwm__17xx__40xx_8h}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+{\ttfamily \#include \char`\"{}core\+\_\+cm3.\+h\char`\"{}}\\*
+Include dependency graph for pwm\+\_\+17xx\+\_\+40xx.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a8f6d33d8a778985e3d46b3306185e3ad}{P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH}(x)~(p\+T\+MR-\/$>$MR\#\#x)
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_aa2a1a282ba75d73fcf6df736c5c5eab1}{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG}(n)    ~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}((((n) $\ast$ 3) + 1)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_aad98f8ef546bbb741bc893f33cce95f9}{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT}(n)            ~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}((((n) \& 0x0\+F) + 4)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a981a0c3aff0ac2289d0cadc0a9ab33b7}{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG}(n)      ~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}(((n) $\ast$ 3)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_ae5421149122a9165e18f65a31b9f2cbf}{P\+W\+M\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a123d8664356bfda93b30be8330341f25}{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP}(n)      ~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}((((n) $\ast$ 3) + 2)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a79a01e6eb5b99d56daece9ce92582af6}{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}(n)  ~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}(((n) $\ast$ 3)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a02e59f97f6ea2e5033079f665b191c17}{P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR}(n)              ~\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}(n)
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_ad1d045edec7d415e31e5401119f2f05b}{P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT}(n)        ~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}((n) \& 0x0\+F))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a782df348868d4e40bc726c04b859f637}{P\+W\+M\+\_\+\+R\+E\+S\+ET}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_ac55c05661d054807e5a7eb327c9b9cc9}{P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}(n)~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}((((n) $\ast$ 3) + 1)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a015bba636337b6b3bf4b1575c9f9c3cc}{P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}(n)~(\hyperlink{group__LPC__Types__Public__Macros_ga7ee022f5e5a971a8324e4b7572d49170}{\+\_\+\+B\+IT}((((n) $\ast$ 3) + 2)))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a044bc37471024bccfd81af6af0fd053b}{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE}~((uint32\+\_\+t) (1 $<$$<$ 0))
+\item 
+\#define \hyperlink{pwm__17xx__40xx_8h_a900c6f1a7add119940486d559b475832}{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17}{I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE} \hyperlink{pwm__17xx__40xx_8h_a68bd234b2375fb19daa72cda9c6f48c0}{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Standard timer clock and edge for count source. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4}{I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE} \hyperlink{pwm__17xx__40xx_8h_a7454e1e5a0dbd3f14a8ccd49abc858af}{P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Standard timer initial match pin state and change state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17}{I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE} \{ \hyperlink{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a079939ff03bb7456f5079af334203a97}{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+P\+C\+LK} = 0, 
+\hyperlink{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a2a5ae1f1ecabeb6dd3163e9e16263bce}{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+C\+A\+PN} = 1, 
+\hyperlink{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a8df149d3faa8c4597614877a18fd5c2a}{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+F\+A\+L\+L\+I\+N\+G\+\_\+\+C\+A\+PN} = 2, 
+\hyperlink{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a2da622c0c8040a70135bb3bb1fcefd3c}{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+B\+O\+T\+H\+\_\+\+C\+A\+PN} = 3
+ \}\begin{DoxyCompactList}\small\item\em Standard timer clock and edge for count source. \end{DoxyCompactList}
+\item 
+enum \hyperlink{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4}{I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE} \{ \hyperlink{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a2bfb984e5efe5a860b77e3b952a72914}{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+D\+O\+\_\+\+N\+O\+T\+H\+I\+NG} = 0, 
+\hyperlink{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4afa73314938fb2c4060d8342a81b43f15}{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+C\+L\+E\+AR} = 1, 
+\hyperlink{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a0e6a157a61ee1f177805faf8b8f98bf3}{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+S\+ET} = 2, 
+\hyperlink{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a69e3bbb1bed7ad0744ec3f590f490508}{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+T\+O\+G\+G\+LE} = 3
+ \}\begin{DoxyCompactList}\small\item\em Standard timer initial match pin state and change state. \end{DoxyCompactList}
+\item 
+enum \hyperlink{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579}{P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE} \{ \hyperlink{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579ad4e5f7c7472dfc0c9da11521019c1b4f}{P\+W\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE} =0, 
+\hyperlink{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579a3101222745f8fdfa0956d8fab9599082}{P\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE} =1
+ \}
+\item 
+enum \hyperlink{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011}{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD} \{ \hyperlink{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011af9a81b75a81be3ee625ee34f276fdf1d}{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED} =0, 
+\hyperlink{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011a7138225f095aff48f80f3f76f3ff63cc}{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED} =1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_aadfab5b6949ce689d0590e78a0e92e58}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Disables interrupt on capture of selected C\+AP signal. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_adf4c7f67db1a50867bc20182a8be769c}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Enables interrupt on capture of selected C\+AP signal. For the selected capture register, an interrupt will be generated when the enabled rising or falling edge on C\+A\+Pn.\+capnum is detected. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a9878eba0a5f5c778309c4b8dd114e8e7}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Disables capture on on falling edge of selected C\+AP signal. For the selected capture register, disables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a falling edge. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a8b8ef7b0aadfc4f9c106d9184631d0f6}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Enables capture on on falling edge of selected C\+AP signal. For the selected capture register, enables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a falling edge. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{pwm__17xx__40xx_8h_ad335470afa652a1970b2af2417464a70}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Determine if a capture interrupt is pending. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a8e44558ae5377eb3f1dd2687024e48f2}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Disables capture on on rising edge of selected C\+AP signal. For the selected capture register, disables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a rising edge. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_ae377ba6ee38a3e8c56e80b95ecf77dd2}{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Enables capture on on rising edge of selected C\+AP signal for the selected capture register, enables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a rising edge. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_ac2fdae3c35ac9f6c5a8edab4e8ec1120}{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Clears a (pending) capture interrupt. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a4f33d869e307afe08ba3051576240d66}{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Clears a (pending) match interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{pwm__17xx__40xx_8h_a4c08163649b23a14a5d8b2a1371e8d0e}{Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Shutdown a pwm. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a78b353645ed50797dc1975ae49e67a66}{Chip\+\_\+\+P\+W\+M\+\_\+\+Disable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Disables the timer (stops count) \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_aacfb1c6b7214ddcdc2686814dc497141}{Chip\+\_\+\+P\+W\+M\+\_\+\+Enable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Enables the timer (starts count) \end{DoxyCompactList}\item 
+void \hyperlink{pwm__17xx__40xx_8h_a397ea4c5cc71698c0b8f5f2bed2809f1}{Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t initial\+\_\+state, \hyperlink{pwm__17xx__40xx_8h_a7454e1e5a0dbd3f14a8ccd49abc858af}{P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T} match\+State, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Sets external match control (M\+A\+Tn.\+matchnum) pin control. For the pin selected with matchnum, sets the function of the pin that occurs on a terminal count match for the match count. \end{DoxyCompactList}\item 
+void \hyperlink{pwm__17xx__40xx_8h_afeb1b9bf3313d9fec98419c013b81a9e}{Chip\+\_\+\+P\+W\+M\+\_\+\+Init} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Initialize a pwm. \end{DoxyCompactList}\item 
+void \hyperlink{pwm__17xx__40xx_8h_adf29be3cc545e52fb74a951b918b0db9}{Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, uint8\+\_\+t pwm\+Channel, \hyperlink{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011}{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD} pwm\+Cmd)
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a5b3c371bb4208b0c52e66c321cf80660}{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Disables a match interrupt for a match counter. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a9188ef48a116ce7642607cc74605398b}{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Enables a match interrupt that fires when the terminal count matches the match counter value. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{pwm__17xx__40xx_8h_a9d094082178fcc3162c1097450f9e330}{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Determine if a match interrupt is pending. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a4fe88f6e227640becf9e0f7facfde3ba}{Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, uint32\+\_\+t prescale)
+\begin{DoxyCompactList}\small\item\em Sets the prescaler value. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{pwm__17xx__40xx_8h_ac4cb6d2fbcbd813039ddd8e148efaea9}{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Reads a capture register. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{pwm__17xx__40xx_8h_aa514325f81219b15dc10a310cfb8b493}{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Returns the current timer count. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{pwm__17xx__40xx_8h_ada63d82d4517fcadc36ce84e460dbeac}{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Returns the current prescale count. \end{DoxyCompactList}\item 
+void \hyperlink{pwm__17xx__40xx_8h_ab5aeea30bde4f72cfac262c964f461c7}{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR)
+\begin{DoxyCompactList}\small\item\em Resets the timer terminal and prescale counts to 0. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_acc75f345ce8a27ba22a08ce61ff2fa0e}{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em For the specific match counter, disables reset of the terminal count register when a match occurs. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a4c725f314b9cece9db2ce154312ce2b1}{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em For the specific match counter, enables reset of the terminal count register when a match occurs. \end{DoxyCompactList}\item 
+void \hyperlink{pwm__17xx__40xx_8h_abd889ab810ec26f7251684fd0fa7ef4c}{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, uint8\+\_\+t pwm\+Channel, \hyperlink{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579}{P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE} pwm\+Edge\+Mode, \hyperlink{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011}{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD} pwm\+Cmd)
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_ab7d22514063f8bc4d7466df04729fed0}{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, \hyperlink{pwm__17xx__40xx_8h_a68bd234b2375fb19daa72cda9c6f48c0}{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T} cap\+Src, int8\+\_\+t capnum)
+\begin{DoxyCompactList}\small\item\em Sets timer count source and edge with the selected passed from Cap\+Src. If Cap\+Src selected a C\+A\+Pn pin, select the specific C\+A\+Pn pin with the capnum value. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a253ed88ccf4b3b90c1cbb6c306a17a60}{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum, uint32\+\_\+t matchval)
+\begin{DoxyCompactList}\small\item\em Sets a timer match value. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_a6b23fb8e04ca1a5e30a8c525fbe940d7}{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Disable stop on match for a match timer. Disables a match timer to stop the terminal count when a match count equals the terminal count. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{pwm__17xx__40xx_8h_ac537219bdbaebcd7dc552b7b6a7f1936}{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable} (\hyperlink{structLPC__PWM__T}{L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$p\+T\+MR, int8\+\_\+t matchnum)
+\begin{DoxyCompactList}\small\item\em Enable a match timer to stop the terminal count when a match count equals the terminal count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH}}
+\index{P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH}{PWM_APPEND_MR_MATCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+A\+P\+P\+E\+N\+D\+\_\+\+M\+R\+\_\+\+M\+A\+T\+CH(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(p\+T\+MR-\/$>$MR\#\#x)}\hypertarget{pwm__17xx__40xx_8h_a8f6d33d8a778985e3d46b3306185e3ad}{}\label{pwm__17xx__40xx_8h_a8f6d33d8a778985e3d46b3306185e3ad}
+
+
+Definition at line 71 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG}}
+\index{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG}{PWM_CAP_FALLING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+F\+A\+L\+L\+I\+NG(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}((((n) $\ast$ 3) + 1)))}\hypertarget{pwm__17xx__40xx_8h_aa2a1a282ba75d73fcf6df736c5c5eab1}{}\label{pwm__17xx__40xx_8h_aa2a1a282ba75d73fcf6df736c5c5eab1}
+Bit location for C\+A\+P.\+n on C\+Rx falling edge, n = 0 to 3 
+
+Definition at line 67 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT}}
+\index{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT}{PWM_CAP_INT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+I\+NT(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}((((n) \& 0x0\+F) + 4)))}\hypertarget{pwm__17xx__40xx_8h_aad98f8ef546bbb741bc893f33cce95f9}{}\label{pwm__17xx__40xx_8h_aad98f8ef546bbb741bc893f33cce95f9}
+Macro for getting a capture event interrupt bit 
+
+Definition at line 45 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG}}
+\index{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG}{PWM_CAP_RISING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+R\+I\+S\+I\+NG(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}(((n) $\ast$ 3)))}\hypertarget{pwm__17xx__40xx_8h_a981a0c3aff0ac2289d0cadc0a9ab33b7}{}\label{pwm__17xx__40xx_8h_a981a0c3aff0ac2289d0cadc0a9ab33b7}
+Bit location for C\+A\+P.\+n on C\+Rx rising edge, n = 0 to 3 
+
+Definition at line 65 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+E\+N\+A\+B\+LE@{P\+W\+M\+\_\+\+E\+N\+A\+B\+LE}}
+\index{P\+W\+M\+\_\+\+E\+N\+A\+B\+LE@{P\+W\+M\+\_\+\+E\+N\+A\+B\+LE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+E\+N\+A\+B\+LE}{PWM_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 3))}\hypertarget{pwm__17xx__40xx_8h_ae5421149122a9165e18f65a31b9f2cbf}{}\label{pwm__17xx__40xx_8h_ae5421149122a9165e18f65a31b9f2cbf}
+Timer/counter enable bit 
+
+Definition at line 53 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP@{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP}}
+\index{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP@{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP}{PWM_INT_ON_CAP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+C\+AP(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}((((n) $\ast$ 3) + 2)))}\hypertarget{pwm__17xx__40xx_8h_a123d8664356bfda93b30be8330341f25}{}\label{pwm__17xx__40xx_8h_a123d8664356bfda93b30be8330341f25}
+Bit location for C\+A\+P.\+n on C\+Rx interrupt enable, n = 0 to 3 
+
+Definition at line 69 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}}
+\index{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}{PWM_INT_ON_MATCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+I\+N\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}(((n) $\ast$ 3)))}\hypertarget{pwm__17xx__40xx_8h_a79a01e6eb5b99d56daece9ce92582af6}{}\label{pwm__17xx__40xx_8h_a79a01e6eb5b99d56daece9ce92582af6}
+Bit location for interrupt on M\+Rx match, n = 0 to 3 
+
+Definition at line 58 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR@{P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR}}
+\index{P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR@{P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR}{PWM_IR_CLR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+I\+R\+\_\+\+C\+LR(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~{\bf \+\_\+\+B\+IT}(n)}\hypertarget{pwm__17xx__40xx_8h_a02e59f97f6ea2e5033079f665b191c17}{}\label{pwm__17xx__40xx_8h_a02e59f97f6ea2e5033079f665b191c17}
+Macro to clear interrupt pending 
+
+Definition at line 40 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT@{P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT}}
+\index{P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT@{P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT}{PWM_MATCH_INT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+M\+A\+T\+C\+H\+\_\+\+I\+NT(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}((n) \& 0x0\+F))}\hypertarget{pwm__17xx__40xx_8h_ad1d045edec7d415e31e5401119f2f05b}{}\label{pwm__17xx__40xx_8h_ad1d045edec7d415e31e5401119f2f05b}
+Macro for getting a timer match interrupt bit 
+
+Definition at line 43 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+R\+E\+S\+ET@{P\+W\+M\+\_\+\+R\+E\+S\+ET}}
+\index{P\+W\+M\+\_\+\+R\+E\+S\+ET@{P\+W\+M\+\_\+\+R\+E\+S\+ET}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+R\+E\+S\+ET}{PWM_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+R\+E\+S\+ET~((uint32\+\_\+t) (1 $<$$<$ 3))}\hypertarget{pwm__17xx__40xx_8h_a782df348868d4e40bc726c04b859f637}{}\label{pwm__17xx__40xx_8h_a782df348868d4e40bc726c04b859f637}
+Timer/counter reset bit 
+
+Definition at line 55 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}}
+\index{P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}{PWM_RESET_ON_MATCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}((((n) $\ast$ 3) + 1)))}\hypertarget{pwm__17xx__40xx_8h_ac55c05661d054807e5a7eb327c9b9cc9}{}\label{pwm__17xx__40xx_8h_ac55c05661d054807e5a7eb327c9b9cc9}
+Bit location for reset on M\+Rx match, n = 0 to 3 
+
+Definition at line 60 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}}
+\index{P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH@{P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH}{PWM_STOP_ON_MATCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+O\+N\+\_\+\+M\+A\+T\+CH(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+\+B\+IT}((((n) $\ast$ 3) + 2)))}\hypertarget{pwm__17xx__40xx_8h_a015bba636337b6b3bf4b1575c9f9c3cc}{}\label{pwm__17xx__40xx_8h_a015bba636337b6b3bf4b1575c9f9c3cc}
+Bit location for stop on M\+Rx match, n = 0 to 3 
+
+Definition at line 62 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE@{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE}}
+\index{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE@{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE}{PWM_TIM_ENABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+E\+N\+A\+B\+LE~((uint32\+\_\+t) (1 $<$$<$ 0))}\hypertarget{pwm__17xx__40xx_8h_a044bc37471024bccfd81af6af0fd053b}{}\label{pwm__17xx__40xx_8h_a044bc37471024bccfd81af6af0fd053b}
+Timer/counter enable bit 
+
+Definition at line 48 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET@{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET}}
+\index{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET@{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET}{PWM_TIM_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+W\+M\+\_\+\+T\+I\+M\+\_\+\+R\+E\+S\+ET~((uint32\+\_\+t) (1 $<$$<$ 1))}\hypertarget{pwm__17xx__40xx_8h_a900c6f1a7add119940486d559b475832}{}\label{pwm__17xx__40xx_8h_a900c6f1a7add119940486d559b475832}
+Timer/counter reset bit 
+
+Definition at line 50 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T}}
+\index{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T@{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T}{PWM_CAP_SRC_STATE_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE}  {\bf P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T}}\hypertarget{pwm__17xx__40xx_8h_a68bd234b2375fb19daa72cda9c6f48c0}{}\label{pwm__17xx__40xx_8h_a68bd234b2375fb19daa72cda9c6f48c0}
+
+
+Standard timer clock and edge for count source. 
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T@{P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T}}
+\index{P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T@{P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T}{PWM_PIN_MATCH_STATE_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE}  {\bf P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T}}\hypertarget{pwm__17xx__40xx_8h_a7454e1e5a0dbd3f14a8ccd49abc858af}{}\label{pwm__17xx__40xx_8h_a7454e1e5a0dbd3f14a8ccd49abc858af}
+
+
+Standard timer initial match pin state and change state. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE@{I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE}}
+\index{I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE@{I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE}{IP_PWM_CAP_SRC_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+P\+\_\+\+P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+TE}}\hypertarget{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17}{}\label{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17}
+
+
+Standard timer clock and edge for count source. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+P\+C\+LK@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+P\+C\+LK}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+P\+C\+LK@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+P\+C\+LK}}\item[{\em 
+P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+P\+C\+LK\hypertarget{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a079939ff03bb7456f5079af334203a97}{}\label{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a079939ff03bb7456f5079af334203a97}
+}]Timer ticks on P\+C\+LK rising edge \index{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+C\+A\+PN@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+C\+A\+PN}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+C\+A\+PN@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+C\+A\+PN}}\item[{\em 
+P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+R\+I\+S\+I\+N\+G\+\_\+\+C\+A\+PN\hypertarget{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a2a5ae1f1ecabeb6dd3163e9e16263bce}{}\label{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a2a5ae1f1ecabeb6dd3163e9e16263bce}
+}]Timer ticks on C\+A\+Pn.\+x rising edge \index{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+F\+A\+L\+L\+I\+N\+G\+\_\+\+C\+A\+PN@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+F\+A\+L\+L\+I\+N\+G\+\_\+\+C\+A\+PN}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+F\+A\+L\+L\+I\+N\+G\+\_\+\+C\+A\+PN@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+F\+A\+L\+L\+I\+N\+G\+\_\+\+C\+A\+PN}}\item[{\em 
+P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+F\+A\+L\+L\+I\+N\+G\+\_\+\+C\+A\+PN\hypertarget{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a8df149d3faa8c4597614877a18fd5c2a}{}\label{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a8df149d3faa8c4597614877a18fd5c2a}
+}]Timer ticks on C\+A\+Pn.\+x falling edge \index{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+B\+O\+T\+H\+\_\+\+C\+A\+PN@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+B\+O\+T\+H\+\_\+\+C\+A\+PN}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+B\+O\+T\+H\+\_\+\+C\+A\+PN@{P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+B\+O\+T\+H\+\_\+\+C\+A\+PN}}\item[{\em 
+P\+W\+M\+\_\+\+C\+A\+P\+S\+R\+C\+\_\+\+B\+O\+T\+H\+\_\+\+C\+A\+PN\hypertarget{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a2da622c0c8040a70135bb3bb1fcefd3c}{}\label{pwm__17xx__40xx_8h_ab1d8fce81c1ed8660ae1af002f8b9c17a2da622c0c8040a70135bb3bb1fcefd3c}
+}]Timer ticks on C\+A\+Pn.\+x both edges \end{description}
+\end{Desc}
+
+
+Definition at line 471 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE@{I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE}}
+\index{I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE@{I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE}{IP_PWM_PIN_MATCH_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+P\+\_\+\+P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+TE}}\hypertarget{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4}{}\label{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4}
+
+
+Standard timer initial match pin state and change state. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+D\+O\+\_\+\+N\+O\+T\+H\+I\+NG@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+D\+O\+\_\+\+N\+O\+T\+H\+I\+NG}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+D\+O\+\_\+\+N\+O\+T\+H\+I\+NG@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+D\+O\+\_\+\+N\+O\+T\+H\+I\+NG}}\item[{\em 
+P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+D\+O\+\_\+\+N\+O\+T\+H\+I\+NG\hypertarget{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a2bfb984e5efe5a860b77e3b952a72914}{}\label{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a2bfb984e5efe5a860b77e3b952a72914}
+}]Timer match state does nothing on match pin \index{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+C\+L\+E\+AR@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+C\+L\+E\+AR}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+C\+L\+E\+AR@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+C\+L\+E\+AR}}\item[{\em 
+P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+C\+L\+E\+AR\hypertarget{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4afa73314938fb2c4060d8342a81b43f15}{}\label{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4afa73314938fb2c4060d8342a81b43f15}
+}]Timer match state sets match pin low \index{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+S\+ET@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+S\+ET}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+S\+ET@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+S\+ET}}\item[{\em 
+P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+S\+ET\hypertarget{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a0e6a157a61ee1f177805faf8b8f98bf3}{}\label{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a0e6a157a61ee1f177805faf8b8f98bf3}
+}]Timer match state sets match pin high \index{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+T\+O\+G\+G\+LE@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+T\+O\+G\+G\+LE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+T\+O\+G\+G\+LE@{P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+T\+O\+G\+G\+LE}}\item[{\em 
+P\+W\+M\+\_\+\+E\+X\+T\+M\+A\+T\+C\+H\+\_\+\+T\+O\+G\+G\+LE\hypertarget{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a69e3bbb1bed7ad0744ec3f590f490508}{}\label{pwm__17xx__40xx_8h_ad2dda4e90dfb51859039f3a1fe2516f4a69e3bbb1bed7ad0744ec3f590f490508}
+}]Timer match state toggles match pin \end{description}
+\end{Desc}
+
+
+Definition at line 446 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE@{P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}}
+\index{P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE@{P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}{PWM_EDGE_CONTROL_MODE}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}}\hypertarget{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579}{}\label{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+W\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE@{P\+W\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE@{P\+W\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}}\item[{\em 
+P\+W\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE\hypertarget{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579ad4e5f7c7472dfc0c9da11521019c1b4f}{}\label{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579ad4e5f7c7472dfc0c9da11521019c1b4f}
+}]\index{P\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE@{P\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE@{P\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}}\item[{\em 
+P\+W\+M\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE\hypertarget{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579a3101222745f8fdfa0956d8fab9599082}{}\label{pwm__17xx__40xx_8h_ae4f0b6394f86368fe360db42014c9579a3101222745f8fdfa0956d8fab9599082}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 73 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD@{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD}}
+\index{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD@{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD}{PWM_OUT_CMD}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD}}\hypertarget{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011}{}\label{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}\item[{\em 
+P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+ED\hypertarget{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011af9a81b75a81be3ee625ee34f276fdf1d}{}\label{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011af9a81b75a81be3ee625ee34f276fdf1d}
+}]\index{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED@{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED@{P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED}}\item[{\em 
+P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED\hypertarget{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011a7138225f095aff48f80f3f76f3ff63cc}{}\label{pwm__17xx__40xx_8h_a4c2a48f8b3c3a2b25b5f655cf4527011a7138225f095aff48f80f3f76f3ff63cc}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 79 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CaptureDisableInt(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Disable\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_aadfab5b6949ce689d0590e78a0e92e58}{}\label{pwm__17xx__40xx_8h_aadfab5b6949ce689d0590e78a0e92e58}
+
+
+Disables interrupt on capture of selected C\+AP signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture signal/register to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 437 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CaptureEnableInt(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Enable\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_adf4c7f67db1a50867bc20182a8be769c}{}\label{pwm__17xx__40xx_8h_adf4c7f67db1a50867bc20182a8be769c}
+
+
+Enables interrupt on capture of selected C\+AP signal. For the selected capture register, an interrupt will be generated when the enabled rising or falling edge on C\+A\+Pn.\+capnum is detected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture signal/register to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 425 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CaptureFallingEdgeDisable(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a9878eba0a5f5c778309c4b8dd114e8e7}{}\label{pwm__17xx__40xx_8h_a9878eba0a5f5c778309c4b8dd114e8e7}
+
+
+Disables capture on on falling edge of selected C\+AP signal. For the selected capture register, disables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a falling edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture signal/register to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 412 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CaptureFallingEdgeEnable(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Falling\+Edge\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a8b8ef7b0aadfc4f9c106d9184631d0f6}{}\label{pwm__17xx__40xx_8h_a8b8ef7b0aadfc4f9c106d9184631d0f6}
+
+
+Enables capture on on falling edge of selected C\+AP signal. For the selected capture register, enables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a falling edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture signal/register to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 398 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CapturePending(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} bool Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Pending (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ad335470afa652a1970b2af2417464a70}{}\label{pwm__17xx__40xx_8h_ad335470afa652a1970b2af2417464a70}
+
+
+Determine if a capture interrupt is pending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+{\em capnum} & \+: Capture interrupt number to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the interrupt is not pending, otherwise true 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Determine if the capture interrupt for the passed capture pin is pending. 
+\end{DoxyNote}
+
+
+Definition at line 123 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CaptureRisingEdgeDisable(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a8e44558ae5377eb3f1dd2687024e48f2}{}\label{pwm__17xx__40xx_8h_a8e44558ae5377eb3f1dd2687024e48f2}
+
+
+Disables capture on on rising edge of selected C\+AP signal. For the selected capture register, disables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a rising edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture signal/register to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 383 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_CaptureRisingEdgeEnable(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Capture\+Rising\+Edge\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ae377ba6ee38a3e8c56e80b95ecf77dd2}{}\label{pwm__17xx__40xx_8h_ae377ba6ee38a3e8c56e80b95ecf77dd2}
+
+
+Enables capture on on rising edge of selected C\+AP signal for the selected capture register, enables the selected C\+A\+Pn.\+capnum signal to load the capture register with the terminal coount on a rising edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture signal/register to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 368 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture@{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture@{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_ClearCapture(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Capture (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ac2fdae3c35ac9f6c5a8edab4e8ec1120}{}\label{pwm__17xx__40xx_8h_ac2fdae3c35ac9f6c5a8edab4e8ec1120}
+
+
+Clears a (pending) capture interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+{\em capnum} & \+: Capture interrupt number to clear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Clears a pending timer capture interrupt. 
+\end{DoxyNote}
+
+
+Definition at line 149 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match@{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match@{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_ClearMatch(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Clear\+Match (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a4f33d869e307afe08ba3051576240d66}{}\label{pwm__17xx__40xx_8h_a4f33d869e307afe08ba3051576240d66}
+
+
+Clears a (pending) match interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+{\em matchnum} & \+: Match interrupt number to clear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Clears a pending timer match interrupt. 
+\end{DoxyNote}
+
+
+Definition at line 136 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init@{Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init@{Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_DeInit(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+P\+W\+M\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a4c08163649b23a14a5d8b2a1371e8d0e}{}\label{pwm__17xx__40xx_8h_a4c08163649b23a14a5d8b2a1371e8d0e}
+
+
+Shutdown a pwm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file pwm\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Disable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Disable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Disable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_Disable(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a78b353645ed50797dc1975ae49e67a66}{}\label{pwm__17xx__40xx_8h_a78b353645ed50797dc1975ae49e67a66}
+
+
+Disables the timer (stops count) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Disables the timer to stop counting. 
+\end{DoxyNote}
+
+
+Definition at line 173 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Enable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Enable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Enable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_Enable(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_aacfb1c6b7214ddcdc2686814dc497141}{}\label{pwm__17xx__40xx_8h_aacfb1c6b7214ddcdc2686814dc497141}
+
+
+Enables the timer (starts count) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Enables the timer to start counting. 
+\end{DoxyNote}
+
+
+Definition at line 160 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set@{Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set@{Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t initial\+\_\+state, P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T match\+State, int8\+\_\+t matchnum)}{Chip_PWM_ExtMatchControlSet(LPC_PWM_T *pTMR, int8_t initial_state, PWM_PIN_MATCH_STATE_T matchState, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+P\+W\+M\+\_\+\+Ext\+Match\+Control\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{initial\+\_\+state, }
+\item[{{\bf P\+W\+M\+\_\+\+P\+I\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+T}}]{match\+State, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a397ea4c5cc71698c0b8f5f2bed2809f1}{}\label{pwm__17xx__40xx_8h_a397ea4c5cc71698c0b8f5f2bed2809f1}
+
+
+Sets external match control (M\+A\+Tn.\+matchnum) pin control. For the pin selected with matchnum, sets the function of the pin that occurs on a terminal count match for the match count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em initial\+\_\+state} & \+: Initial state of the pin, high(1) or low(0) \\
+\hline
+{\em match\+State} & \+: Selects the match state for the pin \\
+\hline
+{\em matchnum} & \+: M\+A\+Tn.\+matchnum signal to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For the pin selected with matchnum, sets the function of the pin that occurs on a terminal count match for the match count. 
+\end{DoxyNote}
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Init@{Chip\+\_\+\+P\+W\+M\+\_\+\+Init}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Init@{Chip\+\_\+\+P\+W\+M\+\_\+\+Init}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Init(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_Init(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+P\+W\+M\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_afeb1b9bf3313d9fec98419c013b81a9e}{}\label{pwm__17xx__40xx_8h_afeb1b9bf3313d9fec98419c013b81a9e}
+
+
+Initialize a pwm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file pwm\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, uint8\+\_\+t pwm\+Channel, P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+M\+D pwm\+Cmd)}{Chip_PWM_LatchEnable(LPC_PWM_T *pTMR, uint8_t pwmChannel, PWM_OUT_CMD pwmCmd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+P\+W\+M\+\_\+\+Latch\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{uint8\+\_\+t}]{pwm\+Channel, }
+\item[{{\bf P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD}}]{pwm\+Cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_adf29be3cc545e52fb74a951b918b0db9}{}\label{pwm__17xx__40xx_8h_adf29be3cc545e52fb74a951b918b0db9}
+
+
+Definition at line 100 of file pwm\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_MatchDisableInt(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Disable\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a5b3c371bb4208b0c52e66c321cf80660}{}\label{pwm__17xx__40xx_8h_a5b3c371bb4208b0c52e66c321cf80660}
+
+
+Disables a match interrupt for a match counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer, 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 301 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int@{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_MatchEnableInt(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Enable\+Int (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a9188ef48a116ce7642607cc74605398b}{}\label{pwm__17xx__40xx_8h_a9188ef48a116ce7642607cc74605398b}
+
+
+Enables a match interrupt that fires when the terminal count matches the match counter value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer, 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 288 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending@{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending@{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_MatchPending(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} bool Chip\+\_\+\+P\+W\+M\+\_\+\+Match\+Pending (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a9d094082178fcc3162c1097450f9e330}{}\label{pwm__17xx__40xx_8h_a9d094082178fcc3162c1097450f9e330}
+
+
+Determine if a match interrupt is pending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+{\em matchnum} & \+: Match interrupt number to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the interrupt is not pending, otherwise true 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Determine if the match interrupt for the passed timer and match counter is pending. 
+\end{DoxyNote}
+
+
+Definition at line 109 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set@{Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set@{Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, uint32\+\_\+t prescale)}{Chip_PWM_PrescaleSet(LPC_PWM_T *pTMR, uint32_t prescale)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Prescale\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{uint32\+\_\+t}]{prescale}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a4fe88f6e227640becf9e0f7facfde3ba}{}\label{pwm__17xx__40xx_8h_a4fe88f6e227640becf9e0f7facfde3ba}
+
+
+Sets the prescaler value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+{\em prescale} & \+: Prescale value to set the prescale register to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Sets the prescale count value. 
+\end{DoxyNote}
+
+
+Definition at line 212 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture@{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture@{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t capnum)}{Chip_PWM_ReadCapture(LPC_PWM_T *pTMR, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Capture (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ac4cb6d2fbcbd813039ddd8e148efaea9}{}\label{pwm__17xx__40xx_8h_ac4cb6d2fbcbd813039ddd8e148efaea9}
+
+
+Reads a capture register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em capnum} & \+: Capture register to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The selected capture register value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns the selected capture register value. 
+\end{DoxyNote}
+
+
+Definition at line 266 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count@{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count@{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_ReadCount(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_aa514325f81219b15dc10a310cfb8b493}{}\label{pwm__17xx__40xx_8h_aa514325f81219b15dc10a310cfb8b493}
+
+
+Returns the current timer count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current timer terminal count value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns the current timer terminal count. 
+\end{DoxyNote}
+
+
+Definition at line 187 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale@{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale@{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_ReadPrescale(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+P\+W\+M\+\_\+\+Read\+Prescale (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ada63d82d4517fcadc36ce84e460dbeac}{}\label{pwm__17xx__40xx_8h_ada63d82d4517fcadc36ce84e460dbeac}
+
+
+Returns the current prescale count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to pwm IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current timer prescale count value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns the current prescale count. 
+\end{DoxyNote}
+
+
+Definition at line 199 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Reset@{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset@{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R)}{Chip_PWM_Reset(LPC_PWM_T *pTMR)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+P\+W\+M\+\_\+\+Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ab5aeea30bde4f72cfac262c964f461c7}{}\label{pwm__17xx__40xx_8h_ab5aeea30bde4f72cfac262c964f461c7}
+
+
+Resets the timer terminal and prescale counts to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file pwm\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_ResetOnMatchDisable(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_acc75f345ce8a27ba22a08ce61ff2fa0e}{}\label{pwm__17xx__40xx_8h_acc75f345ce8a27ba22a08ce61ff2fa0e}
+
+
+For the specific match counter, disables reset of the terminal count register when a match occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer, 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 325 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_ResetOnMatchEnable(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Reset\+On\+Match\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a4c725f314b9cece9db2ce154312ce2b1}{}\label{pwm__17xx__40xx_8h_a4c725f314b9cece9db2ce154312ce2b1}
+
+
+For the specific match counter, enables reset of the terminal count register when a match occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer, 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 313 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode@{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode@{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, uint8\+\_\+t pwm\+Channel, P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+E pwm\+Edge\+Mode, P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+M\+D pwm\+Cmd)}{Chip_PWM_SetControlMode(LPC_PWM_T *pTMR, uint8_t pwmChannel, PWM_EDGE_CONTROL_MODE pwmEdgeMode, PWM_OUT_CMD pwmCmd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Control\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{uint8\+\_\+t}]{pwm\+Channel, }
+\item[{{\bf P\+W\+M\+\_\+\+E\+D\+G\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+DE}}]{pwm\+Edge\+Mode, }
+\item[{{\bf P\+W\+M\+\_\+\+O\+U\+T\+\_\+\+C\+MD}}]{pwm\+Cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_abd889ab810ec26f7251684fd0fa7ef4c}{}\label{pwm__17xx__40xx_8h_abd889ab810ec26f7251684fd0fa7ef4c}
+
+
+Definition at line 76 of file pwm\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src@{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src@{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T cap\+Src, int8\+\_\+t capnum)}{Chip_PWM_SetCountClockSrc(LPC_PWM_T *pTMR, PWM_CAP_SRC_STATE_T capSrc, int8_t capnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Count\+Clock\+Src (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{{\bf P\+W\+M\+\_\+\+C\+A\+P\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+T}}]{cap\+Src, }
+\item[{int8\+\_\+t}]{capnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ab7d22514063f8bc4d7466df04729fed0}{}\label{pwm__17xx__40xx_8h_ab7d22514063f8bc4d7466df04729fed0}
+
+
+Sets timer count source and edge with the selected passed from Cap\+Src. If Cap\+Src selected a C\+A\+Pn pin, select the specific C\+A\+Pn pin with the capnum value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em cap\+Src} & \+: timer clock source and edge \\
+\hline
+{\em capnum} & \+: C\+A\+Pn.\+capnum pin to use (if used) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If Cap\+Src selected a C\+A\+Pn pin, select the specific C\+A\+Pn pin with the capnum value. 
+\end{DoxyNote}
+
+
+Definition at line 488 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match@{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match@{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum, uint32\+\_\+t matchval)}{Chip_PWM_SetMatch(LPC_PWM_T *pTMR, int8_t matchnum, uint32_t matchval)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Set\+Match (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum, }
+\item[{uint32\+\_\+t}]{matchval}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a253ed88ccf4b3b90c1cbb6c306a17a60}{}\label{pwm__17xx__40xx_8h_a253ed88ccf4b3b90c1cbb6c306a17a60}
+
+
+Sets a timer match value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer to set match count for \\
+\hline
+{\em matchval} & \+: Match value for the selected match count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Sets one of the timer match values. 
+\end{DoxyNote}
+
+
+Definition at line 227 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_StopOnMatchDisable(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Disable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_a6b23fb8e04ca1a5e30a8c525fbe940d7}{}\label{pwm__17xx__40xx_8h_a6b23fb8e04ca1a5e30a8c525fbe940d7}
+
+
+Disable stop on match for a match timer. Disables a match timer to stop the terminal count when a match count equals the terminal count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer, 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 353 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}!Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable}}
+\index{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable@{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable}!pwm\+\_\+17xx\+\_\+40xx.\+h@{pwm\+\_\+17xx\+\_\+40xx.\+h}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable(\+L\+P\+C\+\_\+\+P\+W\+M\+\_\+\+T $\ast$p\+T\+M\+R, int8\+\_\+t matchnum)}{Chip_PWM_StopOnMatchEnable(LPC_PWM_T *pTMR, int8_t matchnum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf I\+N\+L\+I\+NE} void Chip\+\_\+\+P\+W\+M\+\_\+\+Stop\+On\+Match\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+P\+W\+M\+\_\+T} $\ast$}]{p\+T\+MR, }
+\item[{int8\+\_\+t}]{matchnum}
+\end{DoxyParamCaption}
+)}\hypertarget{pwm__17xx__40xx_8h_ac537219bdbaebcd7dc552b7b6a7f1936}{}\label{pwm__17xx__40xx_8h_ac537219bdbaebcd7dc552b7b6a7f1936}
+
+
+Enable a match timer to stop the terminal count when a match count equals the terminal count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+T\+MR} & \+: Pointer to timer IP register address \\
+\hline
+{\em matchnum} & \+: Match timer, 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 340 of file pwm\+\_\+17xx\+\_\+40xx.\+h.
+

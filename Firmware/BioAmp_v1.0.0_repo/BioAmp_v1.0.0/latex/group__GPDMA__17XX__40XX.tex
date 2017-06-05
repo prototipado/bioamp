@@ -1,0 +1,1062 @@
+\hypertarget{group__GPDMA__17XX__40XX}{}\section{C\+H\+IP\+: L\+P\+C17xx/40xx General Purpose D\+MA driver}
+\label{group__GPDMA__17XX__40XX}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structDMA__ChannelHandle__t}{D\+M\+A\+\_\+\+Channel\+Handle\+\_\+t}
+\begin{DoxyCompactList}\small\item\em D\+MA channel handle structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structDMA__TransferDescriptor}{D\+M\+A\+\_\+\+Transfer\+Descriptor}
+\begin{DoxyCompactList}\small\item\em Transfer Descriptor structure typedef. \end{DoxyCompactList}\item 
+struct \hyperlink{structGPDMA__CH__CFG__T}{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}
+\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA structure using for D\+MA configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structGPDMA__CH__T}{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+T}
+\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA Channel register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T}
+\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA register block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga42385ba8b249b55d8a140a7c35f41c35}{D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}~0
+\begin{DoxyCompactList}\small\item\em Flow control definitions. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga09bdacfb969a90a403f99d379c34638c}{D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}~2
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gafd44c148b998d28bc156b947794ad011}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1}~((0\+U\+L))
+\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA Burst size in Source and Destination definitions. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga808a32404cd29d656eb9ee31dacacdbb}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128}~((6\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga6a56379136d5416a0799642fa2217fe2}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16}~((3\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gad11cb83bebe2dc426f62cded244ea391}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256}~((7\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga2ebaf7a771f5bf603ecfed0503a66c5c}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32}~((4\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga768f1f0d1cf1a2611573362ed7b6a18d}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4}~((1\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gababd7d98382dd69ae09a9a4b447a0977}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64}~((5\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga21239562985215b67c024871f804f0bd}{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8}~((2\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gad882001a1a177628f45ffa5a57a2c894}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x03))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga253822f2712564a42379a76d9447cde4}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E}~((0x01))
+\begin{DoxyCompactList}\small\item\em Macro defines for D\+MA Configuration register. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga0f2a7e8c8704f5a897f911ac3a8617e3}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M}~((0x02))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gae28eb1e74ecafc5e6170e3f7a8688335}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A}~((1\+U\+L $<$$<$ 17))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gae90fe60d160d07ffe1f667ff7d38b94d}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral}(n)    ~(((n \& 0x1\+F) $<$$<$ 6))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga1c7608bb37d512277e42672ee4e785a5}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E}~((1\+U\+L $<$$<$ 0))
+\begin{DoxyCompactList}\small\item\em Macro defines for D\+MA Channel Configuration registers. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga987a4bb2d26cf2ef476483f347ad49ff}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H}~((1\+U\+L $<$$<$ 18))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga0fb4c3e9768c0a757b6ff25f77b75a26}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE}~((1\+U\+L $<$$<$ 14))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gac7c379cbf11a214f436620e4f7a7ee2a}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC}~((1\+U\+L $<$$<$ 15))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga37a55c8ebde3d56defbf6281534237fe}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L}~((1\+U\+L $<$$<$ 16))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga0704c2279f810122b08d3f43be5fde52}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral}(n)      ~(((n \& 0x1\+F) $<$$<$ 1))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga27ab9d0828c9c04614320beb2f6dd234}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type}(n)        ~(((n \& 0x7) $<$$<$ 11))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga6961276bf1298d51b7ca2a5463f8b638}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size}(n)          ~(((n \& 0x07) $<$$<$ 15))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gacd71734a295849633110d6c64edda70c}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1}~0
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gaddcec41c911bbd0911391e6195c1c040}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI}~((1\+U\+L $<$$<$ 27))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga2816f8f7f945e30c97a3092c6ec094ab}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width}(n)          ~(((n \& 0x07) $<$$<$ 21))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga6ef0b54b0190c139796679d6db1e6e19}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I}~((1\+U\+L $<$$<$ 31))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga883ee41e16f8df248437075cebab7993}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1}~((1\+U\+L $<$$<$ 28))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gabe38faff26ee3951122c23ff1425d70a}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2}~((1\+U\+L $<$$<$ 29))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gaf6a439bbf5a4b082fa7f36effca23f15}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3}~((1\+U\+L $<$$<$ 30))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga0da68e439de8314455732716f3823226}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size}(n)          ~(((n \& 0x07) $<$$<$ 12))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gaa9b006e86536835dfe6f7034ee25d12a}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI}~((1\+U\+L $<$$<$ 26))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga90b29a1b2c82b32d6e586d74cdd727b7}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1}~0
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gac8510c21ebe2b97b20db9700b04b06a9}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width}(n)          ~(((n \& 0x07) $<$$<$ 18))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga0e3ee35f724f4ef0cc8e91dfaec761e4}{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size}(n)~(((n \& 0x\+F\+F\+F) $<$$<$ 0))
+\begin{DoxyCompactList}\small\item\em Macro defines for D\+MA channel control registers. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gaf7c43b3d13c91c30ddf67e479966d5cd}{G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS}~8
+\begin{DoxyCompactList}\small\item\em Number of channels on G\+P\+D\+MA. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gacc6deb5ab0e06eded3cdd151754db8f0}{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE}~((0\+U\+L))
+\begin{DoxyCompactList}\small\item\em Width in Source transfer width and Destination transfer width definitions. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gab28fc48561886a87a1c87eeb7078ef8b}{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD}~((1\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_gad611897f330a6ec01b0699b244b132bb}{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD}~((2\+U\+L))
+\item 
+\#define \hyperlink{group__GPDMA__17XX__40XX_ga850a296f501c6a30228f8df251b73767}{S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structDMA__TransferDescriptor}{D\+M\+A\+\_\+\+Transfer\+Descriptor} \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Transfer Descriptor structure typedef. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} \{ \\*
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133ae5ff87adb4451f2a695c9d21c3c52c59}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA} = ((0\+UL)), 
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a331474560497f41cfe921b0e55ce8722}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA} = ((1\+UL)), 
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133aa2ae587fb924cb679f51250470927e34}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA} = ((2\+UL)), 
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a29ec59e967f3a1841002ef740552c1d5}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA} = ((3\+UL)), 
+\\*
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a176e307292918213de220bdae957ad6d}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL} = ((4\+UL)), 
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a640177df7a3c696a9ccab9a09dcdbc0c}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL} = ((5\+UL)), 
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133aaeaf72b20cee326722ee7650405e2e43}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL} = ((6\+UL)), 
+\hyperlink{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a4615bdb6a415ddc02f8eab20a700a17d}{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL} = ((7\+UL))
+ \}\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA Type of D\+MA controller. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__GPDMA__17XX__40XX_gabbb281ef4b818f2e60167cf766f94fdb}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T} \{ \hyperlink{group__GPDMA__17XX__40XX_ggabbb281ef4b818f2e60167cf766f94fdba9a0c8256eb0f656d56f065914219c96c}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC}, 
+\hyperlink{group__GPDMA__17XX__40XX_ggabbb281ef4b818f2e60167cf766f94fdbaf6e975b9dfa7d659d18a377c7873b92a}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR}
+ \}\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA Interrupt Clear Status. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__GPDMA__17XX__40XX_ga2f4aa97bd0ffa5046c8e2b17028d99cc}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} \{ \\*
+\hyperlink{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccaf89b610470a940617af6bef4f4451aa9}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT}, 
+\hyperlink{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccac093908914ed40148e81169fc15df2f7}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC}, 
+\hyperlink{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccaee7927c433e007f270c365bcca865706}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR}, 
+\hyperlink{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99cca4a74b1bc907fbbdbf9dfb05222f0b513}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC}, 
+\\*
+\hyperlink{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccad547775dc5510034932bf1597931e899}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR}, 
+\hyperlink{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99cca711d88f645a203338f297a286b912767}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH}
+ \}\begin{DoxyCompactList}\small\item\em G\+P\+D\+MA Type of Interrupt Status. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__GPDMA__17XX__40XX_gae93a1b9cb8ee1a04176ce51a9a4ad073}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t channel\+Num, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable the G\+P\+D\+MA Channel. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_ga94c9bdb806ce700f0c04deeec0da142e}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{group__GPDMA__17XX__40XX_gabbb281ef4b818f2e60167cf766f94fdb}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T} type, uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Clear the Interrupt Flag from different registers according to the type. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_ga673cc6cab2ad87185f5f5d0ff8424075}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA)
+\begin{DoxyCompactList}\small\item\em Shutdown the G\+P\+D\+MA. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group__GPDMA__17XX__40XX_ga55ff3d61ec382dbec4775bed2db2cde2}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint32\+\_\+t Peripheral\+Connection\+\_\+\+ID)
+\begin{DoxyCompactList}\small\item\em Get a free G\+P\+D\+MA channel for one D\+MA connection. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_ga21c99277e4579af4be9d9311a03b5542}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA)
+\begin{DoxyCompactList}\small\item\em Initialize the G\+P\+D\+MA. \end{DoxyCompactList}\item 
+int \hyperlink{group__GPDMA__17XX__40XX_gac32ac477dbee2d3be93ca90b30db856c}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{structGPDMA__CH__CFG__T}{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$G\+P\+D\+M\+A\+Cfg, uint8\+\_\+t Channel\+Num, uint32\+\_\+t src, uint32\+\_\+t dst, uint32\+\_\+t Size, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type)
+\begin{DoxyCompactList}\small\item\em Initialize channel configuration strucutre. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga986bb4a0d10a05ff6284fff871fb86c6}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num)
+\begin{DoxyCompactList}\small\item\em The G\+P\+D\+MA stream interrupt status checking. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_gab7d263072f745b4f3913fb0afc434c4e}{Int\+Status} \hyperlink{group__GPDMA__17XX__40XX_ga06fdae68a49436b9a02d42ad85782ff4}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{group__GPDMA__17XX__40XX_ga2f4aa97bd0ffa5046c8e2b17028d99cc}{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} type, uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Read the status from different registers according to the type. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga8605c52de33b7a8977eadaa480f5807c}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$D\+M\+A\+Descriptor, uint32\+\_\+t src, uint32\+\_\+t dst, uint32\+\_\+t Size, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type, const \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$Next\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Prepare a single D\+MA descriptor. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga6a2f7c7238f4288cb73baec79c3e38a7}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num, const \hyperlink{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$D\+M\+A\+Descriptor, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type)
+\begin{DoxyCompactList}\small\item\em Do a D\+MA transfer using linked list of descriptors. \end{DoxyCompactList}\item 
+void \hyperlink{group__GPDMA__17XX__40XX_gafa887387f85205ecacc3220700b49d0d}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num)
+\begin{DoxyCompactList}\small\item\em Stop a stream D\+MA transfer. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__GPDMA__17XX__40XX_ga53a4dbf10ce59c17b0dd2284fa635580}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer} (\hyperlink{structLPC__GPDMA__T}{L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$p\+G\+P\+D\+MA, uint8\+\_\+t Channel\+Num, uint32\+\_\+t src, uint32\+\_\+t dst, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T} Transfer\+Type, uint32\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Do a D\+MA transfer M2M, M2P,P2M or P2P. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}}
+\index{D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}{DMA_CONTROLLER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+M\+A\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER~0}\hypertarget{group__GPDMA__17XX__40XX_ga42385ba8b249b55d8a140a7c35f41c35}{}\label{group__GPDMA__17XX__40XX_ga42385ba8b249b55d8a140a7c35f41c35}
+
+
+Flow control definitions. 
+
+Flow control is D\+MA controller 
+
+Definition at line 265 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}}
+\index{D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}{DST_PER_CONTROLLER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+S\+T\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER~2}\hypertarget{group__GPDMA__17XX__40XX_ga09bdacfb969a90a403f99d379c34638c}{}\label{group__GPDMA__17XX__40XX_ga09bdacfb969a90a403f99d379c34638c}
+Flow control is Destination peripheral controller 
+
+Definition at line 267 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1}{GPDMA_BSIZE_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+1~((0\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_gafd44c148b998d28bc156b947794ad011}{}\label{group__GPDMA__17XX__40XX_gafd44c148b998d28bc156b947794ad011}
+
+
+G\+P\+D\+MA Burst size in Source and Destination definitions. 
+
+Burst size = 1 
+
+Definition at line 246 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128}{GPDMA_BSIZE_128}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+128~((6\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_ga808a32404cd29d656eb9ee31dacacdbb}{}\label{group__GPDMA__17XX__40XX_ga808a32404cd29d656eb9ee31dacacdbb}
+Burst size = 128 
+
+Definition at line 252 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16}{GPDMA_BSIZE_16}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+16~((3\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_ga6a56379136d5416a0799642fa2217fe2}{}\label{group__GPDMA__17XX__40XX_ga6a56379136d5416a0799642fa2217fe2}
+Burst size = 16 
+
+Definition at line 249 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256}{GPDMA_BSIZE_256}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+256~((7\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_gad11cb83bebe2dc426f62cded244ea391}{}\label{group__GPDMA__17XX__40XX_gad11cb83bebe2dc426f62cded244ea391}
+Burst size = 256 
+
+Definition at line 253 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32}{GPDMA_BSIZE_32}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+32~((4\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_ga2ebaf7a771f5bf603ecfed0503a66c5c}{}\label{group__GPDMA__17XX__40XX_ga2ebaf7a771f5bf603ecfed0503a66c5c}
+Burst size = 32 
+
+Definition at line 250 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4}{GPDMA_BSIZE_4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+4~((1\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_ga768f1f0d1cf1a2611573362ed7b6a18d}{}\label{group__GPDMA__17XX__40XX_ga768f1f0d1cf1a2611573362ed7b6a18d}
+Burst size = 4 
+
+Definition at line 247 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64}{GPDMA_BSIZE_64}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+64~((5\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_gababd7d98382dd69ae09a9a4b447a0977}{}\label{group__GPDMA__17XX__40XX_gababd7d98382dd69ae09a9a4b447a0977}
+Burst size = 64 
+
+Definition at line 251 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8}}
+\index{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8@{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8}{GPDMA_BSIZE_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+B\+S\+I\+Z\+E\+\_\+8~((2\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_ga21239562985215b67c024871f804f0bd}{}\label{group__GPDMA__17XX__40XX_ga21239562985215b67c024871f804f0bd}
+Burst size = 8 
+
+Definition at line 248 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK}{GPDMA_DMACConfig_BITMASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+\+B\+I\+T\+M\+A\+SK~((0x03))}\hypertarget{group__GPDMA__17XX__40XX_gad882001a1a177628f45ffa5a57a2c894}{}\label{group__GPDMA__17XX__40XX_gad882001a1a177628f45ffa5a57a2c894}
+
+
+Definition at line 105 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E}{GPDMA_DMACConfig_E}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+E~((0x01))}\hypertarget{group__GPDMA__17XX__40XX_ga253822f2712564a42379a76d9447cde4}{}\label{group__GPDMA__17XX__40XX_ga253822f2712564a42379a76d9447cde4}
+
+
+Macro defines for D\+MA Configuration register. 
+
+D\+MA Controller enable 
+
+Definition at line 103 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M}{GPDMA_DMACConfig_M}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Config\+\_\+M~((0x02))}\hypertarget{group__GPDMA__17XX__40XX_ga0f2a7e8c8704f5a897f911ac3a8617e3}{}\label{group__GPDMA__17XX__40XX_ga0f2a7e8c8704f5a897f911ac3a8617e3}
+A\+HB Master endianness configuration 
+
+Definition at line 104 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A}{GPDMA_DMACCxConfig_A}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+A~((1\+U\+L $<$$<$ 17))}\hypertarget{group__GPDMA__17XX__40XX_gae28eb1e74ecafc5e6170e3f7a8688335}{}\label{group__GPDMA__17XX__40XX_gae28eb1e74ecafc5e6170e3f7a8688335}
+Active 
+
+Definition at line 117 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral}{GPDMA_DMACCxConfig_DestPeripheral}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Dest\+Peripheral(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x1\+F) $<$$<$ 6))}\hypertarget{group__GPDMA__17XX__40XX_gae90fe60d160d07ffe1f667ff7d38b94d}{}\label{group__GPDMA__17XX__40XX_gae90fe60d160d07ffe1f667ff7d38b94d}
+Destination peripheral 
+
+Definition at line 112 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E}{GPDMA_DMACCxConfig_E}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+E~((1\+U\+L $<$$<$ 0))}\hypertarget{group__GPDMA__17XX__40XX_ga1c7608bb37d512277e42672ee4e785a5}{}\label{group__GPDMA__17XX__40XX_ga1c7608bb37d512277e42672ee4e785a5}
+
+
+Macro defines for D\+MA Channel Configuration registers. 
+
+D\+MA control enable 
+
+Definition at line 110 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H}{GPDMA_DMACCxConfig_H}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+H~((1\+U\+L $<$$<$ 18))}\hypertarget{group__GPDMA__17XX__40XX_ga987a4bb2d26cf2ef476483f347ad49ff}{}\label{group__GPDMA__17XX__40XX_ga987a4bb2d26cf2ef476483f347ad49ff}
+Halt 
+
+Definition at line 118 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE}{GPDMA_DMACCxConfig_IE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+IE~((1\+U\+L $<$$<$ 14))}\hypertarget{group__GPDMA__17XX__40XX_ga0fb4c3e9768c0a757b6ff25f77b75a26}{}\label{group__GPDMA__17XX__40XX_ga0fb4c3e9768c0a757b6ff25f77b75a26}
+Interrupt error mask 
+
+Definition at line 114 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC}{GPDMA_DMACCxConfig_ITC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+I\+TC~((1\+U\+L $<$$<$ 15))}\hypertarget{group__GPDMA__17XX__40XX_gac7c379cbf11a214f436620e4f7a7ee2a}{}\label{group__GPDMA__17XX__40XX_gac7c379cbf11a214f436620e4f7a7ee2a}
+Terminal count interrupt mask 
+
+Definition at line 115 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L}{GPDMA_DMACCxConfig_L}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+L~((1\+U\+L $<$$<$ 16))}\hypertarget{group__GPDMA__17XX__40XX_ga37a55c8ebde3d56defbf6281534237fe}{}\label{group__GPDMA__17XX__40XX_ga37a55c8ebde3d56defbf6281534237fe}
+Lock 
+
+Definition at line 116 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral}{GPDMA_DMACCxConfig_SrcPeripheral}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Src\+Peripheral(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x1\+F) $<$$<$ 1))}\hypertarget{group__GPDMA__17XX__40XX_ga0704c2279f810122b08d3f43be5fde52}{}\label{group__GPDMA__17XX__40XX_ga0704c2279f810122b08d3f43be5fde52}
+Source peripheral 
+
+Definition at line 111 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type}{GPDMA_DMACCxConfig_TransferType}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Config\+\_\+\+Transfer\+Type(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x7) $<$$<$ 11))}\hypertarget{group__GPDMA__17XX__40XX_ga27ab9d0828c9c04614320beb2f6dd234}{}\label{group__GPDMA__17XX__40XX_ga27ab9d0828c9c04614320beb2f6dd234}
+This value indicates the type of transfer 
+
+Definition at line 113 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size}{GPDMA_DMACCxControl_DBSize}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+B\+Size(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x07) $<$$<$ 15))}\hypertarget{group__GPDMA__17XX__40XX_ga6961276bf1298d51b7ca2a5463f8b638}{}\label{group__GPDMA__17XX__40XX_ga6961276bf1298d51b7ca2a5463f8b638}
+Destination burst size 
+
+Definition at line 88 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1}{GPDMA_DMACCxControl_DestTransUseAHBMaster1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Dest\+Trans\+Use\+A\+H\+B\+Master1~0}\hypertarget{group__GPDMA__17XX__40XX_gacd71734a295849633110d6c64edda70c}{}\label{group__GPDMA__17XX__40XX_gacd71734a295849633110d6c64edda70c}
+
+
+Definition at line 94 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI}{GPDMA_DMACCxControl_DI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+DI~((1\+U\+L $<$$<$ 27))}\hypertarget{group__GPDMA__17XX__40XX_gaddcec41c911bbd0911391e6195c1c040}{}\label{group__GPDMA__17XX__40XX_gaddcec41c911bbd0911391e6195c1c040}
+Destination increment 
+
+Definition at line 92 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width}{GPDMA_DMACCxControl_DWidth}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+D\+Width(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x07) $<$$<$ 21))}\hypertarget{group__GPDMA__17XX__40XX_ga2816f8f7f945e30c97a3092c6ec094ab}{}\label{group__GPDMA__17XX__40XX_ga2816f8f7f945e30c97a3092c6ec094ab}
+Destination transfer width 
+
+Definition at line 90 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I}{GPDMA_DMACCxControl_I}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+I~((1\+U\+L $<$$<$ 31))}\hypertarget{group__GPDMA__17XX__40XX_ga6ef0b54b0190c139796679d6db1e6e19}{}\label{group__GPDMA__17XX__40XX_ga6ef0b54b0190c139796679d6db1e6e19}
+Terminal count interrupt enable bit 
+
+Definition at line 98 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1}{GPDMA_DMACCxControl_Prot1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot1~((1\+U\+L $<$$<$ 28))}\hypertarget{group__GPDMA__17XX__40XX_ga883ee41e16f8df248437075cebab7993}{}\label{group__GPDMA__17XX__40XX_ga883ee41e16f8df248437075cebab7993}
+Indicates that the access is in user mode or privileged mode 
+
+Definition at line 95 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2}{GPDMA_DMACCxControl_Prot2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot2~((1\+U\+L $<$$<$ 29))}\hypertarget{group__GPDMA__17XX__40XX_gabe38faff26ee3951122c23ff1425d70a}{}\label{group__GPDMA__17XX__40XX_gabe38faff26ee3951122c23ff1425d70a}
+Indicates that the access is bufferable or not bufferable 
+
+Definition at line 96 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3}{GPDMA_DMACCxControl_Prot3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Prot3~((1\+U\+L $<$$<$ 30))}\hypertarget{group__GPDMA__17XX__40XX_gaf6a439bbf5a4b082fa7f36effca23f15}{}\label{group__GPDMA__17XX__40XX_gaf6a439bbf5a4b082fa7f36effca23f15}
+Indicates that the access is cacheable or not cacheable 
+
+Definition at line 97 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size}{GPDMA_DMACCxControl_SBSize}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+B\+Size(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x07) $<$$<$ 12))}\hypertarget{group__GPDMA__17XX__40XX_ga0da68e439de8314455732716f3823226}{}\label{group__GPDMA__17XX__40XX_ga0da68e439de8314455732716f3823226}
+Source burst size 
+
+Definition at line 87 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI}{GPDMA_DMACCxControl_SI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+SI~((1\+U\+L $<$$<$ 26))}\hypertarget{group__GPDMA__17XX__40XX_gaa9b006e86536835dfe6f7034ee25d12a}{}\label{group__GPDMA__17XX__40XX_gaa9b006e86536835dfe6f7034ee25d12a}
+Source increment 
+
+Definition at line 91 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1}{GPDMA_DMACCxControl_SrcTransUseAHBMaster1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Src\+Trans\+Use\+A\+H\+B\+Master1~0}\hypertarget{group__GPDMA__17XX__40XX_ga90b29a1b2c82b32d6e586d74cdd727b7}{}\label{group__GPDMA__17XX__40XX_ga90b29a1b2c82b32d6e586d74cdd727b7}
+
+
+Definition at line 93 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width}{GPDMA_DMACCxControl_SWidth}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+S\+Width(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x07) $<$$<$ 18))}\hypertarget{group__GPDMA__17XX__40XX_gac8510c21ebe2b97b20db9700b04b06a9}{}\label{group__GPDMA__17XX__40XX_gac8510c21ebe2b97b20db9700b04b06a9}
+Source transfer width 
+
+Definition at line 89 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size}}
+\index{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size@{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size}{GPDMA_DMACCxControl_TransferSize}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+D\+M\+A\+C\+Cx\+Control\+\_\+\+Transfer\+Size(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(((n \& 0x\+F\+F\+F) $<$$<$ 0))}\hypertarget{group__GPDMA__17XX__40XX_ga0e3ee35f724f4ef0cc8e91dfaec761e4}{}\label{group__GPDMA__17XX__40XX_ga0e3ee35f724f4ef0cc8e91dfaec761e4}
+
+
+Macro defines for D\+MA channel control registers. 
+
+Transfer size 
+
+Definition at line 86 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS}}
+\index{G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS}{GPDMA_NUMBER_CHANNELS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+H\+A\+N\+N\+E\+LS~8}\hypertarget{group__GPDMA__17XX__40XX_gaf7c43b3d13c91c30ddf67e479966d5cd}{}\label{group__GPDMA__17XX__40XX_gaf7c43b3d13c91c30ddf67e479966d5cd}
+
+
+Number of channels on G\+P\+D\+MA. 
+
+
+
+Definition at line 47 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE@{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE}}
+\index{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE@{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE}{GPDMA_WIDTH_BYTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+B\+Y\+TE~((0\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_gacc6deb5ab0e06eded3cdd151754db8f0}{}\label{group__GPDMA__17XX__40XX_gacc6deb5ab0e06eded3cdd151754db8f0}
+
+
+Width in Source transfer width and Destination transfer width definitions. 
+
+Width = 1 byte 
+
+Definition at line 258 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD@{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD}}
+\index{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD@{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD}{GPDMA_WIDTH_HALFWORD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+H\+A\+L\+F\+W\+O\+RD~((1\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_gab28fc48561886a87a1c87eeb7078ef8b}{}\label{group__GPDMA__17XX__40XX_gab28fc48561886a87a1c87eeb7078ef8b}
+Width = 2 bytes 
+
+Definition at line 259 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD@{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD}}
+\index{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD@{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD}{GPDMA_WIDTH_WORD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+D\+M\+A\+\_\+\+W\+I\+D\+T\+H\+\_\+\+W\+O\+RD~((2\+U\+L))}\hypertarget{group__GPDMA__17XX__40XX_gad611897f330a6ec01b0699b244b132bb}{}\label{group__GPDMA__17XX__40XX_gad611897f330a6ec01b0699b244b132bb}
+Width = 4 bytes 
+
+Definition at line 260 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}}
+\index{S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}{SRC_PER_CONTROLLER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+R\+C\+\_\+\+P\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER~1}\hypertarget{group__GPDMA__17XX__40XX_ga850a296f501c6a30228f8df251b73767}{}\label{group__GPDMA__17XX__40XX_ga850a296f501c6a30228f8df251b73767}
+Flow control is Source peripheral controller 
+
+Definition at line 266 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t@{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t}}
+\index{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t@{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t}{DMA_TransferDescriptor_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf D\+M\+A\+\_\+\+Transfer\+Descriptor}  {\bf D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t}}\hypertarget{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}{}\label{group__GPDMA__17XX__40XX_ga23dbdf610f0d1f61ae30a69944bbee55}
+
+
+Transfer Descriptor structure typedef. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}}
+\index{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}{GPDMA_FLOW_CONTROL_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}}\hypertarget{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{}\label{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}
+
+
+G\+P\+D\+MA Type of D\+MA controller. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133ae5ff87adb4451f2a695c9d21c3c52c59}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133ae5ff87adb4451f2a695c9d21c3c52c59}
+}]Memory to memory -\/ D\+MA control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a331474560497f41cfe921b0e55ce8722}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a331474560497f41cfe921b0e55ce8722}
+}]Memory to peripheral -\/ D\+MA control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133aa2ae587fb924cb679f51250470927e34}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133aa2ae587fb924cb679f51250470927e34}
+}]Peripheral to memory -\/ D\+MA control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a29ec59e967f3a1841002ef740552c1d5}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a29ec59e967f3a1841002ef740552c1d5}
+}]Source peripheral to destination peripheral -\/ D\+MA control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a176e307292918213de220bdae957ad6d}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a176e307292918213de220bdae957ad6d}
+}]Source peripheral to destination peripheral -\/ destination peripheral control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a640177df7a3c696a9ccab9a09dcdbc0c}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a640177df7a3c696a9ccab9a09dcdbc0c}
+}]Memory to peripheral -\/ peripheral control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133aaeaf72b20cee326722ee7650405e2e43}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133aaeaf72b20cee326722ee7650405e2e43}
+}]Peripheral to memory -\/ peripheral control \index{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL@{G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL\hypertarget{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a4615bdb6a415ddc02f8eab20a700a17d}{}\label{group__GPDMA__17XX__40XX_gga2cb59b641cd840f22780c44be1208133a4615bdb6a415ddc02f8eab20a700a17d}
+}]Source peripheral to destination peripheral -\/ source peripheral control \end{description}
+\end{Desc}
+
+
+Definition at line 143 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T}}
+\index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T}{GPDMA_STATECLEAR_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T}}\hypertarget{group__GPDMA__17XX__40XX_gabbb281ef4b818f2e60167cf766f94fdb}{}\label{group__GPDMA__17XX__40XX_gabbb281ef4b818f2e60167cf766f94fdb}
+
+
+G\+P\+D\+MA Interrupt Clear Status. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC\hypertarget{group__GPDMA__17XX__40XX_ggabbb281ef4b818f2e60167cf766f94fdba9a0c8256eb0f656d56f065914219c96c}{}\label{group__GPDMA__17XX__40XX_ggabbb281ef4b818f2e60167cf766f94fdba9a0c8256eb0f656d56f065914219c96c}
+}]G\+P\+D\+MA Interrupt Terminal Count Request Clear \index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR\hypertarget{group__GPDMA__17XX__40XX_ggabbb281ef4b818f2e60167cf766f94fdbaf6e975b9dfa7d659d18a377c7873b92a}{}\label{group__GPDMA__17XX__40XX_ggabbb281ef4b818f2e60167cf766f94fdbaf6e975b9dfa7d659d18a377c7873b92a}
+}]G\+P\+D\+MA Interrupt Error Clear \end{description}
+\end{Desc}
+
+
+Definition at line 123 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}
+\index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}{GPDMA_STATUS_T}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}\hypertarget{group__GPDMA__17XX__40XX_ga2f4aa97bd0ffa5046c8e2b17028d99cc}{}\label{group__GPDMA__17XX__40XX_ga2f4aa97bd0ffa5046c8e2b17028d99cc}
+
+
+G\+P\+D\+MA Type of Interrupt Status. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT\hypertarget{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccaf89b610470a940617af6bef4f4451aa9}{}\label{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccaf89b610470a940617af6bef4f4451aa9}
+}]G\+P\+D\+MA Interrupt Status \index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC\hypertarget{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccac093908914ed40148e81169fc15df2f7}{}\label{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccac093908914ed40148e81169fc15df2f7}
+}]G\+P\+D\+MA Interrupt Terminal Count Request Status \index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR\hypertarget{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccaee7927c433e007f270c365bcca865706}{}\label{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccaee7927c433e007f270c365bcca865706}
+}]G\+P\+D\+MA Interrupt Error Status \index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC\hypertarget{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99cca4a74b1bc907fbbdbf9dfb05222f0b513}{}\label{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99cca4a74b1bc907fbbdbf9dfb05222f0b513}
+}]G\+P\+D\+MA Raw Interrupt Terminal Count Status \index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR\hypertarget{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccad547775dc5510034932bf1597931e899}{}\label{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99ccad547775dc5510034932bf1597931e899}
+}]G\+P\+D\+MA Raw Error Interrupt Status \index{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH@{G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH}}\item[{\em 
+G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH\hypertarget{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99cca711d88f645a203338f297a286b912767}{}\label{group__GPDMA__17XX__40XX_gga2f4aa97bd0ffa5046c8e2b17028d99cca711d88f645a203338f297a286b912767}
+}]G\+P\+D\+MA Enabled Channel Status \end{description}
+\end{Desc}
+
+
+Definition at line 131 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, uint8\+\_\+t channel\+Num, Functional\+State New\+State)}{Chip_GPDMA_ChannelCmd(LPC_GPDMA_T *pGPDMA, uint8_t channelNum, FunctionalState NewState)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Channel\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{uint8\+\_\+t}]{channel\+Num, }
+\item[{{\bf Functional\+State}}]{New\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_gae93a1b9cb8ee1a04176ce51a9a4ad073}{}\label{group__GPDMA__17XX__40XX_gae93a1b9cb8ee1a04176ce51a9a4ad073}
+
+
+Enable or Disable the G\+P\+D\+MA Channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em channel\+Num} & \+: The G\+P\+D\+MA channel \+: 0 -\/ 7 \\
+\hline
+{\em New\+State} & \+: E\+N\+A\+B\+LE to enable G\+P\+D\+MA or D\+I\+S\+A\+B\+LE to disable G\+P\+D\+MA \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 546 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+\+T type, uint8\+\_\+t channel)}{Chip_GPDMA_ClearIntPending(LPC_GPDMA_T *pGPDMA, GPDMA_STATECLEAR_T type, uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Clear\+Int\+Pending (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+E\+C\+L\+E\+A\+R\+\_\+T}}]{type, }
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga94c9bdb806ce700f0c04deeec0da142e}{}\label{group__GPDMA__17XX__40XX_ga94c9bdb806ce700f0c04deeec0da142e}
+
+
+Clear the Interrupt Flag from different registers according to the type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em type} & \+: Flag mode, should be\+:
+\begin{DoxyItemize}
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+TC \+: G\+P\+D\+MA Interrupt Terminal Count Request
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+C\+L\+R\+\_\+\+I\+N\+T\+E\+RR \+: G\+P\+D\+MA Interrupt Error 
+\end{DoxyItemize}\\
+\hline
+{\em channel} & \+: The G\+P\+D\+MA channel \+: 0 -\/ 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 533 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A)}{Chip_GPDMA_DeInit(LPC_GPDMA_T *pGPDMA)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+De\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga673cc6cab2ad87185f5f5d0ff8424075}{}\label{group__GPDMA__17XX__40XX_ga673cc6cab2ad87185f5f5d0ff8424075}
+
+
+Shutdown the G\+P\+D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 411 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, uint32\+\_\+t Peripheral\+Connection\+\_\+\+I\+D)}{Chip_GPDMA_GetFreeChannel(LPC_GPDMA_T *pGPDMA, uint32_t PeripheralConnection_ID)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{uint32\+\_\+t}]{Peripheral\+Connection\+\_\+\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga55ff3d61ec382dbec4775bed2db2cde2}{}\label{group__GPDMA__17XX__40XX_ga55ff3d61ec382dbec4775bed2db2cde2}
+
+
+Get a free G\+P\+D\+MA channel for one D\+MA connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em Peripheral\+Connection\+\_\+\+ID} & \+: Some chip fix each peripheral D\+MA connection on a specified channel ( have not used in 17xx/40xx ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The channel number which is selected 
+\end{DoxyReturn}
+
+
+Definition at line 692 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A)}{Chip_GPDMA_Init(LPC_GPDMA_T *pGPDMA)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga21c99277e4579af4be9d9311a03b5542}{}\label{group__GPDMA__17XX__40XX_ga21c99277e4579af4be9d9311a03b5542}
+
+
+Initialize the G\+P\+D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 389 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T $\ast$\+G\+P\+D\+M\+A\+Cfg, uint8\+\_\+t Channel\+Num, uint32\+\_\+t src, uint32\+\_\+t dst, uint32\+\_\+t Size, G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T Transfer\+Type)}{Chip_GPDMA_InitChannelCfg(LPC_GPDMA_T *pGPDMA, GPDMA_CH_CFG_T *GPDMACfg, uint8_t ChannelNum, uint32_t src, uint32_t dst, uint32_t Size, GPDMA_FLOW_CONTROL_T TransferType)}}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Init\+Channel\+Cfg (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T} $\ast$}]{G\+P\+D\+M\+A\+Cfg, }
+\item[{uint8\+\_\+t}]{Channel\+Num, }
+\item[{uint32\+\_\+t}]{src, }
+\item[{uint32\+\_\+t}]{dst, }
+\item[{uint32\+\_\+t}]{Size, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}}]{Transfer\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_gac32ac477dbee2d3be93ca90b30db856c}{}\label{group__GPDMA__17XX__40XX_gac32ac477dbee2d3be93ca90b30db856c}
+
+
+Initialize channel configuration strucutre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em G\+P\+D\+M\+A\+Cfg} & \+: Pointer to configuration structure to be initialized \\
+\hline
+{\em Channel\+Num} & \+: Channel used for transfer {\itshape must be obtained using \hyperlink{group__GPDMA__17XX__40XX_ga55ff3d61ec382dbec4775bed2db2cde2}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel()}} \\
+\hline
+{\em src} & \+: Address of Memory or one of G\+P\+D\+M\+A\+\_\+\+C\+O\+N\+N\+\_\+\+M\+E\+M\+O\+RY Peripheral\+Connection\+\_\+\+ID , which is the source \\
+\hline
+{\em dst} & \+: Address of Memory or one of G\+P\+D\+M\+A\+\_\+\+C\+O\+N\+N\+\_\+\+M\+E\+M\+O\+RY Peripheral\+Connection\+\_\+\+ID, which is the destination \\
+\hline
+{\em Size} & \+: The number of D\+MA transfers \\
+\hline
+{\em Transfer\+Type} & \+: Select the transfer controller and the type of transfer. (See, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR on error, S\+U\+C\+C\+E\+SS on success 
+\end{DoxyReturn}
+
+
+Definition at line 455 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, uint8\+\_\+t Channel\+Num)}{Chip_GPDMA_Interrupt(LPC_GPDMA_T *pGPDMA, uint8_t ChannelNum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{uint8\+\_\+t}]{Channel\+Num}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga986bb4a0d10a05ff6284fff871fb86c6}{}\label{group__GPDMA__17XX__40XX_ga986bb4a0d10a05ff6284fff871fb86c6}
+
+
+The G\+P\+D\+MA stream interrupt status checking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em Channel\+Num} & \+: Channel Number to be checked on interruption \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS \+: D\+MA transfer success
+\item E\+R\+R\+OR \+: D\+MA transfer failed 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 433 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+T type, uint8\+\_\+t channel)}{Chip_GPDMA_IntGetStatus(LPC_GPDMA_T *pGPDMA, GPDMA_STATUS_T type, uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int\+Status} Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Int\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}]{type, }
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga06fdae68a49436b9a02d42ad85782ff4}{}\label{group__GPDMA__17XX__40XX_ga06fdae68a49436b9a02d42ad85782ff4}
+
+
+Read the status from different registers according to the type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em type} & \+: Status mode, should be\+:
+\begin{DoxyItemize}
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+NT \+: G\+P\+D\+MA Interrupt Status
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+TC \+: G\+P\+D\+MA Interrupt Terminal Count Request Status
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+T\+E\+RR \+: G\+P\+D\+MA Interrupt Error Status
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+TC \+: G\+P\+D\+MA Raw Interrupt Terminal Count Status
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+R\+A\+W\+I\+N\+T\+E\+RR \+: G\+P\+D\+MA Raw Error Interrupt Status
+\item G\+P\+D\+M\+A\+\_\+\+S\+T\+A\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+CH \+: G\+P\+D\+MA Enabled Channel Status 
+\end{DoxyItemize}\\
+\hline
+{\em channel} & \+: The G\+P\+D\+MA channel \+: 0 -\/ 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+ET is interrupt is pending or R\+E\+S\+ET if not pending 
+\end{DoxyReturn}
+T\+O\+DO check the channel $<$=8 type is exited
+
+Definition at line 506 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t $\ast$\+D\+M\+A\+Descriptor, uint32\+\_\+t src, uint32\+\_\+t dst, uint32\+\_\+t Size, G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T Transfer\+Type, const D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t $\ast$\+Next\+Descriptor)}{Chip_GPDMA_PrepareDescriptor(LPC_GPDMA_T *pGPDMA, DMA_TransferDescriptor_t *DMADescriptor, uint32_t src, uint32_t dst, uint32_t Size, GPDMA_FLOW_CONTROL_T TransferType, const DMA_TransferDescriptor_t *NextDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Prepare\+Descriptor (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{{\bf D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$}]{D\+M\+A\+Descriptor, }
+\item[{uint32\+\_\+t}]{src, }
+\item[{uint32\+\_\+t}]{dst, }
+\item[{uint32\+\_\+t}]{Size, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}}]{Transfer\+Type, }
+\item[{const {\bf D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$}]{Next\+Descriptor}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga8605c52de33b7a8977eadaa480f5807c}{}\label{group__GPDMA__17XX__40XX_ga8605c52de33b7a8977eadaa480f5807c}
+
+
+Prepare a single D\+MA descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em D\+M\+A\+Descriptor} & \+: D\+MA Descriptor to be initialized \\
+\hline
+{\em src} & \+: Address of Memory or one of G\+P\+D\+M\+A\+\_\+\+C\+O\+N\+N\+\_\+\+M\+E\+M\+O\+RY Peripheral\+Connection\+\_\+\+ID, which is the source \\
+\hline
+{\em dst} & \+: Address of Memory or one of G\+P\+D\+M\+A\+\_\+\+C\+O\+N\+N\+\_\+\+M\+E\+M\+O\+RY Peripheral\+Connection\+\_\+\+ID, which is the destination \\
+\hline
+{\em Size} & \+: The number of D\+MA transfers \\
+\hline
+{\em Transfer\+Type} & \+: Select the transfer controller and the type of transfer. (See, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}) \\
+\hline
+{\em Next\+Descriptor} & \+: Pointer to next descriptor (0 if no more descriptors available) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR on error, S\+U\+C\+C\+E\+SS on success 
+\end{DoxyReturn}
+
+
+Definition at line 608 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, uint8\+\_\+t Channel\+Num, const D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t $\ast$\+D\+M\+A\+Descriptor, G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T Transfer\+Type)}{Chip_GPDMA_SGTransfer(LPC_GPDMA_T *pGPDMA, uint8_t ChannelNum, const DMA_TransferDescriptor_t *DMADescriptor, GPDMA_FLOW_CONTROL_T TransferType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+S\+G\+Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{uint8\+\_\+t}]{Channel\+Num, }
+\item[{const {\bf D\+M\+A\+\_\+\+Transfer\+Descriptor\+\_\+t} $\ast$}]{D\+M\+A\+Descriptor, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}}]{Transfer\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga6a2f7c7238f4288cb73baec79c3e38a7}{}\label{group__GPDMA__17XX__40XX_ga6a2f7c7238f4288cb73baec79c3e38a7}
+
+
+Do a D\+MA transfer using linked list of descriptors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em Channel\+Num} & \+: Channel used for transfer {\itshape must be obtained using \hyperlink{group__GPDMA__17XX__40XX_ga55ff3d61ec382dbec4775bed2db2cde2}{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Get\+Free\+Channel()}} \\
+\hline
+{\em D\+M\+A\+Descriptor} & \+: First node in the linked list of descriptors \\
+\hline
+{\em Transfer\+Type} & \+: Select the transfer controller and the type of transfer. (See, \hyperlink{group__GPDMA__17XX__40XX_ga2cb59b641cd840f22780c44be1208133}{G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR on error, S\+U\+C\+C\+E\+SS on success 
+\end{DoxyReturn}
+
+
+Definition at line 651 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, uint8\+\_\+t Channel\+Num)}{Chip_GPDMA_Stop(LPC_GPDMA_T *pGPDMA, uint8_t ChannelNum)}}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Stop (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{uint8\+\_\+t}]{Channel\+Num}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_gafa887387f85205ecacc3220700b49d0d}{}\label{group__GPDMA__17XX__40XX_gafa887387f85205ecacc3220700b49d0d}
+
+
+Stop a stream D\+MA transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em Channel\+Num} & \+: Channel Number to be closed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 417 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+\index{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}!Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer}}
+\index{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer@{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer}!C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver@{C\+H\+I\+P\+: L\+P\+C17xx/40xx General Purpose D\+M\+A driver}}
+\subsubsection[{\texorpdfstring{Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer(\+L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+\+T $\ast$p\+G\+P\+D\+M\+A, uint8\+\_\+t Channel\+Num, uint32\+\_\+t src, uint32\+\_\+t dst, G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T Transfer\+Type, uint32\+\_\+t Size)}{Chip_GPDMA_Transfer(LPC_GPDMA_T *pGPDMA, uint8_t ChannelNum, uint32_t src, uint32_t dst, GPDMA_FLOW_CONTROL_T TransferType, uint32_t Size)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} Chip\+\_\+\+G\+P\+D\+M\+A\+\_\+\+Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+G\+P\+D\+M\+A\+\_\+T} $\ast$}]{p\+G\+P\+D\+MA, }
+\item[{uint8\+\_\+t}]{Channel\+Num, }
+\item[{uint32\+\_\+t}]{src, }
+\item[{uint32\+\_\+t}]{dst, }
+\item[{{\bf G\+P\+D\+M\+A\+\_\+\+F\+L\+O\+W\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}}]{Transfer\+Type, }
+\item[{uint32\+\_\+t}]{Size}
+\end{DoxyParamCaption}
+)}\hypertarget{group__GPDMA__17XX__40XX_ga53a4dbf10ce59c17b0dd2284fa635580}{}\label{group__GPDMA__17XX__40XX_ga53a4dbf10ce59c17b0dd2284fa635580}
+
+
+Do a D\+MA transfer M2M, M2P,P2M or P2P. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+G\+P\+D\+MA} & \+: The base of G\+P\+D\+MA on the chip \\
+\hline
+{\em Channel\+Num} & \+: Channel used for transfer \\
+\hline
+{\em src} & \+: Address of Memory or Peripheral\+Connection\+\_\+\+ID which is the source \\
+\hline
+{\em dst} & \+: Address of Memory or Peripheral\+Connection\+\_\+\+ID which is the destination \\
+\hline
+{\em Transfer\+Type} & Select the transfer controller and the type of transfer. Should be\+:
+\begin{DoxyItemize}
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+D\+MA
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Dest\+P\+E\+R\+I\+P\+H\+E\+R\+AL
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+AL
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+Src\+P\+E\+R\+I\+P\+H\+E\+R\+AL 
+\end{DoxyItemize}\\
+\hline
+{\em Size} & \+: The number of D\+MA transfers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR on error, S\+U\+C\+C\+E\+SS on success 
+\end{DoxyReturn}
+
+
+Definition at line 562 of file gpdma\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+

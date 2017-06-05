@@ -1,0 +1,979 @@
+\hypertarget{usbd__cdc_8h}{}\section{usbd\+\_\+cdc.\+h File Reference}
+\label{usbd__cdc_8h}\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+{\ttfamily \#include \char`\"{}usbd.\+h\char`\"{}}\\*
+Include dependency graph for usbd\+\_\+cdc.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__CDC__ABSTRACT__CONTROL__MANAGEMENT__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__CDC__CALL__MANAGEMENT__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__CDC__HEADER__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__CDC__LINE__CODING}{\+\_\+\+C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}
+\item 
+struct \hyperlink{struct__CDC__UNION__1SLAVE__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+struct \hyperlink{struct__CDC__UNION__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usbd__cdc_8h_af25239a0a435bd921892cadadb9e253e}{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}~0x02
+\item 
+\#define \hyperlink{usbd__cdc_8h_a45c103c50f65018dc180c9b2bebf7efd}{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x02
+\item 
+\#define \hyperlink{usbd__cdc_8h_afc7ac79bd33733bd68140d2e88062281}{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE}~0x01
+\item 
+\#define \hyperlink{usbd__cdc_8h_a7800f91d3e98a1b22c00a925099d9000}{C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER}~(1 $<$$<$ 1)
+\item 
+\#define \hyperlink{usbd__cdc_8h_ae6d98845aabbddd52c3f9d2b8444b245}{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}~0x10
+\item 
+\#define \hyperlink{usbd__cdc_8h_ae3eb9a2cf5b62f9dae77f1b25397c75a}{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x07
+\item 
+\#define \hyperlink{usbd__cdc_8h_a0c1eabf2ab336fe1aab2949d736e8de0}{C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}~0x08
+\item 
+\#define \hyperlink{usbd__cdc_8h_a9917cd2343a8736133247b9c3fe77d07}{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}~0x01
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab81c6abf6515b13872792d5ac78e7a9e}{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}~0x28
+\item 
+\#define \hyperlink{usbd__cdc_8h_a1eb41e1403101869f4d3cf5aa261fa2a}{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}~0x0E
+\item 
+\#define \hyperlink{usbd__cdc_8h_af4e3243ed0fcc9f1f7ac66bbe2170b02}{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x05
+\item 
+\#define \hyperlink{usbd__cdc_8h_a6c79b8666110840333ad3785bf7ce87c}{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}~0x04
+\item 
+\#define \hyperlink{usbd__cdc_8h_a296b7ff8f411cbec0beb3ca081807851}{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}~0x39
+\item 
+\#define \hyperlink{usbd__cdc_8h_a15ba271255934c53442a1b5c3f84bcdd}{C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}~0x02
+\item 
+\#define \hyperlink{usbd__cdc_8h_a9f28a376a759311d1e4a1e56a6b2f49a}{C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE}~0x2A
+\item 
+\#define \hyperlink{usbd__cdc_8h_a76861e5f85f372d6a993d773f05e48eb}{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}~0x07
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab1bc012fc51f7f645360cd2cdad2c97c}{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG}~0x02
+\item 
+\#define \hyperlink{usbd__cdc_8h_ae07e10978a48ff63df33c3aeedf84c3a}{C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT}~0x25
+\item 
+\#define \hyperlink{usbd__cdc_8h_afe0ca40b5aacc5c750f952af952583d2}{C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~0x24
+\item 
+\#define \hyperlink{usbd__cdc_8h_af81d6e2f13ca36ac1099de2cabd56b84}{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}~0x0A
+\item 
+\#define \hyperlink{usbd__cdc_8h_afe5ea0520d17cefc8007249738703d03}{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE}~(1 $<$$<$ 1)
+\item 
+\#define \hyperlink{usbd__cdc_8h_a4d1029757801882e8d6589c05a3c41db}{C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS}~0x36
+\item 
+\#define \hyperlink{usbd__cdc_8h_aa4b22f62a3e073de17e7c5fa1c44fce3}{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x01
+\item 
+\#define \hyperlink{usbd__cdc_8h_ac2098e156d8f57126390f70aecf4ecae}{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}~0x03
+\item 
+\#define \hyperlink{usbd__cdc_8h_ac47a8c4d97a6c4701526b8c0083de851}{C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{usbd__cdc_8h_a2d7cb7b2ddf1244b4f38197fbf3d6017}{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}~0x0F
+\item 
+\#define \hyperlink{usbd__cdc_8h_af4582f88e4c5e7c6dfdd6b4f20793b5b}{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x06
+\item 
+\#define \hyperlink{usbd__cdc_8h_a7617ce5ed5f0d8b9058c6596d9be2067}{C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT}~0x0C
+\item 
+\#define \hyperlink{usbd__cdc_8h_ae6533ac7d829cdb9c496a81cee1e94d7}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}~0x51
+\item 
+\#define \hyperlink{usbd__cdc_8h_af1e526400896ec1ae50b4b49225a3cde}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}~0x53
+\item 
+\#define \hyperlink{usbd__cdc_8h_ad0912dac888d01142b225b0c6f8a508f}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}~0x03
+\item 
+\#define \hyperlink{usbd__cdc_8h_a6170632c774a3163b5a9927cc4e960ec}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}~0x01
+\item 
+\#define \hyperlink{usbd__cdc_8h_afc0a1bd36fdd097c6aab5455ecb4dc31}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}~0x42
+\item 
+\#define \hyperlink{usbd__cdc_8h_aee82eef61bdf0892cfbc3e2024b20416}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC}~0x44
+\item 
+\#define \hyperlink{usbd__cdc_8h_a1068ab45668e413d964a01bc36fa2d43}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}~0x21
+\item 
+\#define \hyperlink{usbd__cdc_8h_a725da0e1d595c7aebacb9fa3df4d7231}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}~0x35
+\item 
+\#define \hyperlink{usbd__cdc_8h_a257e7150670c8cc0b1d90c8f19c36b38}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}~0x33
+\item 
+\#define \hyperlink{usbd__cdc_8h_adc210559fe7b278167eaac01c504b048}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE}~0x3A
+\item 
+\#define \hyperlink{usbd__cdc_8h_a7a17ca0755e655bd1fe6ac97b68ec10f}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}~0x31
+\item 
+\#define \hyperlink{usbd__cdc_8h_afbcb9dcbc2139a1e0dc9a171033ca6e4}{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}~0x38
+\item 
+\#define \hyperlink{usbd__cdc_8h_aed9b4832a62cea26549cb48d1d60b3cd}{C\+D\+C\+\_\+\+H\+E\+A\+D\+ER}~0x00
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab7cf7bbef26d854f9eaa674e30a724b3}{C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{usbd__cdc_8h_a0bc1d5d2e07e211932793bd184c086d2}{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}~0x29
+\item 
+\#define \hyperlink{usbd__cdc_8h_a09432e81675e3420e2417c48dacc1446}{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x04
+\item 
+\#define \hyperlink{usbd__cdc_8h_a35dda23ca54017fbb00deed4d4f8c246}{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}~0x0D
+\item 
+\#define \hyperlink{usbd__cdc_8h_a2541f7d6e99caaffe7ef24e450848ca4}{C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL}~0x0A
+\item 
+\#define \hyperlink{usbd__cdc_8h_a2fc10b4e8d5f62b794742579f331ccb6}{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}~0x00
+\item 
+\#define \hyperlink{usbd__cdc_8h_a5e0b1a3162b4366e4affe826d41b588a}{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE}~0x20
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab4b9f5ccbaea5aa9468c352bd6670673}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI}~0x93
+\item 
+\#define \hyperlink{usbd__cdc_8h_a21d037be044406870a96728eab22eb04}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}~0x01
+\item 
+\#define \hyperlink{usbd__cdc_8h_ae92a998daaf7ced3b53d01f6e02bf272}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD}~0x\+FE
+\item 
+\#define \hyperlink{usbd__cdc_8h_ad89bfc1833e0b0d016eb76d79eb9c91b}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN}~0x91
+\item 
+\#define \hyperlink{usbd__cdc_8h_af4adc6afe3a8d15272d6063942fe1b1d}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC}~0x31
+\item 
+\#define \hyperlink{usbd__cdc_8h_a9c92cdf947b11c57a0367f2176dcb1c7}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER}~0x\+FD
+\item 
+\#define \hyperlink{usbd__cdc_8h_a78dc55c4e5f94f3d8f582601fe7ea898}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI}~0x30
+\item 
+\#define \hyperlink{usbd__cdc_8h_abfb6cf3a9d44e8cd5fe500b7b54d375c}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK}~0x51
+\item 
+\#define \hyperlink{usbd__cdc_8h_afd3e2fe679be1a4dd412907e48752106}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}~0x50
+\item 
+\#define \hyperlink{usbd__cdc_8h_a3d6e149c2214d9dbd8534dda168daacf}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR}~0x52
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab19110d83ed2e6ca0346e49b49522062}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}~0x32
+\item 
+\#define \hyperlink{usbd__cdc_8h_a763bfa17ad4e31a2d825435d2d525743}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT}~0x0B
+\item 
+\#define \hyperlink{usbd__cdc_8h_a170942a6e275b4e9d651b7f0f079e131}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON}~0x92
+\item 
+\#define \hyperlink{usbd__cdc_8h_ad24f4fed1ae2a53e78953d714effc033}{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42}~0x90
+\item 
+\#define \hyperlink{usbd__cdc_8h_aab5439915442bd5b835d7c755ba5fec1}{C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP}~0x12
+\item 
+\#define \hyperlink{usbd__cdc_8h_a1c22e67f33828642c5de9bdb9744fba0}{C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}~0x05
+\item 
+\#define \hyperlink{usbd__cdc_8h_a8181593c43c91cdcae5fce9578cf14a6}{C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}~0x01
+\item 
+\#define \hyperlink{usbd__cdc_8h_a763f022025ebdaa3e6fb3dd6b5bef118}{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK}~0x15
+\item 
+\#define \hyperlink{usbd__cdc_8h_ac1eec1036c75765a36266563f5dc522a}{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT}~0x09
+\item 
+\#define \hyperlink{usbd__cdc_8h_a868c480caf0abda6b458c82281dda8ad}{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK}~0x23
+\item 
+\#define \hyperlink{usbd__cdc_8h_a7aaa245703a0a2191c27697715f3727c}{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}~0x00
+\item 
+\#define \hyperlink{usbd__cdc_8h_af83535db4560a2fa52c72571f914dfc1}{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE}~0x13
+\item 
+\#define \hyperlink{usbd__cdc_8h_a4f4568a9c419e1f6c6049e6351f4fb8a}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK}~(1 $<$$<$ 2)  /$\ast$ state of break detection $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_a1d2b66027b86544993305f5602612a72}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG}~(1 $<$$<$ 4)  /$\ast$ framing error has occurred $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_a460608200d65e5aaa071185af20973e6}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN}~(1 $<$$<$ 6)  /$\ast$ receive data overrun error has occurred $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_ac1a2e84a7444f8d9c22467d48b250449}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY}~(1 $<$$<$ 5)  /$\ast$ parity error has occurred $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_a50e133d334a1d269f11dbfddf7584aa2}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG}~(1 $<$$<$ 3)  /$\ast$ state of ring signal detection $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab5cce2e3041aeb473b3e570ea7e0dd02}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER}~(1 $<$$<$ 0)  /$\ast$ state of receiver carrier $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_aac7cec8cdd36cb4a824af50cc556c862}{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER}~(1 $<$$<$ 1)  /$\ast$ state of transmission carrier $\ast$/
+\item 
+\#define \hyperlink{usbd__cdc_8h_aa035b52c9857b59480234cde9624c89c}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT}~0x50
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab3fad775e9da8b7d0223cddfb444c4d2}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC}~0x52
+\item 
+\#define \hyperlink{usbd__cdc_8h_ac39a42b128864ba4fae224be0078adba}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}~0x10
+\item 
+\#define \hyperlink{usbd__cdc_8h_a893b79445f99070657e8d45f6495b174}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}~0x02
+\item 
+\#define \hyperlink{usbd__cdc_8h_a11c392243dec4d03970f1eaa1f8053ae}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}~0x22
+\item 
+\#define \hyperlink{usbd__cdc_8h_a9abaa51e99db04219620a328c719d9b4}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS}~0x40
+\item 
+\#define \hyperlink{usbd__cdc_8h_a5776aef3d254f11c1b6cca8b9c25ea77}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER}~0x43
+\item 
+\#define \hyperlink{usbd__cdc_8h_aa0f6ee8db8c60236159f939776829fcf}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}~0x41
+\item 
+\#define \hyperlink{usbd__cdc_8h_a367e07b7ce50e3a17703da1dea7f05a1}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}~0x11
+\item 
+\#define \hyperlink{usbd__cdc_8h_ad07ce089c8757b8d2ff37ddd83dc9351}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}~0x20
+\item 
+\#define \hyperlink{usbd__cdc_8h_a74433e0421d2cfd59982db6417a8ea41}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}~0x34
+\item 
+\#define \hyperlink{usbd__cdc_8h_a437557c6adb23d8cdde7842b62a03a21}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}~0x32
+\item 
+\#define \hyperlink{usbd__cdc_8h_a83ededfa85fdc32e603f9d1cdccbad78}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME}~0x14
+\item 
+\#define \hyperlink{usbd__cdc_8h_aacceff07ade4b94b3c924d4f4ad6b139}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}~0x30
+\item 
+\#define \hyperlink{usbd__cdc_8h_af6288535dffb72bcbdce329546eede03}{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}~0x37
+\item 
+\#define \hyperlink{usbd__cdc_8h_a7952047aa14ed96652c4ca32184b5fbe}{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}~0x03
+\item 
+\#define \hyperlink{usbd__cdc_8h_a80a819de39e07558242157c6f43b1c9b}{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES}~0x08
+\item 
+\#define \hyperlink{usbd__cdc_8h_a0a5a5d643222d2f98829e4e3820ae893}{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER}~0x04
+\item 
+\#define \hyperlink{usbd__cdc_8h_af6f38e6604e2bc2f4dc6e138cc39162a}{C\+D\+C\+\_\+\+U\+N\+I\+ON}~0x06
+\item 
+\#define \hyperlink{usbd__cdc_8h_ab1d0ea5a7cedfd170085ac2e713d95be}{C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL}~0x09
+\item 
+\#define \hyperlink{usbd__cdc_8h_a8e40069024a8bbca6a4c9475f16a390b}{C\+D\+C\+\_\+\+V1\+\_\+10}~0x0110
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__CDC__ABSTRACT__CONTROL__MANAGEMENT__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{usbd__cdc_8h_a182e7d74060fd5dbb84199f22da25e14}{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__CDC__CALL__MANAGEMENT__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{usbd__cdc_8h_a86872a8d744a670b1d41a07109dbfd5c}{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__CDC__HEADER__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{usbd__cdc_8h_abb35aec6d5dc7bf80335bf03f6419e9a}{C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__CDC__LINE__CODING}{\+\_\+\+C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG} \hyperlink{usbd__cdc_8h_a1d66ffafad206be2563c72cb972fbf52}{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}
+\item 
+typedef \hyperlink{group__USBD__Core_ga4a940f7627cc7e9f0bb693cc0fce8637}{U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} \hyperlink{usbd__cdc_8h_a0859cc73ebea375bd109da2f54b862cf}{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}
+\item 
+typedef struct \hyperlink{struct__CDC__UNION__1SLAVE__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{usbd__cdc_8h_a2bca91720bb49dd22cc35e1ece6d87c3}{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\item 
+typedef struct \hyperlink{struct__CDC__UNION__DESCRIPTOR}{\+\_\+\+C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{usbd__cdc_8h_abae3cc6753424f8383c5d46f674975b9}{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}}
+\index{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}{CDC_ABSTRACT_CONTROL_MANAGEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT~0x02}\hypertarget{usbd__cdc_8h_af25239a0a435bd921892cadadb9e253e}{}\label{usbd__cdc_8h_af25239a0a435bd921892cadadb9e253e}
+
+
+Definition at line 81 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_ABSTRACT_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x02}\hypertarget{usbd__cdc_8h_a45c103c50f65018dc180c9b2bebf7efd}{}\label{usbd__cdc_8h_a45c103c50f65018dc180c9b2bebf7efd}
+
+
+Definition at line 42 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE}{CDC_ABSTRACT_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+S\+T\+A\+TE~0x01}\hypertarget{usbd__cdc_8h_afc7ac79bd33733bd68140d2e88062281}{}\label{usbd__cdc_8h_afc7ac79bd33733bd68140d2e88062281}
+
+
+Definition at line 138 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER@{C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER}}
+\index{C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER@{C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER}{CDC_ACTIVATE_CARRIER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+C\+A\+R\+R\+I\+ER~(1 $<$$<$ 1)}\hypertarget{usbd__cdc_8h_a7800f91d3e98a1b22c00a925099d9000}{}\label{usbd__cdc_8h_a7800f91d3e98a1b22c00a925099d9000}
+
+
+Definition at line 150 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG@{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}}
+\index{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG@{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}{CDC_ATM_NETWORKING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG~0x10}\hypertarget{usbd__cdc_8h_ae6d98845aabbddd52c3f9d2b8444b245}{}\label{usbd__cdc_8h_ae6d98845aabbddd52c3f9d2b8444b245}
+
+
+Definition at line 95 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_ATM_NETWORKING_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+T\+M\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x07}\hypertarget{usbd__cdc_8h_ae3eb9a2cf5b62f9dae77f1b25397c75a}{}\label{usbd__cdc_8h_ae3eb9a2cf5b62f9dae77f1b25397c75a}
+
+
+Definition at line 47 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}{CDC_AUX_JACK_HOOK_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+A\+U\+X\+\_\+\+J\+A\+C\+K\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE~0x08}\hypertarget{usbd__cdc_8h_a0c1eabf2ab336fe1aab2949d736e8de0}{}\label{usbd__cdc_8h_a0c1eabf2ab336fe1aab2949d736e8de0}
+
+
+Definition at line 157 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}}
+\index{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}{CDC_CALL_MANAGEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT~0x01}\hypertarget{usbd__cdc_8h_a9917cd2343a8736133247b9c3fe77d07}{}\label{usbd__cdc_8h_a9917cd2343a8736133247b9c3fe77d07}
+
+
+Definition at line 80 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE@{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}}
+\index{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE@{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}{CDC_CALL_STATE_CHANGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE~0x28}\hypertarget{usbd__cdc_8h_ab81c6abf6515b13872792d5ac78e7a9e}{}\label{usbd__cdc_8h_ab81c6abf6515b13872792d5ac78e7a9e}
+
+
+Definition at line 160 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}}
+\index{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}{CDC_CAPI_CONTROL_MANAGEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT~0x0E}\hypertarget{usbd__cdc_8h_a1eb41e1403101869f4d3cf5aa261fa2a}{}\label{usbd__cdc_8h_a1eb41e1403101869f4d3cf5aa261fa2a}
+
+
+Definition at line 93 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_CAPI_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+A\+P\+I\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x05}\hypertarget{usbd__cdc_8h_af4e3243ed0fcc9f1f7ac66bbe2170b02}{}\label{usbd__cdc_8h_af4e3243ed0fcc9f1f7ac66bbe2170b02}
+
+
+Definition at line 45 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE@{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\index{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE@{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}{CDC_CLEAR_COMM_FEATURE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE~0x04}\hypertarget{usbd__cdc_8h_a6c79b8666110840333ad3785bf7ce87c}{}\label{usbd__cdc_8h_a6c79b8666110840333ad3785bf7ce87c}
+
+
+Definition at line 104 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}
+\index{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}{CDC_CLEAR_UNIT_PARAMETER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+L\+E\+A\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER~0x39}\hypertarget{usbd__cdc_8h_a296b7ff8f411cbec0beb3ca081807851}{}\label{usbd__cdc_8h_a296b7ff8f411cbec0beb3ca081807851}
+
+
+Definition at line 124 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS@{C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}}
+\index{C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS@{C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}{CDC_COMMUNICATION_INTERFACE_CLASS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS~0x02}\hypertarget{usbd__cdc_8h_a15ba271255934c53442a1b5c3f84bcdd}{}\label{usbd__cdc_8h_a15ba271255934c53442a1b5c3f84bcdd}
+
+
+Definition at line 37 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE@{C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE}}
+\index{C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE@{C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE}{CDC_CONNECTION_SPEED_CHANGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+P\+E\+E\+D\+\_\+\+C\+H\+A\+N\+GE~0x2A}\hypertarget{usbd__cdc_8h_a9f28a376a759311d1e4a1e56a6b2f49a}{}\label{usbd__cdc_8h_a9f28a376a759311d1e4a1e56a6b2f49a}
+
+
+Definition at line 162 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}
+\index{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}{CDC_COUNTRY_SELECTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON~0x07}\hypertarget{usbd__cdc_8h_a76861e5f85f372d6a993d773f05e48eb}{}\label{usbd__cdc_8h_a76861e5f85f372d6a993d773f05e48eb}
+
+
+Definition at line 86 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG@{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG}}
+\index{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG@{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG}{CDC_COUNTRY_SETTING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+O\+U\+N\+T\+R\+Y\+\_\+\+S\+E\+T\+T\+I\+NG~0x02}\hypertarget{usbd__cdc_8h_ab1bc012fc51f7f645360cd2cdad2c97c}{}\label{usbd__cdc_8h_ab1bc012fc51f7f645360cd2cdad2c97c}
+
+
+Definition at line 139 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT}}
+\index{C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT}{CDC_CS_ENDPOINT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+S\+\_\+\+E\+N\+D\+P\+O\+I\+NT~0x25}\hypertarget{usbd__cdc_8h_ae07e10978a48ff63df33c3aeedf84c3a}{}\label{usbd__cdc_8h_ae07e10978a48ff63df33c3aeedf84c3a}
+
+
+Definition at line 75 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{CDC_CS_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+C\+S\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~0x24}\hypertarget{usbd__cdc_8h_afe0ca40b5aacc5c750f952af952583d2}{}\label{usbd__cdc_8h_afe0ca40b5aacc5c750f952af952583d2}
+
+
+Definition at line 74 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS@{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}}
+\index{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS@{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS}{CDC_DATA_INTERFACE_CLASS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+L\+A\+SS~0x0A}\hypertarget{usbd__cdc_8h_af81d6e2f13ca36ac1099de2cabd56b84}{}\label{usbd__cdc_8h_af81d6e2f13ca36ac1099de2cabd56b84}
+
+
+Definition at line 55 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE}{CDC_DATA_MULTPLEXED_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+D\+A\+T\+A\+\_\+\+M\+U\+L\+T\+P\+L\+E\+X\+E\+D\+\_\+\+S\+T\+A\+TE~(1 $<$$<$ 1)}\hypertarget{usbd__cdc_8h_afe5ea0520d17cefc8007249738703d03}{}\label{usbd__cdc_8h_afe5ea0520d17cefc8007249738703d03}
+
+
+Definition at line 144 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS@{C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS}}
+\index{C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS@{C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS}{CDC_DIAL_DIGITS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+D\+I\+A\+L\+\_\+\+D\+I\+G\+I\+TS~0x36}\hypertarget{usbd__cdc_8h_a4d1029757801882e8d6589c05a3c41db}{}\label{usbd__cdc_8h_a4d1029757801882e8d6589c05a3c41db}
+
+
+Definition at line 121 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_DIRECT_LINE_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x01}\hypertarget{usbd__cdc_8h_aa4b22f62a3e073de17e7c5fa1c44fce3}{}\label{usbd__cdc_8h_aa4b22f62a3e073de17e7c5fa1c44fce3}
+
+
+Definition at line 41 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}}
+\index{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}{CDC_DIRECT_LINE_MANAGEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+L\+I\+N\+E\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT~0x03}\hypertarget{usbd__cdc_8h_ac2098e156d8f57126390f70aecf4ecae}{}\label{usbd__cdc_8h_ac2098e156d8f57126390f70aecf4ecae}
+
+
+Definition at line 82 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT@{C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT}}
+\index{C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT@{C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT}{CDC_DTE_PRESENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+D\+T\+E\+\_\+\+P\+R\+E\+S\+E\+NT~(1 $<$$<$ 0)}\hypertarget{usbd__cdc_8h_ac47a8c4d97a6c4701526b8c0083de851}{}\label{usbd__cdc_8h_ac47a8c4d97a6c4701526b8c0083de851}
+
+
+Definition at line 149 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG@{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}}
+\index{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG@{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG}{CDC_ETHERNET_NETWORKING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+NG~0x0F}\hypertarget{usbd__cdc_8h_a2d7cb7b2ddf1244b4f38197fbf3d6017}{}\label{usbd__cdc_8h_a2d7cb7b2ddf1244b4f38197fbf3d6017}
+
+
+Definition at line 94 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_ETHERNET_NETWORKING_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x06}\hypertarget{usbd__cdc_8h_af4582f88e4c5e7c6dfdd6b4f20793b5b}{}\label{usbd__cdc_8h_af4582f88e4c5e7c6dfdd6b4f20793b5b}
+
+
+Definition at line 46 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT@{C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT}}
+\index{C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT@{C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT}{CDC_EXTENSION_UNIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+IT~0x0C}\hypertarget{usbd__cdc_8h_a7617ce5ed5f0d8b9058c6596d9be2067}{}\label{usbd__cdc_8h_a7617ce5ed5f0d8b9058c6596d9be2067}
+
+
+Definition at line 91 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}{CDC_GET_ATM_DEVICE_STATISTICS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS~0x51}\hypertarget{usbd__cdc_8h_ae6533ac7d829cdb9c496a81cee1e94d7}{}\label{usbd__cdc_8h_ae6533ac7d829cdb9c496a81cee1e94d7}
+
+
+Definition at line 132 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS}{CDC_GET_ATM_VC_STATISTICS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+A\+T\+M\+\_\+\+V\+C\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+CS~0x53}\hypertarget{usbd__cdc_8h_af1e526400896ec1ae50b4b49225a3cde}{}\label{usbd__cdc_8h_af1e526400896ec1ae50b4b49225a3cde}
+
+
+Definition at line 134 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}{CDC_GET_COMM_FEATURE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE~0x03}\hypertarget{usbd__cdc_8h_ad0912dac888d01142b225b0c6f8a508f}{}\label{usbd__cdc_8h_ad0912dac888d01142b225b0c6f8a508f}
+
+
+Definition at line 103 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}{CDC_GET_ENCAPSULATED_RESPONSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE~0x01}\hypertarget{usbd__cdc_8h_a6170632c774a3163b5a9927cc4e960ec}{}\label{usbd__cdc_8h_a6170632c774a3163b5a9927cc4e960ec}
+
+
+Definition at line 101 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}{CDC_GET_ETHERNET_PMP_FILTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER~0x42}\hypertarget{usbd__cdc_8h_afc0a1bd36fdd097c6aab5455ecb4dc31}{}\label{usbd__cdc_8h_afc0a1bd36fdd097c6aab5455ecb4dc31}
+
+
+Definition at line 128 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC}{CDC_GET_ETHERNET_STATISTIC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+T\+A\+T\+I\+S\+T\+IC~0x44}\hypertarget{usbd__cdc_8h_aee82eef61bdf0892cfbc3e2024b20416}{}\label{usbd__cdc_8h_aee82eef61bdf0892cfbc3e2024b20416}
+
+
+Definition at line 130 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}{CDC_GET_LINE_CODING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG~0x21}\hypertarget{usbd__cdc_8h_a1068ab45668e413d964a01bc36fa2d43}{}\label{usbd__cdc_8h_a1068ab45668e413d964a01bc36fa2d43}
+
+
+Definition at line 112 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}{CDC_GET_LINE_PARMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS~0x35}\hypertarget{usbd__cdc_8h_a725da0e1d595c7aebacb9fa3df4d7231}{}\label{usbd__cdc_8h_a725da0e1d595c7aebacb9fa3df4d7231}
+
+
+Definition at line 120 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}{CDC_GET_OPERATION_PARMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS~0x33}\hypertarget{usbd__cdc_8h_a257e7150670c8cc0b1d90c8f19c36b38}{}\label{usbd__cdc_8h_a257e7150670c8cc0b1d90c8f19c36b38}
+
+
+Definition at line 118 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE}{CDC_GET_PROFILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE~0x3A}\hypertarget{usbd__cdc_8h_adc210559fe7b278167eaac01c504b048}{}\label{usbd__cdc_8h_adc210559fe7b278167eaac01c504b048}
+
+
+Definition at line 125 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}{CDC_GET_RINGER_PARMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS~0x31}\hypertarget{usbd__cdc_8h_a7a17ca0755e655bd1fe6ac97b68ec10f}{}\label{usbd__cdc_8h_a7a17ca0755e655bd1fe6ac97b68ec10f}
+
+
+Definition at line 116 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}
+\index{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}{CDC_GET_UNIT_PARAMETER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+G\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER~0x38}\hypertarget{usbd__cdc_8h_afbcb9dcbc2139a1e0dc9a171033ca6e4}{}\label{usbd__cdc_8h_afbcb9dcbc2139a1e0dc9a171033ca6e4}
+
+
+Definition at line 123 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+H\+E\+A\+D\+ER@{C\+D\+C\+\_\+\+H\+E\+A\+D\+ER}}
+\index{C\+D\+C\+\_\+\+H\+E\+A\+D\+ER@{C\+D\+C\+\_\+\+H\+E\+A\+D\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+H\+E\+A\+D\+ER}{CDC_HEADER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+H\+E\+A\+D\+ER~0x00}\hypertarget{usbd__cdc_8h_aed9b4832a62cea26549cb48d1d60b3cd}{}\label{usbd__cdc_8h_aed9b4832a62cea26549cb48d1d60b3cd}
+
+
+Definition at line 79 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG@{C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG}}
+\index{C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG@{C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG}{CDC_IDLE_SETTING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+I\+D\+L\+E\+\_\+\+S\+E\+T\+T\+I\+NG~(1 $<$$<$ 0)}\hypertarget{usbd__cdc_8h_ab7cf7bbef26d854f9eaa674e30a724b3}{}\label{usbd__cdc_8h_ab7cf7bbef26d854f9eaa674e30a724b3}
+
+
+Definition at line 143 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE@{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}}
+\index{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE@{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE}{CDC_LINE_STATE_CHANGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+GE~0x29}\hypertarget{usbd__cdc_8h_a0bc1d5d2e07e211932793bd184c086d2}{}\label{usbd__cdc_8h_a0bc1d5d2e07e211932793bd184c086d2}
+
+
+Definition at line 161 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_MULTI_CHANNEL_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x04}\hypertarget{usbd__cdc_8h_a09432e81675e3420e2417c48dacc1446}{}\label{usbd__cdc_8h_a09432e81675e3420e2417c48dacc1446}
+
+
+Definition at line 44 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}}
+\index{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}{CDC_MULTI_CHANNEL_MANAGEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT~0x0D}\hypertarget{usbd__cdc_8h_a35dda23ca54017fbb00deed4d4f8c246}{}\label{usbd__cdc_8h_a35dda23ca54017fbb00deed4d4f8c246}
+
+
+Definition at line 92 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL@{C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL}}
+\index{C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL@{C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL}{CDC_NETWORK_CHANNEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+H\+A\+N\+N\+EL~0x0A}\hypertarget{usbd__cdc_8h_a2541f7d6e99caaffe7ef24e450848ca4}{}\label{usbd__cdc_8h_a2541f7d6e99caaffe7ef24e450848ca4}
+
+
+Definition at line 89 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON@{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}}
+\index{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON@{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}{CDC_NOTIFICATION_NETWORK_CONNECTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON~0x00}\hypertarget{usbd__cdc_8h_a2fc10b4e8d5f62b794742579f331ccb6}{}\label{usbd__cdc_8h_a2fc10b4e8d5f62b794742579f331ccb6}
+
+
+Definition at line 155 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE}{CDC_NOTIFICATION_SERIAL_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+TE~0x20}\hypertarget{usbd__cdc_8h_a5e0b1a3162b4366e4affe826d41b588a}{}\label{usbd__cdc_8h_a5e0b1a3162b4366e4affe826d41b588a}
+
+
+Definition at line 159 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI}{CDC_PROTOCOL_CAPI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+A\+PI~0x93}\hypertarget{usbd__cdc_8h_ab4b9f5ccbaea5aa9468c352bd6670673}{}\label{usbd__cdc_8h_ab4b9f5ccbaea5aa9468c352bd6670673}
+
+
+Definition at line 68 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS}{CDC_PROTOCOL_COMMON_AT_COMMANDS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+A\+T\+\_\+\+C\+O\+M\+M\+A\+N\+DS~0x01}\hypertarget{usbd__cdc_8h_a21d037be044406870a96728eab22eb04}{}\label{usbd__cdc_8h_a21d037be044406870a96728eab22eb04}
+
+
+Definition at line 51 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD}{CDC_PROTOCOL_DESCRIBED_IN_PUFD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+S\+C\+R\+I\+B\+E\+D\+\_\+\+I\+N\+\_\+\+P\+U\+FD~0x\+FE}\hypertarget{usbd__cdc_8h_ae92a998daaf7ced3b53d01f6e02bf272}{}\label{usbd__cdc_8h_ae92a998daaf7ced3b53d01f6e02bf272}
+
+
+Definition at line 70 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN}{CDC_PROTOCOL_EURO_ISDN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+E\+U\+R\+O\+\_\+\+I\+S\+DN~0x91}\hypertarget{usbd__cdc_8h_ad89bfc1833e0b0d016eb76d79eb9c91b}{}\label{usbd__cdc_8h_ad89bfc1833e0b0d016eb76d79eb9c91b}
+
+
+Definition at line 66 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC}{CDC_PROTOCOL_HDLC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+D\+LC~0x31}\hypertarget{usbd__cdc_8h_af4adc6afe3a8d15272d6063942fe1b1d}{}\label{usbd__cdc_8h_af4adc6afe3a8d15272d6063942fe1b1d}
+
+
+Definition at line 60 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER}{CDC_PROTOCOL_HOST_BASED_DRIVER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+H\+O\+S\+T\+\_\+\+B\+A\+S\+E\+D\+\_\+\+D\+R\+I\+V\+ER~0x\+FD}\hypertarget{usbd__cdc_8h_a9c92cdf947b11c57a0367f2176dcb1c7}{}\label{usbd__cdc_8h_a9c92cdf947b11c57a0367f2176dcb1c7}
+
+
+Definition at line 69 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI}{CDC_PROTOCOL_ISDN_BRI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+I\+S\+D\+N\+\_\+\+B\+RI~0x30}\hypertarget{usbd__cdc_8h_a78dc55c4e5f94f3d8f582601fe7ea898}{}\label{usbd__cdc_8h_a78dc55c4e5f94f3d8f582601fe7ea898}
+
+
+Definition at line 59 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK}{CDC_PROTOCOL_Q921_DATA_LINK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+D\+A\+T\+A\+\_\+\+L\+I\+NK~0x51}\hypertarget{usbd__cdc_8h_abfb6cf3a9d44e8cd5fe500b7b54d375c}{}\label{usbd__cdc_8h_abfb6cf3a9d44e8cd5fe500b7b54d375c}
+
+
+Definition at line 63 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT}{CDC_PROTOCOL_Q921_MANAGEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+NT~0x50}\hypertarget{usbd__cdc_8h_afd3e2fe679be1a4dd412907e48752106}{}\label{usbd__cdc_8h_afd3e2fe679be1a4dd412907e48752106}
+
+
+Definition at line 62 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR}{CDC_PROTOCOL_Q921_MULTIPLEXOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+Q921\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+X\+OR~0x52}\hypertarget{usbd__cdc_8h_a3d6e149c2214d9dbd8534dda168daacf}{}\label{usbd__cdc_8h_a3d6e149c2214d9dbd8534dda168daacf}
+
+
+Definition at line 64 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}{CDC_PROTOCOL_TRANSPARENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT~0x32}\hypertarget{usbd__cdc_8h_ab19110d83ed2e6ca0346e49b49522062}{}\label{usbd__cdc_8h_ab19110d83ed2e6ca0346e49b49522062}
+
+
+Definition at line 61 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT}{CDC_PROTOCOL_UNIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+U\+N\+IT~0x0B}\hypertarget{usbd__cdc_8h_a763bfa17ad4e31a2d825435d2d525743}{}\label{usbd__cdc_8h_a763bfa17ad4e31a2d825435d2d525743}
+
+
+Definition at line 90 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON}{CDC_PROTOCOL_V24_RATE_ADAPTATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V24\+\_\+\+R\+A\+T\+E\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON~0x92}\hypertarget{usbd__cdc_8h_a170942a6e275b4e9d651b7f0f079e131}{}\label{usbd__cdc_8h_a170942a6e275b4e9d651b7f0f079e131}
+
+
+Definition at line 67 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42}}
+\index{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42@{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42}{CDC_PROTOCOL_V42}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V42~0x90}\hypertarget{usbd__cdc_8h_ad24f4fed1ae2a53e78953d714effc033}{}\label{usbd__cdc_8h_ad24f4fed1ae2a53e78953d714effc033}
+
+
+Definition at line 65 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP@{C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP}}
+\index{C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP@{C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP}{CDC_PULSE_SETUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+P\+U\+L\+S\+E\+\_\+\+S\+E\+T\+UP~0x12}\hypertarget{usbd__cdc_8h_aab5439915442bd5b835d7c755ba5fec1}{}\label{usbd__cdc_8h_aab5439915442bd5b835d7c755ba5fec1}
+
+
+Definition at line 107 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES@{C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}}
+\index{C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES@{C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES}{CDC_REPORTING_CAPABILITIES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+R\+E\+P\+O\+R\+T\+I\+N\+G\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+ES~0x05}\hypertarget{usbd__cdc_8h_a1c22e67f33828642c5de9bdb9744fba0}{}\label{usbd__cdc_8h_a1c22e67f33828642c5de9bdb9744fba0}
+
+
+Definition at line 84 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}}
+\index{C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE@{C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE}{CDC_RESPONSE_AVAILABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE~0x01}\hypertarget{usbd__cdc_8h_a8181593c43c91cdcae5fce9578cf14a6}{}\label{usbd__cdc_8h_a8181593c43c91cdcae5fce9578cf14a6}
+
+
+Definition at line 156 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK@{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK}}
+\index{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK@{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK}{CDC_RING_AUX_JACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+A\+U\+X\+\_\+\+J\+A\+CK~0x15}\hypertarget{usbd__cdc_8h_a763f022025ebdaa3e6fb3dd6b5bef118}{}\label{usbd__cdc_8h_a763f022025ebdaa3e6fb3dd6b5bef118}
+
+
+Definition at line 110 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT@{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT}}
+\index{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT@{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT}{CDC_RING_DETECT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+R\+I\+N\+G\+\_\+\+D\+E\+T\+E\+CT~0x09}\hypertarget{usbd__cdc_8h_ac1eec1036c75765a36266563f5dc522a}{}\label{usbd__cdc_8h_ac1eec1036c75765a36266563f5dc522a}
+
+
+Definition at line 158 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK@{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK}}
+\index{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK@{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK}{CDC_SEND_BREAK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+B\+R\+E\+AK~0x23}\hypertarget{usbd__cdc_8h_a868c480caf0abda6b458c82281dda8ad}{}\label{usbd__cdc_8h_a868c480caf0abda6b458c82281dda8ad}
+
+
+Definition at line 114 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND@{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}}
+\index{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND@{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}{CDC_SEND_ENCAPSULATED_COMMAND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+N\+C\+A\+P\+S\+U\+L\+A\+T\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND~0x00}\hypertarget{usbd__cdc_8h_a7aaa245703a0a2191c27697715f3727c}{}\label{usbd__cdc_8h_a7aaa245703a0a2191c27697715f3727c}
+
+
+Definition at line 100 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE@{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE}}
+\index{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE@{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE}{CDC_SEND_PULSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+N\+D\+\_\+\+P\+U\+L\+SE~0x13}\hypertarget{usbd__cdc_8h_af83535db4560a2fa52c72571f914dfc1}{}\label{usbd__cdc_8h_af83535db4560a2fa52c72571f914dfc1}
+
+
+Definition at line 108 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK}{CDC_SERIAL_STATE_BREAK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK~(1 $<$$<$ 2)  /$\ast$ state of break detection $\ast$/}\hypertarget{usbd__cdc_8h_a4f4568a9c419e1f6c6049e6351f4fb8a}{}\label{usbd__cdc_8h_a4f4568a9c419e1f6c6049e6351f4fb8a}
+
+
+Definition at line 170 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG}{CDC_SERIAL_STATE_FRAMING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+R\+A\+M\+I\+NG~(1 $<$$<$ 4)  /$\ast$ framing error has occurred $\ast$/}\hypertarget{usbd__cdc_8h_a1d2b66027b86544993305f5602612a72}{}\label{usbd__cdc_8h_a1d2b66027b86544993305f5602612a72}
+
+
+Definition at line 168 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN}{CDC_SERIAL_STATE_OVERRUN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+V\+E\+R\+R\+UN~(1 $<$$<$ 6)  /$\ast$ receive data overrun error has occurred $\ast$/}\hypertarget{usbd__cdc_8h_a460608200d65e5aaa071185af20973e6}{}\label{usbd__cdc_8h_a460608200d65e5aaa071185af20973e6}
+
+
+Definition at line 166 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY}{CDC_SERIAL_STATE_PARITY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+I\+TY~(1 $<$$<$ 5)  /$\ast$ parity error has occurred $\ast$/}\hypertarget{usbd__cdc_8h_ac1a2e84a7444f8d9c22467d48b250449}{}\label{usbd__cdc_8h_ac1a2e84a7444f8d9c22467d48b250449}
+
+
+Definition at line 167 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG}{CDC_SERIAL_STATE_RING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+I\+NG~(1 $<$$<$ 3)  /$\ast$ state of ring signal detection $\ast$/}\hypertarget{usbd__cdc_8h_a50e133d334a1d269f11dbfddf7584aa2}{}\label{usbd__cdc_8h_a50e133d334a1d269f11dbfddf7584aa2}
+
+
+Definition at line 169 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER}{CDC_SERIAL_STATE_RX_CARRIER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+C\+A\+R\+R\+I\+ER~(1 $<$$<$ 0)  /$\ast$ state of receiver carrier $\ast$/}\hypertarget{usbd__cdc_8h_ab5cce2e3041aeb473b3e570ea7e0dd02}{}\label{usbd__cdc_8h_ab5cce2e3041aeb473b3e570ea7e0dd02}
+
+
+Definition at line 172 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER}}
+\index{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER@{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER}{CDC_SERIAL_STATE_TX_CARRIER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+C\+A\+R\+R\+I\+ER~(1 $<$$<$ 1)  /$\ast$ state of transmission carrier $\ast$/}\hypertarget{usbd__cdc_8h_aac7cec8cdd36cb4a824af50cc556c862}{}\label{usbd__cdc_8h_aac7cec8cdd36cb4a824af50cc556c862}
+
+
+Definition at line 171 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT}{CDC_SET_ATM_DATA_FORMAT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT~0x50}\hypertarget{usbd__cdc_8h_aa035b52c9857b59480234cde9624c89c}{}\label{usbd__cdc_8h_aa035b52c9857b59480234cde9624c89c}
+
+
+Definition at line 131 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC}{CDC_SET_ATM_DEFAULT_VC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+T\+M\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+VC~0x52}\hypertarget{usbd__cdc_8h_ab3fad775e9da8b7d0223cddfb444c4d2}{}\label{usbd__cdc_8h_ab3fad775e9da8b7d0223cddfb444c4d2}
+
+
+Definition at line 133 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}{CDC_SET_AUX_LINE_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+A\+U\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE~0x10}\hypertarget{usbd__cdc_8h_ac39a42b128864ba4fae224be0078adba}{}\label{usbd__cdc_8h_ac39a42b128864ba4fae224be0078adba}
+
+
+Definition at line 105 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE}{CDC_SET_COMM_FEATURE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+M\+\_\+\+F\+E\+A\+T\+U\+RE~0x02}\hypertarget{usbd__cdc_8h_a893b79445f99070657e8d45f6495b174}{}\label{usbd__cdc_8h_a893b79445f99070657e8d45f6495b174}
+
+
+Definition at line 102 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE}{CDC_SET_CONTROL_LINE_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+A\+TE~0x22}\hypertarget{usbd__cdc_8h_a11c392243dec4d03970f1eaa1f8053ae}{}\label{usbd__cdc_8h_a11c392243dec4d03970f1eaa1f8053ae}
+
+
+Definition at line 113 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS}{CDC_SET_ETHERNET_MULTICAST_FILTERS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+F\+I\+L\+T\+E\+RS~0x40}\hypertarget{usbd__cdc_8h_a9abaa51e99db04219620a328c719d9b4}{}\label{usbd__cdc_8h_a9abaa51e99db04219620a328c719d9b4}
+
+
+Definition at line 126 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER}{CDC_SET_ETHERNET_PACKET_FILTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+F\+I\+L\+T\+ER~0x43}\hypertarget{usbd__cdc_8h_a5776aef3d254f11c1b6cca8b9c25ea77}{}\label{usbd__cdc_8h_a5776aef3d254f11c1b6cca8b9c25ea77}
+
+
+Definition at line 129 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER}{CDC_SET_ETHERNET_PMP_FILTER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+M\+P\+\_\+\+F\+I\+L\+T\+ER~0x41}\hypertarget{usbd__cdc_8h_aa0f6ee8db8c60236159f939776829fcf}{}\label{usbd__cdc_8h_aa0f6ee8db8c60236159f939776829fcf}
+
+
+Definition at line 127 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE}{CDC_SET_HOOK_STATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+H\+O\+O\+K\+\_\+\+S\+T\+A\+TE~0x11}\hypertarget{usbd__cdc_8h_a367e07b7ce50e3a17703da1dea7f05a1}{}\label{usbd__cdc_8h_a367e07b7ce50e3a17703da1dea7f05a1}
+
+
+Definition at line 106 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}{CDC_SET_LINE_CODING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG~0x20}\hypertarget{usbd__cdc_8h_ad07ce089c8757b8d2ff37ddd83dc9351}{}\label{usbd__cdc_8h_ad07ce089c8757b8d2ff37ddd83dc9351}
+
+
+Definition at line 111 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS}{CDC_SET_LINE_PARMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+L\+I\+N\+E\+\_\+\+P\+A\+R\+MS~0x34}\hypertarget{usbd__cdc_8h_a74433e0421d2cfd59982db6417a8ea41}{}\label{usbd__cdc_8h_a74433e0421d2cfd59982db6417a8ea41}
+
+
+Definition at line 119 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS}{CDC_SET_OPERATION_PARMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+P\+A\+R\+MS~0x32}\hypertarget{usbd__cdc_8h_a437557c6adb23d8cdde7842b62a03a21}{}\label{usbd__cdc_8h_a437557c6adb23d8cdde7842b62a03a21}
+
+
+Definition at line 117 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME}{CDC_SET_PULSE_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+T\+I\+ME~0x14}\hypertarget{usbd__cdc_8h_a83ededfa85fdc32e603f9d1cdccbad78}{}\label{usbd__cdc_8h_a83ededfa85fdc32e603f9d1cdccbad78}
+
+
+Definition at line 109 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS}{CDC_SET_RINGER_PARMS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+R\+I\+N\+G\+E\+R\+\_\+\+P\+A\+R\+MS~0x30}\hypertarget{usbd__cdc_8h_aacceff07ade4b94b3c924d4f4ad6b139}{}\label{usbd__cdc_8h_aacceff07ade4b94b3c924d4f4ad6b139}
+
+
+Definition at line 115 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}
+\index{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}{CDC_SET_UNIT_PARAMETER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+S\+E\+T\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER~0x37}\hypertarget{usbd__cdc_8h_af6288535dffb72bcbdce329546eede03}{}\label{usbd__cdc_8h_af6288535dffb72bcbdce329546eede03}
+
+
+Definition at line 122 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}}
+\index{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL@{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL}{CDC_TELEPHONE_CONTROL_MODEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+O\+D\+EL~0x03}\hypertarget{usbd__cdc_8h_a7952047aa14ed96652c4ca32184b5fbe}{}\label{usbd__cdc_8h_a7952047aa14ed96652c4ca32184b5fbe}
+
+
+Definition at line 43 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES@{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES}}
+\index{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES@{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES}{CDC_TELEPHONE_OPERATIONAL_MODES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+M\+O\+D\+ES~0x08}\hypertarget{usbd__cdc_8h_a80a819de39e07558242157c6f43b1c9b}{}\label{usbd__cdc_8h_a80a819de39e07558242157c6f43b1c9b}
+
+
+Definition at line 87 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER@{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER}}
+\index{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER@{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER}{CDC_TELEPHONE_RINGER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+T\+E\+L\+E\+P\+H\+O\+N\+E\+\_\+\+R\+I\+N\+G\+ER~0x04}\hypertarget{usbd__cdc_8h_a0a5a5d643222d2f98829e4e3820ae893}{}\label{usbd__cdc_8h_a0a5a5d643222d2f98829e4e3820ae893}
+
+
+Definition at line 83 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+U\+N\+I\+ON@{C\+D\+C\+\_\+\+U\+N\+I\+ON}}
+\index{C\+D\+C\+\_\+\+U\+N\+I\+ON@{C\+D\+C\+\_\+\+U\+N\+I\+ON}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+U\+N\+I\+ON}{CDC_UNION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+U\+N\+I\+ON~0x06}\hypertarget{usbd__cdc_8h_af6f38e6604e2bc2f4dc6e138cc39162a}{}\label{usbd__cdc_8h_af6f38e6604e2bc2f4dc6e138cc39162a}
+
+
+Definition at line 85 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL@{C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL}}
+\index{C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL@{C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL}{CDC_USB_TERMINAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+U\+S\+B\+\_\+\+T\+E\+R\+M\+I\+N\+AL~0x09}\hypertarget{usbd__cdc_8h_ab1d0ea5a7cedfd170085ac2e713d95be}{}\label{usbd__cdc_8h_ab1d0ea5a7cedfd170085ac2e713d95be}
+
+
+Definition at line 88 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+V1\+\_\+10@{C\+D\+C\+\_\+\+V1\+\_\+10}}
+\index{C\+D\+C\+\_\+\+V1\+\_\+10@{C\+D\+C\+\_\+\+V1\+\_\+10}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+V1\+\_\+10}{CDC_V1_10}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+D\+C\+\_\+\+V1\+\_\+10~0x0110}\hypertarget{usbd__cdc_8h_a8e40069024a8bbca6a4c9475f16a390b}{}\label{usbd__cdc_8h_a8e40069024a8bbca6a4c9475f16a390b}
+
+
+Definition at line 33 of file usbd\+\_\+cdc.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{CDC_ABSTRACT_CONTROL_MANAGEMENT_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf C\+D\+C\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{usbd__cdc_8h_a182e7d74060fd5dbb84199f22da25e14}{}\label{usbd__cdc_8h_a182e7d74060fd5dbb84199f22da25e14}
+
+
+Definition at line 211 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{CDC_CALL_MANAGEMENT_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf C\+D\+C\+\_\+\+C\+A\+L\+L\+\_\+\+M\+A\+N\+A\+G\+E\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{usbd__cdc_8h_a86872a8d744a670b1d41a07109dbfd5c}{}\label{usbd__cdc_8h_a86872a8d744a670b1d41a07109dbfd5c}
+
+
+Definition at line 200 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{CDC_HEADER_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf C\+D\+C\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{usbd__cdc_8h_abb35aec6d5dc7bf80335bf03f6419e9a}{}\label{usbd__cdc_8h_abb35aec6d5dc7bf80335bf03f6419e9a}
+
+
+Definition at line 188 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG@{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}}
+\index{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG@{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}{CDC_LINE_CODING}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG} {\bf C\+D\+C\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+D\+I\+NG}}\hypertarget{usbd__cdc_8h_a1d66ffafad206be2563c72cb972fbf52}{}\label{usbd__cdc_8h_a1d66ffafad206be2563c72cb972fbf52}
+
+
+Definition at line 241 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER@{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}}
+\index{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER@{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}{CDC_NOTIFICATION_HEADER}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET} {\bf C\+D\+C\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}}\hypertarget{usbd__cdc_8h_a0859cc73ebea375bd109da2f54b862cf}{}\label{usbd__cdc_8h_a0859cc73ebea375bd109da2f54b862cf}
+
+
+Definition at line 246 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{CDC_UNION_1SLAVE_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+1\+S\+L\+A\+V\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{usbd__cdc_8h_a2bca91720bb49dd22cc35e1ece6d87c3}{}\label{usbd__cdc_8h_a2bca91720bb49dd22cc35e1ece6d87c3}
+
+
+Definition at line 230 of file usbd\+\_\+cdc.\+h.
+
+\index{usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}!C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!usbd\+\_\+cdc.\+h@{usbd\+\_\+cdc.\+h}}
+\subsubsection[{\texorpdfstring{C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{CDC_UNION_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf C\+D\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{usbd__cdc_8h_abae3cc6753424f8383c5d46f674975b9}{}\label{usbd__cdc_8h_abae3cc6753424f8383c5d46f674975b9}
+
+
+Definition at line 222 of file usbd\+\_\+cdc.\+h.
+

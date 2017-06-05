@@ -1,0 +1,112 @@
+\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR}{}\section{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR Struct Reference}
+\label{struct__USB__ENDPOINT__DESCRIPTOR}\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+
+
+{\ttfamily \#include $<$usbd.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR_a3e5cc674ff534b668ec3521481ef4b37}{b\+Descriptor\+Type}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR_aefabc5abcdba38ecf2653b72f8f8c5ba}{b\+Endpoint\+Address}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR_a63676a1177d7b52e63330a520628a8cd}{b\+Interval}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR_aaea4723089a72e7d9b37077b9023c1a7}{b\+Length}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR_a608be5427fa3b22e530f223933621c5e}{bm\+Attributes}
+\item 
+uint16\+\_\+t \hyperlink{struct__USB__ENDPOINT__DESCRIPTOR_a534e9e14cebf01c6c7a0644ceed20502}{w\+Max\+Packet\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+SB Standard Endpoint Descriptor 
+
+Definition at line 570 of file usbd.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Descriptor\+Type@{b\+Descriptor\+Type}}
+\index{b\+Descriptor\+Type@{b\+Descriptor\+Type}!\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Descriptor\+Type}{bDescriptorType}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Descriptor\+Type}\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR_a3e5cc674ff534b668ec3521481ef4b37}{}\label{struct__USB__ENDPOINT__DESCRIPTOR_a3e5cc674ff534b668ec3521481ef4b37}
+E\+N\+D\+P\+O\+I\+NT Descriptor Type 
+
+Definition at line 573 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Endpoint\+Address@{b\+Endpoint\+Address}}
+\index{b\+Endpoint\+Address@{b\+Endpoint\+Address}!\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Endpoint\+Address}{bEndpointAddress}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Endpoint\+Address}\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR_aefabc5abcdba38ecf2653b72f8f8c5ba}{}\label{struct__USB__ENDPOINT__DESCRIPTOR_aefabc5abcdba38ecf2653b72f8f8c5ba}
+The address of the endpoint on the U\+SB device described by this descriptor. The address is encoded as follows\+: ~\newline
+Bit 3...0\+: The endpoint number ~\newline
+Bit 6...4\+: Reserved, reset to zero ~\newline
+Bit 7\+: Direction, ignored for control endpoints 0 = O\+UT endpoint 1 = IN endpoint. ~\newline
+ \begin{DoxySeeAlso}{See also}
+U\+S\+B\+D\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+A\+D\+R\+\_\+\+Type 
+\end{DoxySeeAlso}
+
+
+Definition at line 574 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Interval@{b\+Interval}}
+\index{b\+Interval@{b\+Interval}!\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Interval}{bInterval}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Interval}\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR_a63676a1177d7b52e63330a520628a8cd}{}\label{struct__USB__ENDPOINT__DESCRIPTOR_a63676a1177d7b52e63330a520628a8cd}
+Interval for polling endpoint for data transfers. Expressed in frames or microframes depending on the device operating speed (i.\+e., either 1 millisecond or 125 µs units). \begin{DoxyItemize}
+\item For full-\//high-\/speed isochronous endpoints, this value must be in the range from 1 to 16. The b\+Interval value is used as the exponent for a $ 2^(bInterval-1) $ value; e.\+g., a b\+Interval of 4 means a period of 8 ( $ 2^(4-1) $). \item For full-\//low-\/speed interrupt endpoints, the value of this field may be from 1 to 255. \item For high-\/speed interrupt endpoints, the b\+Interval value is used as the exponent for a $ 2^(bInterval-1) $ value; e.\+g., a b\+Interval of 4 means a period of 8 ( $ 2^(4-1) $) . This value must be from 1 to 16. \item For high-\/speed bulk/control O\+UT endpoints, the b\+Interval must specify the maximum N\+AK rate of the endpoint. A value of 0 indicates the endpoint never N\+A\+Ks. Other values indicate at most 1 N\+AK each b\+Interval number of microframes. This value must be in the range from 0 to 255. ~\newline
+Refer to Chapter 5 of U\+SB 2.\+0 specification for more information. \end{DoxyItemize}
+
+
+Definition at line 626 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Length@{b\+Length}}
+\index{b\+Length@{b\+Length}!\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Length}{bLength}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Length}\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR_aaea4723089a72e7d9b37077b9023c1a7}{}\label{struct__USB__ENDPOINT__DESCRIPTOR_aaea4723089a72e7d9b37077b9023c1a7}
+Size of this descriptor in bytes 
+
+Definition at line 572 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!bm\+Attributes@{bm\+Attributes}}
+\index{bm\+Attributes@{bm\+Attributes}!\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{bm\+Attributes}{bmAttributes}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::bm\+Attributes}\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR_a608be5427fa3b22e530f223933621c5e}{}\label{struct__USB__ENDPOINT__DESCRIPTOR_a608be5427fa3b22e530f223933621c5e}
+This field describes the endpoint’s attributes when it is configured using the b\+Configuration\+Value. ~\newline
+ Bits 1..0\+: Transfer Type \begin{DoxyItemize}
+\item 00 = Control \item 01 = Isochronous \item 10 = Bulk \item 11 = Interrupt ~\newline
+ If not an isochronous endpoint, bits 5..2 are reserved and must be set to zero. If isochronous, they are defined as follows\+: ~\newline
+ Bits 3..2\+: Synchronization Type \item 00 = No Synchronization \item 01 = Asynchronous \item 10 = Adaptive \item 11 = Synchronous ~\newline
+ Bits 5..4\+: Usage Type \item 00 = Data endpoint \item 01 = Feedback endpoint \item 10 = Implicit feedback Data endpoint \item 11 = Reserved ~\newline
+ Refer to Chapter 5 of U\+SB 2.\+0 specification for more information. ~\newline
+ All other bits are reserved and must be reset to zero. Reserved bits must be ignored by the host. ~\newline
+ \begin{DoxySeeAlso}{See also}
+U\+S\+B\+D\+\_\+\+E\+P\+\_\+\+A\+T\+T\+R\+\_\+\+Type 
+\end{DoxySeeAlso}
+\end{DoxyItemize}
+
+
+Definition at line 582 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!w\+Max\+Packet\+Size@{w\+Max\+Packet\+Size}}
+\index{w\+Max\+Packet\+Size@{w\+Max\+Packet\+Size}!\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{w\+Max\+Packet\+Size}{wMaxPacketSize}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::w\+Max\+Packet\+Size}\hypertarget{struct__USB__ENDPOINT__DESCRIPTOR_a534e9e14cebf01c6c7a0644ceed20502}{}\label{struct__USB__ENDPOINT__DESCRIPTOR_a534e9e14cebf01c6c7a0644ceed20502}
+Maximum packet size this endpoint is capable of sending or receiving when this configuration is selected. ~\newline
+For isochronous endpoints, this value is used to reserve the bus time in the schedule, required for the per-\/(micro)frame data payloads. The pipe may, on an ongoing basis, actually use less bandwidth than that reserved. The device reports, if necessary, the actual bandwidth used via its normal, non-\/\+U\+SB defined mechanisms. ~\newline
+For all endpoints, bits 10..0 specify the maximum packet size (in bytes). ~\newline
+For high-\/speed isochronous and interrupt endpoints\+: ~\newline
+Bits 12..11 specify the number of additional transaction opportunities per microframe\+: ~\newline
+\begin{DoxyItemize}
+\item 00 = None (1 transaction per microframe) \item 01 = 1 additional (2 per microframe) \item 10 = 2 additional (3 per microframe) \item 11 = Reserved ~\newline
+Bits 15..13 are reserved and must be set to zero. \end{DoxyItemize}
+
+
+Definition at line 606 of file usbd.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd_8h}{usbd.\+h}\end{DoxyCompactItemize}

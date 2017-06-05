@@ -1,0 +1,56 @@
+\hypertarget{stopwatch__17xx__40xx_8c}{}\section{stopwatch\+\_\+17xx\+\_\+40xx.\+c File Reference}
+\label{stopwatch__17xx__40xx_8c}\index{stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}}
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stopwatch.\+h\char`\"{}}\\*
+Include dependency graph for stopwatch\+\_\+17xx\+\_\+40xx.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__Stop__Watch_gaa0f8ea277b700d20b4322a15d9ddf32c}{Stop\+Watch\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize stopwatch. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga00f0c8411acd07344c7dd3cac8ec6d3e}{Stop\+Watch\+\_\+\+Ms\+To\+Ticks} (uint32\+\_\+t mS)
+\begin{DoxyCompactList}\small\item\em Converts from mS to stopwatch ticks. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga0dbab611d6cbdd4faad5018131aca140}{Stop\+Watch\+\_\+\+Start} (void)
+\begin{DoxyCompactList}\small\item\em Start a stopwatch. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_gae780d65d75ed3ca6dbd33389479eed9f}{Stop\+Watch\+\_\+\+Ticks\+Per\+Second} (void)
+\begin{DoxyCompactList}\small\item\em Returns number of ticks per second of the stopwatch timer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_gab62ee68f7b01b5c14b0d19c3c391ca02}{Stop\+Watch\+\_\+\+Ticks\+To\+Ms} (uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Converts from stopwatch ticks to mS. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga76fc3c7b473615677932efe3e5d0e142}{Stop\+Watch\+\_\+\+Ticks\+To\+Us} (uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em Converts from stopwatch ticks to uS. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__Stop__Watch_ga65ab3801fdb76aab8879a0698fc4df45}{Stop\+Watch\+\_\+\+Us\+To\+Ticks} (uint32\+\_\+t uS)
+\begin{DoxyCompactList}\small\item\em Converts from uS to stopwatch ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \hyperlink{stopwatch__17xx__40xx_8c_acdffdd47ff314a280f93ec6c84a88443}{ticks\+Per\+Ms}
+\item 
+static uint32\+\_\+t \hyperlink{stopwatch__17xx__40xx_8c_ad955609464d68e79077bc1a6140f3cc5}{ticks\+Per\+Second}
+\item 
+static uint32\+\_\+t \hyperlink{stopwatch__17xx__40xx_8c_aadac4fc6371d1eef4652302991f7ea15}{ticks\+Per\+Us}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}!ticks\+Per\+Ms@{ticks\+Per\+Ms}}
+\index{ticks\+Per\+Ms@{ticks\+Per\+Ms}!stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{ticks\+Per\+Ms}{ticksPerMs}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ticks\+Per\+Ms\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{stopwatch__17xx__40xx_8c_acdffdd47ff314a280f93ec6c84a88443}{}\label{stopwatch__17xx__40xx_8c_acdffdd47ff314a280f93ec6c84a88443}
+
+
+Definition at line 41 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}!ticks\+Per\+Second@{ticks\+Per\+Second}}
+\index{ticks\+Per\+Second@{ticks\+Per\+Second}!stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{ticks\+Per\+Second}{ticksPerSecond}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ticks\+Per\+Second\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{stopwatch__17xx__40xx_8c_ad955609464d68e79077bc1a6140f3cc5}{}\label{stopwatch__17xx__40xx_8c_ad955609464d68e79077bc1a6140f3cc5}
+
+
+Definition at line 40 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+
+\index{stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}!ticks\+Per\+Us@{ticks\+Per\+Us}}
+\index{ticks\+Per\+Us@{ticks\+Per\+Us}!stopwatch\+\_\+17xx\+\_\+40xx.\+c@{stopwatch\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{ticks\+Per\+Us}{ticksPerUs}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ticks\+Per\+Us\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{stopwatch__17xx__40xx_8c_aadac4fc6371d1eef4652302991f7ea15}{}\label{stopwatch__17xx__40xx_8c_aadac4fc6371d1eef4652302991f7ea15}
+
+
+Definition at line 42 of file stopwatch\+\_\+17xx\+\_\+40xx.\+c.
+

@@ -1,0 +1,9 @@
+digraph "Core Debug Registers (CoreDebug)"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="Core Debug Registers\l (CoreDebug)",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="Defines and Type Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CMSIS__core__register.html",tooltip="Type definitions and defines for Cortex-M processor based devices. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

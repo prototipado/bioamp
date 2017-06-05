@@ -1,0 +1,465 @@
+\hypertarget{enet__17xx__40xx_8h}{}\section{enet\+\_\+17xx\+\_\+40xx.\+h File Reference}
+\label{enet__17xx__40xx_8h}\index{enet\+\_\+17xx\+\_\+40xx.\+h@{enet\+\_\+17xx\+\_\+40xx.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structENET__CONTROL__T}{E\+N\+E\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Ethernet Control register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__MAC__T}{E\+N\+E\+T\+\_\+\+M\+A\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Ethernet M\+AC register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__MODULE__CTRL__T}{E\+N\+E\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+C\+T\+R\+L\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Ethernet Module Control register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__RXDESC__T}{E\+N\+E\+T\+\_\+\+R\+X\+D\+E\+S\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em RX Descriptor structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__RXFILTER__T}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Ethernet Receive Filter register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__RXSTAT__T}{E\+N\+E\+T\+\_\+\+R\+X\+S\+T\+A\+T\+\_\+T}
+\begin{DoxyCompactList}\small\item\em RX Status structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__TRANSFER__INFO__T}{E\+N\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+I\+N\+F\+O\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Ethernet Transfer register Block Structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__TXDESC__T}{E\+N\+E\+T\+\_\+\+T\+X\+D\+E\+S\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em TX Descriptor structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structENET__TXSTAT__T}{E\+N\+E\+T\+\_\+\+T\+X\+S\+T\+A\+T\+\_\+T}
+\begin{DoxyCompactList}\small\item\em TX Status structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Ethernet register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga541a85ac1f97834806ea7bd907ca7ef5}{E\+N\+E\+T\+\_\+\+C\+L\+R\+T\+\_\+\+C\+O\+L\+L\+W\+IN}(n)~(((n) \& 0x3\+F) $<$$<$ 8)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga3840d22e13373045c63bc14bb36800a6}{E\+N\+E\+T\+\_\+\+C\+L\+R\+T\+\_\+\+D\+EF}~((\hyperlink{group__ENET__17XX__40XX_ga2e261dd603d1a1909d1b00e11634a958}{E\+N\+E\+T\+\_\+\+C\+L\+R\+T\+\_\+\+R\+E\+T\+R\+A\+N\+S\+M\+AX}(0x0\+F)) $\vert$ (\+E\+N\+E\+T\+\_\+\+C\+L\+R\+T\+\_\+\+C\+O\+L\+L\+W\+I\+N(0x37)))
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga2e261dd603d1a1909d1b00e11634a958}{E\+N\+E\+T\+\_\+\+C\+L\+R\+T\+\_\+\+R\+E\+T\+R\+A\+N\+S\+M\+AX}(n)~((n) \& 0x0\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gac5380c0bb8853772b22db6b37b2c812e}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+F\+U\+L\+L\+D\+U\+P\+L\+EX}~0x00000400
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga22c8103c39e17d184acb4956428022c8}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+A\+S\+S\+R\+U\+N\+T\+F\+R\+A\+ME}~0x00000040
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad15a361a9ea2dae055b13d1416dde2df}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+A\+S\+S\+R\+X\+F\+I\+L\+T\+ER}~0x00000080
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga6745bb544166e94ec0ec4635ce85c2a2}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+E\+G\+R\+E\+S\+ET}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga933d30adf6557d69ddcd1bd0ff3dd3b5}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+M\+II}~0x00000200
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9cbb8fee3c8f649b53585358bd4b78a1}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+X\+E\+N\+A\+B\+LE}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabcbc994bca6d1eb4b677e8f8c58e3ef9}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+X\+R\+E\+S\+ET}~0x00000020
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaad9ec2211ed810f3b3c37156c152a307}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+X\+E\+N\+A\+B\+LE}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga720037c58537b876089d9d3f4df0130f}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+X\+F\+L\+O\+W\+C\+O\+N\+T\+R\+OL}~0x00000100
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab9c38db14b3c0edbe8f9a9062d653612}{E\+N\+E\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+X\+R\+E\+S\+ET}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gacba3b6d78224fc1ee628088edbff5609}{E\+N\+E\+T\+\_\+\+E\+T\+H\+\_\+\+M\+A\+X\+\_\+\+F\+L\+EN}~(1536)
+\begin{DoxyCompactList}\small\item\em Maximum size of an ethernet buffer. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gacc93e8db39ca20d639ffb677cb8fa4e7}{E\+N\+E\+T\+\_\+\+F\+L\+O\+W\+C\+O\+N\+T\+R\+O\+L\+C\+O\+U\+N\+T\+E\+R\+\_\+\+MC}(n)  ~((n) \& 0x\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga783e85b106c9a8446297a499399bf1ce}{E\+N\+E\+T\+\_\+\+F\+L\+O\+W\+C\+O\+N\+T\+R\+O\+L\+C\+O\+U\+N\+T\+E\+R\+\_\+\+PT}(n)  ~(((n) \& 0x\+F\+F\+F\+F) $<$$<$ 16)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaa8ef1915c4211c216269ae6f5c7bad26}{E\+N\+E\+T\+\_\+\+F\+L\+O\+W\+C\+O\+N\+T\+R\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+M\+CC}(n)~((n) \& 0x\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga781ad1e525dde056be7d72df24ed0ee2}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+R\+X\+D\+O\+NE}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad798142f39d48af8fc32d00b7c43bf03}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+R\+X\+E\+R\+R\+OR}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga77e2f10bb242ca14d8b0fb555ba85482}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+R\+X\+F\+I\+N\+I\+S\+H\+ED}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga037e3a6511ff23e15616f883f73e79d3}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+R\+X\+O\+V\+E\+R\+R\+UN}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabf841ab6a0cb5f2a0f1db26d83423029}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+S\+O\+FT}~0x00001000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga4aa84a9aeae31c299a172a2393ad0e41}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+T\+X\+D\+O\+NE}~0x00000080
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga6930081cf2294320579ddea844355ae5}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+T\+X\+E\+R\+R\+OR}~0x00000020
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gae86d066808374ed933169271a2fd6932}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+T\+X\+F\+I\+N\+I\+S\+H\+ED}~0x00000040
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gae41a8df58ad75321ba10799774141411}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+T\+X\+U\+N\+D\+E\+R\+R\+UN}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga1741a903d6aad6718911587aa842ce8d}{E\+N\+E\+T\+\_\+\+I\+N\+T\+\_\+\+W\+A\+K\+E\+UP}~0x00002000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga346ffe9920e1abd20950e001e920d1fb}{E\+N\+E\+T\+\_\+\+I\+P\+G\+R\+\_\+\+N\+B\+T\+O\+B\+I\+N\+T\+E\+G\+A\+P1}(n)~(((n) \& 0x7\+F) $<$$<$ 8)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab665d33e25749c26b32f51b2a9e14b79}{E\+N\+E\+T\+\_\+\+I\+P\+G\+R\+\_\+\+N\+B\+T\+O\+B\+I\+N\+T\+E\+G\+A\+P2}(n)~((n) \& 0x7\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabb7222a12e8e058581bca37fd98cbbe5}{E\+N\+E\+T\+\_\+\+I\+P\+G\+R\+\_\+\+P1\+\_\+\+D\+EF}~\hyperlink{group__ENET__17XX__40XX_ga346ffe9920e1abd20950e001e920d1fb}{E\+N\+E\+T\+\_\+\+I\+P\+G\+R\+\_\+\+N\+B\+T\+O\+B\+I\+N\+T\+E\+G\+A\+P1}(0x0\+C)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gacb2c77e9648c3945d156149617c6d620}{E\+N\+E\+T\+\_\+\+I\+P\+G\+R\+\_\+\+P2\+\_\+\+D\+EF}~(\hyperlink{group__ENET__17XX__40XX_gab665d33e25749c26b32f51b2a9e14b79}{E\+N\+E\+T\+\_\+\+I\+P\+G\+R\+\_\+\+N\+B\+T\+O\+B\+I\+N\+T\+E\+G\+A\+P2}(0x12))
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga7cdae0530c55e9f236d7d9d5bde3391a}{E\+N\+E\+T\+\_\+\+I\+P\+G\+T\+\_\+\+B\+T\+O\+B\+I\+N\+T\+E\+G\+AP}(n)~((n) \& 0x7\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabcaea91a823fd58281d82d9dcb754c2f}{E\+N\+E\+T\+\_\+\+I\+P\+G\+T\+\_\+\+F\+U\+L\+L\+D\+U\+P\+L\+EX}~(\hyperlink{group__ENET__17XX__40XX_ga7cdae0530c55e9f236d7d9d5bde3391a}{E\+N\+E\+T\+\_\+\+I\+P\+G\+T\+\_\+\+B\+T\+O\+B\+I\+N\+T\+E\+G\+AP}(0x15))
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga4c98e396a39809243d38a68b27eeec02}{E\+N\+E\+T\+\_\+\+I\+P\+G\+T\+\_\+\+H\+A\+L\+F\+D\+U\+P\+L\+EX}~(\hyperlink{group__ENET__17XX__40XX_ga7cdae0530c55e9f236d7d9d5bde3391a}{E\+N\+E\+T\+\_\+\+I\+P\+G\+T\+\_\+\+B\+T\+O\+B\+I\+N\+T\+E\+G\+AP}(0x12))
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga5d10c874131056c389ecb1357be5e7a2}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+L\+O\+O\+P\+B\+A\+CK}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gadc9dc4a912f946aef0f397e01c745e23}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+M\+A\+SK}~0xcf1f
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga4c1b1afa07ca17af9a536e55b5214651}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+P\+A\+RF}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaededc9960450035cfa31578c67d9765a}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+R\+E\+S\+E\+T\+M\+C\+S\+RX}~0x00000800
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga929295618f7227006918b172c37274ba}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+R\+E\+S\+E\+T\+M\+C\+S\+TX}~0x00000200
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga08220afd93ff8aaee439369cbda83d55}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+R\+E\+S\+E\+T\+RX}~0x00000400
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaf1ab84b82270514182f96bf19db18b38}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+R\+E\+S\+E\+T\+TX}~0x00000100
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga1c0b1a53b97bbb37a634729dbb1f7c64}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+R\+X\+E\+N\+A\+B\+LE}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga715c51b94b6651715bec8a58d63ede58}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+R\+X\+F\+L\+O\+W\+C\+T\+RL}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad1496577c2254ab94911ee01420744ea}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+S\+I\+M\+R\+E\+S\+ET}~0x00004000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga7b0dd5ccbaca44db89764a33f221b225}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+S\+O\+F\+T\+R\+E\+S\+ET}~0x00008000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9621f7d3f1df5610f251f74a90d4bfd9}{E\+N\+E\+T\+\_\+\+M\+A\+C1\+\_\+\+T\+X\+F\+L\+O\+W\+C\+T\+RL}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga7d73ffbca6a6db5a5262bb59e33627ed}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+A\+U\+T\+O\+D\+E\+T\+P\+A\+D\+EN}~0x00000080
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga43f27812a197029734f14e6d43671564}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+B\+P\+\_\+\+N\+O\+B\+A\+C\+K\+O\+FF}~0x00002000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad21fa9aa92b57dff934b097738297a38}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+C\+R\+C\+EN}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga87f7319213d7ad9c90e61ca1330ab531}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+D\+E\+L\+A\+Y\+E\+D\+C\+RC}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaadf555a1169009b0dbb728dbc5046b14}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+E\+X\+C\+E\+S\+S\+D\+E\+F\+ER}~0x00004000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga572da08adf7e20dd2e9689c4a1bc6ee8}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+F\+LC}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gada771902490e3391858094a565832f75}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+F\+U\+L\+L\+D\+U\+P\+L\+EX}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga8937f821f7f1aa8aee29db2ade25085f}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+H\+F\+EN}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaa1c082cfc7d20fb9683a0a17c355fccf}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+L\+P\+E\+NF}~0x00000200
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga090fe0a3c430ad527911dd8948323e56}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+M\+A\+SK}~0x73ff
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga914e8c639aaf94a0b451153485a2c1dc}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+N\+O\+B\+A\+C\+K\+O\+FF}~0x00001000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga2e96a6046b10faf1b2e490ca0c44fe5e}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+P\+A\+D\+C\+R\+C\+EN}~0x00000020
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabd9c8010102840735375d5b1bfd3ca73}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+P\+P\+E\+NF}~0x00000100
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaff48f524d6da4e540a30879dabebd6c4}{E\+N\+E\+T\+\_\+\+M\+A\+C2\+\_\+\+V\+L\+A\+N\+P\+A\+D\+EN}~0x00000040
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga862790cce5d2614d7184930cbb6c95b2}{E\+N\+E\+T\+\_\+\+M\+A\+D\+R\+\_\+\+P\+H\+Y\+A\+D\+DR}(n)    ~(((n) \& 0x1\+F) $<$$<$ 8)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga65edf5278b03c5b1081bb00f3bd857a2}{E\+N\+E\+T\+\_\+\+M\+A\+D\+R\+\_\+\+R\+E\+G\+A\+D\+DR}(n)    ~((n) \& 0x1\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafa842b5b6e26b8e4890fcedf64d52a9a}{E\+N\+E\+T\+\_\+\+M\+A\+X\+F\+\_\+\+M\+A\+X\+F\+L\+EN}(n)~((n) \& 0x\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga0b6f202981cfa586090cd4f29b16eaea}{E\+N\+E\+T\+\_\+\+M\+A\+X\+F\+\_\+\+M\+A\+X\+F\+L\+E\+N\+\_\+\+D\+EF}~(0x600)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga6556edca61bde2ff55ec5791c6629709}{E\+N\+E\+T\+\_\+\+M\+C\+F\+G\+\_\+\+C\+L\+O\+C\+K\+S\+EL}(n)  ~(((n) \& 0x0\+F) $<$$<$ 2)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaf31c596c785314febc778a974cefa64e}{E\+N\+E\+T\+\_\+\+M\+C\+F\+G\+\_\+\+R\+E\+S\+\_\+\+M\+II}~0x00008000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafd634c8258b41a78b89aff1fa4558996}{E\+N\+E\+T\+\_\+\+M\+C\+F\+G\+\_\+\+R\+E\+S\+E\+T\+M\+I\+I\+M\+G\+MT}~2500000\+UL
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gade8846eaaed89450478cf7e8dd07beb2}{E\+N\+E\+T\+\_\+\+M\+C\+F\+G\+\_\+\+S\+C\+A\+N\+I\+NC}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9f39657f690648231761d2aea5aee7cb}{E\+N\+E\+T\+\_\+\+M\+C\+F\+G\+\_\+\+S\+U\+P\+P\+P\+R\+E\+A\+M\+B\+LE}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga07dfdda78003dd5af6254fc863ae019e}{E\+N\+E\+T\+\_\+\+M\+C\+M\+D\+\_\+\+R\+E\+AD}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga77d7e45ecfbd3f0bace6900cc69b8beb}{E\+N\+E\+T\+\_\+\+M\+C\+M\+D\+\_\+\+S\+C\+AN}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga68db523c6f21026af56d79f5af27b9d1}{E\+N\+E\+T\+\_\+\+M\+I\+I\+\_\+\+R\+D\+\_\+\+T\+O\+UT}~0x00050000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga41de953453bd483f8c9d5805c54010b3}{E\+N\+E\+T\+\_\+\+M\+I\+I\+\_\+\+W\+R\+\_\+\+T\+O\+UT}~0x00050000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9431ce0c183ce96c4fe9956d850f1f5e}{E\+N\+E\+T\+\_\+\+M\+I\+N\+D\+\_\+\+B\+U\+SY}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad05320f311da8c5386dfbbe950eca62b}{E\+N\+E\+T\+\_\+\+M\+I\+N\+D\+\_\+\+M\+I\+I\+L\+I\+N\+K\+F\+A\+IL}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab961efeb9758ffffe627a821cb525f06}{E\+N\+E\+T\+\_\+\+M\+I\+N\+D\+\_\+\+N\+O\+T\+V\+A\+L\+ID}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga748c92254d0cf1e612418e1d48d6793f}{E\+N\+E\+T\+\_\+\+M\+I\+N\+D\+\_\+\+S\+C\+A\+N\+N\+I\+NG}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga1d4093fbfff5c3bf7adacd81b68f96a3}{E\+N\+E\+T\+\_\+\+M\+R\+D\+D\+\_\+\+D\+A\+TA}(n)          ~((n) \& 0x\+F\+F\+F\+F)
+\begin{DoxyCompactList}\small\item\em M\+II Management Read Data Register bit definitions. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga93a5e993895f550b2b258a4c5327d891}{E\+N\+E\+T\+\_\+\+M\+W\+T\+D\+\_\+\+D\+A\+TA}(n)          ~((n) \& 0x\+F\+F\+F\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga6acb31f9219726651b229e11719950e9}{E\+N\+E\+T\+\_\+\+P\+O\+W\+E\+R\+D\+O\+W\+N\+\_\+\+PD}~0x80000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga12ee900d60382c12ef287bc722a2047a}{E\+N\+E\+T\+\_\+\+R\+C\+T\+R\+L\+\_\+\+I\+NT}~0x80000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab547ab07ef4fd7b2af1823e8c5468bb5}{E\+N\+E\+T\+\_\+\+R\+C\+T\+R\+L\+\_\+\+S\+I\+ZE}(n)          ~(((n) -\/ 1) \& 0x7\+F\+F)
+\begin{DoxyCompactList}\small\item\em RX Descriptor Control structure type definition. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga28fbef246f1b3c1145c244c5d2b3768a}{E\+N\+E\+T\+\_\+\+R\+H\+A\+S\+H\+\_\+\+DA}~0x001\+F\+F000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gae4a45f7daf153627307963edb349072b}{E\+N\+E\+T\+\_\+\+R\+H\+A\+S\+H\+\_\+\+SA}~0x000001\+FF
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga4e4fcb457d4d1a16900c13f7a5a2db46}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+RR}~0x08000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaa602c5e08609912f99b95fb4342b3036}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+B\+C\+A\+ST}~0x00400000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad7ea1586c49309069d1d72a4ebe5aa89}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+C\+R\+C\+\_\+\+E\+RR}~0x00800000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabc12c8acaedae0c90e8c10777a1efc35}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+C\+T\+R\+L\+\_\+\+F\+R\+A\+ME}~0x00040000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga15c3af4e6532d6de88860eb58046373a}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+E\+RR}~0x80000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga07c87e5b7136302124084fee594d2d4a}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaf3bb0d91c0511c58691d7189b551fe79}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+F\+A\+I\+L\+\_\+\+F\+I\+LT}~0x00100000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gac84556562920c84d6c161c03c6ed4a52}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+L\+A\+S\+T\+\_\+\+F\+L\+AG}~0x40000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9a8b65ee2091950cb6a66c2cf2f8be79}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+L\+E\+N\+\_\+\+E\+RR}~0x02000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafd8d58d02c5805332909dd4a7213be4a}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+M\+C\+A\+ST}~0x00200000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaf961528973a113b3917e4c493d50d2e4}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+N\+O\+\_\+\+D\+E\+S\+CR}~0x20000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gac8b350c71c904bca07eab6e4338303cf}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+O\+V\+E\+R\+R\+UN}~0x10000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga2aca15d552258eb4116193c9ea803e69}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+RR}~0x04000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad691dd2ea609aff9807d3f2ba4b0ec16}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+S\+I\+ZE}(n)          ~(((n) \& 0x7\+F\+F) + 1)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga6c8d6c27397230acdab0d86aae333adb}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+S\+Y\+M\+\_\+\+E\+RR}~0x01000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga04fdec12cd4f4055863a1bca40a7afe1}{E\+N\+E\+T\+\_\+\+R\+I\+N\+F\+O\+\_\+\+V\+L\+AN}~0x00080000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga87f8e1929545347ff2ddd8ee658ef54b}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}~0x02000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga32813050731261f0abb8a938a49db29d}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+C\+E\+S\+E\+EN}~0x00040000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga4ad18351df747e65f1b3fff139c8d552}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+F\+R\+A\+ME}~0x08000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga7481775906d508f6a529b46520e58a97}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+C\+R\+C\+E\+RR}~0x00100000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga5c2ebce59acc2a9ca4e4569bcc6290ca}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+D\+R\+I\+B\+B\+L\+E\+N\+I\+B\+B\+LE}~0x04000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafadac62e2e18ad75a244e4227509931d}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+L\+C\+E\+RR}~0x00200000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaae8c1aa30582b7a66657c78b54bcf43a}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+L\+OR}~0x00400000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaf0bd8c3446555f296b06d4865c8cb6cd}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+M\+U\+L\+T\+I\+C\+A\+ST}~0x01000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga7ad487168e3201b01eab8504e623d79b}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+P\+A\+U\+SE}~0x10000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaa45464496eefb8f66d8281ceefe3b198}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+P\+PI}~0x00010000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabebe49780c8611118ce1596cf3d77436}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+R\+BC}~0x0000\+F\+F\+FF
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gac21ffe7a15a96229eb770a7f1dcdb7dd}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+R\+CV}~0x00080000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga32032cd510a057a50e4e08acf50ddcde}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+R\+OK}~0x00800000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga96fe41c39224b433c1fe074b76161ec7}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+R\+X\+D\+V\+S\+E\+EN}~0x00020000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gae2f33f7ad025f84d58c97ccb9fecf89a}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+UO}~0x20000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gabe88542e8c0a6fb6ea649cba94d2028d}{E\+N\+E\+T\+\_\+\+R\+S\+V\+\_\+\+V\+L\+AN}~0x40000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaa63bf71c0439dc5176b4af167f4c7f75}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+A\+BE}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga868a51913649ab45dce2ed495d09e401}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+A\+ME}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9d6abb88eb71199e6b8206c71ecc1148}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+A\+M\+HE}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga86aaaa49bc70fe343262a4373c056c87}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+A\+PE}~0x00000020
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga61d70abfbcb89e08b14d7aa571520db3}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+A\+UE}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga14e7ab247ade314679d3546278102373}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+A\+U\+HE}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad2cef615764124959531e6c8fae552b7}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+M\+P\+EW}~0x00001000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga90e5fb9b8c5350d668d5fac5a40f297c}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+C\+T\+R\+L\+\_\+\+R\+F\+EW}~0x00002000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab827c42b0f15cd643b878e3949c86205}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+A\+BW}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga0b050f561283fcfe8d2f76a6c1b000f2}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+A\+M\+HW}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad27e9fe84adddb132645b353d479e4f1}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+A\+MW}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafe115b309fb518d3fb178e41acecf62d}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+A\+PW}~0x00000020
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad81a6e913cfad896e79c391229a68bd2}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+A\+U\+HW}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga23b957a106202e22a74ade7e44f2136c}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+A\+UW}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga244047f695bb766a84b85a2667a71e0e}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+B\+I\+T\+M\+A\+SK}~0x01\+BF
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga46ecfc247fbae6521566f024e6baa0c5}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+M\+PW}~0x00000100
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaeda9888b5a4d439b3e89635ee7044fe4}{E\+N\+E\+T\+\_\+\+R\+X\+F\+I\+L\+T\+E\+R\+W\+O\+L\+S\+T\+A\+T\+U\+S\+\_\+\+R\+FW}~0x00000080
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gad0face01c298deb04c2a6df44839db44}{E\+N\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+X\+S\+T\+A\+T\+US}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gae74d3a5997ed8bf6618a4896b12403e8}{E\+N\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+T\+X\+S\+T\+A\+T\+US}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga66870c22b0f10f275b7b2c1e6d0709a0}{E\+N\+E\+T\+\_\+\+S\+U\+P\+P\+\_\+100\+Mbps\+\_\+\+S\+P\+E\+ED}~0x00000100
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gac92f044f648d5e928f609e9b606b92b1}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+C\+RC}~0x20000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gae22a34de314676fcebc0497288fc5392}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+H\+U\+GE}~0x08000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga38618011f4bed353ba352c639b511268}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+I\+NT}~0x80000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga77c27155fbe90a33eccb8a4331f1c2b5}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+L\+A\+ST}~0x40000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga64b15e381cbd1fa942764060e167327f}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}~0x04000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga1e82cc8733b002c96104d063ac42d79a}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+P\+AD}~0x10000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab74e01121d71d550ce6b6395a5e44e5c}{E\+N\+E\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+S\+I\+ZE}(n)          ~(((n) -\/ 1) \& 0x7\+F\+F)
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafa057fdcf20418b56df28532c048f038}{E\+N\+E\+T\+\_\+\+T\+E\+S\+T\+\_\+\+S\+C\+PQ}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga89c6649c9c320cd57d5bc82b1ecf42ee}{E\+N\+E\+T\+\_\+\+T\+E\+S\+T\+\_\+\+T\+E\+S\+T\+BP}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gafa31bcfcbdb16b2dbfdc132568826153}{E\+N\+E\+T\+\_\+\+T\+E\+S\+T\+\_\+\+T\+E\+S\+T\+P\+A\+U\+SE}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gab483256508551c09e411706f45c81c70}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+C\+O\+L\+\_\+\+C\+NT}~0x01\+E00000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gace4cfc3d6e1db023f33281b1593a97ae}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+D\+E\+F\+ER}~0x02000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaeb11bfbbf43a3c82fb88e56a5e68e7bc}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+E\+RR}~0x80000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga5c85ac99ceb6444c5beb2afbcafee2ec}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+E\+X\+C\+E\+S\+S\+\_\+\+C\+OL}~0x08000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga6572529bff7597c6951184bd325195da}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+E\+X\+C\+E\+S\+S\+\_\+\+D\+EF}~0x04000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga28ff3c0b58337f73dcf19af5c77b1813}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+L\+A\+T\+E\+\_\+\+C\+OL}~0x10000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga217a2ea7ea34a8ce88c5252d838943ba}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+N\+O\+\_\+\+D\+E\+S\+CR}~0x40000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga1c695274991bb04562d674a2869bd2c7}{E\+N\+E\+T\+\_\+\+T\+I\+N\+F\+O\+\_\+\+U\+N\+D\+E\+R\+R\+UN}~0x20000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga0a02af6e44148eb10ad3872f558a7d75}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+B\+A\+C\+K\+P\+R\+E\+S\+S\+U\+RE}~0x40000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga8c81671c6a9577c6bd4cbfca14d0d699}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}~0x00000020
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga2ab4cf2c962a57d2b59cdac5324caf08}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+C\+O\+N\+T\+R\+O\+L\+F\+R\+A\+ME}~0x10000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gadb4cb33d047889ef5584d58ee0110140}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+C\+R\+C\+E\+RR}~0x00000001
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga93ca8c0d6c7224b4a8c41a077bbdf40d}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+D\+O\+NE}~0x00000008
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga70a4c2d8bcefc36d60b2a006ff3f7496}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+E\+X\+C\+OL}~0x00000100
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga7cb26ea3f926fb8f7950bbbc98eb2d61}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+E\+X\+DF}~0x00000080
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga2cc9638b9a72a6aca275ce4aed3701a7}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+G\+I\+A\+NT}~0x00000400
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaca1a7e04bad3d3a31621f81ee11e7833}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+L\+CE}~0x00000002
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga51155a3f13ea78c0a858b402212b8b67}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+L\+C\+OL}~0x00000200
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gadf4b40d301d071e9f0a7819ad45dc534}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+L\+OR}~0x00000004
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga35811b54e0e0ff6e878184c9bc69c279}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+M\+U\+L\+T\+I\+C\+A\+ST}~0x00000010
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gac2d842291755f2488ce8b4ad9d189f6f}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+P\+A\+C\+K\+E\+T\+D\+E\+F\+ER}~0x00000040
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga389586db52739a1a88da7059b813cf80}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+P\+A\+U\+SE}~0x20000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gaced2c895c68a65e25f18810332a9e60c}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+T\+O\+T\+A\+L\+B\+Y\+T\+ES}~0x0\+F\+F\+F\+F000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga62faeddfcb2c47a79c79eafd0d53ae70}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+U\+N\+D\+E\+R\+R\+UN}~0x00000800
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_gacc8396f1c837bf51215f1f29a062bba4}{E\+N\+E\+T\+\_\+\+T\+S\+V0\+\_\+\+V\+L\+AN}~0x80000000
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga85659c24bcb857d841bc18e037ee3a78}{E\+N\+E\+T\+\_\+\+T\+S\+V1\+\_\+\+T\+BC}~0x0000\+F\+F\+FF
+\item 
+\#define \hyperlink{group__ENET__17XX__40XX_ga9a2d8f8be313560a8d1858f623d5d599}{E\+N\+E\+T\+\_\+\+T\+S\+V1\+\_\+\+T\+CC}~0x000\+F0000
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ENET__17XX__40XX_gab29d71439401a8d4f68643acfd10959b}{E\+N\+E\+T\+\_\+\+B\+U\+F\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} \{ \hyperlink{group__ENET__17XX__40XX_ggab29d71439401a8d4f68643acfd10959ba3f06386ec3b80ad2f5abd3b7e4bd46ce}{E\+N\+E\+T\+\_\+\+B\+U\+F\+F\+\_\+\+E\+M\+P\+TY}, 
+\hyperlink{group__ENET__17XX__40XX_ggab29d71439401a8d4f68643acfd10959ba242d1f03fa0a6658fb83e72bb4046c7f}{E\+N\+E\+T\+\_\+\+B\+U\+F\+F\+\_\+\+P\+A\+R\+T\+I\+A\+L\+\_\+\+F\+U\+LL}, 
+\hyperlink{group__ENET__17XX__40XX_ggab29d71439401a8d4f68643acfd10959bacaa757380b8ad295693f72762f49163e}{E\+N\+E\+T\+\_\+\+B\+U\+F\+F\+\_\+\+F\+U\+LL}
+ \}\begin{DoxyCompactList}\small\item\em E\+N\+ET Buffer status definition. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga0a574e2cc8946c200d71152722ac30d7}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Clear\+Int\+Status} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Clear the interrupt status. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga94eb7a70f4023c83ca18e4e675ad0b32}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+De\+Init} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em De-\/initialize the ethernet interface. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga708d5e95e8c437779028713075a55117}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Disable\+Int} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disable E\+N\+ET interrupts. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga591bdc31e1ca992c3ac642c8d64d3ac9}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Disable\+R\+X\+Filter} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disable Rx Filter. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gac0afbb3c822a9e581416fd500b922313}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Enable\+Int} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enable E\+N\+ET interrupts. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga87335faab88d9a16579596f4a0a6ce14}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Enable\+R\+X\+Filter} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enable Rx Filter. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__ENET__17XX__40XX_gad107338dec5ee221957fafe5e711e42e}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Find\+M\+I\+I\+Div} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t clock\+Rate)
+\begin{DoxyCompactList}\small\item\em Find the divider index for a desired M\+II clock rate. \end{DoxyCompactList}\item 
+\hyperlink{group__ENET__17XX__40XX_gab29d71439401a8d4f68643acfd10959b}{E\+N\+E\+T\+\_\+\+B\+U\+F\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} \hyperlink{group__ENET__17XX__40XX_gafed5419d7a6be4580641e557429a63ad}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+Buffer\+Status} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint16\+\_\+t produce\+Index, uint16\+\_\+t consume\+Index, uint16\+\_\+t buff\+Size)
+\begin{DoxyCompactList}\small\item\em Get the buffer status with the current Produce Index and Consume Index. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__ENET__17XX__40XX_gac5f44f20f55847c4c9b9906f051aeca3}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+Fill\+Desc\+Num} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint16\+\_\+t produce\+Index, uint16\+\_\+t consume\+Index, uint16\+\_\+t buff\+Size)
+\begin{DoxyCompactList}\small\item\em Get the number of descriptors filled. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga4d0afde7abd542590c1bb53fba4d90b1}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+Free\+Desc\+Num} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint16\+\_\+t produce\+Index, uint16\+\_\+t consume\+Index, uint16\+\_\+t buff\+Size)
+\begin{DoxyCompactList}\small\item\em Get the number of free descriptors. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga5931404e2db29a1b4cdf357edf79504d}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+Int\+Status} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Get the interrupt status. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_gae79ff7cdffb9e43c95fb309ca7c16aa2}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+R\+X\+Consume\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Get the current Rx Consume Descriptor Index. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_gaa70d279d6bb31b783656b31fe3a1cf8f}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+R\+X\+Produce\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Get the current Rx Produce Descriptor Index. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga6ed1ce4f6bde22c64966d2d513cc7a6d}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+T\+X\+Consume\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Get the current Tx Consume Descriptor Index. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga276d359d20f70fdb005740c3287dd2d7}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Get\+T\+X\+Produce\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Get the current Tx Produce Descriptor Index. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga4246666fbc4e9be17c45e6837a0e5dca}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Inc\+R\+X\+Consume\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Increase the current Rx Consume Descriptor Index. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_ga9a1d6a9086bfbca3c856ad2b3b90546c}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Inc\+T\+X\+Produce\+Index} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Increase the current Tx Produce Descriptor Index. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga24a13ad31f70570906a4b885754f8953}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Init} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, bool use\+R\+M\+II)
+\begin{DoxyCompactList}\small\item\em Initialize ethernet interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga04559be4fcfb24203ce9e372750383c1}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Init\+Rx\+Descriptors} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, \hyperlink{structENET__RXDESC__T}{E\+N\+E\+T\+\_\+\+R\+X\+D\+E\+S\+C\+\_\+T} $\ast$p\+Descs, \hyperlink{structENET__RXSTAT__T}{E\+N\+E\+T\+\_\+\+R\+X\+S\+T\+A\+T\+\_\+T} $\ast$p\+Status, uint32\+\_\+t desc\+Num)
+\begin{DoxyCompactList}\small\item\em Configures the initial ethernet receive descriptors. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga1e57967b888b1a7bfd4313fd9e70c696}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Init\+Tx\+Descriptors} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, \hyperlink{structENET__TXDESC__T}{E\+N\+E\+T\+\_\+\+T\+X\+D\+E\+S\+C\+\_\+T} $\ast$p\+Descs, \hyperlink{structENET__TXSTAT__T}{E\+N\+E\+T\+\_\+\+T\+X\+S\+T\+A\+T\+\_\+T} $\ast$p\+Status, uint32\+\_\+t desc\+Num)
+\begin{DoxyCompactList}\small\item\em Configures the initial ethernet transmit descriptors. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{group__ENET__17XX__40XX_ga2ae5389a2b99d6006980083d02667e07}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Is\+M\+I\+I\+Busy} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Returns M\+II link (P\+HY) busy status. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{group__ENET__17XX__40XX_ga19412cfa444b976f9ec13554da17d210}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Is\+Rx\+Empty} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Check if Rx buffer is empty. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} bool \hyperlink{group__ENET__17XX__40XX_ga593f01cc1a9e665c8c3293c0599b254c}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Is\+Tx\+Full} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Check if Tx buffer is full. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group__ENET__17XX__40XX_gab6d3dfc1cc671503532d00947f236e1d}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Read\+M\+I\+I\+Data} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Returns the value read from the P\+HY. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gae6567d8fb1d427ecf30ce65f48a074b4}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Reset} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Resets the ethernet interface. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gaddd915f4c5b177bef0cd29d882ed3e6f}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Reset\+R\+X\+Logic} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Reset Rx Logic. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga23cc17a06ee9e42b4f1327cd792a2a8e}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Reset\+T\+X\+Logic} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Reset Tx Logic. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gaef60a4790dcce43254081ea7fe5a22d4}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+R\+X\+Disable} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Disables ethernet packet reception. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gaccc601f3393807fe6255771fb1c47a0b}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+R\+X\+Enable} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Enables ethernet packet reception. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gad78db17fecab956142cb20d9a00e39e0}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set100\+Mbps} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Selects 100\+Mbps for the current speed. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga996dae6b7276fc708594ce239f40785f}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set10\+Mbps} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Selects 10\+Mbps for the current speed. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_ga6d915db1de0ba98ac0cdb1df8c59515b}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set\+A\+D\+DR} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, const uint8\+\_\+t $\ast$mac\+Addr)
+\begin{DoxyCompactList}\small\item\em Sets the address of the interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga0881ac9e0e98620c0e65f9a6d7a43240}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set\+Full\+Duplex} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Sets full duplex operation for the interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga6d7031584471e30e89ded1fff5f3340d}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Set\+Half\+Duplex} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Sets half duplex operation for the interface. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_ga9694421dbd0f331895fcf514fd18c938}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Setup\+M\+II} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint32\+\_\+t div, uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Sets up the P\+HY link clock divider and P\+HY address. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_gaca2166605d385fd5150f173cd33a3ac2}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Start\+M\+I\+I\+Read} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em Starts a P\+HY read via the M\+II. \end{DoxyCompactList}\item 
+void \hyperlink{group__ENET__17XX__40XX_gade9f31bbc04119bc06638fd8ce874f73}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+Start\+M\+I\+I\+Write} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET, uint8\+\_\+t reg, uint16\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Starts a P\+HY write via the M\+II. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gaaf0d9ef785afa5a847431e86520430c9}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+T\+X\+Disable} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Disables ethernet transmit. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group__ENET__17XX__40XX_gacc7e455d4b168d2405b4ef9dda242488}{Chip\+\_\+\+E\+N\+E\+T\+\_\+\+T\+X\+Enable} (\hyperlink{structLPC__ENET__T}{L\+P\+C\+\_\+\+E\+N\+E\+T\+\_\+T} $\ast$p\+E\+N\+ET)
+\begin{DoxyCompactList}\small\item\em Enables ethernet transmit. \end{DoxyCompactList}\end{DoxyCompactItemize}

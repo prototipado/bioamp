@@ -1,0 +1,110 @@
+\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR}{}\section{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR Struct Reference}
+\label{struct__USB__CONFIGURATION__DESCRIPTOR}\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+
+
+{\ttfamily \#include $<$usbd.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_af53971d8f3bb4f86298a42ead7ab0b3d}{b\+Configuration\+Value}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_af7b797f915e0e80a352840bb52d4180f}{b\+Descriptor\+Type}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_a412404794d93406568d1cd0cbc77fcfe}{b\+Length}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_a6bb4d11f3863887f0ae93277e156f254}{bm\+Attributes}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_ac51bdfb02c2d5766dcac9e7705b1771f}{b\+Max\+Power}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_a7397ac3398f73959bb4caa7008d00ed5}{b\+Num\+Interfaces}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_a9ab59cdc0def220a76030c91ea312376}{i\+Configuration}
+\item 
+uint16\+\_\+t \hyperlink{struct__USB__CONFIGURATION__DESCRIPTOR_a089b446a621103f1eedff6c023fa738e}{w\+Total\+Length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+SB Standard Configuration Descriptor 
+
+Definition at line 436 of file usbd.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Configuration\+Value@{b\+Configuration\+Value}}
+\index{b\+Configuration\+Value@{b\+Configuration\+Value}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Configuration\+Value}{bConfigurationValue}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Configuration\+Value}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_af53971d8f3bb4f86298a42ead7ab0b3d}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_af53971d8f3bb4f86298a42ead7ab0b3d}
+Value to use as an argument to the Set\+Configuration() request to select this configuration. 
+
+Definition at line 446 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Descriptor\+Type@{b\+Descriptor\+Type}}
+\index{b\+Descriptor\+Type@{b\+Descriptor\+Type}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Descriptor\+Type}{bDescriptorType}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Descriptor\+Type}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_af7b797f915e0e80a352840bb52d4180f}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_af7b797f915e0e80a352840bb52d4180f}
+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON Descriptor Type 
+
+Definition at line 439 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Length@{b\+Length}}
+\index{b\+Length@{b\+Length}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Length}{bLength}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Length}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_a412404794d93406568d1cd0cbc77fcfe}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_a412404794d93406568d1cd0cbc77fcfe}
+Size of this descriptor in bytes 
+
+Definition at line 438 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!bm\+Attributes@{bm\+Attributes}}
+\index{bm\+Attributes@{bm\+Attributes}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{bm\+Attributes}{bmAttributes}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::bm\+Attributes}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_a6bb4d11f3863887f0ae93277e156f254}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_a6bb4d11f3863887f0ae93277e156f254}
+Configuration characteristics ~\newline
+D7\+: Reserved (set to one)~\newline
+D6\+: Self-\/powered ~\newline
+D5\+: Remote Wakeup ~\newline
+D4...0\+: Reserved (reset to zero) ~\newline
+D7 is reserved and must be set to one for historical reasons. ~\newline
+A device configuration that uses power from the bus and a local source reports a non-\/zero value in b\+Max\+Power to indicate the amount of bus power required and sets D6. The actual power source at runtime may be determined using the Get\+Status(\+D\+E\+V\+I\+C\+E) request (see U\+SB 2.\+0 spec Section 9.\+4.\+5). ~\newline
+If a device configuration supports remote wakeup, D5 is set to one. 
+
+Definition at line 451 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Max\+Power@{b\+Max\+Power}}
+\index{b\+Max\+Power@{b\+Max\+Power}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Max\+Power}{bMaxPower}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Max\+Power}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_ac51bdfb02c2d5766dcac9e7705b1771f}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_ac51bdfb02c2d5766dcac9e7705b1771f}
+Maximum power consumption of the U\+SB device from the bus in this specific configuration when the device is fully operational. Expressed in 2 mA units (i.\+e., 50 = 100 mA). ~\newline
+Note\+: A device configuration reports whether the configuration is bus-\/powered or selfpowered. Device status reports whether the device is currently self-\/powered. If a device is disconnected from its external power source, it updates device status to indicate that it is no longer self-\/powered. ~\newline
+A device may not increase its power draw from the bus, when it loses its external power source, beyond the amount reported by its configuration. ~\newline
+If a device can continue to operate when disconnected from its external power source, it continues to do so. If the device cannot continue to operate, it fails operations it can no longer support. The U\+SB System Software may determine the cause of the failure by checking the status and noting the loss of the device’s power source. 
+
+Definition at line 467 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!b\+Num\+Interfaces@{b\+Num\+Interfaces}}
+\index{b\+Num\+Interfaces@{b\+Num\+Interfaces}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{b\+Num\+Interfaces}{bNumInterfaces}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::b\+Num\+Interfaces}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_a7397ac3398f73959bb4caa7008d00ed5}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_a7397ac3398f73959bb4caa7008d00ed5}
+Number of interfaces supported by this configuration 
+
+Definition at line 445 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!i\+Configuration@{i\+Configuration}}
+\index{i\+Configuration@{i\+Configuration}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{i\+Configuration}{iConfiguration}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::i\+Configuration}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_a9ab59cdc0def220a76030c91ea312376}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_a9ab59cdc0def220a76030c91ea312376}
+Index of string descriptor describing this configuration 
+
+Definition at line 449 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!w\+Total\+Length@{w\+Total\+Length}}
+\index{w\+Total\+Length@{w\+Total\+Length}!\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{\+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\subsubsection[{\texorpdfstring{w\+Total\+Length}{wTotalLength}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+::w\+Total\+Length}\hypertarget{struct__USB__CONFIGURATION__DESCRIPTOR_a089b446a621103f1eedff6c023fa738e}{}\label{struct__USB__CONFIGURATION__DESCRIPTOR_a089b446a621103f1eedff6c023fa738e}
+Total length of data returned for this configuration. Includes the combined length of all descriptors (configuration, interface, endpoint, and class-\/ or vendor-\/specific) returned for this configuration. 
+
+Definition at line 440 of file usbd.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd_8h}{usbd.\+h}\end{DoxyCompactItemize}

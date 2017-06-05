@@ -1,0 +1,6 @@
+digraph "LPC_I2C_T"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{LPC_I2C_T\n|+ ADR0\l+ ADR1\l+ ADR2\l+ ADR3\l+ CONCLR\l+ CONSET\l+ DAT\l+ DATA_BUFFER\l+ MASK\l+ MMCTRL\l+ SCLH\l+ SCLL\l+ STAT\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

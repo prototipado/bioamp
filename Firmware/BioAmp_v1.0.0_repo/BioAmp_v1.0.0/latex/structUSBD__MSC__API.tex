@@ -1,0 +1,97 @@
+\hypertarget{structUSBD__MSC__API}{}\section{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI Struct Reference}
+\label{structUSBD__MSC__API}\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI}}
+
+
+M\+SC class A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware.  
+
+
+
+
+{\ttfamily \#include $<$usbd\+\_\+mscuser.\+h$>$}
+
+
+
+Collaboration diagram for U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t($\ast$ \hyperlink{structUSBD__MSC__API_a73a9d240b20fcd83e6d2c9675420d626}{Get\+Mem\+Size} )(\hyperlink{group__USBD__MSC_ga01cbe726c0ee97ee44661ca88d7e8fbd}{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T} $\ast$param)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__MSC__API_a2654b01293392f8a58412e88b46f1e91}{init} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, \hyperlink{group__USBD__MSC_ga01cbe726c0ee97ee44661ca88d7e8fbd}{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T} $\ast$param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+SC class A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. 
+
+
+
+Definition at line 187 of file usbd\+\_\+mscuser.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI}!Get\+Mem\+Size@{Get\+Mem\+Size}}
+\index{Get\+Mem\+Size@{Get\+Mem\+Size}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI}}
+\subsubsection[{\texorpdfstring{Get\+Mem\+Size}{GetMemSize}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+P\+I\+::\+Get\+Mem\+Size}\hypertarget{structUSBD__MSC__API_a73a9d240b20fcd83e6d2c9675420d626}{}\label{structUSBD__MSC__API_a73a9d240b20fcd83e6d2c9675420d626}
+Function to determine the memory required by the M\+SC function driver module.
+
+This function is called by application layer before calling p\+Usb\+Api-\/$>$msc-\/$>$Init(), to allocate memory used by M\+SC function driver module. The application should allocate the memory which is accessible by U\+SB controller/\+D\+MA controller. \begin{DoxyNote}{Note}
+Some memory areas are not accessible by all bus masters.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em param} & Structure containing M\+SC function driver module initialization parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the required memory size in bytes. 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file usbd\+\_\+mscuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI}!init@{init}}
+\index{init@{init}!U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+PI}}
+\subsubsection[{\texorpdfstring{init}{init}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t} U\+S\+B\+D\+\_\+\+M\+S\+C\+\_\+\+A\+P\+I\+::init}\hypertarget{structUSBD__MSC__API_a2654b01293392f8a58412e88b46f1e91}{}\label{structUSBD__MSC__API_a2654b01293392f8a58412e88b46f1e91}
+Function to initialize M\+SC function driver module.
+
+This function is called by application layer to initialize M\+SC function driver module.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in,out}  & {\em param} & Structure containing M\+SC function driver module initialization parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+B\+A\+D\+\_\+\+M\+E\+M\+\_\+\+B\+UF} & Memory buffer passed is not 4-\/byte aligned or smaller than required. \\
+\hline
+{\em E\+R\+R\+\_\+\+A\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+A\+M2} & Either M\+S\+C\+\_\+\+Write() or M\+S\+C\+\_\+\+Read() or M\+S\+C\+\_\+\+Verify() callbacks are not defined. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+B\+A\+D\+\_\+\+I\+N\+T\+F\+\_\+\+D\+E\+SC} & Wrong interface descriptor is passed. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+B\+A\+D\+\_\+\+E\+P\+\_\+\+D\+E\+SC} & Wrong endpoint descriptor is passed. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 218 of file usbd\+\_\+mscuser.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd__mscuser_8h}{usbd\+\_\+mscuser.\+h}\end{DoxyCompactItemize}

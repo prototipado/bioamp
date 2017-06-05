@@ -1,0 +1,6 @@
+digraph "LPC_USB_T"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{LPC_USB_T\n|+ @14\l+ @16\l+ @18\l+ BulkCurrentED\l+ BulkHeadED\l+ CmdCode\l+ CmdData\l+ CommandStatus\l+ Control\l+ ControlCurrentED\land 77 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

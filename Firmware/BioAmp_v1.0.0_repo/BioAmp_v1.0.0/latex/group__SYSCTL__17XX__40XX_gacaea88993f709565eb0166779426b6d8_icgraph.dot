@@ -1,0 +1,15 @@
+digraph "Chip_SYSCTL_SetFLASHAccess"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_SYSCTL_SetFLASHAccess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Board_SetupClocking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__BOARD__COMMON__API.html#gae417dc93d00f1a89f74220e569fac777",tooltip="Setup system clocking. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Board_SystemInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__BOARD__COMMON__API.html#gaeb60ea85499a4208167ae2540086516a",tooltip="Setup and initialize hardware prior to call to main() "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="SystemInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sysinit_8c.html#a93f514700ccf00d08dbdcff7f1224eb2"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="__attribute__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cr__startup__lpc175x__6x_8c.html#adce420b900676fa0caed5a713cac82fb"];
+}

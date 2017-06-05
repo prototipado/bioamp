@@ -1,0 +1,24 @@
+digraph "getCurState"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="getCurState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="isMasterState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#aa5d73e6cbd7622d475d0d050c68a6c4c"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_I2C_IsMasterActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga5fdf29aff7847c93373cf02da41285e1",tooltip="Checks if master xfer in progress. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="handleMasterXferState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#a27f3909b10ee0d79e0e35c4b6aff56f3"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Chip_I2C_MasterStateHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga179362e42a3de931ff7f57ca698254fa",tooltip="I2C Master transfer state change handler. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Chip_I2C_EventHandlerPolling",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#gaaa89a66d658a41325b3c5e56bc059401",tooltip="Default event handler for polling operation. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="getSlaveIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#a405d3f3d822c2995731a6770c75136b5"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Chip_I2C_SlaveStateHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga650618a5f4717c46ae3ea304142ddc03",tooltip="I2C Slave event handler. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="handleSlaveXferState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#ae23b684a3e974c4780c7b96d3b540343"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

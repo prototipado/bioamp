@@ -1,0 +1,11 @@
+digraph "Chip_ENET_IsRxEmpty"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_ENET_IsRxEmpty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_ENET_IncTXProduceIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#ga9a1d6a9086bfbca3c856ad2b3b90546c",tooltip="Increase the current Tx Produce Descriptor Index. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_ENET_IncRXConsumeIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#ga4246666fbc4e9be17c45e6837a0e5dca",tooltip="Increase the current Rx Consume Descriptor Index. "];
+}

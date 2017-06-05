@@ -1,0 +1,6 @@
+digraph "DWT_Type"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{DWT_Type\n|+ COMP0\l+ COMP1\l+ COMP2\l+ COMP3\l+ CPICNT\l+ CTRL\l+ CYCCNT\l+ EXCCNT\l+ FOLDCNT\l+ FUNCTION0\land 13 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

@@ -1,0 +1,76 @@
+\hypertarget{struct__HID__REPORT__T}{}\section{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T Struct Reference}
+\label{struct__HID__REPORT__T}\index{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}}
+
+
+H\+ID report descriptor data structure.  
+
+
+
+
+{\ttfamily \#include $<$usbd\+\_\+hiduser.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct__HID__REPORT__T_a9d56a95a8b9dbdc3bfaec651d23bd360}{\+\_\+\+\_\+pad}
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{struct__HID__REPORT__T_a312421c8506e4dcd1ba2d40a9c409211}{desc}
+\item 
+uint8\+\_\+t \hyperlink{struct__HID__REPORT__T_a388e7eacbfc2006e0ada9e81da54760b}{idle\+\_\+time}
+\item 
+uint16\+\_\+t \hyperlink{struct__HID__REPORT__T_a4c0e68b7360c08788605db4eb667cb4e}{len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\+ID report descriptor data structure. 
+
+This structure is used as part of H\+ID function driver initialization parameter structure \hyperlink{structUSBD__HID__INIT__PARAM}{U\+S\+B\+D\+\_\+\+H\+I\+D\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}. This structure contains details of a report type supported by the application. An application can support multiple report types as a single H\+ID device. The application should define this report type data structure per report it supports and the array of report types to \hyperlink{structUSBD__HID__API_a7b98c434713f1deb07abafcb52fae76d}{U\+S\+B\+D\+\_\+\+H\+I\+D\+\_\+\+A\+P\+I\+::init()} through \hyperlink{structUSBD__HID__INIT__PARAM}{U\+S\+B\+D\+\_\+\+H\+I\+D\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM} structure.
+
+\begin{DoxyNote}{Note}
+All descriptor pointers assigned in this structure should be on 4 byte aligned address boundary. 
+\end{DoxyNote}
+
+
+Definition at line 65 of file usbd\+\_\+hiduser.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}!\+\_\+\+\_\+pad@{\+\_\+\+\_\+pad}}
+\index{\+\_\+\+\_\+pad@{\+\_\+\+\_\+pad}!\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+pad}{__pad}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+::\+\_\+\+\_\+pad}\hypertarget{struct__HID__REPORT__T_a9d56a95a8b9dbdc3bfaec651d23bd360}{}\label{struct__HID__REPORT__T_a9d56a95a8b9dbdc3bfaec651d23bd360}
+Padding space. 
+
+Definition at line 75 of file usbd\+\_\+hiduser.\+h.
+
+\index{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}!desc@{desc}}
+\index{desc@{desc}!\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}}
+\subsubsection[{\texorpdfstring{desc}{desc}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ \+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+::desc}\hypertarget{struct__HID__REPORT__T_a312421c8506e4dcd1ba2d40a9c409211}{}\label{struct__HID__REPORT__T_a312421c8506e4dcd1ba2d40a9c409211}
+Report descriptor. 
+
+Definition at line 76 of file usbd\+\_\+hiduser.\+h.
+
+\index{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}!idle\+\_\+time@{idle\+\_\+time}}
+\index{idle\+\_\+time@{idle\+\_\+time}!\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}}
+\subsubsection[{\texorpdfstring{idle\+\_\+time}{idle_time}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+::idle\+\_\+time}\hypertarget{struct__HID__REPORT__T_a388e7eacbfc2006e0ada9e81da54760b}{}\label{struct__HID__REPORT__T_a388e7eacbfc2006e0ada9e81da54760b}
+This value is used by stack to respond to Set\+\_\+\+Idle \& G\+E\+T\+\_\+\+Idle requests for the specified report ID. The value of this field specified the rate at which duplicate reports are generated for the specified Report ID. For example, a device with two input reports could specify an idle rate of 20 milliseconds for report ID 1 and 500 milliseconds for report ID 2. 
+
+Definition at line 67 of file usbd\+\_\+hiduser.\+h.
+
+\index{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}!len@{len}}
+\index{len@{len}!\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T@{\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+T}}
+\subsubsection[{\texorpdfstring{len}{len}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t \+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+::len}\hypertarget{struct__HID__REPORT__T_a4c0e68b7360c08788605db4eb667cb4e}{}\label{struct__HID__REPORT__T_a4c0e68b7360c08788605db4eb667cb4e}
+Size of the report descriptor in bytes. 
+
+Definition at line 66 of file usbd\+\_\+hiduser.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd__hiduser_8h}{usbd\+\_\+hiduser.\+h}\end{DoxyCompactItemize}

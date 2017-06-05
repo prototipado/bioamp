@@ -1,0 +1,93 @@
+\hypertarget{structGPDMA__CH__CFG__T}{}\section{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T Struct Reference}
+\label{structGPDMA__CH__CFG__T}\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+
+
+G\+P\+D\+MA structure using for D\+MA configuration.  
+
+
+
+
+{\ttfamily \#include $<$gpdma\+\_\+17xx\+\_\+40xx.\+h$>$}
+
+
+
+Collaboration diagram for G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{structGPDMA__CH__CFG__T_a9a37cb463108848cc37e79d230f34602}{Channel\+Num}
+\item 
+uint32\+\_\+t \hyperlink{structGPDMA__CH__CFG__T_a6e67f866c02d9a27662c798bac0554b8}{Dst\+Addr}
+\item 
+uint32\+\_\+t \hyperlink{structGPDMA__CH__CFG__T_a53adde93dea1ba4ce81af0fd4bd3e66e}{Src\+Addr}
+\item 
+uint32\+\_\+t \hyperlink{structGPDMA__CH__CFG__T_a5666efb9edb055974b590443ea45ed7b}{Transfer\+Size}
+\item 
+uint32\+\_\+t \hyperlink{structGPDMA__CH__CFG__T_a6c21f3fe48e5e23443a324f9a42a3886}{Transfer\+Type}
+\item 
+uint32\+\_\+t \hyperlink{structGPDMA__CH__CFG__T_a7aff974420b56393365cc335015ba8df}{Transfer\+Width}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+G\+P\+D\+MA structure using for D\+MA configuration. 
+
+Definition at line 157 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}!Channel\+Num@{Channel\+Num}}
+\index{Channel\+Num@{Channel\+Num}!G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+\subsubsection[{\texorpdfstring{Channel\+Num}{ChannelNum}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T\+::\+Channel\+Num}\hypertarget{structGPDMA__CH__CFG__T_a9a37cb463108848cc37e79d230f34602}{}\label{structGPDMA__CH__CFG__T_a9a37cb463108848cc37e79d230f34602}
+D\+MA channel number, should be in range from 0 to 7. Note\+: D\+MA channel 0 has the highest priority and D\+MA channel 7 the lowest priority. 
+
+Definition at line 158 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}!Dst\+Addr@{Dst\+Addr}}
+\index{Dst\+Addr@{Dst\+Addr}!G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+\subsubsection[{\texorpdfstring{Dst\+Addr}{DstAddr}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T\+::\+Dst\+Addr}\hypertarget{structGPDMA__CH__CFG__T_a6e67f866c02d9a27662c798bac0554b8}{}\label{structGPDMA__CH__CFG__T_a6e67f866c02d9a27662c798bac0554b8}
+Physical Destination Address, used in case Transfer\+Type is chosen as G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2M or G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2M 
+
+Definition at line 167 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}!Src\+Addr@{Src\+Addr}}
+\index{Src\+Addr@{Src\+Addr}!G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+\subsubsection[{\texorpdfstring{Src\+Addr}{SrcAddr}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T\+::\+Src\+Addr}\hypertarget{structGPDMA__CH__CFG__T_a53adde93dea1ba4ce81af0fd4bd3e66e}{}\label{structGPDMA__CH__CFG__T_a53adde93dea1ba4ce81af0fd4bd3e66e}
+Physical Source Address, used in case Transfer\+Type is chosen as G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2M or G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2P 
+
+Definition at line 165 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}!Transfer\+Size@{Transfer\+Size}}
+\index{Transfer\+Size@{Transfer\+Size}!G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+\subsubsection[{\texorpdfstring{Transfer\+Size}{TransferSize}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T\+::\+Transfer\+Size}\hypertarget{structGPDMA__CH__CFG__T_a5666efb9edb055974b590443ea45ed7b}{}\label{structGPDMA__CH__CFG__T_a5666efb9edb055974b590443ea45ed7b}
+Length/\+Size of transfer 
+
+Definition at line 163 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}!Transfer\+Type@{Transfer\+Type}}
+\index{Transfer\+Type@{Transfer\+Type}!G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+\subsubsection[{\texorpdfstring{Transfer\+Type}{TransferType}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T\+::\+Transfer\+Type}\hypertarget{structGPDMA__CH__CFG__T_a6c21f3fe48e5e23443a324f9a42a3886}{}\label{structGPDMA__CH__CFG__T_a6c21f3fe48e5e23443a324f9a42a3886}
+Transfer Type, should be one of the following\+:
+\begin{DoxyItemize}
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2M\+: Memory to memory -\/ D\+MA control
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2P\+: Memory to peripheral -\/ D\+MA control
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2M\+: Peripheral to memory -\/ D\+MA control
+\item G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+P2P\+: Source peripheral to destination peripheral -\/ D\+MA control 
+\end{DoxyItemize}
+
+Definition at line 169 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+\index{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}!Transfer\+Width@{Transfer\+Width}}
+\index{Transfer\+Width@{Transfer\+Width}!G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T@{G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+T}}
+\subsubsection[{\texorpdfstring{Transfer\+Width}{TransferWidth}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t G\+P\+D\+M\+A\+\_\+\+C\+H\+\_\+\+C\+F\+G\+\_\+\+T\+::\+Transfer\+Width}\hypertarget{structGPDMA__CH__CFG__T_a7aff974420b56393365cc335015ba8df}{}\label{structGPDMA__CH__CFG__T_a7aff974420b56393365cc335015ba8df}
+Transfer width -\/ used for Transfer\+Type is G\+P\+D\+M\+A\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+T\+Y\+P\+E\+\_\+\+M2M only 
+
+Definition at line 164 of file gpdma\+\_\+17xx\+\_\+40xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gpdma__17xx__40xx_8h}{gpdma\+\_\+17xx\+\_\+40xx.\+h}\end{DoxyCompactItemize}

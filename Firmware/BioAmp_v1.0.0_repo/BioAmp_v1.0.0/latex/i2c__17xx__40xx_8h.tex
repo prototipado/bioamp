@@ -1,0 +1,258 @@
+\hypertarget{i2c__17xx__40xx_8h}{}\section{i2c\+\_\+17xx\+\_\+40xx.\+h File Reference}
+\label{i2c__17xx__40xx_8h}\index{i2c\+\_\+17xx\+\_\+40xx.\+h@{i2c\+\_\+17xx\+\_\+40xx.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Master transfer data structure definitions. \end{DoxyCompactList}\item 
+struct \hyperlink{structLPC__I2C__T}{L\+P\+C\+\_\+\+I2\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em I2C register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga90031db9f3a3abcdb6c278046019048d}{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}~0x02
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7b419c9f5e25bec1367f655cb2552e2e}{I2\+C\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+E\+NT}~0x01
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac0db244c4c7701bf94e2f5646b69dc2a}{I2\+C\+\_\+\+Check\+Error}(Error\+Code)  ~(Error\+Code \& 0x10000000)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gafd39e9ced8b71fd55deb05d7a23752b9}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+AA}~(1\+U\+L $<$$<$ 2)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5a696207d04d3694700e427a068409b1}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+I2\+EN}~(1\+U\+L $<$$<$ 6)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad53ba19314d57093aaa5076897604a50}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+SI}~(1\+U\+L $<$$<$ 3)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga75e0835be79d812d1e6df8b0a5150365}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TA}~(1\+U\+L $<$$<$ 5)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga9704c03008de747eb42bde530a67350b}{I2\+C\+\_\+\+C\+O\+N\+\_\+\+S\+TO}~(1\+U\+L $<$$<$ 4)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga2e11959cc0c956258dc4833ccdee1504}{I2\+C\+\_\+\+E\+RR}~(0x10000000)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga8d5195514172b58efd29f09642566d37}{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga2509515124601141b72080b5daf45009}{I2\+C\+\_\+\+I2\+A\+D\+R\+\_\+\+GC}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaa13b19babb8442aa9047f8ecb92a908d}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+A\+AC}~((1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga92718ac11d46f6e32d526749f09d01b2}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+I2\+E\+NC}~((1 $<$$<$ 6))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga36753112210a8c33d566b572b63b753b}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+IC}~((1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab6148bf41d7fc32bd259d2f6a7d7667d}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+AC}~((1 $<$$<$ 5))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga449d7af35550484c4dfefcddd01095b8}{I2\+C\+\_\+\+I2\+C\+O\+N\+C\+L\+R\+\_\+\+S\+T\+OC}~((1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga784c4b2fe7f3299e338655d2ddbf283c}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+AA}~((0x04))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab836acc31e0572bb0d0db614f0641f15}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+I2\+EN}~((0x40))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaa447cd2686805ef8009fc599144ee3dc}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+SI}~((0x08))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gabaad3370eb35644c135d40f06adbbba0}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TA}~((0x20))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaae292803a059b84eac20ab8777d113af}{I2\+C\+\_\+\+I2\+C\+O\+N\+S\+E\+T\+\_\+\+S\+TO}~((0x10))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac66b7c81c93cc59f69d204b4eb7d639b}{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5b04af302e0e4007df123dff0328ac5e}{I2\+C\+\_\+\+I2\+D\+A\+T\+\_\+\+I\+D\+L\+E\+\_\+\+C\+H\+AR}~(0x\+F\+F)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga44068704cf00223c47f6880322dcf67c}{I2\+C\+\_\+\+I2\+M\+A\+S\+K\+\_\+\+M\+A\+SK}(n)                ~((n \& 0x\+F\+E))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadca0b6beb066a8f6689960c687334ac2}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x07))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gabf11567c27c48d795ba0f92cf636dab6}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}~((1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac7dd5efba503dd79c6b42f3575f70307}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}~((1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga8dc8fa566a5113c3e1b35c0580d90d9f}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+M\+\_\+\+E\+NA}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad6a9a202cf4d30607475338f7b59968a}{I2\+C\+\_\+\+I2\+S\+C\+L\+H\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadf54076e458f10fc00be5ed9504bc930}{I2\+C\+\_\+\+I2\+S\+C\+L\+L\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7c1e7f0f166cdc547263229c5ce07cb0}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+B\+U\+S\+\_\+\+E\+R\+R\+OR}~((0x00))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaed32dea40cf84a1efb09e0c389579163}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}~((0x38))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga2f07d3cfad351ba3c976d629db20cea2}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x50))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga9cc5203175775bfa5ae6df5d6d98b014}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x58))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gacb1c9145acd64a77464017f1dd9279c5}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+R\+E\+S\+T\+A\+RT}~((0x10))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gacd29e4a94f8a533477dbbf026c0d525a}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}~((0x40))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gafe156febe3313a9f3423776f97d0f24f}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+L\+A\+R\+\_\+\+N\+A\+CK}~((0x48))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab1f79137c62e306269633b005ad936da}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+R\+X\+\_\+\+S\+T\+A\+RT}~((0x08))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga79230136402441c7e233c63fd2f71bdf}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+ST}~((0x38))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad8c325e3c58aa8e7810797b9a6761596}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x28))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga234f86990a6fd63f1d2064cbca4709a3}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x30))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad41d0d1392b7d905b22b9c5015f2e48f}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+R\+E\+S\+T\+A\+RT}~((0x10))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gab91c158252efeb1a3a139faec3622ae0}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}~((0x18))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga15729d9436fbf4c23a22e7cdbc913552}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+L\+A\+W\+\_\+\+N\+A\+CK}~((0x20))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5c44c05176052f6040cd40d680bc2a91}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+M\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT}~((0x08))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga3e2ecdeb466041bb3cf435ccf36564d9}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+N\+O\+\_\+\+I\+NF}~((0x\+F8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga1605c253472e071e7f77e51bda156ba7}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+G\+E\+N\+C\+A\+LL}~((0x78))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaf13df6ed7d10be0e063bcbc04d329749}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}~((0x68))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadcab34e87ad115c011e23a5bd4fb8aa3}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+A\+CK}~((0x70))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga75dd46ddb054c4d47a531b8e90f7f446}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x90))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga20c65f8a82c18211127e5c335026bd76}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+G\+E\+N\+C\+A\+L\+L\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x98))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga4342227592c3e2e345517bd3e6cd8089}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x80))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gace56a90d55426cc6ab2a4ca540c63d02}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+P\+R\+E\+\_\+\+S\+L\+A\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x88))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7055c4b55feda352df8016cbca0c270b}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+L\+A\+W\+\_\+\+A\+CK}~((0x60))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga7afe9f0e54aeb9ce8428c0adeb3c3274}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+R\+X\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+S\+L\+V\+R\+E\+C\+\_\+\+S\+L\+V\+T\+RX}~((0x\+A0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac71ac23a80e1bdb700a2c37170031107}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+A\+R\+B\+\_\+\+L\+O\+S\+T\+\_\+\+M\+\_\+\+S\+LA}~((0x\+B0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaeb92fe85cc3f6c813cb91685234ac08c}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x\+B8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gad9cdcd8c06924252a2ad9baced97d838}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+D\+A\+T\+\_\+\+N\+A\+CK}~((0x\+C0))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga3e4522387958da1da6017a6e48a0daad}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+L\+A\+S\+T\+\_\+\+D\+A\+T\+\_\+\+A\+CK}~((0x\+C8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gae6dcbdd1f01f7ebf3595722770e3b7b6}{I2\+C\+\_\+\+I2\+S\+T\+A\+T\+\_\+\+S\+\_\+\+T\+X\+\_\+\+S\+L\+A\+R\+\_\+\+A\+CK}~((0x\+A8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadbb787dfeda35fe21147da81f68c0b57}{I2\+C\+\_\+\+L\+A\+S\+T\+\_\+\+B\+Y\+T\+E\+\_\+\+R\+E\+CV}~0x04
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gadd2b30f5b29839a83c893d88b8d09dd7}{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+M\+A\+T\+C\+H\+A\+LL}~\hyperlink{group__I2C__17XX__40XX_gac7dd5efba503dd79c6b42f3575f70307}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+M\+A\+T\+C\+H\+\_\+\+A\+LL}
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga5f79529ae357b8aa86e6ead24d95167e}{I2\+C\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+C\+F\+G\+\_\+\+S\+C\+L\+\_\+\+O\+U\+T\+P\+UT}~\hyperlink{group__I2C__17XX__40XX_gabf11567c27c48d795ba0f92cf636dab6}{I2\+C\+\_\+\+I2\+M\+M\+C\+T\+R\+L\+\_\+\+E\+N\+A\+\_\+\+S\+CL}
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga01f7ced141c84fc0299e0a509bfcc8ce}{I2\+C\+\_\+\+N\+A\+K\+\_\+\+R\+E\+CV}~(0x10000000 $\vert$ 0x01)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga57d0c95ccd7c129288743e9674a9e96d}{I2\+C\+\_\+\+OK}~0x00
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac6c3ac5b11a68d4ff63b01e7aa4bc121}{I2\+C\+\_\+\+R\+E\+C\+V\+\_\+\+E\+ND}~0x10
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga758db89a42044992cfb80d0f6f55261d}{I2\+C\+\_\+\+S\+E\+N\+D\+\_\+\+E\+ND}~0x08
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gae90c077796281121b65b80b661a23062}{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+BF}~(1 $<$$<$ 8)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gaefbb25ca99e199765e7dcdd6ef343590}{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}~(1 $<$$<$ 10)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga90a37b470118d82b9682cfc2e0b4de84}{I2\+C\+\_\+\+S\+E\+T\+U\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+A\+C\+KF}~(1 $<$$<$ 9)
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga33116b352c72ef28879812c66387f17a}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT}~0x10000000\+UL
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}~0x20
+\begin{DoxyCompactList}\small\item\em I2C state handle return values. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga6ed81fd3a1ae05f1fbf96525f1520cd3}{I2\+C\+\_\+\+S\+T\+A\+\_\+\+S\+T\+O\+\_\+\+R\+E\+CV}~0x20
+\begin{DoxyCompactList}\small\item\em I2C state handle return values. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gafeb8b5f682a81a2cc32f6c4b720a5e1f}{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F8))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gacfbf48ab1ed4f43314f63898ac827925}{I2\+C\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+D\+E\+\_\+\+E\+R\+R\+OR}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga95d605cbb817fa36d9c83545dd23fb5f}{I2\+D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gae5dd077e6273af4e15c3b656b56f9afd}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+B\+U\+SY}~0
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_gac3305a3a03ff55a1ee6ba304a09e0187}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+D\+LE}~2
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga16246f0e987c65b12170dd4f127e99f9}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}~5
+\item 
+\#define \hyperlink{group__I2C__17XX__40XX_ga49da135773ab760dbf75fcbcdb383623}{R\+E\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}~6
+\begin{DoxyCompactList}\small\item\em Return values for S\+L\+A\+VE handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T}) (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T}, \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T})
+\begin{DoxyCompactList}\small\item\em Event handler function type. \end{DoxyCompactList}\item 
+typedef enum \hyperlink{group__I2C__17XX__40XX_gaec46000c6a1fe2c12c9a0c7ee3677626}{I2\+C\+\_\+\+ID} \hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T}
+\begin{DoxyCompactList}\small\item\em I2C interface I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T} \{ \\*
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+W\+A\+IT} = 1, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+O\+NE}, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+O\+CK}, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+N\+L\+O\+CK}, 
+\\*
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+RX}, 
+\hyperlink{group__I2C__17XX__40XX_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+TX}
+ \}\begin{DoxyCompactList}\small\item\em I2C master events. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_gaec46000c6a1fe2c12c9a0c7ee3677626}{I2\+C\+\_\+\+ID} \{ \hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653}{I2\+C0}, 
+\hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2}{I2\+C1}, 
+\hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b}{I2\+C2}, 
+\hyperlink{group__I2C__17XX__40XX_ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304}{I2\+C\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}
+ \}\begin{DoxyCompactList}\small\item\em I2C interface I\+Ds. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_ga5fb1ba338fb3822bb6ca012adc4194bf}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID} \{ \\*
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa7d2284af5f49b5b9df2582a31fff6370}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+G\+E\+N\+E\+R\+AL}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfad17f6d6b2d217b84307c502108a6fed6}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+0}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfa8a4d6db2156bad4cf8c21226be564fe2}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+1}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfab6d7a585cfa1106eb290fa9f302c5783}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+2}, 
+\\*
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfaf5cff98e9db3da7cc50edd21d3873efd}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+3}, 
+\hyperlink{group__I2C__17XX__40XX_gga5fb1ba338fb3822bb6ca012adc4194bfabdb0d442b75f2dbdb63aed5a307de077}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}
+ \}\begin{DoxyCompactList}\small\item\em I2C Slave Identifiers. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__I2C__17XX__40XX_ga21aa839302786105dcf6a96be0e6e8bc}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T} \{ \\*
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca9f5024a35710b260041d351d794afa9a}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+NE}, 
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcac41be4d0689494327d4dae20504c854d}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+AK}, 
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca674732e92811621ed2ca34b9e40ca724}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+A\+R\+B\+L\+O\+ST}, 
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bca803d8563e2b11514ba4549763ad441f5}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+S\+E\+RR}, 
+\\*
+\hyperlink{group__I2C__17XX__40XX_gga21aa839302786105dcf6a96be0e6e8bcab3dd2c4a10e92ca1a5cb580501bad817}{I2\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}
+ \}\begin{DoxyCompactList}\small\item\em I2C transfer status. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__I2C__17XX__40XX_ga334c2c12edda443a7e949a1ea4a6a646}{Chip\+\_\+\+I2\+C\+\_\+\+De\+Init} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em De-\/initializes the I2C peripheral registers to their default reset values. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga68f1d630224edab35ba796373c5867c0}{Chip\+\_\+\+I2\+C\+\_\+\+Disable} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Disable I2C peripheral\textquotesingle{}s operation. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga06b84fe3fad7ffd4ccb93f2683781936}{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T} event)
+\begin{DoxyCompactList}\small\item\em Default event handler for interrupt base operation. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_gaaa89a66d658a41325b3c5e56bc059401}{Chip\+\_\+\+I2\+C\+\_\+\+Event\+Handler\+Polling} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_gacb2cd4e03ea48339d327e4f387441bf3}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+T} event)
+\begin{DoxyCompactList}\small\item\em Default event handler for polling operation. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__I2C__17XX__40XX_ga6b13511432337d21b8cd325651cc5b63}{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Clock\+Rate} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Get current clock rate for L\+P\+C\+\_\+\+I2C peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} \hyperlink{group__I2C__17XX__40XX_gafad03b4f6c0ecb3f59f014ab63bfda5c}{Chip\+\_\+\+I2\+C\+\_\+\+Get\+Master\+Event\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Get pointer to current function handling the events. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_gab79263d278814945df2cd44c5db7b514}{Chip\+\_\+\+I2\+C\+\_\+\+Init} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Initializes the L\+P\+C\+\_\+\+I2C peripheral with specified parameter. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga5fdf29aff7847c93373cf02da41285e1}{Chip\+\_\+\+I2\+C\+\_\+\+Is\+Master\+Active} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em Checks if master xfer in progress. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga4240d03d5dda43ddc8afd527b3172318}{Chip\+\_\+\+I2\+C\+\_\+\+Is\+State\+Changed} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em I2C peripheral state change checking. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga4a875b456dfe68acbe8ce1fc74d88bd3}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Cmd\+Read} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint8\+\_\+t slave\+Addr, uint8\+\_\+t cmd, uint8\+\_\+t $\ast$buff, int len)
+\begin{DoxyCompactList}\small\item\em Transfer a command to slave and receive data from slave after a repeated start. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_gae816049843eb162c803b5058ebd9a25c}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Read} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint8\+\_\+t slave\+Addr, uint8\+\_\+t $\ast$buff, int len)
+\begin{DoxyCompactList}\small\item\em Set function that must handle I2C events. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga9ff549bdb526786d313c141b11cab43e}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Send} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint8\+\_\+t slave\+Addr, const uint8\+\_\+t $\ast$buff, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Transmit data to I2C slave using I2C Master mode. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga179362e42a3de931ff7f57ca698254fa}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+State\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em I2C Master transfer state change handler. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga5f89391d66048894f4365d3b2b7df267}{Chip\+\_\+\+I2\+C\+\_\+\+Master\+Transfer} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} $\ast$xfer)
+\begin{DoxyCompactList}\small\item\em Transmit and Receive data in master mode. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga17fac5d72058db8eed11d247e78b74ed}{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Clock\+Rate} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, uint32\+\_\+t clockrate)
+\begin{DoxyCompactList}\small\item\em Set up clock rate for L\+P\+C\+\_\+\+I2C peripheral. \end{DoxyCompactList}\item 
+int \hyperlink{group__I2C__17XX__40XX_ga1fc3fc0946344e9551d9eef0bbf610b9}{Chip\+\_\+\+I2\+C\+\_\+\+Set\+Master\+Event\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} event)
+\begin{DoxyCompactList}\small\item\em Set function that must handle I2C events. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_gaf6ea40668dde26e406f76ff3ddeda527}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+Setup} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id, \hyperlink{group__I2C__17XX__40XX_ga5fb1ba338fb3822bb6ca012adc4194bf}{I2\+C\+\_\+\+S\+L\+A\+V\+E\+\_\+\+ID} sid, \hyperlink{structI2C__XFER__T}{I2\+C\+\_\+\+X\+F\+E\+R\+\_\+T} $\ast$xfer, \hyperlink{group__I2C__17XX__40XX_gaef152f4dc1487d90573810007489082e}{I2\+C\+\_\+\+E\+V\+E\+N\+T\+H\+A\+N\+D\+L\+E\+R\+\_\+T} event, uint8\+\_\+t addr\+Mask)
+\begin{DoxyCompactList}\small\item\em Setup a slave I2C device. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2C__17XX__40XX_ga650618a5f4717c46ae3ea304142ddc03}{Chip\+\_\+\+I2\+C\+\_\+\+Slave\+State\+Handler} (\hyperlink{group__I2C__17XX__40XX_ga957556a4d900506cd4cba8427afd81e6}{I2\+C\+\_\+\+I\+D\+\_\+T} id)
+\begin{DoxyCompactList}\small\item\em I2C Slave event handler. \end{DoxyCompactList}\end{DoxyCompactItemize}

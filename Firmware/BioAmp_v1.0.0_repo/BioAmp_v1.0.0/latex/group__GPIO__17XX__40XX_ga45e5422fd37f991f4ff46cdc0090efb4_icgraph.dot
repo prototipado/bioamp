@@ -1,0 +1,9 @@
+digraph "Chip_GPIO_SetMaskedPortValue"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_GPIO_SetMaskedPortValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_GPIO_SetPortValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__17XX__40XX.html#ga095eb3a5396553fa88997b4cfd21e644",tooltip="Set all GPIO raw pin states (does not bypass masking on this chip!) "];
+}

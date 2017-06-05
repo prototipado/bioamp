@@ -1,0 +1,15 @@
+digraph "Chip_I2C_MasterSend"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_I2C_MasterSend",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_I2C_MasterTransfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2C__17XX__40XX.html#ga5f89391d66048894f4365d3b2b7df267",tooltip="Transmit and Receive data in master mode. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="startMasterXfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#a98ebe9d56104a1959ca9ec5874b93029"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="isI2CBusFree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#adf0dffdb74771c1f98a5e959e6dca498"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="startSlaverXfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$i2c__17xx__40xx_8c.html#a0f8b2c1a7c00b5e622b3a6f273cd5177"];
+}

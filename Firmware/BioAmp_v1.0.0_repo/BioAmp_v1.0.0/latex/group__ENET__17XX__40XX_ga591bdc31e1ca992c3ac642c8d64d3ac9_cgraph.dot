@@ -1,0 +1,11 @@
+digraph "Chip_ENET_DisableRXFilter"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_ENET_DisableRXFilter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Chip_ENET_SetFullDuplex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#ga0881ac9e0e98620c0e65f9a6d7a43240",tooltip="Sets full duplex operation for the interface. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_ENET_SetHalfDuplex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#ga6d7031584471e30e89ded1fff5f3340d",tooltip="Sets half duplex operation for the interface. "];
+}

@@ -1,0 +1,74 @@
+\hypertarget{usbd__rom__api_8h}{}\section{usbd\+\_\+rom\+\_\+api.\+h File Reference}
+\label{usbd__rom__api_8h}\index{usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}}
+
+
+R\+OM A\+PI for U\+SB device stack.  
+
+
+{\ttfamily \#include \char`\"{}error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+hw.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+core.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+mscuser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+dfuuser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+hiduser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usbd\+\_\+cdcuser.\+h\char`\"{}}\\*
+Include dependency graph for usbd\+\_\+rom\+\_\+api.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structUSBD__API}{U\+S\+B\+D\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em Main U\+S\+BD A\+PI functions structure.
+
+This structure contains pointer to various U\+SB Device stack\textquotesingle{}s sub-\/module function tables. This structure is used as main entry point to access various methods (grouped in sub-\/modules) exposed by R\+OM based U\+SB device stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usbd__rom__api_8h_a917f89ab1130705af952ee4252032497}{U\+S\+B\+D\+\_\+\+A\+PI}~\hyperlink{usbd__rom__api_8h_aa694a4a7a106972c3e4bd17e03ab8f3b}{g\+\_\+p\+Usb\+Api}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structUSBD__API}{U\+S\+B\+D\+\_\+\+A\+PI} \hyperlink{usbd__rom__api_8h_a3f9095ac0bb2d8c6159b2b76912909c9}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Main U\+S\+BD A\+PI functions structure.
+
+This structure contains pointer to various U\+SB Device stack\textquotesingle{}s sub-\/module function tables. This structure is used as main entry point to access various methods (grouped in sub-\/modules) exposed by R\+OM based U\+SB device stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{usbd__rom__api_8h_a3f9095ac0bb2d8c6159b2b76912909c9}{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T} $\ast$ \hyperlink{usbd__rom__api_8h_aa694a4a7a106972c3e4bd17e03ab8f3b}{g\+\_\+p\+Usb\+Api}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+OM A\+PI for U\+SB device stack. 
+
+Definition of functions exported by R\+OM based U\+SB device stack. 
+
+\subsection{Macro Definition Documentation}
+\index{usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}!U\+S\+B\+D\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+A\+PI}}
+\index{U\+S\+B\+D\+\_\+\+A\+PI@{U\+S\+B\+D\+\_\+\+A\+PI}!usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+A\+PI}{USBD_API}}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf U\+S\+B\+D\+\_\+\+A\+PI}~{\bf g\+\_\+p\+Usb\+Api}}\hypertarget{usbd__rom__api_8h_a917f89ab1130705af952ee4252032497}{}\label{usbd__rom__api_8h_a917f89ab1130705af952ee4252032497}
+
+
+Definition at line 89 of file usbd\+\_\+rom\+\_\+api.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}!U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T}!usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T}{USBD_API_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf U\+S\+B\+D\+\_\+\+A\+PI}  {\bf U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T}}\hypertarget{usbd__rom__api_8h_a3f9095ac0bb2d8c6159b2b76912909c9}{}\label{usbd__rom__api_8h_a3f9095ac0bb2d8c6159b2b76912909c9}
+
+
+Main U\+S\+BD A\+PI functions structure.
+
+This structure contains pointer to various U\+SB Device stack\textquotesingle{}s sub-\/module function tables. This structure is used as main entry point to access various methods (grouped in sub-\/modules) exposed by R\+OM based U\+SB device stack. 
+
+
+
+\subsection{Variable Documentation}
+\index{usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}!g\+\_\+p\+Usb\+Api@{g\+\_\+p\+Usb\+Api}}
+\index{g\+\_\+p\+Usb\+Api@{g\+\_\+p\+Usb\+Api}!usbd\+\_\+rom\+\_\+api.\+h@{usbd\+\_\+rom\+\_\+api.\+h}}
+\subsubsection[{\texorpdfstring{g\+\_\+p\+Usb\+Api}{g_pUsbApi}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+S\+B\+D\+\_\+\+A\+P\+I\+\_\+T}$\ast$ g\+\_\+p\+Usb\+Api}\hypertarget{usbd__rom__api_8h_aa694a4a7a106972c3e4bd17e03ab8f3b}{}\label{usbd__rom__api_8h_aa694a4a7a106972c3e4bd17e03ab8f3b}

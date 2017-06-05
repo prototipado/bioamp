@@ -1,0 +1,452 @@
+\hypertarget{usbd__dfu_8h}{}\section{usbd\+\_\+dfu.\+h File Reference}
+\label{usbd__dfu_8h}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+
+
+Device Firmware Upgrade (D\+FU) class descriptors.  
+
+
+{\ttfamily \#include \char`\"{}usbd.\+h\char`\"{}}\\*
+Include dependency graph for usbd\+\_\+dfu.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__DFU__STATUS}{\+\_\+\+D\+F\+U\+\_\+\+S\+T\+A\+T\+US}
+\item 
+struct \hyperlink{struct__USB__DFU__FUNC__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usbd__dfu_8h_a59488bbdc680e48770d5738fd83c0761}{D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA}~4
+\item 
+\#define \hyperlink{usbd__dfu_8h_af3d14051c5260c17dcb9ce2e15d1a73a}{D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE}~0
+\item 
+\#define \hyperlink{usbd__dfu_8h_ac0abbd3f666a8abb01bf9a3f75dbe5ac}{D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL}~2
+\item 
+\#define \hyperlink{usbd__dfu_8h_a86ee225c2823f97b53fe0384e505a65a}{D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED}~1
+\item 
+\#define \hyperlink{usbd__dfu_8h_aaeda42c69d37b0857e34ed2486c9e39d}{D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP}~3
+\item 
+\#define \hyperlink{usbd__dfu_8h_a22f3071b929a21eaa486a0858d26be50}{D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}~sizeof(\hyperlink{usbd__dfu_8h_aad88bef95fbda7dd5332e409b50ddddd}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR})
+\item 
+\#define \hyperlink{usbd__dfu_8h_a3de22461a8203230a1f2d4ba20ab77fb}{D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE}~0x6
+\item 
+\#define \hyperlink{usbd__dfu_8h_ac6ad732600bd8304cb51035dce7d3856}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS}~0x08
+\item 
+\#define \hyperlink{usbd__dfu_8h_a3985be03f000c7fce28f73f4f4de368a}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED}~0x05
+\item 
+\#define \hyperlink{usbd__dfu_8h_a351c53cf1613c98ac78df91825d0dfba}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE}~0x04
+\item 
+\#define \hyperlink{usbd__dfu_8h_a29c3f46b70e6a5b66e235470a8f5666f}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE}~0x02
+\item 
+\#define \hyperlink{usbd__dfu_8h_a995495b99703953df4c50fd0604f69de}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE}~0x0a
+\item 
+\#define \hyperlink{usbd__dfu_8h_ade4a263efc99cfa88b52912e9f36382b}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE}~0x09
+\item 
+\#define \hyperlink{usbd__dfu_8h_abe38eb166d5aec95e05cb3b7db83ee83}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR}~0x0d
+\item 
+\#define \hyperlink{usbd__dfu_8h_a1d4c83777af9a7adbc9ba1024633d423}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG}~0x06
+\item 
+\#define \hyperlink{usbd__dfu_8h_ac1c24c035a04f6c1999e46167d31256b}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT}~0x0f
+\item 
+\#define \hyperlink{usbd__dfu_8h_a524439631953bbafc709199ea5cc3872}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET}~0x01
+\item 
+\#define \hyperlink{usbd__dfu_8h_ad999af667dfb69c401720d41a0385649}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN}~0x0e
+\item 
+\#define \hyperlink{usbd__dfu_8h_a8fc608b29849d4e837dacfeefe616951}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR}~0x0c
+\item 
+\#define \hyperlink{usbd__dfu_8h_a337c7fa10da80dd6587dadccab2e83a2}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR}~0x0b
+\item 
+\#define \hyperlink{usbd__dfu_8h_abd9acb6a8bbc62dfe3f5d619f4e5fa8d}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY}~0x07
+\item 
+\#define \hyperlink{usbd__dfu_8h_ab9fc4d881810368b6da5cd2d86fd5e65}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE}~0x03
+\item 
+\#define \hyperlink{usbd__dfu_8h_adca1223d97fed104d04df2f13f4e278b}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}~0x00
+\item 
+\#define \hyperlink{usbd__dfu_8h_a97f168713ef0523016079e77d1eafbf7}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{usbd__dfu_8h_aca456b139d47198b68b679a0a128fe9a}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD}~(1 $<$$<$ 1)
+\item 
+\#define \hyperlink{usbd__dfu_8h_a7f36c1f1536dfe16c52c1b5408b66c49}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE}~9
+\item 
+\#define \hyperlink{usbd__dfu_8h_a4229ddca385f29c1712374579736d962}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}~0x21
+\item 
+\#define \hyperlink{usbd__dfu_8h_a9c6096c21b3d4525edce753d8b8e84b6}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM}~0x0
+\item 
+\#define \hyperlink{usbd__dfu_8h_a86ace3ed8d127c3107426b37cee3c0ea}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL}~(1 $<$$<$ 2)
+\item 
+\#define \hyperlink{usbd__dfu_8h_a518e936748d79f70576e082604203ae7}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS}~0x01
+\item 
+\#define \hyperlink{usbd__dfu_8h_a01f15f0d059477270366799015500a41}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH}~(1 $<$$<$ 3)
+\item 
+\#define \hyperlink{usbd__dfu_8h_ac84973c4288582edbda8785e87d0d2a2}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT}~0x06
+\item 
+\#define \hyperlink{usbd__dfu_8h_a40457acfe7124e402ec9c164710d642c}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US}~0x04
+\item 
+\#define \hyperlink{usbd__dfu_8h_adf05df70e99a9134659d6d65f6ebe405}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH}~0x00
+\item 
+\#define \hyperlink{usbd__dfu_8h_af88b1add2b88c791f2a9c0c48294e38a}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD}~0x01
+\item 
+\#define \hyperlink{usbd__dfu_8h_a079e823748fe9b404c91a6da34896a8d}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE}~0x05
+\item 
+\#define \hyperlink{usbd__dfu_8h_a8a56dbb7249fd8d0707d4447de5e28b4}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US}~0x03
+\item 
+\#define \hyperlink{usbd__dfu_8h_ae0d0d3062eab3210449d0fb49fa9f837}{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD}~0x02
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__DFU__STATUS}{\+\_\+\+D\+F\+U\+\_\+\+S\+T\+A\+T\+US} \hyperlink{usbd__dfu_8h_ad291eacb7d324414f53d877a0eb1a871}{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}
+\item 
+typedef struct \hyperlink{struct__USB__DFU__FUNC__DESCRIPTOR}{\+\_\+\+U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} \hyperlink{usbd__dfu_8h_aad88bef95fbda7dd5332e409b50ddddd}{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143}{dfu\+\_\+state} \{ \\*
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a86a05cf48803c0df184b6d680aa0933b}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+I\+D\+LE} = 0, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143acbcb0b1d432310d5e816fa628c025c53}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+D\+E\+T\+A\+CH} = 1, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a7f932c047877fdbc614643e5343e9ee7}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+I\+D\+LE} = 2, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143aaa7df3ba4fb24de3b5e236f7cc1b788e}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+S\+Y\+NC} = 3, 
+\\*
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a07e74bf2d38282e7bdd7d3914bf912f2}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+B\+U\+SY} = 4, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143acd88af06ee60775bb2b779180ff7953a}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+I\+D\+LE} = 5, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a7bd97cfd913457ddc58715bdaffdca38}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+S\+Y\+NC} = 6, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143ab4e5bc7d31a16ca4e11f908e7ac94336}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+ST} = 7, 
+\\*
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a82a375fd39d23b54d9867276f9a66a9c}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+ST} = 8, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a5a74928966499a6c5bb1fc5125e3860c}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+U\+P\+L\+O\+A\+D\+\_\+\+I\+D\+LE} = 9, 
+\hyperlink{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143af79e1fcfbc0fec72559a254fd53b6916}{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+E\+R\+R\+OR} = 10
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Device Firmware Upgrade (D\+FU) class descriptors. 
+
+Definition of D\+FU class descriptors and their bit defines. 
+
+\subsection{Macro Definition Documentation}
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA}}
+\index{D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA}{DFU_EP0_DATA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+E\+P0\+\_\+\+D\+A\+TA~4}\hypertarget{usbd__dfu_8h_a59488bbdc680e48770d5738fd83c0761}{}\label{usbd__dfu_8h_a59488bbdc680e48770d5738fd83c0761}
+
+
+Definition at line 91 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE}}
+\index{D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE}{DFU_EP0_NONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+E\+P0\+\_\+\+N\+O\+NE~0}\hypertarget{usbd__dfu_8h_af3d14051c5260c17dcb9ce2e15d1a73a}{}\label{usbd__dfu_8h_af3d14051c5260c17dcb9ce2e15d1a73a}
+
+
+Definition at line 87 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL}}
+\index{D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL}{DFU_EP0_STALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+E\+P0\+\_\+\+S\+T\+A\+LL~2}\hypertarget{usbd__dfu_8h_ac0abbd3f666a8abb01bf9a3f75dbe5ac}{}\label{usbd__dfu_8h_ac0abbd3f666a8abb01bf9a3f75dbe5ac}
+
+
+Definition at line 89 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED}}
+\index{D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED}{DFU_EP0_UNHANDLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+E\+P0\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED~1}\hypertarget{usbd__dfu_8h_a86ee225c2823f97b53fe0384e505a65a}{}\label{usbd__dfu_8h_a86ee225c2823f97b53fe0384e505a65a}
+
+
+Definition at line 88 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP}}
+\index{D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP@{D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP}{DFU_EP0_ZLP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+E\+P0\+\_\+\+Z\+LP~3}\hypertarget{usbd__dfu_8h_aaeda42c69d37b0857e34ed2486c9e39d}{}\label{usbd__dfu_8h_aaeda42c69d37b0857e34ed2486c9e39d}
+
+
+Definition at line 90 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}}
+\index{D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE@{D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE}{DFU_FUNC_DESC_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+\_\+\+S\+I\+ZE~sizeof({\bf U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR})}\hypertarget{usbd__dfu_8h_a22f3071b929a21eaa486a0858d26be50}{}\label{usbd__dfu_8h_a22f3071b929a21eaa486a0858d26be50}
+
+
+Definition at line 116 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE@{D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE}}
+\index{D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE@{D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE}{DFU_GET_STATUS_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+I\+ZE~0x6}\hypertarget{usbd__dfu_8h_a3de22461a8203230a1f2d4ba20ab77fb}{}\label{usbd__dfu_8h_a3de22461a8203230a1f2d4ba20ab77fb}
+
+
+Definition at line 117 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS}{DFU_STATUS_errADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+A\+D\+D\+R\+E\+SS~0x08}\hypertarget{usbd__dfu_8h_ac6ad732600bd8304cb51035dce7d3856}{}\label{usbd__dfu_8h_ac6ad732600bd8304cb51035dce7d3856}
+
+
+Definition at line 64 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED}{DFU_STATUS_errCHECK_ERASED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+C\+H\+E\+C\+K\+\_\+\+E\+R\+A\+S\+ED~0x05}\hypertarget{usbd__dfu_8h_a3985be03f000c7fce28f73f4f4de368a}{}\label{usbd__dfu_8h_a3985be03f000c7fce28f73f4f4de368a}
+
+
+Definition at line 61 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE}{DFU_STATUS_errERASE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+E\+R\+A\+SE~0x04}\hypertarget{usbd__dfu_8h_a351c53cf1613c98ac78df91825d0dfba}{}\label{usbd__dfu_8h_a351c53cf1613c98ac78df91825d0dfba}
+
+
+Definition at line 60 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE}{DFU_STATUS_errFILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+LE~0x02}\hypertarget{usbd__dfu_8h_a29c3f46b70e6a5b66e235470a8f5666f}{}\label{usbd__dfu_8h_a29c3f46b70e6a5b66e235470a8f5666f}
+
+
+Definition at line 58 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE}{DFU_STATUS_errFIRMWARE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+F\+I\+R\+M\+W\+A\+RE~0x0a}\hypertarget{usbd__dfu_8h_a995495b99703953df4c50fd0604f69de}{}\label{usbd__dfu_8h_a995495b99703953df4c50fd0604f69de}
+
+
+Definition at line 66 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE}{DFU_STATUS_errNOTDONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+N\+O\+T\+D\+O\+NE~0x09}\hypertarget{usbd__dfu_8h_ade4a263efc99cfa88b52912e9f36382b}{}\label{usbd__dfu_8h_ade4a263efc99cfa88b52912e9f36382b}
+
+
+Definition at line 65 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR}{DFU_STATUS_errPOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+OR~0x0d}\hypertarget{usbd__dfu_8h_abe38eb166d5aec95e05cb3b7db83ee83}{}\label{usbd__dfu_8h_abe38eb166d5aec95e05cb3b7db83ee83}
+
+
+Definition at line 69 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG}{DFU_STATUS_errPROG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+P\+R\+OG~0x06}\hypertarget{usbd__dfu_8h_a1d4c83777af9a7adbc9ba1024633d423}{}\label{usbd__dfu_8h_a1d4c83777af9a7adbc9ba1024633d423}
+
+
+Definition at line 62 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT}{DFU_STATUS_errSTALLEDPKT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+S\+T\+A\+L\+L\+E\+D\+P\+KT~0x0f}\hypertarget{usbd__dfu_8h_ac1c24c035a04f6c1999e46167d31256b}{}\label{usbd__dfu_8h_ac1c24c035a04f6c1999e46167d31256b}
+
+
+Definition at line 71 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET}{DFU_STATUS_errTARGET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+T\+A\+R\+G\+ET~0x01}\hypertarget{usbd__dfu_8h_a524439631953bbafc709199ea5cc3872}{}\label{usbd__dfu_8h_a524439631953bbafc709199ea5cc3872}
+
+
+Definition at line 57 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN}{DFU_STATUS_errUNKNOWN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+N\+K\+N\+O\+WN~0x0e}\hypertarget{usbd__dfu_8h_ad999af667dfb69c401720d41a0385649}{}\label{usbd__dfu_8h_ad999af667dfb69c401720d41a0385649}
+
+
+Definition at line 70 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR}{DFU_STATUS_errUSBR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+U\+S\+BR~0x0c}\hypertarget{usbd__dfu_8h_a8fc608b29849d4e837dacfeefe616951}{}\label{usbd__dfu_8h_a8fc608b29849d4e837dacfeefe616951}
+
+
+Definition at line 68 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR}{DFU_STATUS_errVENDOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+N\+D\+OR~0x0b}\hypertarget{usbd__dfu_8h_a337c7fa10da80dd6587dadccab2e83a2}{}\label{usbd__dfu_8h_a337c7fa10da80dd6587dadccab2e83a2}
+
+
+Definition at line 67 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY}{DFU_STATUS_errVERIFY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+V\+E\+R\+I\+FY~0x07}\hypertarget{usbd__dfu_8h_abd9acb6a8bbc62dfe3f5d619f4e5fa8d}{}\label{usbd__dfu_8h_abd9acb6a8bbc62dfe3f5d619f4e5fa8d}
+
+
+Definition at line 63 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE}{DFU_STATUS_errWRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+err\+W\+R\+I\+TE~0x03}\hypertarget{usbd__dfu_8h_ab9fc4d881810368b6da5cd2d86fd5e65}{}\label{usbd__dfu_8h_ab9fc4d881810368b6da5cd2d86fd5e65}
+
+
+Definition at line 59 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}{DFU_STATUS_OK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK~0x00}\hypertarget{usbd__dfu_8h_adca1223d97fed104d04df2f13f4e278b}{}\label{usbd__dfu_8h_adca1223d97fed104d04df2f13f4e278b}
+
+
+Definition at line 56 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD}{USB_DFU_CAN_DOWNLOAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+D\+O\+W\+N\+L\+O\+AD~(1 $<$$<$ 0)}\hypertarget{usbd__dfu_8h_a97f168713ef0523016079e77d1eafbf7}{}\label{usbd__dfu_8h_a97f168713ef0523016079e77d1eafbf7}
+
+
+Definition at line 93 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD}{USB_DFU_CAN_UPLOAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+C\+A\+N\+\_\+\+U\+P\+L\+O\+AD~(1 $<$$<$ 1)}\hypertarget{usbd__dfu_8h_aca456b139d47198b68b679a0a128fe9a}{}\label{usbd__dfu_8h_aca456b139d47198b68b679a0a128fe9a}
+
+
+Definition at line 94 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE}{USB_DFU_DESCRIPTOR_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+I\+ZE~9}\hypertarget{usbd__dfu_8h_a7f36c1f1536dfe16c52c1b5408b66c49}{}\label{usbd__dfu_8h_a7f36c1f1536dfe16c52c1b5408b66c49}
+
+
+Definition at line 44 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE}{USB_DFU_DESCRIPTOR_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+T\+Y\+PE~0x21}\hypertarget{usbd__dfu_8h_a4229ddca385f29c1712374579736d962}{}\label{usbd__dfu_8h_a4229ddca385f29c1712374579736d962}
+
+
+Definition at line 43 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM}{USB_DFU_IF_NUM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+I\+F\+\_\+\+N\+UM~0x0}\hypertarget{usbd__dfu_8h_a9c6096c21b3d4525edce753d8b8e84b6}{}\label{usbd__dfu_8h_a9c6096c21b3d4525edce753d8b8e84b6}
+If U\+SB device is only D\+FU capable, D\+FU Interface number is always 0. if U\+SB device is (D\+FU + Other Class (Audio/\+Mass Storage/\+H\+ID), D\+FU Interface number should also be 0 in this implementation. 
+
+Definition at line 41 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL}{USB_DFU_MANIFEST_TOL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+T\+OL~(1 $<$$<$ 2)}\hypertarget{usbd__dfu_8h_a86ace3ed8d127c3107426b37cee3c0ea}{}\label{usbd__dfu_8h_a86ace3ed8d127c3107426b37cee3c0ea}
+
+
+Definition at line 95 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS}{USB_DFU_SUBCLASS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+S\+U\+B\+C\+L\+A\+SS~0x01}\hypertarget{usbd__dfu_8h_a518e936748d79f70576e082604203ae7}{}\label{usbd__dfu_8h_a518e936748d79f70576e082604203ae7}
+
+
+Definition at line 45 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH}{USB_DFU_WILL_DETACH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH~(1 $<$$<$ 3)}\hypertarget{usbd__dfu_8h_a01f15f0d059477270366799015500a41}{}\label{usbd__dfu_8h_a01f15f0d059477270366799015500a41}
+
+
+Definition at line 96 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT}{USB_REQ_DFU_ABORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+A\+B\+O\+RT~0x06}\hypertarget{usbd__dfu_8h_ac84973c4288582edbda8785e87d0d2a2}{}\label{usbd__dfu_8h_ac84973c4288582edbda8785e87d0d2a2}
+
+
+Definition at line 54 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US}{USB_REQ_DFU_CLRSTATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+C\+L\+R\+S\+T\+A\+T\+US~0x04}\hypertarget{usbd__dfu_8h_a40457acfe7124e402ec9c164710d642c}{}\label{usbd__dfu_8h_a40457acfe7124e402ec9c164710d642c}
+
+
+Definition at line 52 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH}{USB_REQ_DFU_DETACH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH~0x00}\hypertarget{usbd__dfu_8h_adf05df70e99a9134659d6d65f6ebe405}{}\label{usbd__dfu_8h_adf05df70e99a9134659d6d65f6ebe405}
+
+
+Definition at line 48 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD}{USB_REQ_DFU_DNLOAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+N\+L\+O\+AD~0x01}\hypertarget{usbd__dfu_8h_af88b1add2b88c791f2a9c0c48294e38a}{}\label{usbd__dfu_8h_af88b1add2b88c791f2a9c0c48294e38a}
+
+
+Definition at line 49 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE}{USB_REQ_DFU_GETSTATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+TE~0x05}\hypertarget{usbd__dfu_8h_a079e823748fe9b404c91a6da34896a8d}{}\label{usbd__dfu_8h_a079e823748fe9b404c91a6da34896a8d}
+
+
+Definition at line 53 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US}{USB_REQ_DFU_GETSTATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US~0x03}\hypertarget{usbd__dfu_8h_a8a56dbb7249fd8d0707d4447de5e28b4}{}\label{usbd__dfu_8h_a8a56dbb7249fd8d0707d4447de5e28b4}
+
+
+Definition at line 51 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD}}
+\index{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD@{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD}{USB_REQ_DFU_UPLOAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+U\+P\+L\+O\+AD~0x02}\hypertarget{usbd__dfu_8h_ae0d0d3062eab3210449d0fb49fa9f837}{}\label{usbd__dfu_8h_ae0d0d3062eab3210449d0fb49fa9f837}
+
+
+Definition at line 50 of file usbd\+\_\+dfu.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T@{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}{DFU_STATUS_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+D\+F\+U\+\_\+\+S\+T\+A\+T\+US} {\bf D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+T}}\hypertarget{usbd__dfu_8h_ad291eacb7d324414f53d877a0eb1a871}{}\label{usbd__dfu_8h_ad291eacb7d324414f53d877a0eb1a871}
+
+
+Definition at line 114 of file usbd\+\_\+dfu.\+h.
+
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\index{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR@{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}{USB_DFU_FUNC_DESCRIPTOR}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR} {\bf U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}\hypertarget{usbd__dfu_8h_aad88bef95fbda7dd5332e409b50ddddd}{}\label{usbd__dfu_8h_aad88bef95fbda7dd5332e409b50ddddd}
+
+
+Definition at line 106 of file usbd\+\_\+dfu.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!dfu\+\_\+state@{dfu\+\_\+state}}
+\index{dfu\+\_\+state@{dfu\+\_\+state}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}
+\subsubsection[{\texorpdfstring{dfu\+\_\+state}{dfu_state}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf dfu\+\_\+state}}\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+I\+D\+LE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+I\+D\+LE}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+I\+D\+LE\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a86a05cf48803c0df184b6d680aa0933b}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a86a05cf48803c0df184b6d680aa0933b}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+D\+E\+T\+A\+CH@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+D\+E\+T\+A\+CH}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+D\+E\+T\+A\+CH@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+D\+E\+T\+A\+CH}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+app\+D\+E\+T\+A\+CH\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143acbcb0b1d432310d5e816fa628c025c53}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143acbcb0b1d432310d5e816fa628c025c53}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+I\+D\+LE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+I\+D\+LE}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+I\+D\+LE\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a7f932c047877fdbc614643e5343e9ee7}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a7f932c047877fdbc614643e5343e9ee7}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+S\+Y\+NC@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+S\+Y\+NC}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+S\+Y\+NC@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+S\+Y\+NC}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+S\+Y\+NC\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143aaa7df3ba4fb24de3b5e236f7cc1b788e}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143aaa7df3ba4fb24de3b5e236f7cc1b788e}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+B\+U\+SY@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+B\+U\+SY}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+B\+U\+SY@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+B\+U\+SY}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+B\+U\+SY\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a07e74bf2d38282e7bdd7d3914bf912f2}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a07e74bf2d38282e7bdd7d3914bf912f2}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+I\+D\+LE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+I\+D\+LE}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+D\+N\+L\+O\+A\+D\+\_\+\+I\+D\+LE\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143acd88af06ee60775bb2b779180ff7953a}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143acd88af06ee60775bb2b779180ff7953a}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+S\+Y\+NC@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+S\+Y\+NC}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+S\+Y\+NC@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+S\+Y\+NC}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+S\+Y\+NC\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a7bd97cfd913457ddc58715bdaffdca38}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a7bd97cfd913457ddc58715bdaffdca38}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+ST@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+ST}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+ST@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+ST}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+ST\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143ab4e5bc7d31a16ca4e11f908e7ac94336}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143ab4e5bc7d31a16ca4e11f908e7ac94336}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+ST@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+ST}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+ST@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+ST}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+M\+A\+N\+I\+F\+E\+S\+T\+\_\+\+W\+A\+I\+T\+\_\+\+R\+ST\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a82a375fd39d23b54d9867276f9a66a9c}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a82a375fd39d23b54d9867276f9a66a9c}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+U\+P\+L\+O\+A\+D\+\_\+\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+U\+P\+L\+O\+A\+D\+\_\+\+I\+D\+LE}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+U\+P\+L\+O\+A\+D\+\_\+\+I\+D\+LE@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+U\+P\+L\+O\+A\+D\+\_\+\+I\+D\+LE}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+U\+P\+L\+O\+A\+D\+\_\+\+I\+D\+LE\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a5a74928966499a6c5bb1fc5125e3860c}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143a5a74928966499a6c5bb1fc5125e3860c}
+}]\index{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+E\+R\+R\+OR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+E\+R\+R\+OR}!usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}}\index{usbd\+\_\+dfu.\+h@{usbd\+\_\+dfu.\+h}!D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+E\+R\+R\+OR@{D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+E\+R\+R\+OR}}\item[{\em 
+D\+F\+U\+\_\+\+S\+T\+A\+T\+E\+\_\+dfu\+E\+R\+R\+OR\hypertarget{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143af79e1fcfbc0fec72559a254fd53b6916}{}\label{usbd__dfu_8h_a3f025bde53c777c5e0493ef54bbeb143af79e1fcfbc0fec72559a254fd53b6916}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 73 of file usbd\+\_\+dfu.\+h.
+

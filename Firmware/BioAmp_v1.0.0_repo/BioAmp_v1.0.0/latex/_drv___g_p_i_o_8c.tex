@@ -1,0 +1,153 @@
+\hypertarget{_drv___g_p_i_o_8c}{}\section{src/\+Drv\+\_\+\+G\+P\+I\+O.c File Reference}
+\label{_drv___g_p_i_o_8c}\index{src/\+Drv\+\_\+\+G\+P\+I\+O.\+c@{src/\+Drv\+\_\+\+G\+P\+I\+O.\+c}}
+{\ttfamily \#include \char`\"{}Drv\+\_\+\+G\+P\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_drv___g_p_i_o_8c_a9be5db131ab65deac64ba3f32adc3e0a}{Drv\+\_\+\+G\+P\+I\+O\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize G\+P\+I\+O port. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___g_p_i_o_8c_abfa3c7c5fbe5f6cc90ef6e78b2051c49}{Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init} ()
+\begin{DoxyCompactList}\small\item\em De-\/\+Initialize G\+P\+I\+O port. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___g_p_i_o_8c_aa0fc19aa74a1bf75817ba137e78f7a0a}{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State} (uint8\+\_\+t port, uint8\+\_\+t pin, bool state)
+\begin{DoxyCompactList}\small\item\em Set a G\+P\+I\+O pin state. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___g_p_i_o_8c_a3979c4c389440c603c44afef9b25c6c6}{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Get a G\+P\+I\+O pin state. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___g_p_i_o_8c_ab513ddd38bb6f89dfa844fd7ab6c48dd}{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir} (uint8\+\_\+t port, uint8\+\_\+t pin, bool output)
+\begin{DoxyCompactList}\small\item\em Set G\+P\+I\+O direction for a single G\+P\+I\+O pin. \end{DoxyCompactList}\item 
+bool \hyperlink{_drv___g_p_i_o_8c_ad767589a46bc6f6781d3572f68a71f1c}{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Get G\+P\+I\+O direction for a single G\+P\+I\+O pin. \end{DoxyCompactList}\item 
+void \hyperlink{_drv___g_p_i_o_8c_a240d6ad540b4d4cc042ea7a3a5746159}{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Toggle an individual G\+P\+I\+O output to the opposite state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_drv___g_p_i_o_8c_abfa3c7c5fbe5f6cc90ef6e78b2051c49}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init@{Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init@{Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+G\+P\+I\+O\+\_\+de\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_abfa3c7c5fbe5f6cc90ef6e78b2051c49}
+
+
+De-\/\+Initialize G\+P\+I\+O port. 
+
+\hypertarget{_drv___g_p_i_o_8c_ad767589a46bc6f6781d3572f68a71f1c}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir@{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir@{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir(uint8\+\_\+t port, uint8\+\_\+t pin)}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+Dir (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port, }
+\item[{uint8\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_ad767589a46bc6f6781d3572f68a71f1c}
+
+
+Get G\+P\+I\+O direction for a single G\+P\+I\+O pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Number of G\+P\+I\+O port \\
+\hline
+{\em pin} & Number of G\+P\+I\+O pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E in the G\+P\+I\+O is an O\+U\+T\+P\+U\+T, F\+A\+L\+S\+E if I\+N\+P\+U\+T 
+\end{DoxyReturn}
+\hypertarget{_drv___g_p_i_o_8c_a3979c4c389440c603c44afef9b25c6c6}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State@{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State@{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State(uint8\+\_\+t port, uint8\+\_\+t pin)}]{\setlength{\rightskip}{0pt plus 5cm}bool Drv\+\_\+\+G\+P\+I\+O\+\_\+get\+Pin\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port, }
+\item[{uint8\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_a3979c4c389440c603c44afef9b25c6c6}
+
+
+Get a G\+P\+I\+O pin state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Number of G\+P\+I\+O port \\
+\hline
+{\em pin} & Number of G\+P\+I\+O pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+U\+E if the G\+P\+I\+O is H\+I\+G\+H, F\+A\+L\+S\+E if L\+O\+W 
+\end{DoxyReturn}
+\hypertarget{_drv___g_p_i_o_8c_a9be5db131ab65deac64ba3f32adc3e0a}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+init@{Drv\+\_\+\+G\+P\+I\+O\+\_\+init}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+init@{Drv\+\_\+\+G\+P\+I\+O\+\_\+init}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+G\+P\+I\+O\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_a9be5db131ab65deac64ba3f32adc3e0a}
+
+
+Initialize G\+P\+I\+O port. 
+
+\hypertarget{_drv___g_p_i_o_8c_ab513ddd38bb6f89dfa844fd7ab6c48dd}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir@{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir@{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir(uint8\+\_\+t port, uint8\+\_\+t pin, bool output)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Dir (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port, }
+\item[{uint8\+\_\+t}]{pin, }
+\item[{bool}]{output}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_ab513ddd38bb6f89dfa844fd7ab6c48dd}
+
+
+Set G\+P\+I\+O direction for a single G\+P\+I\+O pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Number of G\+P\+I\+O port \\
+\hline
+{\em pin} & Number of G\+P\+I\+O pin \\
+\hline
+{\em output} & T\+R\+U\+E for O\+U\+T\+P\+U\+T, F\+A\+L\+S\+E for I\+N\+P\+U\+T \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___g_p_i_o_8c_aa0fc19aa74a1bf75817ba137e78f7a0a}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State@{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State@{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State(uint8\+\_\+t port, uint8\+\_\+t pin, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+State (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port, }
+\item[{uint8\+\_\+t}]{pin, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_aa0fc19aa74a1bf75817ba137e78f7a0a}
+
+
+Set a G\+P\+I\+O pin state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Number of G\+P\+I\+O port \\
+\hline
+{\em pin} & Number of G\+P\+I\+O pin \\
+\hline
+{\em state} & T\+R\+U\+E for H\+I\+G\+H, F\+A\+L\+S\+E for L\+O\+W \\
+\hline
+\end{DoxyParams}
+\hypertarget{_drv___g_p_i_o_8c_a240d6ad540b4d4cc042ea7a3a5746159}{}\index{Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}!Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle@{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle}}
+\index{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle@{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle}!Drv\+\_\+\+G\+P\+I\+O.\+c@{Drv\+\_\+\+G\+P\+I\+O.\+c}}
+\subsubsection[{Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle(uint8\+\_\+t port, uint8\+\_\+t pin)}]{\setlength{\rightskip}{0pt plus 5cm}void Drv\+\_\+\+G\+P\+I\+O\+\_\+set\+Pin\+Toggle (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port, }
+\item[{uint8\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}\label{_drv___g_p_i_o_8c_a240d6ad540b4d4cc042ea7a3a5746159}
+
+
+Toggle an individual G\+P\+I\+O output to the opposite state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Number of G\+P\+I\+O port \\
+\hline
+{\em pin} & Number of G\+P\+I\+O pin \\
+\hline
+\end{DoxyParams}

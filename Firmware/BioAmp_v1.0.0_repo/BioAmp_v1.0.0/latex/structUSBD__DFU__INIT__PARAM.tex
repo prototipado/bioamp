@@ -1,0 +1,216 @@
+\hypertarget{structUSBD__DFU__INIT__PARAM}{}\section{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM Struct Reference}
+\label{structUSBD__DFU__INIT__PARAM}\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+
+
+U\+SB descriptors data structure.  
+
+
+
+
+{\ttfamily \#include $<$usbd\+\_\+dfuuser.\+h$>$}
+
+
+
+Collaboration diagram for U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \hyperlink{structUSBD__DFU__INIT__PARAM_ae4467d347854eaab0b352aa5cdef7a74}{D\+F\+U\+\_\+\+Detach} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb)
+\item 
+void($\ast$ \hyperlink{structUSBD__DFU__INIT__PARAM_ace12153364bebed4b022776bcdf4574f}{D\+F\+U\+\_\+\+Done} )(void)
+\item 
+\hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t}($\ast$ \hyperlink{structUSBD__DFU__INIT__PARAM_a066ab927ae9d87ecac1113648ecb51c6}{D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr} )(\hyperlink{group__USBD__Core_gafdbb2204d929cb9d75736bd2b42342ac}{U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)
+\item 
+uint32\+\_\+t($\ast$ \hyperlink{structUSBD__DFU__INIT__PARAM_adb7678f56abeefa8d1169fe85a66d474}{D\+F\+U\+\_\+\+Read} )(uint32\+\_\+t block\+\_\+num, uint8\+\_\+t $\ast$$\ast$dst, uint32\+\_\+t length)
+\item 
+uint8\+\_\+t($\ast$ \hyperlink{structUSBD__DFU__INIT__PARAM_abefbfdbb6f1154eb736f539782745b3e}{D\+F\+U\+\_\+\+Write} )(uint32\+\_\+t block\+\_\+num, uint8\+\_\+t $\ast$$\ast$src, uint32\+\_\+t length, uint8\+\_\+t $\ast$bw\+Poll\+Timeout)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{structUSBD__DFU__INIT__PARAM_ac124783c4a9188405cdb87399aa067ce}{intf\+\_\+desc}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__DFU__INIT__PARAM_a00d172e271b0f2272b052f479c3d2439}{mem\+\_\+base}
+\item 
+uint32\+\_\+t \hyperlink{structUSBD__DFU__INIT__PARAM_a4624ef53dbdf39e27314fa7b19d6720d}{mem\+\_\+size}
+\item 
+uint16\+\_\+t \hyperlink{structUSBD__DFU__INIT__PARAM_a12378565018adc1588b6fd4f12e3a5dc}{pad}
+\item 
+uint16\+\_\+t \hyperlink{structUSBD__DFU__INIT__PARAM_a497bbbfa6751823b9e288c257456b56f}{w\+Transfer\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+SB descriptors data structure. 
+
+This module exposes functions which interact directly with U\+SB device stack\textquotesingle{}s core layer. The application layer uses this component when it has to implement custom class function driver or standard class function driver which is not part of the current U\+SB device stack. The functions exposed by this interface are to register class specific E\+P0 handlers and corresponding utility functions to manipulate E\+P0 state machine of the stack. This interface also exposes function to register custom endpoint interrupt handler. 
+
+Definition at line 62 of file usbd\+\_\+dfuuser.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!D\+F\+U\+\_\+\+Detach@{D\+F\+U\+\_\+\+Detach}}
+\index{D\+F\+U\+\_\+\+Detach@{D\+F\+U\+\_\+\+Detach}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+Detach}{DFU_Detach}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+D\+F\+U\+\_\+\+Detach) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb)}\hypertarget{structUSBD__DFU__INIT__PARAM_ae4467d347854eaab0b352aa5cdef7a74}{}\label{structUSBD__DFU__INIT__PARAM_ae4467d347854eaab0b352aa5cdef7a74}
+D\+FU detach callback function.
+
+This function is provided by the application software. This function gets called after U\+S\+B\+\_\+\+R\+E\+Q\+\_\+\+D\+F\+U\+\_\+\+D\+E\+T\+A\+CH is received. Applications which set U\+S\+B\+\_\+\+D\+F\+U\+\_\+\+W\+I\+L\+L\+\_\+\+D\+E\+T\+A\+CH bit in D\+FU descriptor should define this function. As part of this function application can call Connect() routine to disconnect and then connect back with host. For application which rely on Win\+U\+SB based host application should use this feature since U\+SB reset can be invoked only by kernel drivers on Windows host. By implementing this feature host doen\textquotesingle{}t have to issue reset instead the device has to do it automatically by disconnect and connect procedure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle D\+FU control structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!D\+F\+U\+\_\+\+Done@{D\+F\+U\+\_\+\+Done}}
+\index{D\+F\+U\+\_\+\+Done@{D\+F\+U\+\_\+\+Done}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+Done}{DFU_Done}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+D\+F\+U\+\_\+\+Done) (void)}\hypertarget{structUSBD__DFU__INIT__PARAM_ace12153364bebed4b022776bcdf4574f}{}\label{structUSBD__DFU__INIT__PARAM_ace12153364bebed4b022776bcdf4574f}
+D\+FU done callback function.
+
+This function is provided by the application software. This function gets called after firmware download completes.
+
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr@{D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr}}
+\index{D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr@{D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr}{DFU_Ep0_Hdlr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Code\+\_\+t}($\ast$ U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+D\+F\+U\+\_\+\+Ep0\+\_\+\+Hdlr) ({\bf U\+S\+B\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+T} h\+Usb, void $\ast$data, uint32\+\_\+t event)}\hypertarget{structUSBD__DFU__INIT__PARAM_a066ab927ae9d87ecac1113648ecb51c6}{}\label{structUSBD__DFU__INIT__PARAM_a066ab927ae9d87ecac1113648ecb51c6}
+Optional user override-\/able function to replace the default D\+FU class handler.
+
+The application software could override the default E\+P0 class handler with their own by providing the handler function address as this data member of the parameter structure. Application which like the default handler should set this data member to zero before calling the U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+::\+Init(). ~\newline
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em h\+Usb} & Handle to the U\+SB device stack. \\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to the data which will be passed when callback function is called by the stack. \\
+\hline
+\mbox{\tt in}  & {\em event} & Type of endpoint event. See \hyperlink{group__USBD__HW_ga61dde6aa35d2912927ef1b185eedaa13}{U\+S\+B\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+T} for more details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The call back should returns \hyperlink{error_8h_a905255056c349318139d94aa4523d516}{Error\+Code\+\_\+t} type to indicate success or error condition. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+P\+C\+\_\+\+OK} & On success. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} & Event is not handled hence pass the event to next in line. \\
+\hline
+{\em E\+R\+R\+\_\+\+U\+S\+B\+D\+\_\+xxx} & For other error conditions. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 179 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!D\+F\+U\+\_\+\+Read@{D\+F\+U\+\_\+\+Read}}
+\index{D\+F\+U\+\_\+\+Read@{D\+F\+U\+\_\+\+Read}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+Read}{DFU_Read}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t($\ast$ U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+D\+F\+U\+\_\+\+Read) (uint32\+\_\+t block\+\_\+num, uint8\+\_\+t $\ast$$\ast$dst, uint32\+\_\+t length)}\hypertarget{structUSBD__DFU__INIT__PARAM_adb7678f56abeefa8d1169fe85a66d474}{}\label{structUSBD__DFU__INIT__PARAM_adb7678f56abeefa8d1169fe85a66d474}
+D\+FU Read callback function.
+
+This function is provided by the application software. This function gets called when host sends a read command.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em block\+\_\+num} & Destination start address. \\
+\hline
+\mbox{\tt in,out}  & {\em dst} & Pointer to a pointer to the source of data. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt in}  & {\em length} & Amount of data copied to destination buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns
+\begin{DoxyItemize}
+\item D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+ values defined in mw\+\_\+usbd\+\_\+dfu.\+h to return error conditions.
+\item 0 if there is no more data to be read. Stack will send E\+OF frame and set D\+FU state-\/machine to dfu\+Idle state.
+\item length of the data copied, should be greater than or equal to 16. If the data copied is less than D\+FU {\itshape w\+Transfer\+Size} the stack will send E\+OF frame and goes to dfu\+Idle state. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 129 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!D\+F\+U\+\_\+\+Write@{D\+F\+U\+\_\+\+Write}}
+\index{D\+F\+U\+\_\+\+Write@{D\+F\+U\+\_\+\+Write}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{D\+F\+U\+\_\+\+Write}{DFU_Write}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t($\ast$ U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::\+D\+F\+U\+\_\+\+Write) (uint32\+\_\+t block\+\_\+num, uint8\+\_\+t $\ast$$\ast$src, uint32\+\_\+t length, uint8\+\_\+t $\ast$bw\+Poll\+Timeout)}\hypertarget{structUSBD__DFU__INIT__PARAM_abefbfdbb6f1154eb736f539782745b3e}{}\label{structUSBD__DFU__INIT__PARAM_abefbfdbb6f1154eb736f539782745b3e}
+D\+FU Write callback function.
+
+This function is provided by the application software. This function gets called when host sends a write command. For application using zero-\/copy buffer scheme this function is called for the first time with {\itshape length} parameter set to 0. The application code should update the buffer pointer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em block\+\_\+num} & Destination start address. \\
+\hline
+\mbox{\tt in,out}  & {\em src} & Pointer to a pointer to the source of data. Pointer-\/to-\/pointer is used to implement zero-\/copy buffers. See U\+S\+B\+D\+\_\+\+Zero\+Copy for more details on zero-\/copy concept. \\
+\hline
+\mbox{\tt out}  & {\em bw\+Poll\+Timeout} & Pointer to a 3 byte buffer which the callback implementer should fill with the amount of minimum time, in milliseconds, that the host should wait before sending a subsequent D\+F\+U\+\_\+\+G\+E\+T\+S\+T\+A\+T\+US request. \\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns D\+F\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+ values defined in mw\+\_\+usbd\+\_\+dfu.\+h. 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!intf\+\_\+desc@{intf\+\_\+desc}}
+\index{intf\+\_\+desc@{intf\+\_\+desc}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{intf\+\_\+desc}{intf_desc}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::intf\+\_\+desc}\hypertarget{structUSBD__DFU__INIT__PARAM_ac124783c4a9188405cdb87399aa067ce}{}\label{structUSBD__DFU__INIT__PARAM_ac124783c4a9188405cdb87399aa067ce}
+Pointer to the D\+FU interface descriptor within the descriptor array ({\itshape high\+\_\+speed\+\_\+desc}) passed to Init() through \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} structure. 
+
+Definition at line 85 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!mem\+\_\+base@{mem\+\_\+base}}
+\index{mem\+\_\+base@{mem\+\_\+base}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{mem\+\_\+base}{mem_base}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::mem\+\_\+base}\hypertarget{structUSBD__DFU__INIT__PARAM_a00d172e271b0f2272b052f479c3d2439}{}\label{structUSBD__DFU__INIT__PARAM_a00d172e271b0f2272b052f479c3d2439}
+Base memory location from where the stack can allocate data and buffers. \begin{DoxyNote}{Note}
+The memory address set in this field should be accessible by U\+SB D\+MA controller. Also this value should be aligned on 4 byte boundary. 
+\end{DoxyNote}
+
+
+Definition at line 65 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!mem\+\_\+size@{mem\+\_\+size}}
+\index{mem\+\_\+size@{mem\+\_\+size}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{mem\+\_\+size}{mem_size}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::mem\+\_\+size}\hypertarget{structUSBD__DFU__INIT__PARAM_a4624ef53dbdf39e27314fa7b19d6720d}{}\label{structUSBD__DFU__INIT__PARAM_a4624ef53dbdf39e27314fa7b19d6720d}
+The size of memory buffer which stack can use. \begin{DoxyNote}{Note}
+The {\itshape mem\+\_\+size} should be greater than the size returned by \hyperlink{structUSBD__DFU__API_a91b64bb4209cfa9e3254bd3ba8963cdc}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+::\+Get\+Mem\+Size()} routine. 
+\end{DoxyNote}
+
+
+Definition at line 70 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!pad@{pad}}
+\index{pad@{pad}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{pad}{pad}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::pad}\hypertarget{structUSBD__DFU__INIT__PARAM_a12378565018adc1588b6fd4f12e3a5dc}{}\label{structUSBD__DFU__INIT__PARAM_a12378565018adc1588b6fd4f12e3a5dc}
+
+
+Definition at line 80 of file usbd\+\_\+dfuuser.\+h.
+
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}!w\+Transfer\+Size@{w\+Transfer\+Size}}
+\index{w\+Transfer\+Size@{w\+Transfer\+Size}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}}
+\subsubsection[{\texorpdfstring{w\+Transfer\+Size}{wTransferSize}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+::w\+Transfer\+Size}\hypertarget{structUSBD__DFU__INIT__PARAM_a497bbbfa6751823b9e288c257456b56f}{}\label{structUSBD__DFU__INIT__PARAM_a497bbbfa6751823b9e288c257456b56f}
+D\+FU transfer block size in number of bytes. This value should match the value set in D\+FU descriptor provided as part of the descriptor array ({\itshape high\+\_\+speed\+\_\+desc}) passed to Init() through \hyperlink{group__USBD__Core_gabdc617d119eac0555f91bea957c41ecc}{U\+S\+B\+\_\+\+C\+O\+R\+E\+\_\+\+D\+E\+S\+C\+S\+\_\+T} structure. 
+
+Definition at line 74 of file usbd\+\_\+dfuuser.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd__dfuuser_8h}{usbd\+\_\+dfuuser.\+h}\end{DoxyCompactItemize}

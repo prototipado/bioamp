@@ -1,0 +1,14 @@
+digraph "_USB_SETUP_PACKET"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="{_USB_SETUP_PACKET\n|+ bRequest\l+ wLength\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +wIndex\n+wValue" ,arrowhead="odiamond"];
+  Node2 [label="{__WORD_BYTE\n|+ W\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union____WORD__BYTE.html"];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +WB" ,arrowhead="odiamond"];
+  Node3 [label="{_WB_T\n|+ H\l+ L\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct__WB__T.html"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +bmRequestType" ,arrowhead="odiamond"];
+  Node4 [label="{_REQUEST_TYPE\n|+ B\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union__REQUEST__TYPE.html"];
+  Node5 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +BM" ,arrowhead="odiamond"];
+  Node5 [label="{_BM_T\n|+ Dir\l+ Recipient\l+ Type\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct__BM__T.html"];
+}

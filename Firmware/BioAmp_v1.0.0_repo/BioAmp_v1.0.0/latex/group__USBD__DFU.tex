@@ -1,0 +1,46 @@
+\hypertarget{group__USBD__DFU}{}\section{Device Firmware Upgrade (D\+FU) Class Function Driver}
+\label{group__USBD__DFU}\index{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver@{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structUSBD__DFU__API}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em D\+FU class A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. \end{DoxyCompactList}\item 
+struct \hyperlink{structUSBD__DFU__INIT__PARAM}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}
+\begin{DoxyCompactList}\small\item\em U\+SB descriptors data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structUSBD__DFU__API}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+PI} \hyperlink{group__USBD__DFU_gadf9281f8af1223053e3ccf48e26ac80d}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T}
+\begin{DoxyCompactList}\small\item\em D\+FU class A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structUSBD__DFU__INIT__PARAM}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM} \hyperlink{group__USBD__DFU_ga8506b43ae2bda83cc8c459114fd3fc82}{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}
+\begin{DoxyCompactList}\small\item\em U\+SB descriptors data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{group__USBD__MSC_Sec_MSCModDescription}{}\subsection{Module Description}\label{group__USBD__MSC_Sec_MSCModDescription}
+D\+FU Class Function Driver module. This module contains an internal implementation of the U\+SB D\+FU Class. User applications can use this class driver instead of implementing the D\+FU class manually via the low-\/level U\+S\+B\+D\+\_\+\+HW and U\+S\+B\+D\+\_\+\+Core A\+P\+Is.
+
+This module is designed to simplify the user code by exposing only the required interface needed to interface with Devices using the U\+SB D\+FU Class. 
+
+\subsection{Typedef Documentation}
+\index{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver@{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T}!Device Firmware Upgrade (\+D\+F\+U) Class Function Driver@{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T}{USBD_DFU_API_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+PI}  {\bf U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+A\+P\+I\+\_\+T}}\hypertarget{group__USBD__DFU_gadf9281f8af1223053e3ccf48e26ac80d}{}\label{group__USBD__DFU_gadf9281f8af1223053e3ccf48e26ac80d}
+
+
+D\+FU class A\+PI functions structure.
+
+This module exposes functions which interact directly with U\+SB device controller hardware. 
+
+\index{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver@{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver}!U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}}
+\index{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T@{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}!Device Firmware Upgrade (\+D\+F\+U) Class Function Driver@{Device Firmware Upgrade (\+D\+F\+U) Class Function Driver}}
+\subsubsection[{\texorpdfstring{U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}{USBD_DFU_INIT_PARAM_T}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+AM}  {\bf U\+S\+B\+D\+\_\+\+D\+F\+U\+\_\+\+I\+N\+I\+T\+\_\+\+P\+A\+R\+A\+M\+\_\+T}}\hypertarget{group__USBD__DFU_ga8506b43ae2bda83cc8c459114fd3fc82}{}\label{group__USBD__DFU_ga8506b43ae2bda83cc8c459114fd3fc82}
+
+
+U\+SB descriptors data structure. 
+
+This module exposes functions which interact directly with U\+SB device stack\textquotesingle{}s core layer. The application layer uses this component when it has to implement custom class function driver or standard class function driver which is not part of the current U\+SB device stack. The functions exposed by this interface are to register class specific E\+P0 handlers and corresponding utility functions to manipulate E\+P0 state machine of the stack. This interface also exposes function to register custom endpoint interrupt handler. 

@@ -1,0 +1,11 @@
+digraph "Chip_CAN_Receive"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Chip_CAN_Receive",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="getReceiveFrameInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$can__17xx__40xx_8c.html#a9b0a41982bb5ea7085dce416ef16a026"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chip_CAN_SetCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CAN__17XX__40XX.html#ga204f7aa9af769ea809d9dc54ef4408a9",tooltip="Set the CAN command request. "];
+}

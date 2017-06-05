@@ -1,0 +1,56 @@
+\hypertarget{i2s__17xx__40xx_8c}{}\section{i2s\+\_\+17xx\+\_\+40xx.\+c File Reference}
+\label{i2s__17xx__40xx_8c}\index{i2s\+\_\+17xx\+\_\+40xx.\+c@{i2s\+\_\+17xx\+\_\+40xx.\+c}}
+{\ttfamily \#include \char`\"{}chip.\+h\char`\"{}}\\*
+Include dependency graph for i2s\+\_\+17xx\+\_\+40xx.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__I2S__17XX__40XX_ga2fbdb14520735214e155253f05a88a0a}{Chip\+\_\+\+I2\+S\+\_\+\+De\+Init} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Shutdown I2S. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_ga9c7067a9ee62d240aa6cd9426deefb13}{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Rx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} dma\+Num, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable D\+MA with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_gac08890ba38fd8e5df3a3a603e7a4fa42}{Chip\+\_\+\+I2\+S\+\_\+\+D\+M\+A\+\_\+\+Tx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__I2S__17XX__40XX_gac04c1583101ddd661886d9677683421b}{I2\+S\+\_\+\+D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} dma\+Num, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable D\+MA with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_ga006752f0240a956ae02fba521e63c053}{Chip\+\_\+\+I2\+S\+\_\+\+Init} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S)
+\begin{DoxyCompactList}\small\item\em Initialize for I2S. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_ga36b0f5c62d5c703c1374bdcc0d84d07f}{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Rx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable Interrupt with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+void \hyperlink{group__I2S__17XX__40XX_gaf5ea5a92372f64937b2a967f8aa284f3}{Chip\+\_\+\+I2\+S\+\_\+\+Int\+\_\+\+Tx\+Cmd} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{group__LPC__Types__Public__Types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} new\+State, uint8\+\_\+t depth)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable Interrupt with a specific F\+I\+FO depth. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__I2S__17XX__40XX_gab443fc12cad5f6cfb13dc5ab19a003ae}{Chip\+\_\+\+I2\+S\+\_\+\+Rx\+Config} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{structI2S__AUDIO__FORMAT__T}{I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$format)
+\begin{DoxyCompactList}\small\item\em Configure I2S for Audio Format input. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{group__I2S__17XX__40XX_ga09acfe336e9aee86f1d029146937326a}{Chip\+\_\+\+I2\+S\+\_\+\+Tx\+Config} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{structI2S__AUDIO__FORMAT__T}{I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$format)
+\begin{DoxyCompactList}\small\item\em Configure I2S for Audio Format input. \end{DoxyCompactList}\item 
+\hyperlink{group__LPC__Types__Public__Macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{group__LPC__Types__Public__Types_ga67a0db04d321a74b7e7fcfd3f1a3f70b}{Status} \hyperlink{i2s__17xx__40xx_8c_a820d48d5d5cedc548319581e2c009352}{get\+Clk\+Div} (\hyperlink{structLPC__I2S__T}{L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$p\+I2S, \hyperlink{structI2S__AUDIO__FORMAT__T}{I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$format, uint16\+\_\+t $\ast$px\+Div, uint16\+\_\+t $\ast$py\+Div, uint32\+\_\+t $\ast$pN)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{i2s\+\_\+17xx\+\_\+40xx.\+c@{i2s\+\_\+17xx\+\_\+40xx.\+c}!get\+Clk\+Div@{get\+Clk\+Div}}
+\index{get\+Clk\+Div@{get\+Clk\+Div}!i2s\+\_\+17xx\+\_\+40xx.\+c@{i2s\+\_\+17xx\+\_\+40xx.\+c}}
+\subsubsection[{\texorpdfstring{get\+Clk\+Div(\+L\+P\+C\+\_\+\+I2\+S\+\_\+\+T $\ast$p\+I2\+S, I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T $\ast$format, uint16\+\_\+t $\ast$px\+Div, uint16\+\_\+t $\ast$py\+Div, uint32\+\_\+t $\ast$p\+N)}{getClkDiv(LPC_I2S_T *pI2S, I2S_AUDIO_FORMAT_T *format, uint16_t *pxDiv, uint16_t *pyDiv, uint32_t *pN)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+IC} {\bf Status} get\+Clk\+Div (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+C\+\_\+\+I2\+S\+\_\+T} $\ast$}]{p\+I2S, }
+\item[{{\bf I2\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+T} $\ast$}]{format, }
+\item[{uint16\+\_\+t $\ast$}]{px\+Div, }
+\item[{uint16\+\_\+t $\ast$}]{py\+Div, }
+\item[{uint32\+\_\+t $\ast$}]{pN}
+\end{DoxyParamCaption}
+)}\hypertarget{i2s__17xx__40xx_8c_a820d48d5d5cedc548319581e2c009352}{}\label{i2s__17xx__40xx_8c_a820d48d5d5cedc548319581e2c009352}
+
+
+Definition at line 47 of file i2s\+\_\+17xx\+\_\+40xx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+

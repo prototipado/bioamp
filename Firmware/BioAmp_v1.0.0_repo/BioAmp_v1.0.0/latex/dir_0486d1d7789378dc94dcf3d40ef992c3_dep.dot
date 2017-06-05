@@ -1,0 +1,8 @@
+digraph "inc" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  dir_0486d1d7789378dc94dcf3d40ef992c3 [shape=box, label="inc", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0486d1d7789378dc94dcf3d40ef992c3.html"];
+  dir_8087890dbc618c524e550df49f6346f0 [shape=box label="lpc_chip_175x_6x" fillcolor="white" style="filled" color="red" URL="dir_8087890dbc618c524e550df49f6346f0.html"];
+  dir_0486d1d7789378dc94dcf3d40ef992c3->dir_8087890dbc618c524e550df49f6346f0 [headlabel="5", labeldistance=1.5 headhref="dir_000007_000000.html"];
+}

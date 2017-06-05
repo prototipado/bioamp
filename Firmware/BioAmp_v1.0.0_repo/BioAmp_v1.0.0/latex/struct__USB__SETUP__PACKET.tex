@@ -1,0 +1,79 @@
+\hypertarget{struct__USB__SETUP__PACKET}{}\section{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET Struct Reference}
+\label{struct__USB__SETUP__PACKET}\index{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+
+
+{\ttfamily \#include $<$usbd.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__USBD__Core_gac85164494feb72445fab7999a3723b6f}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE} \hyperlink{struct__USB__SETUP__PACKET_ac3379b5aabd08a8d980fe8d030f5d6a8}{bm\+Request\+Type}
+\item 
+uint8\+\_\+t \hyperlink{struct__USB__SETUP__PACKET_a95f462f8491a38e7ee662dcd95d5cb6a}{b\+Request}
+\item 
+\hyperlink{group__USBD__Core_ga340ec8de2973608b96d5cc7379b9561a}{W\+O\+R\+D\+\_\+\+B\+Y\+TE} \hyperlink{struct__USB__SETUP__PACKET_a1f0ec0c931efe4a96d92b3ceea80b2a3}{w\+Index}
+\item 
+uint16\+\_\+t \hyperlink{struct__USB__SETUP__PACKET_a2beb83e5854b4a7bc518e5cfbc3f38a6}{w\+Length}
+\item 
+\hyperlink{group__USBD__Core_ga340ec8de2973608b96d5cc7379b9561a}{W\+O\+R\+D\+\_\+\+B\+Y\+TE} \hyperlink{struct__USB__SETUP__PACKET_a790f014cc1dac6148a182b1cbe24bffe}{w\+Value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+SB Default Control Pipe Setup Packet 
+
+Definition at line 198 of file usbd.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}!bm\+Request\+Type@{bm\+Request\+Type}}
+\index{bm\+Request\+Type@{bm\+Request\+Type}!\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+\subsubsection[{\texorpdfstring{bm\+Request\+Type}{bmRequestType}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+PE} \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+E\+T\+::bm\+Request\+Type}\hypertarget{struct__USB__SETUP__PACKET_ac3379b5aabd08a8d980fe8d030f5d6a8}{}\label{struct__USB__SETUP__PACKET_ac3379b5aabd08a8d980fe8d030f5d6a8}
+This bitmapped field identifies the characteristics of the specific request. \begin{DoxySeeAlso}{See also}
+\hyperlink{struct__BM__T}{\+\_\+\+B\+M\+\_\+T}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 200 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}!b\+Request@{b\+Request}}
+\index{b\+Request@{b\+Request}!\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+\subsubsection[{\texorpdfstring{b\+Request}{bRequest}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+E\+T\+::b\+Request}\hypertarget{struct__USB__SETUP__PACKET_a95f462f8491a38e7ee662dcd95d5cb6a}{}\label{struct__USB__SETUP__PACKET_a95f462f8491a38e7ee662dcd95d5cb6a}
+This field specifies the particular request. The Type bits in the bm\+Request\+Type field modify the meaning of this field. \begin{DoxySeeAlso}{See also}
+U\+S\+B\+D\+\_\+\+R\+E\+Q\+U\+E\+ST. 
+\end{DoxySeeAlso}
+
+
+Definition at line 203 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}!w\+Index@{w\+Index}}
+\index{w\+Index@{w\+Index}!\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+\subsubsection[{\texorpdfstring{w\+Index}{wIndex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+B\+Y\+TE} \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+E\+T\+::w\+Index}\hypertarget{struct__USB__SETUP__PACKET_a1f0ec0c931efe4a96d92b3ceea80b2a3}{}\label{struct__USB__SETUP__PACKET_a1f0ec0c931efe4a96d92b3ceea80b2a3}
+Used to pass a parameter to the device, specific to the request. The w\+Index field is often used in requests to specify an endpoint or an interface. 
+
+Definition at line 210 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}!w\+Length@{w\+Length}}
+\index{w\+Length@{w\+Length}!\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+\subsubsection[{\texorpdfstring{w\+Length}{wLength}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+E\+T\+::w\+Length}\hypertarget{struct__USB__SETUP__PACKET_a2beb83e5854b4a7bc518e5cfbc3f38a6}{}\label{struct__USB__SETUP__PACKET_a2beb83e5854b4a7bc518e5cfbc3f38a6}
+This field specifies the length of the data transferred during the second phase of the control transfer. 
+
+Definition at line 214 of file usbd.\+h.
+
+\index{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}!w\+Value@{w\+Value}}
+\index{w\+Value@{w\+Value}!\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET@{\+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+ET}}
+\subsubsection[{\texorpdfstring{w\+Value}{wValue}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+B\+Y\+TE} \+\_\+\+U\+S\+B\+\_\+\+S\+E\+T\+U\+P\+\_\+\+P\+A\+C\+K\+E\+T\+::w\+Value}\hypertarget{struct__USB__SETUP__PACKET_a790f014cc1dac6148a182b1cbe24bffe}{}\label{struct__USB__SETUP__PACKET_a790f014cc1dac6148a182b1cbe24bffe}
+Used to pass a parameter to the device, specific to the request. 
+
+Definition at line 207 of file usbd.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usbd_8h}{usbd.\+h}\end{DoxyCompactItemize}

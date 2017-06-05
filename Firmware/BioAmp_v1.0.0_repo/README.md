@@ -1,0 +1,1 @@
+Directorio destinado a alojar los activos relacionados con fuentes de firmware
