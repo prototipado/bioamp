@@ -3,10 +3,6 @@
 /**/.settings
 /**/RemoteSystemsTempFiles
 /**/Debug
-*.launch
-*.cproject
-*.project
-.settings
 
 # Docbook
 *.fo

@@ -1,0 +1,11 @@
+digraph "src" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_ba2ae61b3ae37c8c6e60a7fd722fd3fa {
+    graph [ bgcolor="#ddddee", pencolor="black", label="BioAmp_v1.0.0" fontname="FreeSans", fontsize="10", URL="dir_ba2ae61b3ae37c8c6e60a7fd722fd3fa.html"]
+  dir_f279180d66f21634db38df6d82f162fb [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f279180d66f21634db38df6d82f162fb.html"];
+  }
+  dir_0486d1d7789378dc94dcf3d40ef992c3 [shape=box label="inc" URL="dir_0486d1d7789378dc94dcf3d40ef992c3.html"];
+  dir_f279180d66f21634db38df6d82f162fb->dir_0486d1d7789378dc94dcf3d40ef992c3 [headlabel="16", labeldistance=1.5 headhref="dir_000001_000002.html"];
+}

@@ -1,0 +1,13 @@
+digraph "Drv_Devices_startDevices"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Drv_Devices_startDevices",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Drv_GPIO_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#ga9be5db131ab65deac64ba3f32adc3e0a",tooltip="Initialize GPIO port. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Drv_GPIO_setPinDir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#gab513ddd38bb6f89dfa844fd7ab6c48dd",tooltip="Set GPIO direction for a single GPIO pin. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="Drv_GPIO_setPinState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__GPIO__Library.html#gaa0fc19aa74a1bf75817ba137e78f7a0a",tooltip="Set a GPIO pin state. "];
+}

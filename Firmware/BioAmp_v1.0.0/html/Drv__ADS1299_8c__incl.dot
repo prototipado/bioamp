@@ -1,0 +1,23 @@
+digraph "Drv_ADS1299.c"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Drv_ADS1299.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Drv_ADS1299.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Drv__ADS1299_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Definitions_ADS1299.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Definitions__ADS1299_8h.html"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="lpc_types.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="Drv_GPIO.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Drv__GPIO_8h.html"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Drv_SSP.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Drv__SSP_8h.html"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="Drv_Devices.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Drv__Devices_8h.html"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="chip.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
