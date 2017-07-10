@@ -13,6 +13,12 @@
   )
 
   (page A4)
+  (title_block
+    (title "BioAmp-FIUNER-Lab. de Prototipado")
+    (date 2017-06-07)
+    (rev v1.0.0)
+  )
+
   (layers
     (0 F.Cu signal hide)
     (31 B.Cu signal hide)
@@ -72,7 +78,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x010fc_80000001)
+      (layerselection 0x011fc_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -91,11 +97,11 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 1)
+      (outputformat 4)
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory pdfs/))
   )
 
   (net 0 "")
@@ -517,7 +523,7 @@
       (net 101 "Net-(J13-Pad5)"))
     (pad "" np_thru_hole circle (at -2 -2.75 90) (size 1.4 1.4) (drill 1.4) (layers *.Cu *.Mask F.SilkS))
     (pad "" np_thru_hole circle (at -2 2.75 90) (size 1.4 1.4) (drill 1.4) (layers *.Cu *.Mask F.SilkS))
-    (model "${KIPRJMOD}/Mod 3d/USB_B-smd.wrl"
+    (model ${KIPRJMOD}/3d_models/USB_B-smd.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -604,7 +610,7 @@
       (net 13 "Net-(C24-Pad1)"))
     (pad 2 smd rect (at 0.75 0 180) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -633,7 +639,7 @@
       (net 14 "Net-(C25-Pad1)"))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -662,11 +668,6 @@
       (net 23 "/Entradas Analogicas/IN_SRB"))
     (pad 2 smd rect (at 0.75 0) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 24 "/Analog Front End/SRB1"))
-    (model Resistors_SMD.3dshapes/R_0603.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (module biopotenciales:R_0603 (layer F.Cu) (tedit 56BDFC7F) (tstamp 56B55721)
@@ -691,11 +692,6 @@
       (net 23 "/Entradas Analogicas/IN_SRB"))
     (pad 2 smd rect (at 0.75 0) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 25 "/Analog Front End/SRB2"))
-    (model Resistors_SMD.3dshapes/R_0603.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (module biopotenciales:C_0603 (layer F.Cu) (tedit 56BE32D6) (tstamp 56B556BB)
@@ -720,7 +716,7 @@
       (net 17 "/Analog Front End/RL_DRV"))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 18 "Net-(C29-Pad2)"))
-    (model Capacitors_SMD.3dshapes/C_0603.wrl
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -749,7 +745,7 @@
       (net 17 "/Analog Front End/RL_DRV"))
     (pad 2 smd rect (at 0.75 0) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 18 "Net-(C29-Pad2)"))
-    (model Resistors_SMD.3dshapes/R_0603.wrl
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -778,7 +774,7 @@
       (net 19 "Net-(C30-Pad1)"))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -807,7 +803,7 @@
       (net 14 "Net-(C25-Pad1)"))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -836,7 +832,7 @@
       (net 16 "Net-(C28-Pad1)"))
     (pad 2 smd rect (at 0.75 0 180) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -865,7 +861,7 @@
       (net 19 "Net-(C30-Pad1)"))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -894,7 +890,7 @@
       (net 1 "Net-(C1-Pad1)"))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -923,7 +919,7 @@
       (net 3 "Net-(C2-Pad1)"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -952,7 +948,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -981,7 +977,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1097,7 +1093,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 270) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1126,7 +1122,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 270) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1155,7 +1151,7 @@
       (net 5 5V_NI))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1184,7 +1180,7 @@
       (net 5 5V_NI))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1213,7 +1209,7 @@
       (net 7 "Net-(C13-Pad1)"))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1242,7 +1238,7 @@
       (net 91 "/Comunicacion USB/D_N"))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1271,7 +1267,7 @@
       (net 92 "/Comunicacion USB/D_P"))
     (pad 2 smd rect (at 0.75 0 180) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1300,7 +1296,7 @@
       (net 8 5V_ISO))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "D:/Proyecto_BiopotencialesLIRINS/Repositorios_Git/biopotenciales-lirins/Activos_biopotenciales-lirins/Fuentes/Hardware/Kicad/Biopotenciales_LIRINS/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1329,7 +1325,7 @@
       (net 8 5V_ISO))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1358,7 +1354,7 @@
       (net 10 V_USB))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1387,7 +1383,7 @@
       (net 8 5V_ISO))
     (pad 2 smd rect (at 0.75 0) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "D:/Proyecto_BiopotencialesLIRINS/Repositorios_Git/biopotenciales-lirins/Activos_biopotenciales-lirins/Fuentes/Hardware/Kicad/Biopotenciales_LIRINS/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1416,7 +1412,7 @@
       (net 8 5V_ISO))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1445,7 +1441,7 @@
       (net 11 "/Comunicacion USB/3V3OUT"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1474,7 +1470,7 @@
       (net 12 "Net-(C23-Pad1)"))
     (pad 2 smd rect (at 0.75 0 90) (size 0.8 0.75) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/C_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1531,7 +1527,7 @@
       (net 10 V_USB))
     (pad 1 smd rect (at -0.7493 0 180) (size 0.79756 0.79756) (layers F.Cu F.Paste F.Mask)
       (net 100 "Net-(D4-Pad1)"))
-    (model "${KIPRJMOD}/Mod 3d/LED_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/LED_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
@@ -1565,7 +1561,7 @@
       (net 101 "Net-(J13-Pad5)"))
     (pad 2 smd rect (at 0.95 0) (size 1.3 1.5) (layers F.Cu F.Paste F.Mask)
       (net 6 NI_GND))
-    (model "${KIPRJMOD}/Mod 3d/FER-0805.wrl"
+    (model ${KIPRJMOD}/3d_models/FER-0805.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1599,7 +1595,7 @@
       (net 10 V_USB))
     (pad 2 smd rect (at 0.95 0 270) (size 1.3 1.5) (layers F.Cu F.Paste F.Mask)
       (net 7 "Net-(C13-Pad1)"))
-    (model "${KIPRJMOD}/Mod 3d/FER-0805.wrl"
+    (model ${KIPRJMOD}/3d_models/FER-0805.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1633,7 +1629,7 @@
       (net 8 5V_ISO))
     (pad 2 smd rect (at 0.95 0 90) (size 1.3 1.5) (layers F.Cu F.Paste F.Mask)
       (net 26 A_VCC))
-    (model "${KIPRJMOD}/Mod 3d/FER-0805.wrl"
+    (model ${KIPRJMOD}/3d_models/FER-0805.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1667,7 +1663,7 @@
       (net 5 5V_NI))
     (pad 2 smd rect (at 0.95 0) (size 1.3 1.5) (layers F.Cu F.Paste F.Mask)
       (net 27 V_USB_IO))
-    (model "${KIPRJMOD}/Mod 3d/FER-0805.wrl"
+    (model ${KIPRJMOD}/3d_models/FER-0805.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1763,7 +1759,7 @@
       (net 43 "/Interfaz Interconectividad/SCL"))
     (pad 3 thru_hole oval (at 0 5.08 90) (size 2.032 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/Pin_Header_Straight_1x03.wrl"
+    (model ${KIPRJMOD}/3d_models/Pin_Header_Straight_1x03.wrl
       (at (xyz 0 -0.1 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
@@ -1802,11 +1798,6 @@
       (net 46 "/Analog Front End/GPIO2"))
     (pad 5 thru_hole oval (at 0 10.16 180) (size 2.032 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 47 "/Analog Front End/GPIO1"))
-    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x05.wrl
-      (at (xyz 0 -0.2 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
-    )
   )
 
   (module biopotenciales:Pin_Header_Straight_1x03 (layer F.Cu) (tedit 56BE07D5) (tstamp 56B558FD)
@@ -1895,7 +1886,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 43 "/Interfaz Interconectividad/SCL"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1924,7 +1915,7 @@
       (net 60 "Net-(R2-Pad1)"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 4 D_VCC))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1953,7 +1944,7 @@
       (net 37 /Microcontrolador/RST/))
     (pad 2 smd rect (at 0.75 0 180) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 4 D_VCC))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1982,7 +1973,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 90) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 42 "/Interfaz Interconectividad/SDA"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2011,7 +2002,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.75 0 90) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 180 "/Analog Front End/M/S"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2040,7 +2031,7 @@
       (net 61 /Microcontrolador/LED_R))
     (pad 2 smd rect (at 0.75 0 90) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2069,7 +2060,7 @@
       (net 61 /Microcontrolador/LED_R))
     (pad 2 smd rect (at 0.75 0 90) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 181 "Net-(Q1-Pad2)"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2098,7 +2089,7 @@
       (net 20 "Net-(D1-Pad1)"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 58 "Net-(Q1-Pad3)"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2127,7 +2118,7 @@
       (net 21 "Net-(D1-Pad3)"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 59 "Net-(Q2-Pad3)"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2156,7 +2147,7 @@
       (net 62 /Microcontrolador/LED_V))
     (pad 2 smd rect (at 0.75 0 90) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 182 "Net-(Q2-Pad2)"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2185,7 +2176,7 @@
       (net 62 /Microcontrolador/LED_V))
     (pad 2 smd rect (at 0.75 0 90) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 2 GND))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2243,7 +2234,7 @@
       (net 64 "/Comunicacion USB/USBD-"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 91 "/Comunicacion USB/D_N"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2272,7 +2263,7 @@
       (net 65 "/Comunicacion USB/USBD+"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 92 "/Comunicacion USB/D_P"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2301,7 +2292,7 @@
       (net 66 "Net-(R15-Pad1)"))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 67 "Net-(R15-Pad2)"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2330,7 +2321,7 @@
       (net 100 "Net-(D4-Pad1)"))
     (pad 2 smd rect (at 0.75 0 180) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 68 "Net-(R16-Pad2)"))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2359,7 +2350,7 @@
       (net 2 GND))
     (pad 1 smd rect (at 2 -1.2 180) (size 1.8 1.2) (layers F.Cu F.Paste F.Mask)
       (net 1 "Net-(C1-Pad1)"))
-    (model "${KIPRJMOD}/Mod 3d/XTAL_AM3B.wrl"
+    (model ${KIPRJMOD}/3d_models/XTAL_AM3B.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.395 0.395 0.395))
       (rotate (xyz 0 0 0))
@@ -2408,11 +2399,6 @@
       (net 77 "/Entradas Analogicas/IN6-"))
     (pad 10 thru_hole oval (at 0 22.86 90) (size 2.032 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x10.wrl
-      (at (xyz 0 -0.45 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
-    )
   )
 
   (module biopotenciales:r_cay16-4 (layer F.Cu) (tedit 56BE0560) (tstamp 56BB6F5D)
@@ -2443,7 +2429,7 @@
       (net 80 "/Entradas Analogicas/IN7+"))
     (pad 8 smd rect (at -1 1.25 90) (size 1 0.7) (layers F.Cu F.Paste F.Mask)
       (net 81 "/Entradas Analogicas/IN8-"))
-    (model "${KIPRJMOD}/Mod 3d/r_cay16-4.wrl"
+    (model ${KIPRJMOD}/3d_models/r_cay16-4.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2478,7 +2464,7 @@
       (net 84 "/Entradas Analogicas/IN1+"))
     (pad 8 smd rect (at -1 1.25 90) (size 1 0.7) (layers F.Cu F.Paste F.Mask)
       (net 85 "/Entradas Analogicas/IN2-"))
-    (model "${KIPRJMOD}/Mod 3d/r_cay16-4.wrl"
+    (model ${KIPRJMOD}/3d_models/r_cay16-4.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2513,7 +2499,7 @@
       (net 108 "Net-(RN3-Pad5)"))
     (pad 8 smd rect (at -1 1.25 90) (size 1 0.7) (layers F.Cu F.Paste F.Mask)
       (net 23 "/Entradas Analogicas/IN_SRB"))
-    (model "${KIPRJMOD}/Mod 3d/r_cay16-4.wrl"
+    (model ${KIPRJMOD}/3d_models/r_cay16-4.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2545,7 +2531,7 @@
     (pad 1 thru_hole circle (at 0 0 180) (size 1.75 1.75) (drill 0.99) (layers *.Cu *.Mask F.SilkS)
       (net 63 /Microcontrolador/ISP))
     (pad "" thru_hole circle (at -1.25 2.49 180) (size 2.1 2.1) (drill 1.3) (layers *.Cu *.Mask F.SilkS))
-    (model "${KIPRJMOD}/Mod 3d/SW_Tactile_SPST_Angled.wrl"
+    (model ${KIPRJMOD}/3d_models/SW_Tactile_SPST_Angled.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.39 0.39 0.39))
       (rotate (xyz 0 0 180))
@@ -2633,7 +2619,7 @@
       (net 6 NI_GND))
     (pad 1 smd rect (at -1.37414 0 270) (size 1.95072 1.50114) (layers F.Cu F.Paste F.Mask)
       (net 10 V_USB))
-    (model "${KIPRJMOD}/Mod 3d/c_tant_A.wrl"
+    (model ${KIPRJMOD}/3d_models/c_tant_A.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
@@ -2664,7 +2650,7 @@
       (net 4 D_VCC))
     (pad 2 smd rect (at 0.9525 1.05664) (size 0.59944 1.00076) (layers F.Cu F.Paste F.Mask)
       (net 22 V_JATG))
-    (model "${KIPRJMOD}/Mod 3d/sot23.wrl"
+    (model ${KIPRJMOD}/3d_models/sot23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2695,7 +2681,7 @@
       (net 58 "Net-(Q1-Pad3)"))
     (pad 2 smd rect (at 0.9525 1.05664) (size 0.59944 1.00076) (layers F.Cu F.Paste F.Mask)
       (net 181 "Net-(Q1-Pad2)"))
-    (model "${KIPRJMOD}/Mod 3d/sot23.wrl"
+    (model ${KIPRJMOD}/3d_models/sot23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2726,7 +2712,7 @@
       (net 59 "Net-(Q2-Pad3)"))
     (pad 2 smd rect (at 0.9525 1.05664) (size 0.59944 1.00076) (layers F.Cu F.Paste F.Mask)
       (net 182 "Net-(Q2-Pad2)"))
-    (model "${KIPRJMOD}/Mod 3d/sot23.wrl"
+    (model ${KIPRJMOD}/3d_models/sot23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2868,7 +2854,7 @@
       (net 35 "/Entradas Analogicas/E1+"))
     (pad 6 smd rect (at 1.1 -0.65 180) (size 1.5 0.35) (layers F.Cu F.Paste F.Mask)
       (net 111 "Net-(U2-Pad6)"))
-    (model "${KIPRJMOD}/Mod 3d/TSOP-6_2x1.25mm_Pitch0.65mm.wrl"
+    (model ${KIPRJMOD}/3d_models/TSOP-6_2x1.25mm_Pitch0.65mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2926,7 +2912,7 @@
       (net 31 "/Entradas Analogicas/E7+"))
     (pad 6 smd rect (at 1.1 -0.65 180) (size 1.5 0.35) (layers F.Cu F.Paste F.Mask)
       (net 109 "Net-(U1-Pad6)"))
-    (model "${KIPRJMOD}/Mod 3d/TSOP-6_2x1.25mm_Pitch0.65mm.wrl"
+    (model ${KIPRJMOD}/3d_models/TSOP-6_2x1.25mm_Pitch0.65mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3057,7 +3043,7 @@
       (net 31 "/Entradas Analogicas/E7+"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3090,7 +3076,7 @@
       (net 36 "/Entradas Analogicas/SRB"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3123,7 +3109,7 @@
       (net 35 "/Entradas Analogicas/E1+"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3156,7 +3142,7 @@
       (net 34 "/Entradas Analogicas/E1-"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3189,7 +3175,7 @@
       (net 32 "/Entradas Analogicas/E2-"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3222,7 +3208,7 @@
       (net 33 "/Entradas Analogicas/E2+"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3255,7 +3241,7 @@
       (net 29 "/Entradas Analogicas/E8+"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3288,7 +3274,7 @@
       (net 28 "/Entradas Analogicas/E8-"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -9779,7 +9765,7 @@
       (net 30 "/Entradas Analogicas/E7-"))
     (pad 2 thru_hole circle (at -2.5 5.2 180) (size 1.8 1.8) (drill 1.3) (layers *.Cu *.Mask F.SilkS)
       (net 9 GNDA))
-    (model "${KIPRJMOD}/Mod 3d/Jack_TouchProof_1.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/Jack_TouchProof_1.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -9837,7 +9823,7 @@
       (net 112 "Net-(U3-Pad5)"))
     (pad 6 smd rect (at 1.1 -0.65) (size 1.5 0.35) (layers F.Cu F.Paste F.Mask)
       (net 69 "Net-(U3-Pad6)"))
-    (model "${KIPRJMOD}/Mod 3d/TSOP-6_2x1.25mm_Pitch0.65mm.wrl"
+    (model ${KIPRJMOD}/3d_models/TSOP-6_2x1.25mm_Pitch0.65mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10068,7 +10054,7 @@
       (net 88 "/Comunicacion USB/I_RX0"))
     (pad 100 smd rect (at -6 -7.9 180) (size 1.5 0.28) (layers F.Cu F.Paste F.Mask)
       (net 171 "Net-(U4-Pad100)"))
-    (model "${KIPRJMOD}/Mod 3d/LQFP-100_14x14mm_Pitch0.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/LQFP-100_14x14mm_Pitch0.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10131,7 +10117,7 @@
       (net 9 GNDA))
     (pad 16 smd rect (at 4.65 -4.445 90) (size 1.5 0.6) (layers F.Cu F.Paste F.Mask)
       (net 8 5V_ISO))
-    (model "${KIPRJMOD}/Mod 3d/SOIC-16_7.5x10.3mm_Pitch1.27mm.wrl"
+    (model ${KIPRJMOD}/3d_models/SOIC-16_7.5x10.3mm_Pitch1.27mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10189,7 +10175,7 @@
       (net 175 "Net-(U7-Pad15)"))
     (pad 16 smd rect (at 2.6 -2.2225) (size 1.2 0.4) (layers F.Cu F.Paste F.Mask)
       (net 176 "Net-(U7-Pad16)"))
-    (model "${KIPRJMOD}/Mod 3d/SSOP-16_3.9x4.9mm_Pitch0.635mm.wrl"
+    (model ${KIPRJMOD}/3d_models/SSOP-16_3.9x4.9mm_Pitch0.635mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10349,7 +10335,7 @@
       (net 18 "Net-(C29-Pad2)"))
     (pad 64 smd rect (at -3.75 -5.7) (size 1 0.25) (layers F.Cu F.Paste F.Mask)
       (net 179 "Net-(U8-Pad64)"))
-    (model "${KIPRJMOD}/Mod 3d/LQFP-64_10x10mm_Pitch0.5mm.wrl"
+    (model ${KIPRJMOD}/3d_models/LQFP-64_10x10mm_Pitch0.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10378,7 +10364,7 @@
       (net 93 "Net-(VR1-Pad4)"))
     (pad 5 smd rect (at -0.9525 -1.05664 270) (size 0.59944 1.00076) (layers F.Cu F.Paste F.Mask)
       (net 12 "Net-(C23-Pad1)"))
-    (model "${KIPRJMOD}/Mod 3d/sot23-5.wrl"
+    (model ${KIPRJMOD}/3d_models/sot23-5.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10506,7 +10492,7 @@
       (net 98 "Net-(CN3-Pad2)"))
     (pad 3 smd rect (at -0.775 0.25 90) (size 1 0.25) (layers F.Cu F.Paste F.Mask)
       (net 99 "Net-(CN3-Pad3)"))
-    (model "${KIPRJMOD}/Mod 3d/Cap_Array_4.wrl"
+    (model ${KIPRJMOD}/3d_models/Cap_Array_4.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10540,7 +10526,7 @@
       (net 83 "/Entradas Analogicas/IN1-"))
     (pad 3 smd rect (at -0.775 0.25) (size 1 0.25) (layers F.Cu F.Paste F.Mask)
       (net 82 "/Entradas Analogicas/IN2+"))
-    (model "${KIPRJMOD}/Mod 3d/Cap_Array_4.wrl"
+    (model ${KIPRJMOD}/3d_models/Cap_Array_4.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10574,7 +10560,7 @@
       (net 79 "/Entradas Analogicas/IN7-"))
     (pad 3 smd rect (at -0.775 0.25) (size 1 0.25) (layers F.Cu F.Paste F.Mask)
       (net 78 "/Entradas Analogicas/IN8+"))
-    (model "${KIPRJMOD}/Mod 3d/Cap_Array_4.wrl"
+    (model ${KIPRJMOD}/3d_models/Cap_Array_4.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -10606,7 +10592,7 @@
       (net 6 NI_GND))
     (pad 1 thru_hole circle (at -1.27 -3.175) (size 1.27 1.27) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 27 V_USB_IO))
-    (model "${KIPRJMOD}/Mod 3d/PXG.M0.2GG.NG.wrl"
+    (model ${KIPRJMOD}/3d_models/PXG.M0.2GG.NG.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.395 0.395 0.395))
       (rotate (xyz 0 0 0))
@@ -10654,7 +10640,7 @@
       (net 2 GND))
     (pad 1 thru_hole circle (at -1.27 -5.715) (size 1.27 1.27) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 56 "/Analog Front End/CLK"))
-    (model "${KIPRJMOD}/Mod 3d/PXG.M1.0GG.NG.wrl"
+    (model ${KIPRJMOD}/3d_models/PXG.M1.0GG.NG.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.395 0.395 0.395))
       (rotate (xyz 0 0 0))
@@ -10690,7 +10676,7 @@
       (net 9 GNDA))
     (pad 1 thru_hole circle (at -1.27 -3.175) (size 1.27 1.27) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 57 "/Analog Front End/BIAS_INV"))
-    (model "${KIPRJMOD}/Mod 3d/PXG.M0.4GG.NG.wrl"
+    (model ${KIPRJMOD}/3d_models/PXG.M0.4GG.NG.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.395 0.395 0.395))
       (rotate (xyz 0 0 0))
@@ -10719,7 +10705,7 @@
       (net 5 5V_NI))
     (pad 2 smd rect (at 0.75 0 270) (size 0.5 0.9) (layers F.Cu F.Paste F.Mask)
       (net 10 V_USB))
-    (model "${KIPRJMOD}/Mod 3d/R_0603.wrl"
+    (model ${KIPRJMOD}/3d_models/R_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
