@@ -19,13 +19,11 @@ THIS DESING IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND AN
 		   Agustin Solano (asolano@gmail.com) - Developer
                    Eduardo Filomena (efilomena@bioingenieria.edu.ar) - Requirements Definition
 		   Juan Manuel Reta (jmreta@ingenieria.edu.ar ) - Project Manager
-
+Colaborators:
+		   Albano Peñalva (albanopenialva@gmail.com) - Developer
+		   Christian Mista (cmista@ingenieria.uner.edu.ar) - Developer
 ===============================================================================
 */
-
-
-
-
 
 
 Laboratorio de Prototipado Electronico y 3D - FIUNER (http://ingenieria.uner.edu.ar/grupos/prototipado)
