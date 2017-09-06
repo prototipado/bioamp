@@ -34,7 +34,7 @@ The device has 8 programmable channels - 2000 Hz maximun sampling frequency, all
 
 Features:
 
-Resulution: 17 - 19 bits depending on settings (gain and sampling frequency).
+Resolution: 17 - 19 bits depending on settings (gain and sampling frequency).
 Channels: 8 differential channels / 8 monopolar channels.
 Input Impedance: ≥ 500 M Ω
 Dimentions: 153x114x34mm
