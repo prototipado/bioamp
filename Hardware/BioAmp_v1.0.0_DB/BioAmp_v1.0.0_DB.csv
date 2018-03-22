@@ -1,7 +1,0 @@
-Reference, Quantity, Value, Footprint, Datasheet
-CN1 CN2 CN3 ,3,CKCL44X7R1H,biopotenciales:Cap_Array_4,
-J2 J3 J4 J6 J7 J8 J9 ,7,Jack_Touch-Proof,biopotenciales:Jack_TouchProof_1.5mm,
-J10 J5 ,2,Jack_Touch-Proof,,
-P1 ,1,CONN_01X10,Pin_Headers:Pin_Header_Straight_1x10,
-RN1 RN2 RN3 ,3,CAY16-F4_R-ARRAY,biopotenciales:r_cay16-4,
-U1 U2 U3 ,3,TPD4E1B06,biopotenciales:TSOP-6_2x1.25mm_Pitch0.65mm,

@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name bioamp_db)(type KiCad)(uri "$(KIPRJMOD)\\bioamp_db.pretty")(options "")(descr ""))
-)
