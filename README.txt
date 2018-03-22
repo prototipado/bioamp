@@ -17,8 +17,8 @@ THIS DESING IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND AN
  Initial Authors : 
 		   Juan Ignacio Cerrudo (juanicerrudo@gmail.com) - Developer
 		   Agustin Solano (asolano@gmail.com) - Developer
-                   Eduardo Filomena (efilomena@bioingenieria.edu.ar) - Requirements Definition
-		   Juan Manuel Reta (jmreta@ingenieria.edu.ar ) - Project Manager
+                   Eduardo Filomena (efilomena@ingenieria.uner.edu.ar) - Requirements Definition
+		   Juan Manuel Reta (jmreta@ingenieria.uner.edu.ar ) - Project Manager
 Colaborators:
 		   Albano Peñalva (albanopenialva@gmail.com) - Developer
 		   Christian Mista (cmista@ingenieria.uner.edu.ar) - Developer
