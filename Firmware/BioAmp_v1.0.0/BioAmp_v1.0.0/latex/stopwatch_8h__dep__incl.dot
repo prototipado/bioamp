@@ -1,8 +1,0 @@
-digraph "stopwatch.h"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="stopwatch.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="stopwatch_17xx_40xx.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stopwatch__17xx__40xx_8c.html"];
-}

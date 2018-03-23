@@ -1,6 +1,0 @@
-digraph "_USB_CORE_DESCS_T"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{_USB_CORE_DESCS_T\n|+ device_desc\l+ device_qualifier\l+ full_speed_desc\l+ high_speed_desc\l+ string_desc\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

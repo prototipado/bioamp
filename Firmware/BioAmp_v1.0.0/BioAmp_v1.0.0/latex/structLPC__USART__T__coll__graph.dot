@@ -1,6 +1,0 @@
-digraph "LPC_USART_T"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{LPC_USART_T\n|+ @10\l+ @12\l+ @6\l+ @8\l+ ACR\l+ DLL\l+ DLM\l+ FCR\l+ FDR\l+ FIFOLVL\land 21 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

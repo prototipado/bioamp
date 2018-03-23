@@ -1,6 +1,0 @@
-digraph "LPC_MCPWM_T"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{LPC_MCPWM_T\n|+ CAP\l+ CAP_CLR\l+ CAPCON\l+ CAPCON_CLR\l+ CAPCON_SET\l+ CCP\l+ CNTCON\l+ CNTCON_CLR\l+ CNTCON_SET\l+ CON\land 12 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

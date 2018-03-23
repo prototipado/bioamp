@@ -1,6 +1,0 @@
-digraph "LPC_QEI_T"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{LPC_QEI_T\n|+ CAP\l+ CLR\l+ CMPOS0\l+ CMPOS1\l+ CMPOS2\l+ CON\l+ CONF\l+ FILTERINX\l+ FILTERPHA\l+ FILTERPHB\land 18 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

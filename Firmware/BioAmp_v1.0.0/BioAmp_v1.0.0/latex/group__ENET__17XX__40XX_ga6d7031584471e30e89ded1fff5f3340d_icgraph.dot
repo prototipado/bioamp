@@ -1,9 +1,0 @@
-digraph "Chip_ENET_SetHalfDuplex"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="Chip_ENET_SetHalfDuplex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="Chip_ENET_DisableRXFilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#ga591bdc31e1ca992c3ac642c8d64d3ac9",tooltip="Disable Rx Filter. "];
-}

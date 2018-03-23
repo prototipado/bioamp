@@ -1,8 +1,0 @@
-digraph "ENET_CONTROL_T"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{ENET_CONTROL_T\n|+ COMMAND\l+ FLOWCONTROLCOUNTER\l+ FLOWCONTROLSTATUS\l+ RESERVED0\l+ RESERVED1\l+ RSV\l+ STATUS\l+ TSV0\l+ TSV1\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +TX\n+RX" ,arrowhead="odiamond"];
-  Node2 [label="{ENET_TRANSFER_INFO_T\n|+ CONSUMEINDEX\l+ DESCRIPTOR\l+ DESCRIPTORNUMBER\l+ PRODUCEINDEX\l+ STATUS\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structENET__TRANSFER__INFO__T.html",tooltip="Ethernet Transfer register Block Structure. "];
-}

@@ -1,6 +1,0 @@
-digraph "USBD_MSC_INIT_PARAM"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{USBD_MSC_INIT_PARAM\n|+ BlockCount\l+ BlockSize\l+ InquiryStr\l+ intf_desc\l+ mem_base\l+ mem_size\l+ MemorySize\l+ MemorySize64\l+ MSC_Ep0_Hdlr\l+ MSC_GetWriteBuf\l+ MSC_Read\l+ MSC_Verify\l+ MSC_Write\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

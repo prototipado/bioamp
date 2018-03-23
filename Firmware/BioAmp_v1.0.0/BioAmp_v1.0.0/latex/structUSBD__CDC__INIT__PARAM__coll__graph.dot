@@ -1,6 +1,0 @@
-digraph "USBD_CDC_INIT_PARAM"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{USBD_CDC_INIT_PARAM\n|+ CDC_BulkIN_Hdlr\l+ CDC_BulkOUT_Hdlr\l+ CDC_Ep0_Hdlr\l+ CDC_InterruptEP_Hdlr\l+ CIC_GetRequest\l+ CIC_SetRequest\l+ cif_intf_desc\l+ ClrCommFeature\l+ dif_intf_desc\l+ GetCommFeature\land 8 more...\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

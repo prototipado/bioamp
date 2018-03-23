@@ -1,8 +1,0 @@
-digraph "USBD_HID_INIT_PARAM"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{USBD_HID_INIT_PARAM\n|+ HID_Ep0_Hdlr\l+ HID_EpIn_Hdlr\l+ HID_EpOut_Hdlr\l+ HID_GetPhysDesc\l+ HID_GetReport\l+ HID_GetReportDesc\l+ HID_SetIdle\l+ HID_SetProtocol\l+ HID_SetReport\l+ intf_desc\l+ max_reports\l+ mem_base\l+ mem_size\l+ pad\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +report_data" ,arrowhead="odiamond"];
-  Node2 [label="{_HID_REPORT_T\n|+ __pad\l+ desc\l+ idle_time\l+ len\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct__HID__REPORT__T.html",tooltip="HID report descriptor data structure. "];
-}

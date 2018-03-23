@@ -1,9 +1,0 @@
-digraph "Chip_I2S_TxConfig"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="Chip_I2S_TxConfig",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="Chip_I2S_SetRxXYDivider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__I2S__17XX__40XX.html#gafd2bc55fb29ea5f082d5ae3b5794f605",tooltip="Set the MCLK rate by using a fractional rate generator, dividing down the frequency of PCLK..."];
-}

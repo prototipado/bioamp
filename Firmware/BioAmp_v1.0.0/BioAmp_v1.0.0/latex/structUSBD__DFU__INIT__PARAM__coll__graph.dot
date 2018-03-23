@@ -1,6 +1,0 @@
-digraph "USBD_DFU_INIT_PARAM"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  Node1 [label="{USBD_DFU_INIT_PARAM\n|+ DFU_Detach\l+ DFU_Done\l+ DFU_Ep0_Hdlr\l+ DFU_Read\l+ DFU_Write\l+ intf_desc\l+ mem_base\l+ mem_size\l+ pad\l+ wTransferSize\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

@@ -1,9 +1,0 @@
-digraph "Chip_ENET_GetFreeDescNum"
-{
-  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
-  node [fontname="FreeSans",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="Chip_ENET_GetFreeDescNum",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="Chip_ENET_GetFillDescNum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ENET__17XX__40XX.html#gac5f44f20f55847c4c9b9906f051aeca3",tooltip="Get the number of descriptors filled. "];
-}
