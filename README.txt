@@ -25,9 +25,6 @@ Colaborators:
 ===============================================================================
 */
 
-
-Laboratorio de Prototipado Electronico y 3D - FIUNER (http://ingenieria.uner.edu.ar/grupos/prototipado)
-
 BioAmp is an opensource project of a multichannel biopotential adquisition system for EEG, EMG, EOG and EOG signals.
 
 The device has 8 programmable channels - 2000 Hz maximun sampling frequency, allowing the acquisition of biopotentials.
@@ -38,6 +35,10 @@ Resolution: 17 - 19 bits depending on settings (gain and sampling frequency).
 Channels: 8 differential channels / 8 monopolar channels.
 Input Impedance: ≥ 500 M Ω
 Dimentions: 153x114x34mm
+
+
+Laboratorio de Prototipado Electronico y 3D - FIUNER (http://ingenieria.uner.edu.ar/grupos/prototipado)
+Laboratorio de Ingenierı́a en Rehabilitación e Investigaciones Neuromusculares y Sensoriales (LIRINS).
 
 
 
