@@ -7,7 +7,7 @@
 
 [Laboratorio de Prototipado Electronico y 3D - Laboratorio de Ingenierı́a en Rehabilitación e Investigaciones Neuromusculares y Sensoriales (LIRINS)- FIUNER](http://ingenieria.uner.edu.ar/grupos/prototipado)
 
-![Image text](BioAmp.png)
+![Bioamp](BioAmp.png)
 
 *Copyright 2017 - Laboratorio de Prototipado Electronico y 3D - FIUNER*
 
