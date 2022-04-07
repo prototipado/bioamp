@@ -1,11 +1,6 @@
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 # BioAmp Project
 
-[Laboratorio de Prototipado Electronico y 3D - Laboratorio de Ingenierı́a en Rehabilitación e Investigaciones Neuromusculares y Sensoriales (LIRINS)- FIUNER](http://ingenieria.uner.edu.ar/grupos/prototipado)
+[Laboratorio de Prototipado Electronico y 3D](http://ingenieria.uner.edu.ar/grupos/prototipado) - Laboratorio de Ingenierı́a en Rehabilitación e Investigaciones Neuromusculares y Sensoriales (LIRINS) - [FIUNER](http://ingenieria.uner.edu.ar)
 
 ![Bioamp](https://github.com/cielogodoy/bioamp/blob/master/BioAmp.PNG)
 
@@ -17,7 +12,7 @@ Redistribution and use in source and binary forms, with or without modification,
 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this design without specific prior written permission.
 
-\scriptsize THIS DESING IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DESIGN, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS DESING IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DESIGN, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ### Initial Authors
 - Juan Ignacio Cerrudo (juanicerrudo@gmail.com) - Developer
@@ -44,11 +39,4 @@ The device has 8 programmable channels - 2000 Hz maximun sampling frequency, all
 ### 📫 Contact us
 Laboratorio de Prototipado Electronico y 3D - FIUNER (http://ingenieria.uner.edu.ar/grupos/prototipado)
 
-Laboratorio de Ingenierı́a en Rehabilitación e Investigaciones Neuromusculares y Sensoriales (LIRINS).
-
-
-
-
-
-
-
+Laboratorio de Ingenierı́a en Rehabilitación e Investigaciones Neuromusculares y Sensoriales (LIRINS)
